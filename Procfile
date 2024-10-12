@@ -1,0 +1,1 @@
+web: gunicorn eco_shave.wsgi.application

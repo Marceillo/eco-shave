@@ -11,7 +11,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-import os 
+import os
+import dj_database_url 
 
 if os.path.exists("env.py"):
     import env 
@@ -31,6 +32,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-marceillo-ecoshave-isg1mt279wv.ws.codeinstitute-ide.net'
+    'eco-shave-7beca10c37e1.herokuapp.com'
     ]
 
 CSRF_TRUSTED_ORIGINS = [
