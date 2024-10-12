@@ -31,8 +31,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-marceillo-ecoshave-isg1mt279wv.ws.codeinstitute-ide.net'
     'eco-shave-7beca10c37e1.herokuapp.com'
+    '8000-marceillo-ecoshave-isg1mt279wv.ws.codeinstitute-ide.net'
     ]
 
 CSRF_TRUSTED_ORIGINS = [
