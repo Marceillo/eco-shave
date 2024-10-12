@@ -37,6 +37,7 @@ ALLOWED_HOSTS = [
 
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-marceillo-ecoshave-isg1mt279wv.ws.codeinstitute-ide.net',
+    'https://eco-shave-7beca10c37e1.herokuapp.com'
     
     ] 
 
