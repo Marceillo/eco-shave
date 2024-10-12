@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-9_nwhy!%+@jzs!)cm2mv*0kwknk-^+_#q8lpx82i2h!cw5(yu0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '8000-marceillo-ecoshave-isg1mt279wv.ws.codeinstitute-ide.net'
+    ]
 
 
 # Application definition
@@ -37,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'eco_shave',
 ]
 
 MIDDLEWARE = [
