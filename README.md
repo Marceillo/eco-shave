@@ -50,11 +50,10 @@
 
 ## Overview
 
-I love water sports, and kayaking is one of the best ways for me to be in nature and escape from daily life. That's why I decided to create a kayaking blog, where my fellow paddlers and I can share our experiences on the water. Please feel free to see the [live link](https://kayak-blog-pp4-1054055911f7.herokuapp.com/my-posts/) 
 
 ## Project Goal:
 
-The goal is to build a community around kayaking, where we can share knowledge and insights to enhance everyone's experience in the sport.
+
 
 **Project Objectives:**
 
@@ -117,7 +116,7 @@ User stories can be viewed here on the project [kanban board ](https://github.co
 
 #### Imagery
 
-* I sourced images and the moving background from [pixabay](https://pixabay.com/).
+*
 
 # Skeleton
 
@@ -178,11 +177,11 @@ Django has a built-in tool that can show you your ERD diagram.
 * So this will give me as a developer an overview of the project from an ERD standpoint.
 
 ### Steps used
-* Step 1 to using this is to install django-extensions.
-* Step 2 would be to add the installed apps.
+* Step 1 to using this is to install python3 -m pip install django-extensions.
+* Step 2 would be to add the installed apps in settings.
 * Step 3 would be to add it to the requirements file.
-* Step4 is to run the python manage.py graph_models -a --output erd.dot 
-* Step5 After this it will create an erd. dot file with all the application model data.
+* Step 4 is to run the python manage.py graph_models -a --output erd.dot 
+* Step 5 After this it will create an erd. dot file with all the application model data.
 * Step 6 Put the data in this software to change to an image file much like the one I used below.
 
 The red dot file converted to image [Graphviz online](https://dreampuf.github.io/GraphvizOnline/#digraph%20G%20%7B%0A%0A%20%20subgraph%20cluster_0%20%7B%0A%20%20%20%20style%3Dfilled%3B%0A%20%20%20%20color%3Dlightgrey%3B%0A%20%20%20%20node%20%5Bstyle%3Dfilled%2Ccolor%3Dwhite%5D%3B%0A%20%20%20%20a0%20-%3E%20a1%20-%3E%20a2%20-%3E%20a3%3B%0A%20%20%20%20label%20%3D%20%22process%20%231%22%3B%0A%20%20%7D%0A%0A%20%20subgraph%20cluster_1%20%7B%0A%20%20%20%20node%20%5Bstyle%3Dfilled%5D%3B%0A%20%20%20%20b0%20-%3E%20b1%20-%3E%20b2%20-%3E%20b3%3B%0A%20%20%20%20label%20%3D%20%22process%20%232%22%3B%0A%20%20%20%20color%3Dblue%0A%20%20%7D%0A%20%20start%20-%3E%20a0%3B%0A%20%20start%20-%3E%20b0%3B%0A%20%20a1%20-%3E%20b3%3B%0A%20%20b2%20-%3E%20a3%3B%0A%20%20a3%20-%3E%20a0%3B%0A%20%20a3%20-%3E%20end%3B%0A%20%20b3%20-%3E%20end%3B%0A%0A%20%20start%20%5Bshape%3DMdiamond%5D%3B%0A%20%20end%20%5Bshape%3DMsquare%5D%3B%0A%7D)
@@ -199,24 +198,15 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 
 ## Visual Experience
 
-* The goal was to bring in a feel of water so you feel as if you are there in the water with other paddlers.
-* It is a moving image in a dark green and this has positives and negatives to the design.
-* If I decided to deploy it to the public I would make some small changes to the color scheme but mostly I am happy with it.
-* I used some Bootstrap code for the html and implemented this in my templates.
-* I got inspiration from the LMS project and used the base template modifying it to my needs and then replicating this into other smaller templates. 
+* 
 
 #### Positives
 
-* It compliments the the idea and the sport nicely.
-* A large number of my kayak friends and family like the moving background.
-* It's different and fresh from what I have done before this kept my motivation high in the really tough times of this project.
+*
 
 #### Negatives 
 
-* It might not suit well with all people as some did not like the moving image.
-* People with visual problems might have difficulty viewing some features.
-* I tested this with my Father who is color blind and he was able to find his way around the site so I am happy with that result.
-* The load time of the site could be a problem when you have a very old laptop or slow internet I have tested and worked in my enviroment. 
+* 
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -232,11 +222,7 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 
 #### Before login 
 
-* Before login The user will see a home page with the blog posts.
-* They will be able to read blog post comments use the search feature and access the footer links.
-* If they wish to have more features they will need to log in or Register if they do not have an account. 
-* On the right is a message that displays that you are not logged in.
-* There is a search option in the nav bar that will display before and after login.
+* 
 
  <br>
 
@@ -246,10 +232,7 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 
 #### After login  
 
-* Note: After login the nav bar will change a bit it will include extra links for more features explained later.
-* The first link will be the Profile Page which will display the login user name.
-* The second Link will be a Create Blog link.
-* Also the login button will change its text to logout. 
+* 
 
 
 <br>
@@ -275,8 +258,7 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 <br>
 
 * Note: This is a basic page with a contact form for users to get in contact.
-* While developing I noticed that most kayak sites do not have this as a landing page as most just want to see the pictures and content including me.
-* Since it's not a live site, we don't have an exchange to set it up, to make it more functional so that we can send a message to the email service provider.
+
 
 <br>
 
@@ -420,155 +402,6 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 
 </details>
 
-### Blog Post CRUD 
-
-<details>
-
-<summary>Blog Post Summary</summary>
-
-#### Create a Blog page link 
-
-* The user can create a blog Using this form.
-* A default picture has been set up if the user decides not to select one.
-* The user can set the post to Draft or Published state.
-* In Draft the user will need to go to My Blog to see their drafts.
-* If in the published state it will go straight to the blog page for everyone to see.
-
-<br>
-
-![Create Blog](/static/readme/images/create-blog.png)
-
-<br>
-
-#### My Blog view
-
-* Here you can see the CRUD buttons and the post you created.
-* Your draft Posts will be here and the Published posts.
-* As a user you will be able to Read, edit(UPdate), and Delete Posts.
-* should you wish to create you will need to go to the create blog link.
-* Originally I had the create link in the view as well but did not want to overpopulate the view with buttons so took it out. 
- 
-<br>
-
-![Create Blog](/static/readme/images/mb-blog.png)
-
-<br>
-
-#### Edit Post 
-
-* The user can update the title and body and the status is also in control of the user.
-* You can choose an image for your post if you don't have one a default image is shown.
-* In the input field when selecting an image and you decide you want the field blank there is a script that clears the input.
-* Once you have chosen an image and don't like it you can change the image.
-
-<br>
-
-![Edit Post](/static/readme/images/edit-post.png)
-
-<br>
-
-#### Delete Post 
-
-* If you click on the deleted post you will receive a confirmation pop-up.
-* The success message or error message.
-
-<br>
-
-![Delet Post](/static/readme/images/delet-post.png)
-
-<br>
-
-#### Detail view 
-
-* This view will be when you click on a post and want to read the post.
-* It will check that you are the author if so you will see extra buttons (edit_post,delet_post)
-* If not it will not show buttons you also will see the favorites and comments in a later section for more info.
-* Here you can read more about the post the author and the created date details are also present.
-
-<br>
-
-![Detail View](/static/readme/images/detail-view.png)
-
-<br>
-
-</details>
-
-### Comments CRUD
-
-<details>
-
-<summary>Comment Page summary</summary>
-
-* In this blog post a logged user will have the opportunity to write a comment on a blog post.
-* You can create, read, update, and delete comments.
-* So when things go write you get a success message or a message. error in the unlucky case.
-
-<br>
-
-![Comment View](/static/readme/images/comments.png)
-
-<br>
-
-##### Update comment 
-
-* When you update a comment the comment icon turns red and there is a count that shows how many comments.
-* When there is no comment there is no count and the icon is not fully red.
-
-<br>
-
-![Update Comment](/static/readme/images/comment_update.png)
-
-<br>
-
-##### Edit Comment 
-
-* You can update the comment and receive a success message with the displayed update on the post.
-* Of course when unsuccessful you will also receive an error message.
-
-<br>
-
-![Edit Comment](/static/readme/images/edit-comment.png)
-
-<br>
-
-##### Delete Comment 
-
-* You will get a confirmation message and then a success message or error message if not.
-
-<br>
-
-![Delete Comment](/static/readme/images/delet-comment.png)
-
-<br>
-
-</details>
-
-### Favorites 
-
-* Here you can favorite or unfavorite a Post 
-* When you do so the star goes red and you receive a success message or error message when not.
-
-<details>
-
-<summary>Favorite Image </summary>
-
-
-
-#### Favorited 
-
-<br>
-
-![Favorited](/static/readme/images/favorited.png)
-
-<br>
-
-#### Unfavorited
-
-<br>
-
-![Unfavorites](/static/readme/images/unfavorited.png)
-
-<br>
 
 </details>
 
@@ -754,160 +587,13 @@ The project design was adapted to different devices and Bootstrap helped with mo
 <details>
 <summary>Blog PeP8 errors/warnings fixed</summary>
 
-#### Blog View
-
-| Error Code | Message                                                                 | Error Code | Message                                                                 |
-|------------|-------------------------------------------------------------------------|------------|-------------------------------------------------------------------------|
-| 18         | E265 block comment should start with '# '                               | 26         | W291 trailing whitespace                                                 |
-| 27         | E302 expected 2 blank lines, found 0                                    | 28         | E501 line too long (86 > 79 characters)                                 |
-| 29         | E231 missing whitespace after ','                                        | 36         | W291 trailing whitespace                                                 |
-| 37         | E302 expected 2 blank lines, found 0                                    | 40         | E305 expected 2 blank lines after class or function definition, found 1 |
-| 41         | E501 line too long (99 > 79 characters)                                 | 48         | E302 expected 2 blank lines, found 0                                    |
-| 52         | E501 line too long (113 > 79 characters)                                | 55         | W293 blank line contains whitespace                                       |
-| 58         | W291 trailing whitespace                                                 | 65         | E501 line too long (112 > 79 characters)                                |
-| 75         | W293 blank line contains whitespace                                       | 78         | E501 line too long (92 > 79 characters)                                 |
-| 79         | E501 line too long (111 > 79 characters)                                | 85         | E302 expected 2 blank lines, found 0                                    |
-| 87         | E225 missing whitespace around operator                                   | 90         | W293 blank line contains whitespace                                       |
-| 98         | E501 line too long (87 > 79 characters)                                 | 101        | W293 blank line contains whitespace                                       |
-| 103        | E501 line too long (83 > 79 characters)                                 | 104        | W291 trailing whitespace                                                 |
-| 106        | E305 expected 2 blank lines after class or function definition, found 1 | 114        | W291 trailing whitespace                                                 |
-| 119        | E302 expected 2 blank lines, found 0                                    | 121        | E225 missing whitespace around operator                                   |
-| 127        | W293 blank line contains whitespace                                       | 134        | W293 blank line contains whitespace                                       |
-| 135        | E501 line too long (87 > 79 characters)                                 | 139        | E501 line too long (83 > 79 characters)                                 |
-| 140        | W291 trailing whitespace                                                 | 150        | E501 line too long (80 > 79 characters)                                 |
-| 152        | E501 line too long (86 > 79 characters)                                 | 155        | E302 expected 2 blank lines, found 0                                    |
-| 161        | E303 too many blank lines (2)                                          | 164        | W293 blank line contains whitespace                                       |
-| 166        | E303 too many blank lines (2)                                          | 167        | E501 line too long (85 > 79 characters)                                 |
-| 170        | W293 blank line contains whitespace                                       | 172        | E501 line too long (83 > 79 characters)                                 |
-| 173        | W291 trailing whitespace                                                 | 174        | W293 blank line contains whitespace                                       |
-| 175        | E305 expected 2 blank lines after class or function definition, found 1 | 176        | E501 line too long (84 > 79 characters)                                 |
-| 181        | W291 trailing whitespace                                                 | 183        | W291 trailing whitespace                                                 |
-| 184        | E302 expected 2 blank lines, found 0                                    | 190        | E501 line too long (81 > 79 characters)                                 |
-| 194        | E303 too many blank lines (3)                                          | 198        | W291 trailing whitespace                                                 |
-| 199        | E302 expected 2 blank lines, found 0                                    | 201        | E231 missing whitespace after ','                                        |
-| 208        | E305 expected 2 blank lines after class or function definition, found 1 | 209        | E501 line too long (80 > 79 characters)                                 |
-| 213        | E302 expected 2 blank lines, found 0                                    | 217        | E501 line too long (96 > 79 characters)                                 |
-| 232        | E211 whitespace before '('                                               | 232        | E231 missing whitespace after ','                                        |
-| 232        | E501 line too long (88 > 79 characters)                                 | 234        | E305 expected 2 blank lines after class or function definition, found 1 |
-| 240        | E302 expected 2 blank lines, found 0                                    | 248        | E231 missing whitespace after ','                                        |
-| 248        | E501 line too long (82 > 79 characters)                                 | 251        | E501 line too long (95 > 79 characters)                                 |
-| 252        | W293 blank line contains whitespace                                       | 254        | W293 blank line contains whitespace                                       |
-| 257        | E305 expected 2 blank lines after class or function definition, found 1 | 261        | E302 expected 2 blank lines, found 0                                    |
-| 263        | W293 blank line contains whitespace                                       | 264        | E117 over-indented                                                       |
-| 275        | W293 blank line contains whitespace                                       | 276        | E303 too many blank lines (2)                                          |
-| 278        | E305 expected 2 blank lines after class or function definition, found 1 | 284        | E302 expected 2 blank lines, found 0                                    |
-| 294        | E501 line too long (82 > 79 characters)                                 | 300        | W293 blank line contains whitespace                                       |
-| 305        | W291 trailing whitespace                                                 | 308        | E302 expected 2 blank lines, found 0                                    |
-| 311        | W293 blank line contains whitespace                                       | 313        | E231 missing whitespace after ','                                        |
-| 315        | W293 blank line contains whitespace                                       | 318        | W293 blank line contains whitespace                                       |
-| 321        | E501 line too long (84 > 79 characters)                                 | 327        | E501 line too long (93 > 79 characters)                                 |
-| 327        | E202 whitespace before ''                                               | 332        | W291 trailing whitespace                                                 |
-| 336        | E302 expected 2 blank lines, found 0                                    | 339        | W293 blank line contains whitespace                                       |
-| 343        | W293 blank line contains whitespace                                       | 347        | E501 line too long (80 > 79 characters)                                 |
-| 350        | W293 blank line contains whitespace                                       | 352        | E303 too many blank lines (2)                                          |
-| 354        | E305 expected 2 blank lines after class or function definition, found 1 | 357        | W291 trailing whitespace                                                 |
-| 359        | E302 expected 2 blank lines, found 0                                    | 371        | W291 trailing whitespace                                                 |
-| 381        | W291 trailing whitespace                                                 | 382        | E302 expected 2 blank lines, found 0                                    |
-| 394        | W291 trailing whitespace                                                 | 395        | E122 continuation line missing indentation or outdented                 |
-| 395        | E501 line too long (82 > 79 characters)                                 | 397        | W293 blank line contains whitespace                                       |
-| 398        | E303 too many blank lines (2)                                          | 398        | E202 whitespace before ')'                                               |
-| 407        | W291 trailing whitespace                                                 | 411        | W391 blank line at end of file                                           |
-
-#### Blog Urls
-
-| Error Code | Message                                                                 | Error Code | Message                                                                 |
-|------------|-------------------------------------------------------------------------|------------|-------------------------------------------------------------------------|
-| 4          | W293 blank line contains whitespace                                       | 7          | E303 too many blank lines (4)                                          |
-| 13         | E501 line too long (97 > 79 characters)                                 | 15         | E501 line too long (88 > 79 characters)                                |
-| 16         | E501 line too long (101 > 79 characters)                                | 17         | E501 line too long (103 > 79 characters)                               |
-| 20         | E501 line too long (81 > 79 characters)                                 | 21         | E501 line too long (84 > 79 characters)                                |
-| 22         | E501 line too long (90 > 79 characters)                                 | 23         | E265 block comment should start with '# '                              |
-| 23         | E501 line too long (89 > 79 characters)                                 | 24         | E265 block comment should start with '# '                              |
-| 24         | E501 line too long (95 > 79 characters)                                 | 25         | E231 missing whitespace after ','                                       |
-| 25         | E501 line too long (87 > 79 characters)                                 | 28         | W391 blank line at end of file                                          |
-
-#### Blog Models
-
-| Error Code | Message                                                                 | Error Code | Message                                                                 |
-|------------|-------------------------------------------------------------------------|------------|-------------------------------------------------------------------------|
-| 51         | W293 blank line contains whitespace                                       | 55         | W291 trailing whitespace                                                 |
-| 56         | W293 blank line contains whitespace                                       | 60         | W291 trailing whitespace                                                 |
-| 63         | E501 line too long (85 > 79 characters)                                 | 64         | E501 line too long (87 > 79 characters)                                |
-| 69         | E303 too many blank lines (2)                                          | 70         | W291 trailing whitespace                                                 |
-| 71         | W293 blank line contains whitespace                                       | 73         | E303 too many blank lines (2)                                          |
-| 77         | E303 too many blank lines (2)                                          | 78         | W291 trailing whitespace                                                 |
-| 83         | W291 trailing whitespace                                                 | 87         | E231 missing whitespace after ','                                        |
-| 89         | E231 missing whitespace after ','                                        | 89         | E501 line too long (84 > 79 characters)                                 |
-| 90         | E222 multiple spaces after operator                                       | 90         | E231 missing whitespace after ','                                        |
-| 90         | E501 line too long (83 > 79 characters)                                 | 114        | W291 trailing whitespace                                                 |
-
-#### Blog Forms
-
-| Error Code | Message                                                                 | Error Code | Message                                                                 |
-|------------|-------------------------------------------------------------------------|------------|-------------------------------------------------------------------------|
-| 1          | W291 trailing whitespace                                                 | 2          | W291 trailing whitespace                                                 |
-| 5          | E201 whitespace after '('                                               | 5          | E202 whitespace before ')'                                              |
-| 7          | E501 line too long (122 > 79 characters)                               | 9          | E301 expected 1 blank line, found 0                                     |
-| 10         | W291 trailing whitespace                                                 | 11         | E201 whitespace after ''                                                |
-| 11         | E231 missing whitespace after ','                                        | 11         | E231 missing whitespace after ','                                        |
-| 11         | E501 line too long (127 > 79 characters)                                | 12         | E301 expected 1 blank line, found 0                                     |
-| 18         | E302 expected 2 blank lines, found 1                                    | 20         | E225 missing whitespace around operator                                   |
-| 23         | E122 continuation line missing indentation or outdented                 | 24         | E122 continuation line missing indentation or outdented                 |
-| 25         | E122 continuation line missing indentation or outdented                 | 28         | E211 whitespace before '('                                               |
-| 28         | E202 whitespace before ')'                                              | 31         | E501 line too long (105 > 79 characters)                                |
-| 42         | W291 trailing whitespace                                                 | 43         | W291 trailing whitespace                                                 |
-| 46         | E203 whitespace before '                                                | 49         | E265 block comment should start with '# '                               |
-| 52         | E501 line too long (91 > 79 characters)                                 | 55         | W293 blank line contains whitespace                                       |
-| 55         | W292 no newline at end of file                                          |            |                                                                         |
-
-#### Blog Admin
-
-| Error Code | Message                                                                 | Error Code | Message                                                                 |
-|------------|-------------------------------------------------------------------------|------------|-------------------------------------------------------------------------|
-|  E231      | missing whitespace after ','                                             | 11         | E231 missing whitespace after ','                                        |
-| 11         | E231 missing whitespace after ','                                        | 12         | E231 missing whitespace after '                                          |
-| 17         | E302 expected 2 blank lines, found 1                                    | 20         | E201 whitespace after ''                                                |
-| 22         | E265 block comment should start with '# '                               | 23         | E265 block comment should start with '# '                               |
-| 25         | E265 block comment should start with '# '                               | 27         | E302 expected 2 blank lines, found 1                                    |
-| 29         | E501 line too long (106 > 79 characters)                               | 29         | E231 missing whitespace after ','                                        |
-| 30         | E231 missing whitespace after ','                                        | 31         | E501 line too long (84 > 79 characters)                                 |
-| 32         | E501 line too long (121 > 79 characters)                               | 32         | E231 missing whitespace after ','                                        |
-| 32         | E231 missing whitespace after ','                                        | 33         | W293 blank line contains whitespace                                       |
-| 37         | W391 blank line at end of file                                          |            |                                                                         |
-
 </details>                                      
 
 <details>
 
 <summary>About PeP8 errors</summary>
 
-#### About View
-
-| Error Code | Description                    | Error Code | Description                        |
-|------------|--------------------------------|------------|-------------------------------------|
-| W291       | trailing whitespace            | E302       | expected 2 blank lines, found 0   |
-| E231       | missing whitespace after ','   | W293       | blank line contains whitespace     |
-| E305       | expected 2 blank lines after class or function definition, found 1 | W291 | trailing whitespace |
-| E302       | expected 2 blank lines, found 0 | W293       | blank line contains whitespace     |
-| E501       | line too long (85 > 79 characters) | E265   | block comment should start with '# ' |
-| W293       | blank line contains whitespace | E303       | too many blank lines (2)           |
-| W291       | trailing whitespace            | E302       | expected 2 blank lines, found 1   |
-| W292       | no newline at end of file      |            |                                    |
-
-#### About Models
-| Error Code | Description                    | Error Code | Description                        |
-|------------|--------------------------------|------------|-------------------------------------|
-| E302       | expected 2 blank lines, found 1 | E303       | too many blank lines (2)           |
-| W292       | no newline at end of file      |            |                                    |
-|            |                                |            |                                    |
-|            |                                |            |                                    |
-
-#### About Forms
-| Error Code | Description                    | Error Code | Description                        |
-|------------|--------------------------------|------------|-------------------------------------|
-| W293       | blank line contains whitespace | W293       | blank line contains whitespace     |
-| W292       | no newline at end of file      |            |                                    |
-|            |                                |            |                                    |
+                   |
 |            |                                |            |                                    |
 
 </details>
@@ -917,33 +603,13 @@ The project design was adapted to different devices and Bootstrap helped with mo
 
 ## Main View
 
-| Error Code | Message                                                                 | Error Code | Message                                                                 |
-|------------|-------------------------------------------------------------------------|------------|-------------------------------------------------------------------------|
-| 7          | E302 expected 2 blank lines, found 0                                    | 11         | E305 expected 2 blank lines after class or function definition, found 1 |
-| 15         | E302 expected 2 blank lines, found 0                                    | 17         | W292 no newline at end of file                                          |
+
 
 ## Main Urls
 
-| Error Code | Message                                                                 | Error Code | Message                                                                 |
-|------------|-------------------------------------------------------------------------|------------|-------------------------------------------------------------------------|
-| 27         | E231 missing whitespace after ','                                        | 28         | W293 blank line contains whitespace                                       |
 
 ## Main Settings
 
-| Error Code | Message                                                                 | Error Code | Message                                                                 |
-|------------|-------------------------------------------------------------------------|------------|-------------------------------------------------------------------------|
-| 19         | W291 trailing whitespace                                                 | 20         | W293 blank line contains whitespace                                       |
-| 31         | E265 block comment should start with '# '                               | 31         | E501 line too long (82 > 79 characters)                                 |
-| 35         | E265 block comment should start with '# '                               | 37         | E501 line too long (128 > 79 characters)                                |
-| 37         | E231 missing whitespace after ','                                        | 61         | E265 block comment should start with '# '                               |
-| 62         | E265 block comment should start with '# '                               | 84         | E303 too many blank lines (5)                                          |
-| 123        | E265 block comment should start with '# '                               | 128        | E265 block comment should start with '# '                               |
-| 137        | W293 blank line contains whitespace                                       | 146        | E501 line too long (91 > 79 characters)                                 |
-| 149        | E501 line too long (81 > 79 characters)                                 | 152        | E501 line too long (82 > 79 characters)                                 |
-| 155        | E501 line too long (83 > 79 characters)                                 | 167        | E265 block comment should start with '# '                               |
-| 178        | W291 trailing whitespace                                                 | 182        | E122 continuation line missing indentation or outdented                 |
-| 183        | E122 continuation line missing indentation or outdented                 | 188        | E303 too many blank lines (3)                                          |
-| 194        | E501 line too long (80 > 79 characters)                                 | 201        | W391 blank line at end of file                                           |
 
 </details>
 
@@ -952,14 +618,7 @@ The project design was adapted to different devices and Bootstrap helped with mo
 
 #### ENV File
 
-| Error Code | Message                                                                 | Error Code | Message                                                                 |
-|------------|-------------------------------------------------------------------------|------------|-------------------------------------------------------------------------|
-| 1          | E501 line too long (158 > 79 characters)                               | 6          | E501 line too long (161 > 79 characters)                               |
-| 9          | E501 line too long (103 > 79 characters)                               | 11         | E501 line too long (109 > 79 characters)                               |
-| 19         | E265 block comment should start with '# '                               | 19         | E501 line too long (91 > 79 characters)                                |
-| 20         | E265 block comment should start with '# '                               | 20         | E501 line too long (80 > 79 characters)                                |
-| 22         | E265 block comment should start with '# '                               | 23         | E265 block comment should start with '# '                               |
-| 24         | W391 blank line at end of file                                          |            |                                                                         |
+
 </details> 
 
 
@@ -994,10 +653,7 @@ The project design was adapted to different devices and Bootstrap helped with mo
 * [Profile Edit ](/static/readme/images/profileeditlight.png)
 * [Profile Edit mobile ](/static/readme/images/profilelighteditmobile.png)
 
-#### My Blog 
 
-* [My Blog ](/static/readme/images/mybloglight.png)
-* [My Blog mobile ](/static/readme/images/mybloglightmobile.png)
 
 </details>
 
@@ -1019,12 +675,6 @@ The project design was adapted to different devices and Bootstrap helped with mo
 * [Password Change](/static/readme/test-image/html-test/profilepasswordchange.png)
 * [Password Reset](/static/readme/test-image/html-test/password-reset.png)
 * [Home Page](/static/readme/test-image/html-test/homepage.png)
-* [MY Post](/static/readme/test-image/html-test/my-post.png)
-* [Post Edit](/static/readme/test-image/html-test/postedit.png)
-* [Post Delete](/static/readme/test-image/html-test/deletpostvalidation.png)
-* [Post Detail](/static/readme/test-image/html-test/postdetail.png)
-* [Comment Edit](/static/readme/test-image/html-test/comment_editsuccess.png)
-* [Contact_Kayaker](/static/readme/test-image/html-test/about-contact.png)
 * [HTML About Page](/static/readme/test-image/html-test/aboutpagesuccess.png)
 
 </details>
@@ -1059,23 +709,11 @@ The project design was adapted to different devices and Bootstrap helped with mo
 | Line | Error Message                                                           | Line | Error Message                                                           |
 |------|-------------------------------------------------------------------------|------|-------------------------------------------------------------------------|
 | 1    | 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz). | 2    | 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz). |
-| 3    | 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz). | 4    | 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz). |
-| 6    | 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz). | 7    | 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz). |
-| 8    | 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz). | 21   | 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz). |
-| 21   | 'for of' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz). | 22   | 'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6'). |
-| 23   | 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz). | 24   | 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz). |
-| 24   | 'template literal syntax' is only available in ES6 (use 'esversion: 6'). | 27   | 'template literal syntax' is only available in ES6 (use 'esversion: 6'). |
-| 46   | 'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6'). | 48   | 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz). |
-| 49   | 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz). | 56   | 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz). |
-| 57   | 'template literal syntax' is only available in ES6 (use 'esversion: 6'). | 64   | 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz). |
-| 71   | 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz). | 72   | 'template literal syntax' is only available in ES6 (use 'esversion: 6'). |
-| 73   | 'template literal syntax' is only available in ES6 (use 'esversion: 6'). | 77   | 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz). |
-| 82   | 'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6'). |      |                                                                         |
-
+|
 | Type | Variable |
 |------|----------|
 | Undefined | 7 bootstrap |
-| Unused | 8 deleteButtons |
+
 </details>
 
 ## Manual Testing
@@ -1219,15 +857,6 @@ The responsive design tests were carried out manually with [Google Chrome DevToo
 | **Bug**                                                                 | **Fix**                                                                                                          |
 |-------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
 | Bug1: Heroku log = Mis-cased Procfile detected; ignoring. to Heroku    | Rename it to `Procfile` to have it honored as it is case sensitive.                                            |
-| Bug2: Deployment was an error on the Heroku app = Bad Request (400).   | I forgot to add the Heroku site to the allowed hosts.                                                          |
-| Bug3: Forbidden (403) CSRF verification failed. Request aborted.        | Added Heroku to the `CSRF_TRUSTED_ORIGINS` in settings.                                                       |
-| Bug4: The model Post is already registered in the app blog.            | Removed the duplicate `admin.register(Post)` entry.                                                             |
-| Bug5: The drop-down list in the Django admin app was showing the ID and not the author's name. | Removed the incorrect code `raw_id_fields = ['author',]`, which returned it to its stock feature: a drop-down list. |
-| Bug6: admin.E108 The value of 'list_display' refers to 'first-name', which is not a callable, an attribute of 'UserProfileAdmin', or an attribute or method on 'blog.UserProfile'. | Changed the code from `first-name` to `first_name` as per my code.                                            |
-| Bug7: RelatedObjectDoesNotExist at /accounts/login/ User has no user profile. Exception Type: RelatedObjectDoesNotExist | Accessed the `manage.py` shell and imported the `UserProfile`, testing after with the shell. Reason: the model was changed and not synced with the database. |
-| Bug8: TemplateSyntaxError at /user_profile/ Could not parse the remainder: | I had extra curly braces; changed it to `<img src="{% static 'images/default_profile_picture.jpg' %}">`. |
-| Bug9: NoReverseMatch at /about/ Reverse for 'contact_success' not found. | It needed to include URLs: `path('about/', include('about.urls'))`.                                           |
-| Bug10: Mixed Content: The page at 'https://8000-......net/' was loaded over HTTPS, but requested an insecure element 'http://res.cloudinary....'. | To add `STATICFILES_STORAGE` for Cloudinary in settings because (Heroku) Django can't serve static files (images, CSS, etc.), |
 
 [Back to Table of Contents](#table-of-contents)
 
