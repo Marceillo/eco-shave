@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -29,6 +30,11 @@ ALLOWED_HOSTS = [
     '8000-marceillo-ecoshave-isg1mt279wv.ws.codeinstitute-ide.net'
     ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-marceillo-ecoshave-isg1mt279wv.ws.codeinstitute-ide.net',
+    
+    ] 
+
 
 # Application definition
 
@@ -39,7 +45,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'eco_shave',
+    'django.contrib.sites', # allauth
+    'allauth', # allauth
+    'allauth.account', # allauth
+    'allauth.socialaccount', # allauth
+    'home',
+    
 ]
 
 MIDDLEWARE = [
@@ -57,7 +68,10 @@ ROOT_URLCONF = 'eco_shave.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'templates', 'allauth'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -70,7 +84,34 @@ TEMPLATES = [
     },
 ]
 
+
+# allauth changed brackets
+AUTHENTICATION_BACKENDS = (
+   
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by email
+    'allauth.account.auth_backends.AuthenticationBackend',
+    
+)
+
+# allauth
+
+SITE_ID = 1  
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
+ACCOUNT_USERNAME_MIN_LENGTH = 4
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/'
+
 WSGI_APPLICATION = 'eco_shave.wsgi.application'
+
 
 
 # Database
@@ -118,7 +159,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
+MEDIA_URL = '/shave_media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'shave_media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
