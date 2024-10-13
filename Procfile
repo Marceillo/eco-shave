@@ -1,1 +1,1 @@
-web: gunicorn eco_shave.wsgi.application
+web: gunicorn eco_shave.wsgi
