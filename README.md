@@ -7,7 +7,13 @@
 - [Project Goal](#project-goal)
 - [User Experience (UX)](#user-experience-ux)
   - [User Stories](#user-stories)
-  - [Design](#design)
+- [Business Model](#business-model)
+  - [ DE and SE Shaving – The Philosophy](#de-se-shaving--the-philosophy)
+  - [Marketing Strategy](#marketing-strategy)
+  - [Future Marketing Ideas](#future-marketing-ideas)
+  - [SEO](#seo)
+  - [Google Search Console](#google-search-console)  
+- [Design](#design)
   - [Colour Scheme](#colour-scheme)
   - [Skeleton](#skeleton)
   - [Wireframes](#wireframes)
@@ -16,9 +22,7 @@
 - [Features](#features)
   - [Visual Effects](#visual-effects)
   - [Home Page](#home-page)
-  - [About Us Page](#about-us-page)
-  - [Blogs Page](#blogs-page)
-  - [Comments Page](#comments-page)
+  - [About Page](#about-us-page)
   - [Contact Page](#contact-page)
   - [Account Login](#account-login)
   - [Register](#register)
@@ -48,19 +52,14 @@
   - [Acknowledgements](#acknowledgements)
 
 
-## Overview
+# Overview
 
 
 ## Project Goal:
 
-
-
 **Project Objectives:**
 
-* 
-
-
-# User Experience UX
+## User Experience UX
 
 **User Stories**
 
@@ -93,6 +92,30 @@ User stories can be viewed here on the project [kanban board ](https://github.co
 
 [Back to Table of Contents](#table-of-contents)
 
+# Business Model 
+
+This is a company that sells shaving products for DE double edge blades or single edge blades and accessories.
+The razors can be used for a liftime even passed on to other generations and still customers can get the best shaves.
+So in actually fact each time a customer uses these products they are helping the enviroment and saving at the same time.
+
+## DE and SE Shaving – The Philosophy
+
+* The shaving razors are the best in my opinion after you go through a small learning curve you get the best shaves.
+* Its a customizible shave where you can change differant assesories such as blades and soaps even your shaving  routine plays a role, the list goes on and on each can 
+  give you a diffrant shave.
+* Why not turn a everyday shave into a hobby and somthing to look forward to doing.
+* DE double edge is newer than the SE single edge razors that dat as far back as the Egyptians even further probibly. 
+* It is a product that can last and the longer it lasts the more you are saving, I will say its a tool that keeps giving.
+* It helps the enviroment my using a product longer and leaving no wast when discarded.Mostly they are given to another generation.
+
+
+## Marketing Strategy
+
+* 
+
+## Future Marketing Ideas
+
+## SEO
 
 # Design
 
