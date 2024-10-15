@@ -1,4 +1,5 @@
 from django.db import models
+from star_ratings.fields import RatingField
 
 # Create your models here.
 
@@ -35,8 +36,16 @@ class Product(models.Model):
     image_url = models.URLField(max_length=1024,
     null=True, blank=True)
     is_active = models.BooleanField(default=True)
+    rating = RatingField() # star ratings
 
     def __str__(self):
         
         return f"{self.name} ({self.sku})"
 
+# from django docs
+class PreviewImage(models.Model):
+    """
+    To store multiple images for one product
+    """
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='preview_images/')

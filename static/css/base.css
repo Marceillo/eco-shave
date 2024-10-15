@@ -6,11 +6,11 @@ html {
 body {
     background: url('/media/pexels-joshsorenson-995300.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: 100vh;
+    height: calc(100vh - 608px);
     color: #555;
     font-family: 'Lato';
     display: flex; 
-    flex-direction: column; 
+    flex-direction: column;
 }
 
 /*------------------------------Main*/
@@ -31,7 +31,8 @@ main {
 
 #myCarousel {
     height: 400px; 
-    margin-top: 0; 
+    margin-top: 0;
+    position: relative; 
 }
 
 .carousel-item {
