@@ -5,7 +5,8 @@ html {
 /* ------------------------------Body*/
 body {
     background: url('/media/pexels-joshsorenson-995300.jpg') no-repeat center center fixed;
-    background-size: cover;
+    /* background-size: cover; */
+    object-fit: contain;
     height: calc(100vh - 608px);
     color: #555;
     font-family: 'Lato';
@@ -29,7 +30,7 @@ main {
 
 /*------------------------------home page template*/
 
-#myCarousel {
+/* #myCarousel {
     height: 400px; 
     margin-top: 0;
     position: relative; 
@@ -46,4 +47,4 @@ main {
 .carousel-caption {
     position: absolute; 
     bottom: 20px; 
-}
+} */
