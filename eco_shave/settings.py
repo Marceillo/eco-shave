@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'allauth.account', # allauth
     'allauth.socialaccount', # allauth
     'home',
+    'products',
     'star_ratings',
     
 ]

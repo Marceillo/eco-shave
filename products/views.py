@@ -3,6 +3,8 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+# from star_ratings.fields import RatingField
+from star_ratings.models import Rating
 
 from .forms import ProductForm
 from.models import Product, Category, PreviewImage
@@ -26,7 +28,7 @@ def all_products(request):
                 sortkey = 'lower_name'
                 products = products.annotate(lower_name=Lower('name'))
             if sortkey == 'category':
-                sortkey = 'category__name'  # Fixed assignment operator
+                sortkey = 'category__name' 
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
@@ -63,13 +65,23 @@ def product_detail(request, product_id):
    
     """
     product = get_object_or_404(Product, pk=product_id)
-    
-    
     preview_images = PreviewImage.objects.filter(product=product)
+
+    if request.method == 'POST':
+        score = request.POST.get('rating')
+
+        if score:
+            product.rating.add(score=int(score), 
+            user=request.user)
+            messages.success(request, 'Thank you for your rating!')
+        else:
+            messages.error(request, 'Please select a rating.')
 
     context = {
         'product': product,
-        'preview_images': preview_images,  # Pass images to the template
+        'preview_images': preview_images,
+        'average_rating': average_rating,
+         
     }
 
     return render(request, 'products/product_detail.html', context)
