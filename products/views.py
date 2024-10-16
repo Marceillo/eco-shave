@@ -118,5 +118,17 @@ def add_product(request):
 
     return render(request, template, context)
 
-
-
+def upload_product_view(request):
+    message = None
+    if request.method == 'POST':
+        product_form = ProductForm(request.POST)
+        if product_form.is_valid():
+            product = product_form.save()
+            # Handling multiple images
+            for img in request.FILES.getlist('images'):
+                PreviewImage.objects.create(product=product, image=img)
+            message = 'Product uploaded successfully!'
+    else:
+        product_form = ProductForm()
+    
+    return render(request, 'upload_product.html', {'product_form': product_form, 'message': message})
