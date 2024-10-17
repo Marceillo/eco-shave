@@ -22,9 +22,9 @@
                 Razors
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="/products/?category=safety_razors" class="dropdown-item">Safety Razors</a>
-                <a href="/products/?category=straight_razors" class="dropdown-item ">Straight Razors</a>
-                <a href="/products/?category=straight_razors,safety_razors" class="dropdown-item">All Razors</a>
+                <a href="{% url 'products' %}?category=safety_razors" class="dropdown-item">Safety Razors</a>
+                <a href="{% url 'products' %}?category=straight_razors" class="dropdown-item ">Straight Razors</a>
+                <a href="{% url 'products' %}?category=straight_razors,safety_razors" class="dropdown-item">All Razors</a>
             </div>
         </li>
 
