@@ -12,13 +12,13 @@ from.models import Product, Category, PreviewImage
 
 def all_products(request):
     """
-    
+    For all products with some filtering ans sorting.
     """
     products = Product.objects.all()
     query = None
     categories = None
     sort = None
-    directions = None
+    directions = 'asc'
 
     if request.GET:
         if 'sort' in request.GET:
@@ -49,7 +49,7 @@ def all_products(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
-    current_sorting = f'{sort}_{direction}'
+    current_sorting = f'{sort}'
 
     context = {
         'products': products,
@@ -62,7 +62,7 @@ def all_products(request):
 
 def product_detail(request, product_id):
     """
-   
+   Provides more information on the product.
     """
     product = get_object_or_404(Product, pk=product_id)
     preview_images = PreviewImage.objects.filter(product=product)
