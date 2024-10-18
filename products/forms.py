@@ -1,13 +1,14 @@
 from django import forms
-# from .widgets import CustomClearableFileInput
+from .widgets import CustomClearableFileInput
 from .models import Product, Category, PreviewImage
 
 class ProductForm(forms.ModelForm):
     
     images = forms.ImageField (
         label='Preview Images',
-        # widget=forms.ClearableFileInput(attrs={'multiple': True}),
-        required=False
+        widget=forms.FileInput(attrs={'multiple': True}),
+         required=False
+        
     )
     class Meta:
         model = Product

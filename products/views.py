@@ -100,7 +100,8 @@ def add_product(request):
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
-            product = form.save() 
+            product = form.save(commit=False) 
+            product.save() 
             
             
             images = request.FILES.getlist('images')  
