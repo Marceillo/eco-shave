@@ -34,11 +34,11 @@
                 Shaving Accessories
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Brushes</a>
-                <a href="" class="dropdown-item">Soaps & Aftershaves</a>
-                <a href="" class="dropdown-item">Shaving Bowls</a>
-                <a href="" class="dropdown-item">Blades</a>
-                <a href="" class="dropdown-item">All shaving Accessories</a>
+                <a href="{% url 'products' %}?category=brushes" class="dropdown-item">Brushes</a>
+                <a href="{% url 'products' %}?category=soaps_aftershaves" class="dropdown-item">Soaps & Aftershaves</a>
+                <a href="{% url 'products' %}?category=shaving_bowls" class="dropdown-item">Shaving Bowls</a>
+                <a href="{% url 'products' %}?category=blades" class="dropdown-item">Blades</a>
+                <a href="{% url 'products' %}?category=blades,shaving_bowls,soaps_aftershaves,brushes" class="dropdown-item">All shaving Accessories</a>
             </div>
         </li>
 
