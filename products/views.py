@@ -66,6 +66,9 @@ def product_detail(request, product_id):
     """
     product = get_object_or_404(Product, pk=product_id)
     preview_images = PreviewImage.objects.filter(product=product)
+    
+    for image in preview_images:
+        print(image.image.url)
 
     if request.method == 'POST':
         score = request.POST.get('rating')
@@ -80,7 +83,7 @@ def product_detail(request, product_id):
     context = {
         'product': product,
         'preview_images': preview_images,
-        'average_rating': average_rating,
+        # 'average_rating': average_rating,
          
     }
 
