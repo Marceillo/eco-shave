@@ -1,13 +1,13 @@
 from django import forms
-from .widgets import CustomClearableFileInput
+# from .widgets import CustomClearableFileInput
 from .models import Product, Category, PreviewImage
 
 class ProductForm(forms.ModelForm):
     
     images = forms.ImageField (
         label='Preview Images',
-        widget=forms.FileInput(attrs={'multiple': True}),
-         required=False
+        # widget=CustomClearableFileInput(attrs={'multiple': True}),
+        required=False
         
     )
     class Meta:
@@ -27,13 +27,13 @@ class ProductForm(forms.ModelForm):
 
     def save(self, commit=True):
         
-        product_instance = super().save(commit)
+        product_instance = super().save(commit=commit)
         
         
-        images = self.cleaned_data.get('images')
-        if images:
-            for image in images:
-                PreviewImage.objects.create(product=product_instance, image=image)
+        # images = self.files.getlist('images')
+        # if images:
+        #     for image in images:
+        #         PreviewImage.objects.create(product=product_instance, image=image)
         
         return product_instance
 

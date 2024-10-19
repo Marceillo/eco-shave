@@ -52,3 +52,13 @@ main {
     position: absolute; 
     bottom: 20px; 
 }
+
+/* carousel in products detail */
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); 
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+}

@@ -16,49 +16,61 @@
     <div class="overlay"></div>
     <div class="container-fluid">
         <div class="row">
-            <!-- Multi image setup -->
+
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-                <div id="productImages" class="carousel slide my-5" data-ride="carousel">
+                <div id="image_carousel" class="carousel slide my-5" data-touch="false" data-ride="carousel" data-interval="3200">
                     <div class="carousel-inner">
-                        {% for image in product.previewimage_set.all %}
-                            <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                                <a href="{{ image.image.url }}" target="_blank">
-                                    <img class="d-block w-100 img-fluid" src="{{ image.image.url }}" alt="{{ product.name }}"> 
+                        <!-----------------------------------------------------------------Main Image -->
+                        <div class="carousel-item active">
+                            {% if product.image %}
+                                <a href="{{ product.image.url }}" target="_blank">
+                                    <img src="{{ product.image.url }}" class="d-block w-100 img-fluid" alt="{{ product.name }}">
                                 </a>
-                            </div>
-                        {% empty %}
-                            <div class="carousel-item active">
+                            {% else %}
                                 <a href="{{ MEDIA_URL }}noimage.png" target="_blank">
-                                    <img class="d-block w-100 img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                    <img src="{{ MEDIA_URL }}noimage.png" class="d-block w-100 img-fluid" alt="{{ product.name }}">
+                                </a>
+                            {% endif %}
+                        </div>
+
+                        <!-----------------------------------------------------------------Preview Images -->
+                        {% for image in product.previewimage_set.all %}
+                            <div class="carousel-item">
+                                <a href="{{ image.image.url }}" target="_blank">
+                                    <img src="{{ image.image.url }}" class="d-block w-100 img-fluid" alt="{{ product.name }}">
                                 </a>
                             </div>
                         {% endfor %}
                     </div>
-                    <a class="carousel-control-prev" href="#productImages" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#productImages" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            </div>
 
-            <!-- Product info -->
+                    <!-----------------------------------------------------------------Carousel Controls -->
+                    {% if product.previewimage_set.exists or product.image %}
+                        <a class="carousel-control-prev" href="#image_carousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#image_carousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    {% endif %}
+                </div> 
+            </div> 
+
+            <!-----------------------------------------------------------------Product info -->
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-5 mt-md-5">
                     <p class="mb-0">{{ product.name }}</p>
                     <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
 
-                    <!-- Star Rating -->
+                    <!-----------------------------------------------------------------django Star Rating -->
                     <div class="product-rating mt-2">
                         {% ratings product %}
                     </div>
 
                     <p class="mt-3">{{ product.description }}</p>
-                </div>
-            </div>
+                </div> 
+            </div> 
         </div>
-    </div>
+    </div> 
 {% endblock %}

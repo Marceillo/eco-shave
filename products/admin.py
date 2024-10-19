@@ -7,7 +7,7 @@ class PreviewImageInline(admin.TabularInline):
     model = PreviewImage
     extra = 1 
 
-
+@admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
         'sku',
@@ -15,16 +15,25 @@ class ProductAdmin(admin.ModelAdmin):
         'category',
         'price',
         # 'rating',
-        'image',
+        'is_active',
+        'get_main_image', 
+        'get_preview_images' 
+        
     )
+
+    def get_main_image(self, obj):
+        return obj.image.url if obj.image else 'No image'
+    
+    def get_preview_images(self, obj):
+        return ', '.join([img.image.url for img in obj.previewimage_set.all()]) or 'No preview images'
 
     ordering = ('sku',)
     inlines = [PreviewImageInline]
-    
+  
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ('name',)
 
 
-admin.site.register(Product, ProductAdmin)
+# admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
