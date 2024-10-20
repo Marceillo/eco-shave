@@ -23,6 +23,8 @@
 - [Features](#features)
   - [Visual Effects](#visual-effects)
   - [Home Page](#home-page)
+  - [Product Page](#product-page)
+  - [Product Detail Page](#product-detail-page)
   - [About Page](#about-us-page)
   - [Contact Page](#contact-page)
   - [Account Login](#account-login)
@@ -261,8 +263,7 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 
 #### After login  
 
-* 
-
+*
 
 <br>
 
@@ -279,6 +280,16 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 <br>
 
 </details>
+
+### Product Page 
+
+* Feature :[django-star-ratings](https://django-star-ratings.readthedocs.io/en/latest/) this is a software install that handles the ratings this is differant to the LMS.
+* Sort with categories 
+
+### Product Detail Page
+
+* Feature : [Multiview feature](https://djangoguide.com/django-image-upload-specialization/django-multiple-image-upload/) from django that allows for one object to have multiple images .
+
 
 ### About Page
 
@@ -567,6 +578,10 @@ I added sprints to help with organizing the project and MoSCoW prioritization La
 [Back to Table of Contents](#table-of-contents)
 
 # Testing
+
+Created a separate document for testing below is the link.
+
+[testing] (workspace/eco-shave/TESTING.md)
 
 ## Responsive Layout and Design
 

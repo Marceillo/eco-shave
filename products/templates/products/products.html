@@ -79,13 +79,12 @@
                                                 </a>
                                             </p>
                                             {% endif %}
-                                            <!-- Product rating using django star rating application  -->
-                                            <div class="product-rating">
-                                                {% if product.rating %}
-                                                    {% ratings product "rating" %}
-                                                {% else %}
-                                                    <small class="text-muted">No rating yet</small>
-                                                {% endif %}
+                                            <!-----------------------------------------------------------------django Star Rating -->
+                                            <div class="product-rating mt-2">
+                                                <div class="product-rating mt-2">
+                                                    {% ratings product %}
+                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
