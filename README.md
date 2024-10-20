@@ -3,16 +3,17 @@
 
 ## Table of Contents
 
-- [Overview](#overview)
-- [Project Goal](#project-goal)
-- [User Experience (UX)](#user-experience-ux)
-  - [User Stories](#user-stories)
+- [Objective](#objective)
+- [Site User Goal](#site-user-goal)
+- [Site Owners Goal](#site-owners-goal)
 - [Business Model](#business-model)
   - [ DE and SE Shaving – The Philosophy](#de-se-shaving--the-philosophy)
   - [Marketing Strategy](#marketing-strategy)
   - [Future Marketing Ideas](#future-marketing-ideas)
   - [SEO](#seo)
   - [Google Search Console](#google-search-console)  
+- [User Experience (UX)](#user-experience-ux)
+  - [User Stories](#user-stories)
 - [Design](#design)
   - [Colour Scheme](#colour-scheme)
   - [Skeleton](#skeleton)
@@ -52,45 +53,14 @@
   - [Acknowledgements](#acknowledgements)
 
 
-# Overview
+# Objective
 
 
-## Project Goal:
+## Site User Goal:
+
+## Site Owners Goal
 
 **Project Objectives:**
-
-## User Experience UX
-
-**User Stories**
-
-User stories can be viewed here on the project [kanban board ](https://github.com/users/Marceillo/projects/8/views/1)
-
-| EPIC                               | ID | User Story                                                           |
-| :--------------------------------- | -- | :------------------------------------------------------------------- |
-| **User Authentication and Profiles**|    |                                                                      |
-|                                     | 1.1| As a user, I can register and log in so that I can access the website.|             
-|                                     | 1.2| As a user, I want to view and edit my profile.                        |
-| **Core Blog Functionality** |    |                                                                      | 
-|                                     | 2.1| As a user, I want to search for specific kayaking topics.             |
-|                                     | 2.2| As a content creator, I can write blog posts so that it is published. |
-|                                     | 2.3| As a user, I want to read blog posts about kayaking experiences.      |
-| **User Interaction and Engagement** |    |                                            |
-|                                     | 3.1 |As a user, I want to comment on blog posts. |
-|                                     | 3.2 | As a user, I want to like blog posts. |
-|                                     | 3.3 |As a user, I want to favorite blog posts to find them later easily.  |
-| **Core Blog Functionality** |    |                                                       |
-|                                     | 4.1 | As a content creator, I want to upload for **images for my blog posts.|
-|                                     | 4.2 | As a user, I want to search for specific kayaking topics.           |
-|                                     | 4.3 | As a content creator, I can write blog posts so that it is published.|
-| **Admin Functionality** |     |                                                                     |
-|                                     | 5.1 | As an admin, I want to manage users and content through the admin panel. |
-| **EPIC: Mobile Responsiveness and UI/UX**|    |                                                                 |
-|                                     | 6.1 | As a user, I want to view the website on my mobile device.          |
-|                                     | 6.2 | As a user, I want to view the website on my Focus on testing all implemented features.          |
-|**Focus on testing all implemented features**.| 
-
-
-[Back to Table of Contents](#table-of-contents)
 
 # Business Model 
 
@@ -111,12 +81,46 @@ So in actually fact each time a customer uses these products they are helping th
 
 ## Marketing Strategy
 
-* 
+* Optimize For Mobile Devices
+* The Website Layout
+* Create content (content marketing)
+* Facebook and Instagram (social media marketing)
 
 ## Future Marketing Ideas
+* 
 
 ## SEO
+* 
 
+[Back to Table of Contents](#table-of-contents)
+
+# User Experience UX
+
+## User Stories
+
+User stories can be viewed here on the project [kanban board ](https://github.com/users/Marceillo/projects/10)
+
+| EPIC                                   | ID  | Priority     | User Story                                                                                     |
+| :------------------------------------- | --  | :----------- | :--------------------------------------------------------------------------------------------- |
+| **E-commerce Integration**             | 1.1 | Must-Have    | As a user, I want to add products to a shopping cart and proceed to check out, so I can easily make purchases on the site. |
+|                                       | 1.2 | Must-Have    | As a user, I want to receive confirmation of my purchase via email and on-screen notifications, so I can verify my order. |
+|                                       | 1.3 | Should-Have  | As a user, I want a streamlined checkout process, so I can complete my purchases efficiently.  |
+| **User Experience Design**            | 2.1 | Must-Have    | As a user, I want an accessible and intuitive website, so I can navigate and interact with the content seamlessly. |
+|                                       | 2.2 | Must-Have    | As a user, I want a mobile-responsive design, so I can access the website on different devices. |
+|                                       | 2.3 | Should-Have  | As a user, I want to edit and view my profile information, so I can keep my account details up-to-date. |
+|                                       | 2.4 | Should-Have  | As a user, I want to create and manage a wishlist within my profile modal, so I can save products for future consideration. |
+| **Search Engine Optimization**         | 3.1 | Must-Have    | As a user, I want to find products quickly using search functionality, so I can locate items efficiently. |
+|                                       | 3.2 | Should-Have  | As a user, I want a helpful 404 error page with navigation options, so I can find my way back to the main site if needed. |
+| **Authentication and Authorization**   | 4.1 | Must-Have    | As a user, I want to register and log in securely to access my account information.           |
+|                                       | 4.2 | Must-Have    | As an admin, I want to manage user roles effectively, so I can control access levels based on user roles. |
+|                                       | 4.3 | Should-Have  | As a user, I want to see my login status clearly on every page.                               |
+| **Marketing and Brand Reach**         | 5.1 | Must-Have    | As a user, I want to subscribe to newsletters for updates and promotions.                     |
+|                                       | 5.2 | Should-Have  | As a user, I want to share products on social media easily to recommend them to friends.     |
+| **E-commerce Fundamentals**            | 6.1 | Must-Have    | As a business owner, I want to document the e-commerce model clearly for outlining the application’s purpose and user value. |
+| **Customer Support and Information Access** | 7.1 | Must-Have    | As a user, I want to submit a contact form so that I can easily reach out for support or inquiries.   |
+|                                       | 7.2 | Must-Have    | As a user, I want to view frequently asked questions in a modal so that I can find quick answers without leaving the About Page.   |
+|                                       | 7.3 | Should-Have  | As a user, I want the contact form and FAQ modal to be mobile-responsive so that I can access them on any device.   |
+[Back to Table of Contents](#table-of-contents)
 
 
 # Design
@@ -570,33 +574,7 @@ The project design was adapted to different devices and Bootstrap helped with mo
 
 * Testing was ongoing during this project from one feature to the next even so I left some of the final testing for last.
  
-## Testing User Stories
 
-<details>
-<summary>User stories testing</summary>
-
-## User Stories Table
-
-| EPIC                                 | ID   | User Story                                                                 | Check | Test Result                                                                                      |
-| :----------------------------------- | ---- | :------------------------------------------------------------------------- | :---: | :----------------------------------------------------------------------------------------------- |
-| **User Authentication and Profiles** |      |                                                                           |       |                                                                                                 |
-|                                     | 1.1  | As a user, I can register and log in so that I can access the website.   | [x]   | The button is there to register and I can access the site after login.                         |
-|                                     | 1.2  | As a user, I want to view and edit my profile.                            | [x]   | I can access my profile and have CRUD functionality.                                           |
-| **Core Blog Functionality**         |      |                                                                           |       |                                                                                                 |
-|                                     | 2.1  | As a user, I want to search for specific kayaking topics.                 | [x]   | I can search by title, body, excerpt, and author for kayaking topics in the blog.              |
-|                                     | 2.2  | As a content creator, I can write blog posts so that they are published.  | [x]   | I can write a post as an admin and as a user, and I can see it in draft and published with CRUD functionality. |
-|                                     | 2.3  | As a user, I want to read blog posts about kayaking experiences.          | [x]   | I can read blog posts in detail.                                                                |
-| **User Interaction and Engagement** |      |                                                                           |       |                                                                                                 |
-|                                     | 3.1  | As a user, I want to comment on blog posts.                               | [x]   | I have CRUD functionality on comments.                                                          |
-|                                     | 3.2  | As a user, I want to like blog posts.                                     | [ ]   | For future implementation.                                                                       |
-|                                     | 3.3  | As a user, I want to favorite blog posts to find them later easily.      | [x]   | I can favorite and unfavorite blog posts.                                                      |
-| **Admin Functionality**             |      |                                                                           |       |                                                                                                 |
-|                                     | 5.1  | As an admin, I want to manage users and content through the admin panel.  | [x]   | The admin has CRUD functionality and can manage the content.                                   |
-| **EPIC: Mobile Responsiveness and UI/UX** |  |                                                                           |       |                                                                                                 |
-|                                     | 6.1  | As a user, I want to view the website on my mobile device.               | [x]   | Yes, I can view the website on a mobile device and other formats.                              |
-|                                     | 6.2  | I want to view the website on my mobile device.                           | [x]   | I have tested the features on a mobile device.                                                 |
-| **Focus on Testing All Implemented Features** | |                                                                           | [x]   | All focused features have been tested on an ongoing basis.
-</details>
 
 ## Python Validation - PEP8
 
