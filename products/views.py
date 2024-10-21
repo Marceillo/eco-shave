@@ -45,8 +45,14 @@ def all_products(request):
                 messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
-            products = products.filter(queries)
+            queries = (
+                Q(name__icontains=query) 
+                | Q(description__icontains=query)
+                | Q(category__name__icontains=query)
+                | Q(category__friendly_name__icontains=query)
+            )
+            # distinct removes duplicate results 
+            products = products.filter(queries).distinct() 
 
     current_sorting = f'{sort}'
 

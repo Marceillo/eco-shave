@@ -18,6 +18,11 @@ body {
     display: flex;
     flex-direction: column;
 } */
+
+.text-black {
+    color: olive !important;
+}
+
 /*------------------------------Main*/
 main {
     flex: 1; 
@@ -52,6 +57,24 @@ main {
     position: absolute; 
     bottom: 20px; 
 }
+
+/* Products */
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
+
 
 /* carousel in products detail */
 
