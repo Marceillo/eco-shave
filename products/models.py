@@ -1,5 +1,4 @@
 from django.db import models
-# from star_ratings.fields import RatingField
 from star_ratings.models import Rating
 
 # Create your models here.
@@ -37,8 +36,7 @@ class Product(models.Model):
     image_url = models.URLField(max_length=1024,
     null=True, blank=True)
     is_active = models.BooleanField(default=True)
-    # star rating
-    # rating = RatingField() 
+
 
     def __str__(self):
         

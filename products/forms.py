@@ -6,7 +6,6 @@ class ProductForm(forms.ModelForm):
     
     images = forms.ImageField (
         label='Preview Images',
-        # widget=CustomClearableFileInput(attrs={'multiple': True}),
         required=False
         
     )
@@ -28,12 +27,6 @@ class ProductForm(forms.ModelForm):
     def save(self, commit=True):
         
         product_instance = super().save(commit=commit)
-        
-        
-        # images = self.files.getlist('images')
-        # if images:
-        #     for image in images:
-        #         PreviewImage.objects.create(product=product_instance, image=image)
         
         return product_instance
 

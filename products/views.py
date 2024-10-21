@@ -3,7 +3,6 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
-# from star_ratings.fields import RatingField
 from star_ratings.models import Rating
 
 from .forms import ProductForm
@@ -66,9 +65,6 @@ def product_detail(request, product_id):
     """
     product = get_object_or_404(Product, pk=product_id)
     preview_images = PreviewImage.objects.filter(product=product)
-    
-    # for image in preview_images:
-    #     print(image.image.url)
 
     if request.method == 'POST':
         score = request.POST.get('rating')
@@ -83,7 +79,6 @@ def product_detail(request, product_id):
     context = {
         'product': product,
         'preview_images': preview_images,
-        # 'average_rating': average_rating,
          
     }
 
@@ -128,7 +123,7 @@ def upload_product_view(request):
         product_form = ProductForm(request.POST)
         if product_form.is_valid():
             product = product_form.save()
-            # Handling multiple images
+            
             for img in request.FILES.getlist('images'):
                 PreviewImage.objects.create(product=product, image=img)
             message = 'Product uploaded successfully!'

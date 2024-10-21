@@ -14,7 +14,6 @@ class ProductAdmin(admin.ModelAdmin):
         'name',
         'category',
         'price',
-        # 'rating',
         'is_active',
         'get_main_image', 
         'get_preview_images' 
@@ -34,6 +33,4 @@ class ProductAdmin(admin.ModelAdmin):
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ('name',)
 
-
-# admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
