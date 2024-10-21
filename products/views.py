@@ -91,7 +91,7 @@ def product_detail(request, product_id):
 
 
 def add_product(request):
-    """  """
+    """ To add products  """
     
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
