@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -14,46 +13,102 @@
     <div class="overlay"></div>
     <div class="container mb-2">
         <div class="row">
-            <div class="col">
-                <hr>
-                <h2 class="logo-font mb-4">Shopping Bag</h2>
-                <hr>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8">
-                {% if bag_items %}
-                    {% for item in bag_items %}
-                        <div class="row mb-3">
-                            <div class="col-12 col-sm-6">
-                                {% include "bag/product-image.html" %}
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                {% include "bag/product-info.html" %}
-                                <p>Price Each: €{{ item.product.price }}</p>
-                                <p><strong>Subtotal: </strong>€{% comment %}
-                                    {{ item.product.price | calc_subtotal:item.quantity }}
-                                  {% endcomment %}</p>
-                                {% include "bag/quantity-form.html" %}
+            <div class="col-md-8 order-md-1">
+                <h4 class="mb-3">Checkout form</h4>
+                <p class="lead">Below is an example form built entirely with Bootstrap form controls.</p>
+                <form class="needs-validation" novalidate>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="firstName">First name</label>
+                            <input type="text" class="form-control" id="firstName" required>
+                            <div class="invalid-feedback">
+                                Valid first name is required.
                             </div>
                         </div>
-                        <hr>
-                    {% endfor %}
-                    <div class="text-right">
-                        {% include "bag/bag-total.html" %}
-                        {% include "bag/checkout-buttons.html" %}
+                        <div class="col-md-6 mb-3">
+                            <label for="lastName">Last name</label>
+                            <input type="text" class="form-control" id="lastName" required>
+                            <div class="invalid-feedback">
+                                Valid last name is required.
+                            </div>
+                        </div>
                     </div>
-                {% else %}
-                    <p class="lead mb-5">Your bag is empty.</p>
-                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                        Keep Shopping
-                    </a>
-                {% endif %}
+
+                    <div class="mb-3">
+                        <label for="username">Username</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">@</span>
+                            </div>
+                            <input type="text" class="form-control" id="username" required>
+                            <div class="invalid-feedback" style="width: 100%;">
+                                Your username is required.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email">Email <span class="text-muted">(Optional)</span></label>
+                        <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                        <div class="invalid-feedback">
+                            Please enter a valid email address for shipping updates.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="address">Address</label>
+                        <input type="text" class="form-control" id="address" required>
+                        <div class="invalid-feedback">
+                            Please enter your shipping address.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
+                        <input type="text" class="form-control" id="address2">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-5 mb-3">
+                            <label for="country">Country</label>
+                            <select class="custom-select d-block w-100" id="country" required>
+                                <option value="">Choose...</option>
+                                <option>United States</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid country.
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="state">State</label>
+                            <select class="custom-select d-block w-100" id="state" required>
+                                <option value="">Choose...</option>
+                                <option>California</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please provide a valid state.
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="zip">Zip</label>
+                            <input type="text" class="form-control" id="zip" required>
+                            <div class="invalid-feedback">
+                                Zip code required.
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="mb-4">
+                    <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+                </form>
             </div>
 
-            <div class="col-md-4">
-                <h4>Your Cart</h4>
+            <!-- Your Cart Section -->
+            <div class="col-md-4 order-md-2 mb-4">
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="text-muted">Your cart</span>
+                    <span class="badge badge-secondary badge-pill">3</span>
+                </h4>
                 <ul class="list-group mb-3">
                     {% for item in bag_items %}
                         <li class="list-group-item d-flex justify-content-between lh-condensed">
@@ -61,16 +116,14 @@
                                 <h6 class="my-0">{{ item.product.name }}</h6>
                                 <small class="text-muted">{{ item.product.description }}</small>
                             </div>
-                            <span class="text-muted">€{% comment %}{{ item.product.price | calc_subtotal:item.quantity }}{% endcomment %}</span>
+                            <span class="text-muted">€{{ item.product.price }}</span>
                         </li>
                     {% endfor %}
                     <li class="list-group-item d-flex justify-content-between">
                         <span>Total (EUR)</span>
-                        <strong>€{{ total_price }}</strong> <!-- Assuming total_price is calculated in your context -->
+                        <strong>€{{ total_price }}</strong>
                     </li>
                 </ul>
-
- 
             </div>
         </div>
     </div>
@@ -79,19 +132,20 @@
 {% block postloadjs %}
 {{ block.super }}
 <script type="text/javascript">
-    $('.update-link').click(function(e) {
-        var form = $(this).prev('.update-form');
-        form.submit();
-    });
-
-    $('.remove-item').click(function(e) {
-        var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('remove_')[1];
-        var url = `/bag/remove/${itemId}/`;
-        $.post(url, {'csrfmiddlewaretoken': csrfToken})
-         .done(function() {
-             location.reload();
-         });
-    });
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+            var forms = document.getElementsByClassName('needs-validation');
+            Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
 </script>
 {% endblock %}
