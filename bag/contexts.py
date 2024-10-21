@@ -1,14 +1,11 @@
-from django.conf import settings
-from django.shortcuts import get_object_or_404
-from products.models import Product
+# from bag.contexts import bag_contents
 
-def shopping_bag(request):
+def bag_contents(request):
     """
     
     """
-    
-    shopping_bag = request.session.get('bag', {})
-    context = {'items_in_bag': sum(shopping_bag.values())}
+    shopping_bag = request.session.get('shopping_bag', {})
+    context = {'items_in_bag_contents': sum(shopping_bag.values())}
     return context
 
 
