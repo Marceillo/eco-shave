@@ -10,62 +10,81 @@
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container mb-5">
-        <h2 class="logo-font text-center mb-4">Shopping </h2>
-        <div class="row">
-            <div class="col-md-8">
-                {% if bag_items %}
-                    {% for item in bag_items %}
-                        <div class="card mb-3">
-                            <div class="row no-gutters">
-                                <div class="col-md-4">
-                                    {% include "bag/product-image.html" %}
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">{{ item.product.name }}</h5>
-                                        <p class="card-text">Price Each: €{{ item.product.price }}</p>
-                                        <p><strong>Subtotal: </strong>€{% comment %}{{ item.product.price | calc_subtotal:item.quantity }}{% endcomment %}</p>
-                                        {% include "bag/quantity-form.html" %}
-                                        <button class="btn btn-danger remove-item" id="remove_{{ item.id }}">Remove</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    {% endfor %}
-                    <hr>
-                    <div class="text-right">
-                        {% include "bag/bag-total.html" %}
-                        {% include "bag/checkout-buttons.html" %}
+thi<div class="card">
+    <div class="row">
+        <div class="col-md-8 cart">
+            <div class="title">
+                <div class="row">
+                    <div class="col"><h4><b>Shopping Bag</b></h4></div>
+                    <div class="col align-self-center text-right text-muted">3 items</div>
+                </div>
+            </div>    
+            <div class="row border-top border-bottom">
+                <div class="row main align-items-center">
+                    <div class="col-2"><img class="img-fluid" src="https://i.imgur.com/1GrakTl.jpg"></div>
+                    <div class="col">
+                        <div class="row text-muted">Shirt</div>
+                        <div class="row">Cotton T-shirt</div>
                     </div>
-                {% else %}
-                    <p class="lead mb-5">Your bag is empty.</p>
-                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">Keep Shopping</a>
-                {% endif %}
+                    <div class="col">
+                        <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a>
+                    </div>
+                    <div class="col">&euro; 44.00 <span class="close">&#10005;</span></div>
+                </div>
             </div>
-
-            <div class="col-md-4">
-                <h4>Your Cart Summary</h4>
-                <ul class="list-group mb-3">
-                    {% for item in bag_items %}
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <div>
-                                <h6 class="my-0">{{ item.product.name }}</h6>
-                                <small class="text-muted">{{ item.product.description }}</small>
-                            </div>
-                            <span class="text-muted">€{% comment %}{{ item.product.price | calc_subtotal:item.quantity }}{% endcomment %}</span>
-                        </li>
-                    {% endfor %}
-                    <li class="list-group-item d-flex justify-content-between">
-                        <span>Total (EUR)</span>
-                        <strong>€{{ total_price }}</strong> 
-                    </li>
-                </ul>
+            <div class="row">
+                <div class="row main align-items-center">
+                    <div class="col-2"><img class="img-fluid" src="https://i.imgur.com/ba3tvGm.jpg"></div>
+                    <div class="col">
+                        <div class="row text-muted">Shirt</div>
+                        <div class="row">Cotton T-shirt</div>
+                    </div>
+                    <div class="col">
+                        <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a>
+                    </div>
+                    <div class="col">&euro; 44.00 <span class="close">&#10005;</span></div>
+                </div>
             </div>
+            <div class="row border-top border-bottom">
+                <div class="row main align-items-center">
+                    <div class="col-2"><img class="img-fluid" src="https://i.imgur.com/pHQ3xT3.jpg"></div>
+                    <div class="col">
+                        <div class="row text-muted">Shirt</div>
+                        <div class="row">Cotton T-shirt</div>
+                    </div>
+                    <div class="col">
+                        <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a>
+                    </div>
+                    <div class="col">&euro; 44.00 <span class="close">&#10005;</span></div>
+                </div>
+            </div>
+            <div class="back-to-shop"><a href="#">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
+        </div>
+        <div class="col-md-4 summary">
+            <div><h5><b>Summary</b></h5></div>
+            <hr>
+            <div class="row">
+                <div class="col" style="padding-left:0;">ITEMS 3</div>
+                <div class="col text-right">&euro; 132.00</div>
+            </div>
+            <form>
+                <p>SHIPPING</p>
+                <select><option class="text-muted">Standard-Delivery- &euro;5.00</option></select>
+                <p>GIVE CODE</p>
+                <input id="code" placeholder="Enter your code">
+            </form>
+            <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
+                <div class="col">TOTAL PRICE</div>
+                <div class="col text-right">&euro; 137.00</div>
+            </div>
+            <button class="btn">CHECKOUT</button>
         </div>
     </div>
+    
+</div>
 {% endblock %}
+
+
 
 {% block postloadjs %}
 {{ block.super }}
