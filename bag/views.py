@@ -9,19 +9,13 @@ def view_bag(request):
     """ A view that renders the bag contents page """
 
     shopping_bag = request.session.get('shopping_bag', {})
-    items_in_bag_contents = sum(shopping_bag.values())
-
-    products = Product.objects.filter(id__in=shopping_bag.keys())
-
-    product_dict = {product.id: product for product in products}
-    
-    total_price = sum(product.price * quantity for 
-    item_id, quantity in shopping_bag.items() if (product := product_dict.get(int(item_id))))
-    
+    total_items = sum(shopping_bag.values())
+    total_price = sum(Product.objects.get(pk=int(item_id)).price * quantity for 
+    item_id, quantity in shopping_bag.items())
+  
     context = {
-        'items_in_bag_contents': items_in_bag_contents,
         'shopping_bag': shopping_bag,
-        'product_dict': product_dict,
+        'total_items': total_items,
         'total_price': total_price,
         
     }
@@ -33,15 +27,20 @@ def add_to_bag( request, item_id):
     """
     Add products to the shopping bag. 
     """
+   
     product = get_object_or_404(Product, pk=item_id)
-    shopping_bag = request.session.get('shopping_bag', {})
-
+    shopping_bag = request.session.get('bag', {})
+   
     if item_id in shopping_bag:
-        shopping_bag[item_id] += 1 
+        shopping_bag[item_id] += quantity
+        messages.success(request, f'Updated {product.name} quantity to {shopping_bag[item_id]}') 
     else:
-        shopping_bag[item_id]= 1
-    request.session['shopping_bag'] = shopping_bag
-    messages.success(request, f'Added {product.name} to your bag.') 
+        shopping_bag[item_id]= quantity
+        messages.success(request, f'Added {product.name} to your bag.')
+
+    request.session['bag'] = shopping_bag
+    return redirect(reverse('view_bag'))
+ 
 
 
 
