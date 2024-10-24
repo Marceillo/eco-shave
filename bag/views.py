@@ -9,12 +9,19 @@ def view_bag(request):
     """ A view that renders the bag contents page """
 
     shopping_bag = request.session.get('shopping_bag', {})
+    items_in_bag_contents = sum(shopping_bag.values())
 
+    products = Product.objects.filter(id__in=shopping_bag.keys())
+
+    total_price = sum(Product.objects.get(id=item_id).price * quantity for
+    item_id, quantity in shopping_bag.items())
+    
     context = {
-        'items_in_bag_contents':
-        sum(shopping_bag.values()),
+        'items_in_bag_contents': items_in_bag_contents,
         'shopping_bag': shopping_bag,
-
+        'products': products,
+        'total_price': total_price,
+        
     }
 
     return render(request, 'bag/bag.html', context)
