@@ -74,8 +74,6 @@ main {
     cursor: pointer;
 }
 
-
-
 /* carousel in products detail */
 
 .carousel-control-prev-icon,
@@ -88,4 +86,53 @@ main {
 
 }
 
+/* shopping buttons */
+
+.shop-now-button {
+    background: gold;
+    color: white;
+    min-width: 260px;
+    border-radius: 50% !important;
+}
+
+.btn-black {
+    background: #555;
+    color: gold;
+}
+
+.btn-outline-black {
+    background: #555;
+    color: gold !important; 
+    border: 1px solid #555;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: #555;
+    color: gold !important;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: gold;
+    color: #555;
+    border: 4px solid #555;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid #555 !important;
+}
+
+.bg-black {
+    background: #555!important;
+}
 
