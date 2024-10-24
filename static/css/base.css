@@ -23,6 +23,12 @@ body {
     color: #555 !important;
 }
 
+.container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+
 /*------------------------------Main*/
 main {
     flex: 1; 
