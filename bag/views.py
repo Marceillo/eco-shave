@@ -13,13 +13,15 @@ def view_bag(request):
 
     products = Product.objects.filter(id__in=shopping_bag.keys())
 
-    total_price = sum(Product.objects.get(id=item_id).price * quantity for
-    item_id, quantity in shopping_bag.items())
+    product_dict = {product.id: product for product in products}
+    
+    total_price = sum(product.price * quantity for 
+    item_id, quantity in shopping_bag.items() if (product := product_dict.get(int(item_id))))
     
     context = {
         'items_in_bag_contents': items_in_bag_contents,
         'shopping_bag': shopping_bag,
-        'products': products,
+        'product_dict': product_dict,
         'total_price': total_price,
         
     }
@@ -38,8 +40,8 @@ def add_to_bag( request, item_id):
         shopping_bag[item_id] += 1 
     else:
         shopping_bag[item_id]= 1
-        request.session['shopping_bag'] = shopping_bag
-        messages.success(request, f'Added {product.name} to your bag.') 
+    request.session['shopping_bag'] = shopping_bag
+    messages.success(request, f'Added {product.name} to your bag.') 
 
 
 

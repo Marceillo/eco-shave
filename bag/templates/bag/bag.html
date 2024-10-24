@@ -1,12 +1,18 @@
 {% extends "base.html" %}
 {% load static %}
 
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
             <div class="col"></div>
         </div>
     </div>
+{% endblock %}
+{% block extra_css %}
+
+    <link rel="stylesheet" href="{% static 'bag/bag.css' %}">
+ 
 {% endblock %}
 
 {% block content %}
@@ -19,11 +25,11 @@
                     <div class="col align-self-center text-right text-muted">{{ items_in_bag_contents }} items</div>
                 </div>
             </div>
-            {% for item_id, quantitiy in shopping_bag.items %}
-                {% with product=products|get_item:item_id %}    
-                <div class="row border-top border-bottom">
+            {% for item_id, quantity in shopping_bag.items %}
+            {% with products=product_dict[item_id] %} 
+            <div class="row border-top border-bottom">
                     <div class="row main align-items-center">
-                        <div class="col-2"><img class="img-fluid" src="{{ product.image_url}}" alt="{{ product.name }}"></div>
+                        <div class="col-2"><img class="img-fluid" src="{{ product.image_url }}"  alt="{{ product.name }}"></div>
                         <div class="col">
                             <div class="row text-muted">{{ product.category.name }}</div>
                             <div class="row">{{ product.name }}</div>
@@ -31,15 +37,13 @@
                         <div class="col">
                             <a href="#" class="remove-item" id="remove_{{ item_id }}">-</a><a href="#" class="border">{{ quantity }}</a><a href="#">+</a>
                         </div>
-                        <div class="col">&euro; {{ product.price }} <span class="close remove-item" id="remove_{{ item-id }}">&#10005;</span>
+                        <div class="col">&euro; {{ product.price }} <span class="close remove-item" id="remove_{{ item_id }}">&#10005;</span>
                         </div>
                     </div>
-                </div>
-                {% endwith %}
-            {% endfor %}
-            <div class="back-to-shop"><a href="#">&leftarrow;</a><span class="text-muted">Back to shop</span>
-                
+            </div>
             
+            {% endfor %}
+    
             </div>
             <div class="col-md-4 summary">
                 <div><h5><b>Summary</b></h5></div>
@@ -53,6 +57,7 @@
                     <div class="col text-right">&euro; {{ total_price }}</div>
                 </div>
                 <button class="btn">CHECKOUT</button>
+                <div class="back-to-shop"><a href="{% url 'products' %}">&leftarrow;</a><span class="text-muted">Back to shop</span>
             </div>
         </div>
         
