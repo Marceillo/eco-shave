@@ -4,8 +4,8 @@
 
 {% block page_header %}
     <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
+        <div class="col text-center">
+            <h1>Your Shopping Bag</h1>
         </div>
     </div>
 {% endblock %}
@@ -16,56 +16,61 @@
 {% endblock %}
 
 {% block content %}
-<div class="card">
-    <div class="row">
-        <div class="col-md-8 cart">
-            <div class="title">
-                <div class="row">
-                    <div class="col"><h4><b>Shopping Bag</b></h4></div>
-                    <div class="col align-self-center text-right text-muted">{{ items_in_bag_contents }} items</div>
-                </div>
-            </div>
-            {% for item_id, quantity in shopping_bag.items %}
-            {% with product=product_dict.item_id %}
-            <div class="row border-top border-bottom">
-                    <div class="row main align-items-center">
-                        <div class="col-2"><img class="img-fluid" src="{{ product.image_url }}"  alt="{{ product.name }}"></div>
-                        <div class="col">
-                            <div class="row text-muted">{{ product.category.name }}</div>
-                            <div class="row">{{ product.name }}</div>
-                        </div>
-                        <div class="col">
-                            <a href="#" class="remove-item" id="remove_{{ item_id }}">-</a>
-                            <a href="#" class="border">{{ quantity }}</a>
-                            <a href="#" class="add-item" id="add_{{ item_id }}">+</a>
-                        </div>
-                        <div class="col">&euro; {{ product.price }} <span class="close remove-item" id="remove_{{ item_id }}">&#10005;</span>
+<div class="container">
+    <div class="card">
+        <div class="row">
+            <div class="col-md-8 cart">
+                <div class="title">
+                    <div class="row">
+                        <div class="col"><h4><b><i class="fa-solid fa-bag-shopping"></i></b></h4></div>
+                        <div class="col align-self-center text-right text-muted">
+                            {{ items_in_bag_contents }} items
                         </div>
                     </div>
+                </div>
+                {% for item_id, quantity in shopping_bag.items %}
+                {% with product=product_dict.item_id %}
+                <div class="row border-top border-bottom py-3 main align-items-center">
+                        <div class="row main align-items-center">
+                            <div class="col-2"><img class="img-fluid" src="{{ product.image_url }}"  alt="{{ product.name }}"></div>
+                            <div class="col">
+                                <div class="row text-muted">{{ product.category.name }}</div>
+                                <div class="row">{{ product.name }}</div>
+                            </div>
+                            <div class="col text-center">
+                                <a href="#" class="remove-item" id="remove_{{ item_id }}">-</a>
+                                <a href="#" class="border">{{ quantity }}</a>
+                                <a href="#" class="add-item" id="add_{{ item_id }}">+</a>
+                            </div>
+                            <div class="col text-right">&euro; {{ product.price }} <span class="close remove-item" id="remove_{{ item_id }}">&#10005;</span>
+                            </div>
+                        </div>
+                </div>
+                
+                {% endwith %}
+                {% endfor %}
+        
+                </div>
+                <div class="col-md-4 summary">
+                    <div><h5><b>Summary</b></h5></div>
+                    <hr>
+                    <div class="row">
+                        <div class="col" style="padding-left:0;">ITEMS {{ items_in_bag_contents }}</div>
+                        <div class="col text-right">&euro; {{ total_price }}</div>
+                    </div>
+                    <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
+                        <div class="col">TOTAL PRICE</div>
+                        <div class="col text-right">&euro; {{ total_price }}</div>
+                    </div>
+                    <button class="btn">CHECKOUT</button>
+                    <div class="back-to-shop"><a href="{% url 'products' %}">&leftarrow;</a><span class="text-muted">Back to shop</span>
+                </div>
             </div>
             
-            {% endwith %}
-            {% endfor %}
-    
-            </div>
-            <div class="col-md-4 summary">
-                <div><h5><b>Summary</b></h5></div>
-                <hr>
-                <div class="row">
-                    <div class="col" style="padding-left:0;">ITEMS {{ items_in_bag_contents }}</div>
-                    <div class="col text-right">&euro; {{ total_price }}</div>
-                </div>
-                <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
-                    <div class="col">TOTAL PRICE</div>
-                    <div class="col text-right">&euro; {{ total_price }}</div>
-                </div>
-                <button class="btn">CHECKOUT</button>
-                <div class="back-to-shop"><a href="{% url 'products' %}">&leftarrow;</a><span class="text-muted">Back to shop</span>
-            </div>
         </div>
-        
     </div>
 </div>
+
 
 {% endblock %}
 
@@ -86,8 +91,7 @@
              location.reload();
          });
     });
-    
-    $('.add-item').click(function(e) {
+        $('.add-item').click(function(e) {
         e.preventDefault(); // Prevent default link behavior
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('add_')[1];
