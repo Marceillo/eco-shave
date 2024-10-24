@@ -26,7 +26,7 @@
                 </div>
             </div>
             {% for item_id, quantity in shopping_bag.items %}
-            {% with products=product_dict[item_id] %} 
+            {% with product=product_dict.item_id %}
             <div class="row border-top border-bottom">
                     <div class="row main align-items-center">
                         <div class="col-2"><img class="img-fluid" src="{{ product.image_url }}"  alt="{{ product.name }}"></div>
@@ -35,13 +35,16 @@
                             <div class="row">{{ product.name }}</div>
                         </div>
                         <div class="col">
-                            <a href="#" class="remove-item" id="remove_{{ item_id }}">-</a><a href="#" class="border">{{ quantity }}</a><a href="#">+</a>
+                            <a href="#" class="remove-item" id="remove_{{ item_id }}">-</a>
+                            <a href="#" class="border">{{ quantity }}</a>
+                            <a href="#" class="add-item" id="add_{{ item_id }}">+</a>
                         </div>
                         <div class="col">&euro; {{ product.price }} <span class="close remove-item" id="remove_{{ item_id }}">&#10005;</span>
                         </div>
                     </div>
             </div>
             
+            {% endwith %}
             {% endfor %}
     
             </div>
@@ -62,7 +65,8 @@
         </div>
         
     </div>
-</div>    
+</div>
+
 {% endblock %}
 
 {% block postloadjs %}
@@ -80,6 +84,18 @@
         $.post(url, {'csrfmiddlewaretoken': csrfToken})
          .done(function() {
              location.reload();
+         });
+    });
+    
+    $('.add-item').click(function(e) {
+        e.preventDefault(); // Prevent default link behavior
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('add_')[1];
+        var url = `/bag/add/${itemId}/`; 
+
+        $.post(url, {'csrfmiddlewaretoken': csrfToken})
+         .done(function() {
+             location.reload(); 
          });
     });
 </script>
