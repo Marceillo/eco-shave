@@ -23,10 +23,10 @@ body {
     color: #555 !important;
 }
 
-.container-fluid {
+/* .container-fluid {
     padding-left: 0px;
     padding-right: 0px;
-}
+} */
 
 
 /*------------------------------Main*/
@@ -102,8 +102,8 @@ main {
 }
 
 .btn-black {
-    background: #555;
-    color: gold;
+    background: #555 !important;
+    color: gold !important;
 }
 
 .btn-outline-black {
@@ -125,8 +125,8 @@ main {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: gold;
-    color: #555;
+    background: gold !important;
+    color: #555 !important;
     border: 4px solid #555;
 }
 
