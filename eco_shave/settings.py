@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     'star_ratings',
     'bag',
     
+    
 ]
 
 MIDDLEWARE = [
