@@ -29,6 +29,7 @@ def add_to_bag( request, item_id):
     """
    
     product = get_object_or_404(Product, pk=item_id)
+    quantity = int(request.POST.get('quantity', 1))
     shopping_bag = request.session.get('bag', {})
    
     if item_id in shopping_bag:
@@ -39,6 +40,7 @@ def add_to_bag( request, item_id):
         messages.success(request, f'Added {product.name} to your bag.')
 
     request.session['bag'] = shopping_bag
+    
     return redirect(reverse('view_bag'))
  
 
