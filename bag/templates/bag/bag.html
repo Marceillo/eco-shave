@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-{% load bag_tools %}
+
 
 {% block page_header %}
     <div class="container header-container">
@@ -29,21 +29,21 @@
                     </div>
                 </div>
                 {% if shopping_bag %}
-                    {% for item_id, quantity in shopping_bag.items %}
+                    {% for item_id, item in product_dict.items %}
                                                                
                         <div class="row border-top border-bottom py-3 main align-items-center">
                             
-                            <div class="col-2"><img class="img-fluid" src="{{item.product.image.url  }}" alt="{{ product.name }}"></div>
+                            <div class="col-2"><img class="img-fluid" src="{{ item.product.image.url }}" alt="{{ item.product.name }}"></div>
                             <div class="col">
-                                <div class="row text-muted">{{ product.category.name }}</div>
-                                <div class="row">{{ product.name }}</div>
+                                <div class="row text-muted">{{ item.product.category.name }}</div>
+                                <div class="row">{{ item.product.name }}</div>
                             </div>
                             <div class="col text-center">
                                 <a href="#" class="remove-item" id="remove_{{ item_id }}">-</a>
-                                <a href="#" class="border">{{ quantity }}</a>
+                                <a href="#" class="border">{{ item.quantity }}</a>
                                 <a href="#" class="add-item" id="add_{{ item_id }}">+</a>
                             </div>
-                            <div class="col text-right">&euro; {{ product.price }} 
+                            <div class="col text-right">&euro; {{ item.product.price }} 
                                 <span class="close remove-item" id="remove_{{ item_id }}">&#10005;</span>
                             </div>
                         </div>
@@ -70,8 +70,8 @@
                     <div class="col text-right">&euro; {{ total_price }}</div>
                 </div>
 
-                {% include "bag/bag-total.html" %}
-                {% comment %}{% include "bag/checkout-buttons.html" %}{% endcomment %}
+                {% comment %}{% include "bag/bag-total.html" %}
+               {% include "bag/checkout-buttons.html" %}{% endcomment %}
 
                 <button class="btn">CHECKOUT</button>
 
