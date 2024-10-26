@@ -15,6 +15,7 @@
 {% endblock %}
 
 {% block content %}
+
 <div class="overlay"></div>
 <div class="container mb-2">
     <div class="card">
@@ -107,6 +108,18 @@
          .done(function() {
              location.reload(); 
          });
+
+         $.post(url, {'csrfmiddlewaretoken': csrfToken})
+         .done(function(response) {
+             
+             alert(response.message); 
+             
+         })
+         .fail(function() {
+             alert('Error adding item to bag.');
+         });
     });
+    
+    
 </script>
 {% endblock %}

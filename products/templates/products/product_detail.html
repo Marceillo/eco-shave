@@ -122,6 +122,11 @@
          .done(function() {
              location.reload(); 
          });
+         function showToast(message) {
+            var toastElement = $('#toast');
+            toastElement.text(message);
+            toastElement.fadeIn().delay(3000).fadeOut(); 
+        }
     });
 </script>
 {% endblock %}
