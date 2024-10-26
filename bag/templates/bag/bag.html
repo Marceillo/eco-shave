@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-
+{% comment %} {% load bag_tools %} {%endcomment%}
 
 {% block page_header %}
     <div class="container header-container">
@@ -40,8 +40,8 @@
                                 <div class="row">{{ item.product.name }}</div>
                             </div>
                             <div class="col text-center">
-                                <a href="#" class="remove-item" id="remove_{{ item_id }}">-</a>
-                                <a href="#" class="border">{{ item.quantity }}</a>
+                                <a href="#" class="remove-item" id="remove_{{ item.id }}">-</a>
+                                <a href="#" class="border"id="item_quantity_{{ item.id }}">{{ item.quantity }}</a>
                                 <a href="#" class="add-item" id="add_{{ item_id }}">+</a>
                             </div>
                             <div class="col text-right">&euro; {{ item.product.price }} 
