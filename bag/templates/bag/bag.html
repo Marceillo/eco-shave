@@ -40,9 +40,12 @@
                                 <div class="row">{{ item.product.name }}</div>
                             </div>
                             <div class="col text-center">
-                                <a href="#" class="remove-item" id="remove_{{ item.id }}">-</a>
-                                <a href="#" class="border"id="item_quantity_{{ item.id }}">{{ item.quantity }}</a>
-                                <a href="#" class="add-item" id="add_{{ item_id }}">+</a>
+                                <div class="input-group">
+                                    <button class="decrement-qty" data-item_id="{{ item_id }}" id="decrement-qty_{{ item_id }}"><i class="fa-solid fa-minus"></i></button>
+                                    <input type="text" class="qty_input" data-item_id="{{ item_id }}" id="id_qty_{{ item_id }}" value="{{ item.quantity }}" readonly>
+                                    <button class="increment-qty" data-item_id="{{ item_id }}" id="increment-qty_{{ item_id }}"><i class="fa-solid fa-plus"></i></button>
+                                </div>
+
                             </div>
                             <div class="col text-right">&euro; {{ item.product.price }} 
                                 <span class="close remove-item" id="remove_{{ item_id }}">&#10005;</span>
@@ -85,6 +88,7 @@
 {% endblock %}
 
 {% block postloadjs %}
+{% include 'products/includes/quantity_input_script.html' %}
 {{ block.super }}
 <script type="text/javascript">
     $('.remove-item').click(function(e) {
