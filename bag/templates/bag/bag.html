@@ -45,6 +45,7 @@
                                     <input type="text" class="qty_input" data-item_id="{{ item_id }}" id="id_qty_{{ item_id }}" value="{{ item.quantity }}" readonly>
                                     <button class="increment-qty" data-item_id="{{ item_id }}" id="increment-qty_{{ item_id }}"><i class="fa-solid fa-plus"></i></button>
                                 </div>
+                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
 
                             </div>
                             <div class="col text-right">&euro; {{ item.product.price }} 

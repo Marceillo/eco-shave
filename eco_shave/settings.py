@@ -96,6 +96,7 @@ TEMPLATES = [
     },
 ]
 
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 # allauth changed brackets
 AUTHENTICATION_BACKENDS = (
