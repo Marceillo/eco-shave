@@ -44,9 +44,7 @@ def add_to_bag(request, item_id):
         shopping_bag[str(item_id)] += quantity
 
         messages.success(request, f'Updated {product.name} quantity to {shopping_bag[item_id]}')
-    if item_id in shopping_bag:
-        shopping_bag[item_id] += quantity
-        messages.success(request, f'Updated {product.name} quantity to {shopping_bag[item_id]}')
+ 
     else:
         shopping_bag[item_id] = quantity
         messages.success(request, f'Added {product.name} to your bag.')
@@ -59,16 +57,20 @@ def add_to_bag(request, item_id):
 def adjust_bag(request, item_id):
     """ Adjust the quantity of the specified product in the bag """
     product = get_object_or_404(Product, pk=item_id)
-    quantity = int(request.POST.get('quantity', 0))
+    # quantity = int(request.POST.get('quantity', 0)) my
+    quantity = int(request.POST.get('quantity'))
     shopping_bag = request.session.get('shopping_bag', {})
 
     if quantity > 0:
         shopping_bag[item_id] = quantity
-        messages.success(request, f'Updated {product.name} quantity to {quantity}')
+        # messages.success(request, f'Updated {product.name} quantity to {quantity}') my
+        messages.success(request, f'Updated size {product.name} quantity to {bag[item_id]}')
     else:
-        if item_id in shopping_bag:
-            del shopping_bag[item_id]
-            messages.success(request, f'Removed {product.name} from your bag')
+        # if item_id in shopping_bag: my
+        del shopping_bag[item_id]
+        if not shopping_bag[item_id]: # lms
+            shopping_bag.pop(item_id,) # lms
+        messages.success(request, f'Removed {product.name} from your bag')
 
     request.session['shopping_bag'] = shopping_bag
     return redirect(reverse('view_bag'))
@@ -76,21 +78,26 @@ def adjust_bag(request, item_id):
 def remove_from_bag(request, item_id):
     """ Remove a product from the shopping bag """
     try:
-        product = get_object_or_404(Product, pk=item_id)
+        item_id_str = str(item_id)  
         shopping_bag = request.session.get('shopping_bag', {})
 
-        # print(f"Current shopping bag contents: {shopping_bag}")
+        print(f"Current shopping bag contents: {shopping_bag}")
 
-        # item_id_str = str(item_id)
+        item_id_str = str(item_id)
 
-        if item_id in shopping_bag:
-            shopping_bag.pop(item_id,)
-            messages.success(request, f'Removed {product.name} from your bag')
-        # else: 
-        #     messages.warning(request, f'Item not found')
+        if item_id_str in shopping_bag:
+            shopping_bag.pop(item_id_str)
+            messages.success(request, f'Removed {item_id_str} from your bag')
+            
+        else: 
+            messages.warning(request, f' Sorry Item not found')
 
         request.session['shopping_bag'] = shopping_bag
         return HttpResponse(status=200)
     except Exception as e:
+        print(f"Error removing item: {e}")
         messages.error(request, f'Error removing item: {e}')
         return HttpResponse(status=500)
+
+
+ 
