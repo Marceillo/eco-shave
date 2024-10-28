@@ -25,7 +25,7 @@
                     <div class="row">
                         <div class="col"><h4><b><i class="fa-solid fa-bag-shopping"></i></b></h4></div>
                         <div class="col align-self-center text-right text-muted">
-                            {{ items_in_bag_contents }} items
+                            {{ items_in_bag_contents }} items price 
                         </div>
                     </div>
                 </div>
@@ -40,10 +40,10 @@
                                 <div class="row">{{ item.product.name }}</div>
                             </div>
                             <div class="col text-center">
-                                <div class="input-group">
-                                    <button class="decrement-qty" data-item_id="{{ item_id }}" id="decrement-qty_{{ item_id }}"><i class="fa-solid fa-minus"></i></button>
+                                <div class="btn-group input-group"role="group" >
+                                    <button type="button" class="btn btn-primary decrement-qty" data-item_id="{{ item_id }}" id="decrement-qty_{{ item_id }}"><i class="fa-solid fa-minus"></i></button>
                                     <input type="text" class="qty_input" data-item_id="{{ item_id }}" id="id_qty_{{ item_id }}" value="{{ item.quantity }}" readonly>
-                                    <button class="increment-qty" data-item_id="{{ item_id }}" id="increment-qty_{{ item_id }}"><i class="fa-solid fa-plus"></i></button>
+                                    <button type="button" class="btn btn-primary increment-qty" data-item_id="{{ item_id }}" id="increment-qty_{{ item_id }}"><i class="fa-solid fa-plus"></i></button>
                                 </div>
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
 

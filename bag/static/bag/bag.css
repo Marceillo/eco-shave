@@ -173,7 +173,7 @@ a:hover{
 
 .decrement-qty,
 .increment-qty {
-    background-color: #555; 
+    background-color: #555 !important; 
     color: white; 
     border: none; 
     width: 30px; 
