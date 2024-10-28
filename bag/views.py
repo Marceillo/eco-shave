@@ -3,31 +3,13 @@ from django.contrib import messages
 from products.models import Product
 
 
+from bag.contexts import bag_contents
+
 def view_bag(request):
-    """ 
-    This is for the bag contents.
-    """          
-    shopping_bag = request.session.get('shopping_bag', {})
-    total_items = sum(shopping_bag.values())
-    products = Product.objects.filter(pk__in=shopping_bag.keys())
-    
-    
-    total_price = sum(product.price * shopping_bag[str(product.pk)] for product in products)
-
-    product_dict = {
-        str(product.pk): {
-            'product': product,
-            'quantity': shopping_bag[str(product.pk)]
-        } for product in products
-    }
-
-    context = {
-        'shopping_bag': shopping_bag,
-        'total_items': total_items,
-        'total_price': total_price,
-        'product_dict': product_dict,
-    }
-
+    """
+    A view that renders the shopping bag contents page
+    """
+    context = bag_contents(request)
     return render(request, 'bag/bag.html', context)
 
 def add_to_bag(request, item_id):
@@ -36,6 +18,7 @@ def add_to_bag(request, item_id):
     """
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity', 1))
+    redirect_url = request.POST.get('redirect_url')
     shopping_bag = request.session.get('shopping_bag', {})
 
     item_id = str(item_id)
@@ -51,37 +34,43 @@ def add_to_bag(request, item_id):
         
     request.session['shopping_bag'] = shopping_bag
     
-    return redirect(reverse('view_bag'))
+    return redirect(redirect_url)
    
 
 def adjust_bag(request, item_id):
-    """ Adjust the quantity of the specified product in the bag """
+    """ 
+    Adjust the quantity of the specified product in the bag
+    
+    """
     product = get_object_or_404(Product, pk=item_id)
-    # quantity = int(request.POST.get('quantity', 0)) my
     quantity = int(request.POST.get('quantity'))
     shopping_bag = request.session.get('shopping_bag', {})
+    action = request.POST.get('action')
 
-    if quantity > 0:
+    if quantity >= 0:
         shopping_bag[item_id] = quantity
-        # messages.success(request, f'Updated {product.name} quantity to {quantity}') my
-        messages.success(request, f'Updated size {product.name} quantity to {bag[item_id]}')
+        messages.success(request,
+        f'Updated size {product.name} quantity to {shopping_bag[item_id]}',
+        )
     else:
-        # if item_id in shopping_bag: my
-        del shopping_bag[item_id]
-        if not shopping_bag[item_id]: # lms
-            shopping_bag.pop(item_id,) # lms
+        # del shopping_bag[item_id]
+        # if not shopping_bag[item_id]: 
+        shopping_bag.pop(item_id,) 
         messages.success(request, f'Removed {product.name} from your bag')
 
     request.session['shopping_bag'] = shopping_bag
     return redirect(reverse('view_bag'))
 
 def remove_from_bag(request, item_id):
-    """ Remove a product from the shopping bag """
+    """ 
+    Remove a product from the shopping bag
+    
+    """
     try:
         item_id_str = str(item_id)  
         shopping_bag = request.session.get('shopping_bag', {})
 
-        print(f"Current shopping bag contents: {shopping_bag}")
+        # print(f"Current shopping bag contents: {shopping_bag}")
 
         item_id_str = str(item_id)
 

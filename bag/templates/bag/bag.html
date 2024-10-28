@@ -25,7 +25,7 @@
                     <div class="row">
                         <div class="col"><h4><b><i class="fa-solid fa-bag-shopping"></i></b></h4></div>
                         <div class="col align-self-center text-right text-muted">
-                            {{ items_in_bag_contents }} items price 
+                            {{ items_in_bag_contents }} item price 
                         </div>
                     </div>
                 </div>
@@ -39,27 +39,33 @@
                                 <div class="row text-muted">{{ item.product.category.name }}</div>
                                 <div class="row">{{ item.product.name }}</div>
                             </div>
+
+                            <!-- form -->
                             <div class="col text-center">
                                 <div class="btn-group input-group"role="group" >
-                                    <button type="button" class="btn btn-primary decrement-qty" data-item_id="{{ item_id }}" id="decrement-qty_{{ item_id }}"><i class="fa-solid fa-minus"></i></button>
+                                    <!-- <button type="button" class="btn btn-primary decrement-qty" data-item_id="{{ item_id }}" id="decrement-qty_{{ item_id }}"><i class="fa-solid fa-minus"></i></button> -->
                                     <input type="text" class="qty_input" data-item_id="{{ item_id }}" id="id_qty_{{ item_id }}" value="{{ item.quantity }}" readonly>
-                                    <button type="button" class="btn btn-primary increment-qty" data-item_id="{{ item_id }}" id="increment-qty_{{ item_id }}"><i class="fa-solid fa-plus"></i></button>
+                                    <!-- <button type="button" class="btn btn-primary increment-qty" data-item_id="{{ item_id }}" id="increment-qty_{{ item_id }}"><i class="fa-solid fa-plus"></i></button> -->
                                 </div>
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
 
                             </div>
-                            <div class="col text-right">&euro; {{ item.product.price }} 
+
+                            
+                            
+                            
+                            <!-- <div class="col text-right">&euro; {{ item.product.price  }}</div> -->
+                            <div class="col text-right">&euro; {{ item.product.price | calc_subtotal:item.quantity}}&euro;
                                 <span class="close remove-item" id="remove_{{ item_id }}"><i class="fa-solid fa-trash"></i></span>
                             </div>
+ 
+
                         </div>
                         
                     {% endfor %}
                 {% else %}
                     <p class="lead mb-5">Your bag is empty.</p>
-                    <!-- <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                        <span class="icon"><i class="fas fa-chevron-left"></i></span>
-                        <span class="text-uppercase">Keep Shopping</span>
-                    </a> -->
+
                 {% endif %}
             </div>
 
@@ -68,11 +74,14 @@
                 <hr>
                 <div class="row">
                     <div class="col" style="padding-left:0;">ITEMS {{ items_in_bag_contents }}</div>
-                    <div class="col text-right">&euro; {{ total_price }}</div>
+                    <div class="col text-right"> {{ total_price }}&euro;</div>
                 </div>
                 <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
                     <div class="col">TOTAL PRICE</div>
-                    <div class="col text-right">&euro; {{ total_price }}</div>
+                    <div class="col text-right"> {{ total_price }}&euro;</div>
+                    <div class="col-12 col-sm-6">
+                        {% include "bag/quantity-form.html" %}
+                    </div>
                 </div>
 
                 {% comment %}{% include "bag/bag-total.html" %}
@@ -92,6 +101,12 @@
 {% include 'products/includes/quantity_input_script.html' %}
 {{ block.super }}
 <script type="text/javascript">
+
+    // Update quantity on click
+    $('.update-link').click(function(e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
 
 $('.remove-item').click(function(e) {
         e.preventDefault();
