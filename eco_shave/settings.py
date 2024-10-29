@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'products',
     'star_ratings',
     'bag',
+    'checkout',
     
     
 ]
