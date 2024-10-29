@@ -284,11 +284,24 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 ### Product Page 
 
 * Feature :[django-star-ratings](https://django-star-ratings.readthedocs.io/en/latest/) this is a software install that handles the ratings this is differant to the LMS.
-* Sort with categories 
+* Sort with categories
+* Images used from these links: 
+* - 
+* - 
 
 ### Product Detail Page
 
 * Feature : [Multiview feature](https://djangoguide.com/django-image-upload-specialization/django-multiple-image-upload/) from django that allows for one object to have multiple images .
+* Feature :[django-star-ratings](https://django-star-ratings.readthedocs.io/en/latest/) this is a software install that handles the ratings this is differant to the LMS.
+
+### Shoppping Bag Page
+
+* Note: The bag app was really difficult to setup when not doing it exactly like the LMS.
+* - Side note I had little support from tutoring team as they kept instructing me to make it similar to the LMS. 
+* - Learning is about trying new things and making mistakes, I believe from this I learnt that variables should be consistant.
+* - Problem 1: The adding of image and date to the bag app. Solution was had to redo the bag/views,context.py several times.
+* - Problem 2: The remove button was not working as I was not consistently using strings for keys, after all the refactoring and print logs problem resolved.
+* Styling : I used a [free template](https://bbbootstrap.com/snippets/bootstrap-ecommerce-shopping-cart-item-summary-44021562) and customised it to the bag app 
 
 
 ### About Page
