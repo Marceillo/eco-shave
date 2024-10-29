@@ -125,8 +125,6 @@ input:focus::-webkit-input-placeholder
     border-color: #555;
     color: white;
     width: 100%;
-    /* font-size: 0.7rem;
-    margin-top: 4vh; */
     padding: 1vh;
     border-radius: 0;
 }
@@ -144,8 +142,6 @@ input:focus::-webkit-input-placeholder
     user-select: none;           
     transition: none;
 }
-
-
 
 .btn:hover{
     
@@ -165,10 +161,22 @@ a:hover{
     background-position-y: center;
 }
 
-/* add and minus buttons */
+
+
+/* add and minus buttons on the bag page */
 .quantity-container {
     display: flex; 
     align-items: center; 
+}
+
+.update-custom {
+    padding: 0.25rem 0.5rem; 
+    /* font-size: 0.75rem;  */
+    line-height: 0.5;
+}
+
+.qty_input {
+    padding: 10px;
 }
 
 .decrement-qty,
@@ -201,3 +209,4 @@ a:hover{
     background-color: #555;
     color: gold; 
 }
+

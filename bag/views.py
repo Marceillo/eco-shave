@@ -60,6 +60,7 @@ def adjust_bag(request, item_id):
 
     request.session['shopping_bag'] = shopping_bag
     return redirect(reverse('view_bag'))
+    
 
 def remove_from_bag(request, item_id):
     """ 

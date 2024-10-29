@@ -41,19 +41,8 @@
                             </div>
 
                             <!-- form -->
-                            <div class="col text-center">
-                                <div class="btn-group input-group"role="group" >
-                                    <!-- <button type="button" class="btn btn-primary decrement-qty" data-item_id="{{ item_id }}" id="decrement-qty_{{ item_id }}"><i class="fa-solid fa-minus"></i></button> -->
-                                    <input type="text" class="qty_input" data-item_id="{{ item_id }}" id="id_qty_{{ item_id }}" value="{{ item.quantity }}" readonly>
-                                    <!-- <button type="button" class="btn btn-primary increment-qty" data-item_id="{{ item_id }}" id="increment-qty_{{ item_id }}"><i class="fa-solid fa-plus"></i></button> -->
-                                </div>
-                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            {% include "bag/quantity-form.html" %}
 
-                            </div>
-
-                            
-                            
-                            
                             <!-- <div class="col text-right">&euro; {{ item.product.price  }}</div> -->
                             <div class="col text-right">&euro; {{ item.product.price | calc_subtotal:item.quantity}}&euro;
                                 <span class="close remove-item" id="remove_{{ item_id }}"><i class="fa-solid fa-trash"></i></span>
@@ -80,7 +69,7 @@
                     <div class="col">TOTAL PRICE</div>
                     <div class="col text-right"> {{ total }}&euro;</div>
                     <div class="col-12 col-sm-6">
-                        {% include "bag/quantity-form.html" %}
+                        
                     </div>
                 </div>
 
@@ -112,7 +101,7 @@ $('.remove-item').click(function(e) {
         e.preventDefault();
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
-        console.log(`Attempting to remove item with ID 1: ${itemId}`);
+        // console.log(`Attempting to remove item with ID 1: ${itemId}`);
         var url = `/shopping_bag/remove/${itemId}/`;
         console.log(`Attempting to remove item with ID: ${itemId}`);
         $.post(url, {'csrfmiddlewaretoken': csrfToken})
@@ -121,41 +110,27 @@ $('.remove-item').click(function(e) {
          });
     });
     
-            
-    // Remove item and reload on click
-    // $('.remove-item').click(function(e) {
+    // $('.add-item').click(function(e) {
+    //     e.preventDefault();
     //     var csrfToken = "{{ csrf_token }}";
-    //     var itemId = $(this).attr('id').split('remove_')[1];
-    //     var url = `/shopping_bag/remove/${itemId}/`;
-    //     var data = {'csrfmiddlewaretoken': csrfToken};
+    //     var itemId = $(this).attr('id').split('add_')[1];
+    //     var url = `/bag/add/${itemId}/`; 
 
-    //     $.post(url, data)
+    //     $.post(url, {'csrfmiddlewaretoken': csrfToken})
     //      .done(function() {
-    //          location.reload();
+    //          location.reload(); 
     //      });
-    // })
-  
-    $('.add-item').click(function(e) {
-        e.preventDefault();
-        var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('add_')[1];
-        var url = `/bag/add/${itemId}/`; 
 
-        $.post(url, {'csrfmiddlewaretoken': csrfToken})
-         .done(function() {
-             location.reload(); 
-         });
-
-         $.post(url, {'csrfmiddlewaretoken': csrfToken})
-         .done(function(response) {
+    //      $.post(url, {'csrfmiddlewaretoken': csrfToken})
+    //      .done(function(response) {
              
-             alert(response.message); 
+    //          alert(response.message); 
              
-         })
-         .fail(function() {
-             alert('Error adding item to bag.');
-         });
-    });
+    //      })
+    //      .fail(function() {
+    //          alert('Error adding item to bag.');
+    //      });
+    // });
     
 
 </script>
