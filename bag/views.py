@@ -67,16 +67,14 @@ def remove_from_bag(request, item_id):
     
     """
     try:
-        item_id_str = str(item_id)  
+        product = get_object_or_404(Product, pk=item_id)  
         shopping_bag = request.session.get('shopping_bag', {})
 
         # print(f"Current shopping bag contents: {shopping_bag}")
-
-        item_id_str = str(item_id)
-
-        if item_id_str in shopping_bag:
-            shopping_bag.pop(item_id_str)
-            messages.success(request, f'Removed {item_id_str} from your bag')
+        
+        if str(item_id) in shopping_bag:
+            shopping_bag.pop(str(item_id))
+            messages.success(request, f'Removed {product.name} from your bag')
             
         else: 
             messages.warning(request, f' Sorry Item not found')
@@ -89,4 +87,3 @@ def remove_from_bag(request, item_id):
         return HttpResponse(status=500)
 
 
- 
