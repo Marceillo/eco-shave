@@ -245,6 +245,9 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 
 ### Home Page
 
+* Styling : Used one of bootstrape [4.6 template example](https://getbootstrap.com/docs/4.6/examples/carousel/) example for the carousel and styled from there.  
+* Image: I used a [Ai generatied image](https://www.bing.com/images/create?FORM=GENILP) as I could not find a image that matches.
+
 <details>
 
 <summary>Home Page Summary</summary>
