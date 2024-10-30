@@ -73,7 +73,7 @@
                 {% comment %}{% include "bag/bag-total.html" %}
                {% include "bag/checkout-buttons.html" %}{% endcomment %}
 
-                <button class="btn">CHECKOUT</button>
+               <a href="{% url 'checkout' %}" class="btn">CHECKOUT</a>
                 
 
                 <div class="back-to-shop"><a href="{% url 'products' %}">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
@@ -95,7 +95,7 @@
         form.submit();
     })
 
-$('.remove-item').click(function(e) {
+    $('.remove-item').click(function(e) {
         e.preventDefault();
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];

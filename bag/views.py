@@ -55,7 +55,7 @@ def adjust_bag(request, item_id):
     else:
         # del shopping_bag[item_id]
         # if not shopping_bag[item_id]: 
-        shopping_bag.pop(item_id,) 
+        shopping_bag.pop(item_id) 
         messages.success(request, f'Removed {product.name} from your bag')
 
     request.session['shopping_bag'] = shopping_bag
