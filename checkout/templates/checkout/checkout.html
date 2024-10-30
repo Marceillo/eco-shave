@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% load static %}
+{% load bag_tools %} 
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="col text-center">
+            <h1 class=" hm-head">Your Shopping Bag</h1>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'bag/bag.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="overlay"></div>
+<div class="container mb-2">
+    <div class="card">
+        <div class="row">
+            <div class="col-md-8 cart">
+                <div class="title">
+                    <div class="row">
+                        <div class="col"><h4><b><i class="fa-solid fa-bag-shopping"></i></b></h4></div>
+                        <div class="col align-self-center text-right text-muted">
+                            {{ items_in_bag_contents }} item price 
+                        </div>
+                    </div>
+                </div>
+                {% if shopping_bag %}
+                    {% for item_id, item in product_dict.items %}
+                                                               
+                        <div class="row border-top border-bottom py-3 main align-items-center">
+                            
+                            <div class="col-2"><img class="img-fluid" src="{{ item.product.image.url }}" alt="{{ item.product.name }}"></div>
+                            <div class="col">
+                                <div class="row text-muted">{{ item.product.category.name }}</div>
+                                <div class="row">{{ item.product.name }}</div>
+                            </div>
+
+                            {% include "bag/quantity-form.html" %}
+                            <div class="col text-right">&euro; {{ item.product.price | calc_subtotal:item.quantity}}&euro;
+                                <span class="close remove-item" id="remove_{{ item_id }}"><i class="fa-solid fa-trash"></i></span>
+                            </div>
+ 
+
+                        </div>
+                        
+                    {% endfor %}
+                {% else %}
+                    <p class="lead mb-5">Your bag is empty.</p>
+
+                {% endif %}
+            </div>
+
+            <div class="col-md-4 summary">
+                <h5><b>Summary</b></h5>
+                <hr>
+                <div class="row">
+                    <div class="col" style="padding-left:0;">ITEMS {{ items_in_bag_contents }}</div>
+                    <div class="col text-right"> {{ product_count}} </div>
+                </div>
+                <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
+                    <div class="col">TOTAL PRICE</div>
+                    <div class="col text-right"> {{ total }}&euro;</div>
+                    <div class="col-12 col-sm-6">
+                    </div>
+                </div>
+                <p>Free delivery on all products till the end of the year!!</p>
+
+                {% comment %}{% include "bag/bag-total.html" %}
+               {% include "bag/checkout-buttons.html" %}{% endcomment %}
+
+                <button class="btn">CHECKOUT</button>
+
+                <div class="back-to-shop"><a href="{% url 'products' %}">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
+            </div>
+
+        </div> 
+    </div> 
+</div> 
+{% endblock %}
+
+{% block postloadjs %}
+{% include 'products/includes/quantity_input_script.html' %}
+{{ block.super }}
+<script type="text/javascript">
+
+    // Update quantity on click
+    $('.update-link').click(function(e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
+
+$('.remove-item').click(function(e) {
+        e.preventDefault();
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        // console.log(`Attempting to remove item with ID 1: ${itemId}`);
+        var url = `/shopping_bag/remove/${itemId}/`;
+        console.log(`Attempting to remove item with ID: ${itemId}`);
+        $.post(url, {'csrfmiddlewaretoken': csrfToken})
+         .done(function() {
+             location.reload();
+         });
+    });
+        
+</script>
+{% endblock %}
