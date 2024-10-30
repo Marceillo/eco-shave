@@ -58,18 +58,29 @@
 
 # Objective
 
+* This website sells shaving products that will transform your shave, helping you and helping our planet at the same time.
+* At the moment, this could be a small business that transforms what is normally a chore into a hobby.
+* These products are highly customizable just by changing your blades you have altered the shave.
+* It's like meditation you have to focus slow down and enjoy.
+* It is a product that just has benefits for the environment and your pocket. 
+* I know some of these products are quite expensive, but they can last a lifetime or even generations, which is a huge benefit and savings.
+ 
 
-## Site User Goal:
+## Site User Goal
+
+* 
 
 ## Site Owners Goal
+
+* 
 
 **Project Objectives:**
 
 # Business Model 
 
-This is a company that sells shaving products for DE double edge blades or single edge blades and accessories.
-The razors can be used for a liftime even passed on to other generations and still customers can get the best shaves.
-So in actually fact each time a customer uses these products they are helping the enviroment and saving at the same time.
+This is a company that sells shaving products for DE double-edge blades or single-edge blades and accessories.
+The razors can be used for a lifetime even passed on to other generations and still customers can get the best shaves.
+So in actual fact each time a customer uses these products they are helping the environment and saving at the same time.
 
 ## DE and SE Shaving – The Philosophy
 
