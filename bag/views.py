@@ -45,7 +45,7 @@ def adjust_bag(request, item_id):
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     shopping_bag = request.session.get('shopping_bag', {})
-    action = request.POST.get('action')
+    # action = request.POST.get('action')
 
     if quantity >= 0:
         shopping_bag[item_id] = quantity
