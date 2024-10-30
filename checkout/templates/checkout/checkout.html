@@ -74,6 +74,12 @@
                {% include "bag/checkout-buttons.html" %}{% endcomment %}
 
                 <button class="btn">CHECKOUT</button>
+                <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
+                    <span class="text-uppercase">Secure Checkout</span>
+                    <span class="icon">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                </a>
 
                 <div class="back-to-shop"><a href="{% url 'products' %}">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
             </div>
@@ -106,6 +112,29 @@ $('.remove-item').click(function(e) {
              location.reload();
          });
     });
-        
+    
+    // $('.add-item').click(function(e) {
+    //     e.preventDefault();
+    //     var csrfToken = "{{ csrf_token }}";
+    //     var itemId = $(this).attr('id').split('add_')[1];
+    //     var url = `/bag/add/${itemId}/`; 
+
+    //     $.post(url, {'csrfmiddlewaretoken': csrfToken})
+    //      .done(function() {
+    //          location.reload(); 
+    //      });
+
+    //      $.post(url, {'csrfmiddlewaretoken': csrfToken})
+    //      .done(function(response) {
+             
+    //          alert(response.message); 
+             
+    //      })
+    //      .fail(function() {
+    //          alert('Error adding item to bag.');
+    //      });
+    // });
+    
+
 </script>
 {% endblock %}
