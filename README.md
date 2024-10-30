@@ -17,6 +17,7 @@
 - [Design](#design)
   - [Colour Scheme](#colour-scheme)
   - [Skeleton](#skeleton)
+  - [#### Product SKU Format](#product-sku-format)
   - [Wireframes](#wireframes)
   - [Flowchart](#flowchart)
   - [Visual Effects](#visual-effects)
@@ -139,15 +140,55 @@ User stories can be viewed here on the project [kanban board ](https://github.co
 
 [Back to Table of Contents](#table-of-contents)
 
-#### Typography
+## Typography
 
 * The Roboto font is the main font, and Lato is the secondary font used for the whole project.
 
 [Back to Table of Contents](#table-of-contents)
 
-#### Imagery
+### Imagery
 
-*
+#### Product SKU Format
+
+* This is a format for each product will have differant sku so that can be used now and in future features.
+* In the future of this bussiness when stock becomes larger it can be used to help with stock management.
+* - Invintory tracking 
+* - Streamlining Point of sale (POS) Operations 
+* It can be used for sales data analysis and other applications.
+
+
+| SKU              | Product Type                   |
+|------------------|--------------------------------|
+| SR-001-STR-2024  | Straight Razor 2               |
+| SR-002-RAZ-2024  | Razor                          |
+| SR-003-BRS-2024  | Brush                          |
+| SR-004-SAP-2024  | Soap                           |
+| SR-005-CRE-2024  | Cream                          |
+| SR-006-BLA-2024  | Blade                          |
+| SR-007-SAF-2024  | Safety Razor 3                 |
+| SR-008-PRE-2024  | Pre-shave                      |
+| SR-009-BAG-2024  | Bag                            |
+| SR-010-BRT-2024  | Brush Restorer Tool            |
+| SR-011-SHM-2024  | Shaving Mug                    |
+| SR-012-MUG-2024  | Mug                            |
+| SR-013-RUB-2024  | Rub                            |
+| SR-014-LTH-2024  | Leather                        |
+| SR-015-TOW-2024  | Towel                          |
+| SR-016-FLA-2024  | Flannel                        |
+| SR-017-PAD-2024  | Pad                            |
+| SR-018-KIT-2024  | Kit                            |
+| SR-019-GEL-2024  | Gel                            |
+| SR-020-WAX-2024  | Wax                            |
+| SR-021-FIN-2024  | Finish                         |
+| SR-022-COM-2024  | Comb                           |
+| SR-023-SCR-2024  | Scraper                        |
+| SR-024-RAS-2024  | Razor Stand                    |
+| SR-025-HOL-2024  | Holder                         |
+| SR-026-SLI-2024  | Slitter                        |
+| SR-027-PEN-2024  | Pen                            |
+| SR-028-CAP-2024  | Cap                            |
+| SR-029-DIS-2024  | Dispenser                      |
+| SR-030-BLK-2024  | Black Razor                    |
 
 # Skeleton
 
