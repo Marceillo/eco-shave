@@ -36,7 +36,7 @@
                             
                             <div class="col-2"><img class="img-fluid" src="{{ item.product.image.url }}" alt="{{ item.product.name }}"></div>
                             <div class="col">
-                                <div class="row text-muted">{{ item.product.category.name }}</div>
+                                <div class="row text-muted">{{ item.product.category.friendly_name }}</div>
                                 <div class="row">{{ item.product.name }}</div>
                             </div>
 
@@ -74,6 +74,7 @@
                {% include "bag/checkout-buttons.html" %}{% endcomment %}
 
                 <button class="btn">CHECKOUT</button>
+                
 
                 <div class="back-to-shop"><a href="{% url 'products' %}">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
             </div>

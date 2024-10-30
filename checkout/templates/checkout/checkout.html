@@ -1,22 +1,28 @@
 {% extends "base.html" %}
 {% load static %}
-{% load bag_tools %} 
+{% load bag_tools %}
+{% load crispy_forms_tags %} 
+
+{% Comment %} {% block extra_css %} 
+    <link rel="stylesheet" href="{% static 'bag/bag.css' %}">
+{% endblock %}{% endcomment %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="col text-center">
-            <h1 class=" hm-head">Your Shopping Bag</h1>
+    <div class="container head-container">
+        <div class="row">
+            <div class="col text-center">
+                <h1 class="logo-font">
+                    Checkout
+                </h1>
+            </div>
         </div>
     </div>
 {% endblock %}
 
-{% block extra_css %}
-    <link rel="stylesheet" href="{% static 'bag/bag.css' %}">
-{% endblock %}
 
 {% block content %}
 
-<div class="overlay"></div>
+<div class="overlay">
 <div class="container mb-2">
     <div class="card">
         <div class="row">
