@@ -41,7 +41,7 @@
                             </div>
 
                             {% include "bag/quantity-form.html" %}
-                            <div class="col text-right">&euro; {{ item.product.price | calc_subtotal:item.quantity}}&euro;
+                            <div class="col text-right">{{ item.product.price | calc_subtotal:item.quantity}}&euro;
                                 <span class="close remove-item" id="remove_{{ item_id }}"><i class="fa-solid fa-trash"></i></span>
                             </div>
  

@@ -53,7 +53,7 @@
                     {% for item in order.lineitems.all %}
                     <div class="row mb-3">
                         <div class="col-12 col-md-4">
-                            <p class="mb-0 text-black font-weight-bold">{{ item.product.name }}{% if item.product_size %} - Size {{ item.product.size|upper }}{% endif %}</p>
+                            <p class="mb-0 text-black font-weight-bold">{{ item.product.name }}</p>
                         </div>
                         <div class="col-12 col-md-4 text-md-center">
                             <p class="mb-0">{{ item.quantity }}</p>
@@ -65,8 +65,9 @@
                        <hr>
                        <div class="row">
                         <div class="col text-right">
-                            <h4>Total: €{{ order.order_total }}</h4>
-                            <a href="{% url 'checkout' %}" class="btn btn-success">Proceed to Checkout</a>
+                            <h4>Total: {{ order.order_total }}€</h4>
+                            <a href="{% url 'products' %}" class="btn btn-success">Proceed to Shopping Page</a>
+                            <!-- <div class="back-to-shop"><a href="{% url 'products' %}">&leftarrow;</a><span class="text-muted">Back to shop</span></div> -->
                         </div>
                     </div>
                     {% endif %}
@@ -83,10 +84,10 @@
                         <span class="text-uppercase">Back to Profile</span>
                     </a>
                 {% else %}
-                    <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="btn btn-black rounded-0 my-2">
+                    <!-- <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="btn btn-black rounded-0 my-2">
                         <span class="icon mr-2"><i class="fas fa-gifts"></i></span>
                         <span class="text-uppercase">Now check out the latest deals!</span>
-                    </a>
+                    </a> -->
                 {% endif %}
             </div>
         </div>
