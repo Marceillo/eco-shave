@@ -4,7 +4,7 @@
 {% load crispy_forms_tags %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'bag/bag.css' %}">
+<link rel="stylesheet" href="{% static 'checkout/checkout.css' %}">
 {% endblock %}
 
 {% block page_header %}
@@ -40,13 +40,13 @@
                             <div class="row">{{ item.product.name }}</div>
                             <p>Qty: {{ item.quantity }}</p>
                         </div>
-                        <div class="col text-right">&euro; {{ item.product.price | calc_subtotal:item.quantity }}</div>
+                        <div class="col text-right">{{ item.product.price | calc_subtotal:item.quantity }}&euro;</div>
                     </div>
                 {% endfor %}
                 <hr>
                 <div class="row text-black text-right">
                     <div class="col-7">Order Total:</div>
-                    <div class="col-3">&euro; {{ total }}</div>
+                    <div class="col-3">{{ total }}&euro;</div>
                 </div>
             </div>
 
@@ -110,50 +110,8 @@
     {% endblock %}
 
     {% block postloadjs %}
-    {% include 'products/includes/quantity_input_script.html' %}
     {{ block.super }}
-    <script type="text/javascript">
-        // Update quantity on click
-        $('.update-link').click(function (e) {
-            var form = $(this).prev('.update-form');
-            form.submit();
-        })
-
-        $('.remove-item').click(function (e) {
-            e.preventDefault();
-            var csrfToken = "{{ csrf_token }}";
-            var itemId = $(this).attr('id').split('remove_')[1];
-            // console.log(`Attempting to remove item with ID 1: ${itemId}`);
-            var url = `/shopping_bag/remove/${itemId}/`;
-            console.log(`Attempting to remove item with ID: ${itemId}`);
-            $.post(url, {
-                    'csrfmiddlewaretoken': csrfToken
-                })
-                .done(function () {
-                    location.reload();
-                });
-        });
-
-        // $('.add-item').click(function(e) {
-        //     e.preventDefault();
-        //     var csrfToken = "{{ csrf_token }}";
-        //     var itemId = $(this).attr('id').split('add_')[1];
-        //     var url = `/bag/add/${itemId}/`; 
-
-        //     $.post(url, {'csrfmiddlewaretoken': csrfToken})
-        //      .done(function() {
-        //          location.reload(); 
-        //      });
-
-        //      $.post(url, {'csrfmiddlewaretoken': csrfToken})
-        //      .done(function(response) {
-
-        //          alert(response.message); 
-
-        //      })
-        //      .fail(function() {
-        //          alert('Error adding item to bag.');
-        //      });
-        // });
-    </script>
-    {% endblock %}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+{% endblock %}

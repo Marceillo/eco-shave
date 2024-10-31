@@ -2,11 +2,11 @@
     <form class="form update-form" action="{% url 'adjust_bag' item_id %}" method="POST">
         {% csrf_token %}
         <div class="btn-group input-group" role="group">
-            <button type="button" class="btn btn-primary decrement-qty btn-sm decrement-qty_{{ item.id }}" data-item_id="{{ item.id }}" >
+            <button type="button" class="btn btn-primary decrement-qty btn-very-small decrement-qty_{{ item.id }}" data-item_id="{{ item.id }}" >
                 <i class="fa-solid fa-minus"></i>
             </button>
-            <input type="number" class="form-control qty_input btn-sm id_qty_{{ item.id }}" name="quantity" data-item_id="{{ item.id }}"  value="{{ item.quantity }}" min="1" max="99" oninput="this.value = Math.max(this.value, 1);">
-            <button type="button" class="btn btn-primary increment-qty btn-sm increment-qty_{{ item.id }}" data-item_id="{{ item.id }}">
+            <input type="number" class="form-control qty_input btn-very-small id_qty_{{ item.id }}" name="quantity" data-item_id="{{ item.id }}"  value="{{ item.quantity }}" min="1" max="99" oninput="this.value = Math.max(this.value, 1);">
+            <button type="button" class="btn btn-primary increment-qty btn-very-small increment-qty_{{ item.id }}" data-item_id="{{ item.id }}">
                 <i class="fa-solid fa-plus"></i>
             </button>
         </div>
