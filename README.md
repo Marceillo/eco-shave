@@ -26,6 +26,7 @@
   - [Home Page](#home-page)
   - [Product Page](#product-page)
   - [Product Detail Page](#product-detail-page)
+  - [Checkout Page & Success Checkout Page ](#checkout-page-&-success-checkout-page)
   - [About Page](#about-us-page)
   - [Contact Page](#contact-page)
   - [Account Login](#account-login)
@@ -358,6 +359,12 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 * - Problem 2: The remove button was not working as I was not consistently using strings for keys, after all the refactoring and print logs problem resolved.
 * Styling : I used a [free template](https://bbbootstrap.com/snippets/bootstrap-ecommerce-shopping-cart-item-summary-44021562) and customised it to the bag app 
 
+### Checkout Page & Success Checkout Page
+
+* Note: This is a page to allow the user to fill out there personal details and delivery information.
+* Bug fix: The Checkout success page was not showing up after confirming the form repaired views the problem was the element for java script was not in the  
+  layout.   
+* - Setup stripe as per the LMS the views have changed in the last years but still managed to create a account and setup.
 
 ### About Page
 
