@@ -13,18 +13,18 @@ import json
 
 def cache_checkout_data(request):
     try:
-        print("Request Method:", request.method)
-        print("POST Data:", request.POST)
+        # print("Request Method:", request.method)
+        # print("POST Data:", request.POST)
         client_secret = request.POST.get('client_secret')
         if client_secret is None:
-            print("Client secret is missing.")
+            # print("Client secret is missing.")
             return HttpResponse('Client secret not provided.', status=400)
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
         stripe.PaymentIntent.modify(pid, metadata={
             'shopping_bag': json.dumps(request.session.get('shopping_bag', {})),
-            # 'save_info': request.POST.get('save_info'),
-            # 'username': request.user,
+            'save_info': request.POST.get('save_info'),
+            'username': request.user,
         })
         return HttpResponse(status=200)
     except Exception as e:
@@ -77,22 +77,26 @@ def checkout(request):
                         )
                         order_line_item.save()
                     else:
-                        for size, quantity in item_data['items_by_size'].items():
+                        for quantity in item_data.items(): 
+                        # for size, quantity in item_data['items_by_size'].items():
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
-                                quantity=quantity,
-                                product_size=size,
+                                quantity=item_data if isinstance(item_data, int) else sum(item_data.values())
+                                # quantity=quantity,
+                                # product_size=size,
                             )
                             order_line_item.save()
+                           
                 except Product.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your bag wasn't found in our database. "
                         "Please call us for assistance!")
                     )
+                    
                     order.delete()
                     return redirect(reverse('view_bag'))
-
+            order.update_total()
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:

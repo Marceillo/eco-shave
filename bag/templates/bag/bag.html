@@ -34,7 +34,16 @@
                                                                
                         <div class="row border-top border-bottom py-3 main align-items-center">
                             
-                            <div class="col-2"><img class="img-fluid" src="{{ item.product.image.url }}" alt="{{ item.product.name }}"></div>
+                            <div class="col-2">
+                                {% if product.image %}
+                                <img class="img-fluid" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                {% else %}
+                                <a href="{{ MEDIA_URL }}noimage.png" target="_blank"></a>
+                                    <img src="{{ MEDIA_URL }}noimage.png" class="d-block w-100 img-fluid" alt="{{ product.name }}">
+                                </a>
+                                {% endif %}
+                            </div>
+
                             <div class="col">
                                 <div class="row text-muted">{{ item.product.category.friendly_name }}</div>
                                 <div class="row">{{ item.product.name }}</div>
