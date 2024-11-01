@@ -44,19 +44,6 @@ class Order(models.Model):
         """
         return uuid.uuid4().hex.upper()
     
-    def save(self, *args, **kwargs):
-        """
-        This method overrides the default save method to set the
-        order number in case it is not there.
-        """
-        if not self.order_number:
-            self.order_number = self._generate_order_number()
-        super().save(*args, **kwargs)
-
-    def __str__(self):
-        return self.order_number
-
-
     def update_total(self):
         """
         This method updates the total cost every time a line item
@@ -66,6 +53,23 @@ class Order(models.Model):
             Sum('lineitem_total'))['lineitem_total__sum'] or 0
         self.total = self.order_total 
         self.save()   
+    
+    def save(self, *args, **kwargs):
+        """
+        This method overrides the default save method to set the
+        order number in case it is not there.
+        """
+        if not self.order_number:
+            self.order_number = self._generate_order_number()
+        super().save(*args, **kwargs)
+        # note for me below
+        # self.order.update_total()
+
+    def __str__(self):
+        return self.order_number
+
+
+    
 
 class OrderLineItem(models.Model):
     """

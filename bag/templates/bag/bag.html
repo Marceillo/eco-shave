@@ -35,12 +35,10 @@
                         <div class="row border-top border-bottom py-3 main align-items-center">
                             
                             <div class="col-2">
-                                {% if product.image %}
-                                <img class="img-fluid" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                {% if item.product.image %}
+                                    <img class="img-fluid" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                                 {% else %}
-                                <a href="{{ MEDIA_URL }}noimage.png" target="_blank"></a>
-                                    <img src="{{ MEDIA_URL }}noimage.png" class="d-block w-100 img-fluid" alt="{{ product.name }}">
-                                </a>
+                                    <img src="{{ MEDIA_URL }}noimage.png" class="d-block w-100 img-fluid" alt="{{ item.product.name }}">
                                 {% endif %}
                             </div>
 

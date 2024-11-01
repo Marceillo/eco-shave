@@ -82,8 +82,8 @@ def checkout(request):
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
-                                quantity=item_data if isinstance(item_data, int) else sum(item_data.values())
-                                # quantity=quantity,
+                                quantity=quantity,
+                                # quantity=item_data if isinstance(item_data, int) else sum(item_data.values())
                                 # product_size=size,
                             )
                             order_line_item.save()
@@ -96,7 +96,7 @@ def checkout(request):
                     
                     order.delete()
                     return redirect(reverse('view_bag'))
-            order.update_total()
+            # order.update_total()
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
