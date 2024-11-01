@@ -55,12 +55,30 @@
                     </div>
                     {% endfor %}
                     <hr>
-                    <div class="row text-black text-right">
-                        <div class="col-7"><strong>Order number:</strong></div>
-                        <div class="col-3">{{ order }}</div>
-                        <div class="col-7"><strong>Order Total:</strong></div>
-                        <div class="col-3">{{ order.order_total }}€</div>
+                    <div class="row text-black">
+                        <div class="col-6 text-black text-left">
+                            <p><strong>Order Date:</strong> {{ order.date }}</p>
+                            <p><strong>Full Name:</strong> {{ order.full_name }}</p>
+                            <p><strong>Phone:</strong> {{ order.phone_number }}</p>
+                            <p><strong>Address:</strong> {{ order.street_address1 }}{% if order.street_address2 %}, {{ order.street_address2 }}{% endif %}</p>
+                            <p><strong>City:</strong> {{ order.town_or_city }}</p>
+                            {% if order.county %}
+                                <p><strong>County:</strong> {{ order.county }}</p>
+                            {% endif %}
+                            {% if order.postcode %}
+                                <p><strong>Postal Code:</strong> {{ order.postcode }}</p>
+                            {% endif %}
+                            <p><strong>Country:</strong> {{ order.country }}</p>
+                        </div>
+                        <div class="col-6 text-black text-right">
+                            <p><strong>Order Number:</strong> {{ order.order_number }}</p>
+                            <!-- <p><strong>Order Total:</strong> {{ order.order_total }}€</p> -->
+                            <p><strong>Free delivery!!</strong></p>
+                            <p><strong>Total:</strong> {{ order.total }}€</p>
+                     
+                        </div>
                     </div>
+
                     {% else %}
                     <h3><strong>Your Cart is Empty</strong></h3>
                     <a href="{% url 'products' %}" class="btn btn-primary cart-btn-transform m-3" data-abc="true">Continue Shopping</a>
