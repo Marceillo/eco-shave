@@ -22,7 +22,7 @@ class StripeWH_Handler:
         cust_email = order.email
         subject = render_to_string(
             'checkout/confirmation_emails/confirmation_email_subject.txt',
-            {'order': order})
+            {'order': order}),
         body = render_to_string(
             'checkout/confirmation_emails/confirmation_email_body.txt',
             {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
@@ -60,7 +60,7 @@ class StripeWH_Handler:
         
         billing_details = stripe_charge.billing_details # updated
         shipping_details = intent.shipping
-        grand_total = round(stripe_charge.amount / 100, 2) # updated
+        total = round(stripe_charge.amount / 100, 2) # updated
 
         # Clean data in the shipping details
         for field, value in shipping_details.address.items():
@@ -96,7 +96,7 @@ class StripeWH_Handler:
                     street_address1__iexact=shipping_details.address.line1,
                     street_address2__iexact=shipping_details.address.line2,
                     county__iexact=shipping_details.address.state,
-                    grand_total=grand_total,
+                    total=total,
                     original_bag=bag,
                     stripe_pid=pid,
                 )
@@ -162,3 +162,5 @@ class StripeWH_Handler:
         return HttpResponse(
             content=f'Webhook received: {event["type"]}',
             status=200)
+
+            
