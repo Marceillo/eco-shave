@@ -26,7 +26,7 @@ class UserProfile(models.Model):
     wish_list = models.ManyToManyField(Product)
 
     def __str__(self):
-        # return self.user.username
+        
         return f"{self.first_name} {self.last_name} ({self.user.username})"
 
 
@@ -37,6 +37,6 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
     """
     if created:
         UserProfile.objects.create(user=instance)
-    # Existing users: just save the profile
+    
     instance.userprofile.save()
 
