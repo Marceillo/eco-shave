@@ -63,11 +63,13 @@ INSTALLED_APPS = [
     'crispy_bootstrap4',
     'profiles',
     
+     
     # other
     'crispy_forms',
     
-    
 ]
+
+ALLAUTH_UI_THEME = "light"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
