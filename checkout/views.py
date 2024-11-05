@@ -66,7 +66,8 @@ def checkout(request):
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_bag = json.dumps(shopping_bag)
-            # print(order_form.errors) 
+            print(order_form.errors)
+            # order = order_form.save() 
             order.save()
             for item_id, item_data in shopping_bag.items():
                 try:
@@ -98,7 +99,7 @@ def checkout(request):
                     
                     order.delete()
                     return redirect(reverse('view_bag'))
-            # order.update_total()
+            order.update_total()
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:

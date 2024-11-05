@@ -40,6 +40,9 @@ class Order(models.Model):
         max_length=254, null=False, blank=False, default=''
     )
 
+    def __str__(self):
+        return f"{self.default_full_name or self.user.username} ({self.user.username})"
+
     def _generate_order_number(self):
         """
         This will generate a unique random number by

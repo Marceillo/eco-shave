@@ -5,7 +5,7 @@ from django.conf import settings
 
 from .models import Order, OrderLineItem
 from products.models import Product
-# from profiles.models import UserProfile
+from profiles.models import UserProfile
 
 import json
 import time
@@ -49,7 +49,7 @@ class StripeWH_Handler:
         intent = event.data.object
         
         pid = intent.id
-        bag = intent.metadata.bag
+        shopping_bag = intent.metadata.shopping_bag # changed
         save_info = intent.metadata.save_info
         
         # Get the Charge object
@@ -88,6 +88,7 @@ class StripeWH_Handler:
             try:
                 order = Order.objects.get(
                     full_name__iexact=shipping_details.name,
+                    user_profile=profile,
                     email__iexact=billing_details.email,
                     phone_number__iexact=shipping_details.phone,
                     country__iexact=shipping_details.address.country,
@@ -97,7 +98,8 @@ class StripeWH_Handler:
                     street_address2__iexact=shipping_details.address.line2,
                     county__iexact=shipping_details.address.state,
                     total=total,
-                    original_bag=bag,
+                    # original_bag=bag,
+                    original_bag=shopping_bag, # changed
                     stripe_pid=pid,
                 )
                 order_exists = True
@@ -115,6 +117,7 @@ class StripeWH_Handler:
             try:
                 order = Order.objects.create(
                     full_name=shipping_details.name,
+                    user_profile=profile,
                     email=billing_details.email,
                     phone_number=shipping_details.phone,
                     country=shipping_details.address.country,
@@ -123,10 +126,13 @@ class StripeWH_Handler:
                     street_address1=shipping_details.address.line1,
                     street_address2=shipping_details.address.line2,
                     county=shipping_details.address.state,
-                    original_bag=bag,
+                    # original_bag=bag,
+                    original_bag=shopping_bag,
                     stripe_pid=pid,
                 )
-                for item_id, item_data in json.loads(bag).items():
+                for item_id, item_data in json.loads(shopping_bag).items():
+                # for item_id, item_data in json.loads(bag).items():
+                    
                     product = Product.objects.get(id=item_id)
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
