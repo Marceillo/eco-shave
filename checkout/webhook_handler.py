@@ -26,7 +26,7 @@ class StripeWH_Handler:
         body = render_to_string(
             'checkout/confirmation_emails/confirmation_email_body.txt',
             {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
-        
+            
         send_mail(
             subject,
             body,
@@ -99,7 +99,7 @@ class StripeWH_Handler:
                     county__iexact=shipping_details.address.state,
                     total=total,
                     # original_bag=bag,
-                    original_bag=shopping_bag, # changed
+                    original_bag=shopping_bag, # changed to shopping bag
                     stripe_pid=pid,
                 )
                 order_exists = True
@@ -131,7 +131,7 @@ class StripeWH_Handler:
                     stripe_pid=pid,
                 )
                 for item_id, item_data in json.loads(shopping_bag).items():
-                # for item_id, item_data in json.loads(bag).items():
+                # for item_id, item_data in json.loads(bag).items(): change to shopping bag
                     
                     product = Product.objects.get(id=item_id)
                     if isinstance(item_data, int):
