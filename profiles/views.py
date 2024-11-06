@@ -33,11 +33,20 @@ def profile(request):
 
     return render(request, template, context)
 
-    # def edit_profile(request):
-    #     """
-    #     To edit the view of the profile
-    #     """
-    #     return render(request, template, context)
+# def edit_profile(request):
+#     """
+#     For the user to update there details in profile. 
+#     """
+#     if request.method == 'POST':
+#         form = UserProfileForm(request.POST, instance=request.user)
+#         if form.is_valid():
+#             form.save()
+#             return redirect('profiles')
+
+
+#     else:
+#         form = UserProfileForm(instance=request.user)
+#         return render(request, 'profiles/edit_profile.html', {'form': form})
 
 
 
