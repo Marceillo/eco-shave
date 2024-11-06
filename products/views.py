@@ -134,6 +134,8 @@ def upload_product_view(request):
             for img in request.FILES.getlist('images'):
                 PreviewImage.objects.create(product=product, image=img)
             message = 'Product uploaded successfully!'
+        else:
+            messages.error(request, 'Failed to upload product. ')
     else:
         product_form = ProductForm()
     
@@ -148,10 +150,16 @@ def edit_product(request, product_id):
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
+    preview_images = PreviewImage.objects.filter(product=product)
+    
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
-            form.save()
+            product_instance = form.save() # start changed
+            images = request.FILES.getlist('images')
+            for image in images:
+                 PreviewImage.objects.create(product=product_instance, image=image) # end changed
+            # form.save()
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
@@ -160,13 +168,14 @@ def edit_product(request, product_id):
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
 
-    template = 'products/edit_product.html'
+    # template = 'products/edit_product.html'
     context = {
         'form': form,
         'product': product,
+        'preview_images': preview_images, # change
     }
 
-    return render(request, template, context)
+    return render(request, 'products/edit_product.html', context)
 
 @login_required
 def delete_product(request, product_id):

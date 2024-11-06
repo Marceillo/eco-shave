@@ -1,17 +1,20 @@
 from django import forms
-# from .widgets import CustomClearableFileInput
+from .widgets import CustomClearableFileInput
 from .models import Product, Category, PreviewImage
 
 class ProductForm(forms.ModelForm):
     
     images = forms.ImageField (
         label='Preview Images',
-        required=False
+        required=False,
+        # widget=forms.FileInput(attrs={'multiple': True})
         
     )
     class Meta:
         model = Product
         fields = '__all__'
+
+        image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
 
         def __init__(self, *args, **kwargs):
             super().__init__(*args, **kwargs)
@@ -29,4 +32,3 @@ class ProductForm(forms.ModelForm):
         product_instance = super().save(commit=commit)
         
         return product_instance
-

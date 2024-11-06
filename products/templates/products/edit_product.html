@@ -32,6 +32,16 @@
                             {{ field }}
                     {% endif %}
                 {% endfor %}
+                <h5>Extra Preview Images:</h5>
+                {% if preview_images %}
+                <div class="existing-images">
+                    {% for img in preview_images %}
+                        <img src="{{ img.image.url }}" width="100" height="100" alt="Preview Image" />
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p>No extra preview images.</p>
+            {% endif %}
                     <div class="text-right">
                         <a class="btn btn-outline-black rounded-0" href="{% url 'products' %}">Cancel</a>
                         <button class="btn btn-black rounded-0" type="submit">Update Product</button>
