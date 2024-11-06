@@ -175,6 +175,7 @@ a:hover{
 }
 
 .card {
+    border: none;
     width: 100%;
     height: auto;
     position: relative;
