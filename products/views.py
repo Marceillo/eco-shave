@@ -6,7 +6,7 @@ from django.db.models.functions import Lower
 from star_ratings.models import Rating
 
 from .forms import ProductForm
-from.models import Product, Category, PreviewImage
+from .models import Product, Category, PreviewImage
 
 
 def all_products(request):
@@ -27,7 +27,7 @@ def all_products(request):
                 sortkey = 'lower_name'
                 products = products.annotate(lower_name=Lower('name'))
             if sortkey == 'category':
-                sortkey = 'category__name' 
+                sortkey = 'category__name'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
@@ -42,17 +42,19 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(
+                    request, "You didn't enter any search criteria!"
+                )
                 return redirect(reverse('products'))
 
             queries = (
-                Q(name__icontains=query) 
+                Q(name__icontains=query)
                 | Q(description__icontains=query)
                 | Q(category__name__icontains=query)
                 | Q(category__friendly_name__icontains=query)
             )
-            # distinct removes duplicate results 
-            products = products.filter(queries).distinct() 
+            # distinct removes duplicate results
+            products = products.filter(queries).distinct()
 
     current_sorting = f'{sort}'
 
@@ -62,12 +64,13 @@ def all_products(request):
         'current_categories': categories,
         'current_sorting': current_sorting,
     }
-    
+
     return render(request, 'products/products.html', context)
+
 
 def product_detail(request, product_id):
     """
-   Provides more information on the product.
+    Provides more information on the product.
     """
     product = get_object_or_404(Product, pk=product_id)
     preview_images = PreviewImage.objects.filter(product=product)
@@ -76,8 +79,7 @@ def product_detail(request, product_id):
         score = request.POST.get('rating')
 
         if score:
-            product.rating.add(score=int(score), 
-            user=request.user)
+            product.rating.add(score=int(score), user=request.user)
             messages.success(request, 'Thank you for your rating!')
         else:
             messages.error(request, 'Please select a rating.')
@@ -85,15 +87,15 @@ def product_detail(request, product_id):
     context = {
         'product': product,
         'preview_images': preview_images,
-         
     }
 
     return render(request, 'products/product_detail.html', context)
 
+
 @login_required
 def add_product(request):
-    """ To add products  """
-    
+    """To add products"""
+
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -101,18 +103,20 @@ def add_product(request):
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
-            product = form.save(commit=False) 
-            product.save() 
-            
-            
-            images = request.FILES.getlist('images')  
+            product = form.save(commit=False)
+            product.save()
+
+            images = request.FILES.getlist('images')
             for image in images:
-                PreviewImage.objects.create(product=product, image=image)  
-            
+                PreviewImage.objects.create(product=product, image=image)
+
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to add product. Please ensure the form is valid.',
+            )
     else:
         form = ProductForm()
 
@@ -123,6 +127,7 @@ def add_product(request):
 
     return render(request, template, context)
 
+
 @login_required
 def upload_product_view(request):
     message = None
@@ -130,7 +135,7 @@ def upload_product_view(request):
         product_form = ProductForm(request.POST)
         if product_form.is_valid():
             product = product_form.save()
-            
+
             for img in request.FILES.getlist('images'):
                 PreviewImage.objects.create(product=product, image=img)
             message = 'Product uploaded successfully!'
@@ -138,32 +143,46 @@ def upload_product_view(request):
             messages.error(request, 'Failed to upload product. ')
     else:
         product_form = ProductForm()
-    
-    return render(request, 'upload_product.html', {'product_form': product_form, 'message': message})
+
+    return render(
+        request,
+        'upload_product.html',
+        {'product_form': product_form, 'message': message},
+    )
+
 
 @login_required
 def edit_product(request, product_id):
-    """ Edit a product in the store """
-    
+    """Edit a product in the store"""
+
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
     preview_images = PreviewImage.objects.filter(product=product)
-    
+
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
-            product_instance = form.save() # start changed
+            product_instance = form.save()  # start changed
+            if 'delete_image' in request.POST:
+                delete_image_ids = request.POST.getlist('delete_images')
+                PreviewImage.objects.filter(id__in=delete_image_ids).delete()
             images = request.FILES.getlist('images')
             for image in images:
-                 PreviewImage.objects.create(product=product_instance, image=image) # end changed
+                PreviewImage.objects.create(
+                    product=product_instance, image=image
+                )  # end changed
+
             # form.save()
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to update product. Please ensure the form is valid.',
+            )
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
@@ -172,15 +191,16 @@ def edit_product(request, product_id):
     context = {
         'form': form,
         'product': product,
-        'preview_images': preview_images, # change
+        'preview_images': preview_images,  # change
     }
 
     return render(request, 'products/edit_product.html', context)
 
+
 @login_required
 def delete_product(request, product_id):
-    """ Delete a product from the store """
-    
+    """Delete a product from the store"""
+
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))

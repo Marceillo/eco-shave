@@ -4,17 +4,18 @@ from .models import Product, Category, PreviewImage
 
 class ProductForm(forms.ModelForm):
     
-    images = forms.ImageField (
-        label='Preview Images',
+    images = forms.ImageField(
+        label='Preview Image',
         required=False,
-        # widget=forms.FileInput(attrs={'multiple': True})
-        
+        widget=CustomClearableFileInput(attrs={'class': 'border-black rounded-0'})
+        # widget=CustomClearableFileInput(attrs={'multiple': True, 'class': 'border-black rounded-0'})
+
     )
     class Meta:
         model = Product
         fields = '__all__'
 
-        image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
+        # image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
 
         def __init__(self, *args, **kwargs):
             super().__init__(*args, **kwargs)
@@ -32,3 +33,4 @@ class ProductForm(forms.ModelForm):
         product_instance = super().save(commit=commit)
         
         return product_instance
+
