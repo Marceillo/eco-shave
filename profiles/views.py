@@ -67,3 +67,60 @@ def order_history(request, order_number):
     }
 
     return render(request, template, context)
+
+@login_required
+def wishlist(request):
+    """
+    For display of user wish list 
+    """
+    profile = get_object_or_404(UserProfile, user=request.user)
+    wish_list = profile.wish_list.all()
+
+    context = {
+        'wish_list': wish_list,
+        'wish_list_page': True,
+    }
+    
+    return render(request, 'profiles/wish_list.html', context)
+
+
+@login_required
+def add_to_wishlist(request):
+    """
+    To add to the wish list 
+    """
+    product = get_object_or_404(Product, id=product_id)
+    profile = get_object_or_404(UserProfile, user=request.user)
+    try:
+        if product not in profile.wish_list.all():
+            profile.wish_list.add(product)
+            messages.success(request, f'{product.name} has been added to your wish list.')
+        else:
+            messages.info(request, f'{product.name} is already in your wish list.')
+
+    except Exception as e:
+        messages.error(request, f'There was a problem adding {product.name} to your wish list: {str(e)}')
+        
+        return redirect('wishlist')
+
+@login_required
+def remove_from_wishlist(request):
+    """
+    To add to the wish list 
+    """
+    product = get_object_or_404(Product, id=product_id)
+    profile = get_object_or_404(UserProfile, user=request.user)
+    try:
+        if product not in profile.wish_list.all():
+            profile.wish_list.remove(product)
+            messages.success(request, f'{product.name} has been removed from your wish list.')
+        else:
+            messages.info(request, f'{product.name} is  not in your wish list.')
+
+    except Exception as e:
+        messages.error(request, f'There was a error removing {product.name} from your wish list: {str(e)}')
+        
+        return redirect('wishlist')
+
+
+
