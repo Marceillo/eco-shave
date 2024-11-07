@@ -366,6 +366,17 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
   layout.   
 * - Setup stripe as per the LMS the views have changed in the last years but still managed to create a account and setup.
 
+### User Profile 
+
+* The page for the profile shows the order history and the profile information.
+* When you click on the profile information there is flip animation that for the user to update.
+* Delete profile still to be implemented 
+
+### Product Admin 
+
+* I have django multiview feature this did not work so well with the widgets from django.
+* The view had to be changed a bit so you can see the images and so you can edit/delete them.
+
 ### About Page
 
 <details>
