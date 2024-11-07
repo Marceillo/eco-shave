@@ -153,7 +153,7 @@ def upload_product_view(request):
 
 @login_required
 def edit_product(request, product_id):
-    """Edit a product in the store"""
+    """Edit a product in the store products """
 
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
@@ -165,37 +165,40 @@ def edit_product(request, product_id):
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
-            product_instance = form.save()  # start changed
-            if 'delete_image' in request.POST:
-                delete_image_ids = request.POST.getlist('delete_images')
-                PreviewImage.objects.filter(id__in=delete_image_ids).delete()
+            product_instance = form.save()
+
+            for i in range(len(preview_images)):
+                image_id = request.POST.get(f'previewimage_set-{i}-id')
+                new_image = request.FILES.get(f'previewimage_set-{i}-image')
+                
+                if new_image:
+                    preview_image = PreviewImage.objects.get(id=image_id)
+                    preview_image.image = new_image
+                    preview_image.save()
+
+                if request.POST.get(f'previewimage_set-{i}-DELETE'):
+                    PreviewImage.objects.filter(id=image_id).delete()
+
+
             images = request.FILES.getlist('images')
             for image in images:
-                PreviewImage.objects.create(
-                    product=product_instance, image=image
-                )  # end changed
+                PreviewImage.objects.create(product=product_instance, image=image)
 
-            # form.save()
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(
-                request,
-                'Failed to update product. Please ensure the form is valid.',
-            )
+            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
 
-    # template = 'products/edit_product.html'
     context = {
         'form': form,
         'product': product,
-        'preview_images': preview_images,  # change
+        'preview_images': preview_images,
     }
 
     return render(request, 'products/edit_product.html', context)
-
 
 @login_required
 def delete_product(request, product_id):
@@ -209,3 +212,6 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+# @login_require
+# def delete_image
