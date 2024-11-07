@@ -11,6 +11,7 @@ from checkout.models import  Order
 def profile(request):
     """ Display the user's profile. """
     profile = get_object_or_404(UserProfile, user=request.user)
+    wish_list = current_user.wish_list.all()
 
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
@@ -28,7 +29,8 @@ def profile(request):
         'form': form,
         'orders': orders,
         'on_profile_page': True,
-        'email': request.user.email
+        'email': request.user.email,
+        'wish_list': wish_list,
     }
 
     return render(request, template, context)
