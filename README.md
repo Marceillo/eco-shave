@@ -348,7 +348,9 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 ### Product Detail Page
 
 * Feature : [Multiview feature](https://djangoguide.com/django-image-upload-specialization/django-multiple-image-upload/) from django that allows for one object to have multiple images .
+* - The Multiview is a extra model as with admin CRUD function.  
 * Feature :[django-star-ratings](https://django-star-ratings.readthedocs.io/en/latest/) this is a software install that handles the ratings this is differant to the LMS.
+* - The Lms had rating system but this one has been setup differantly.
 
 ### Shoppping Bag Page
 
@@ -374,8 +376,10 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 
 ### Product Admin 
 
-* I have django multiview feature this did not work so well with the widgets from django.
-* The view had to be changed a bit so you can see the images and so you can edit/delete them.
+* I have django multiview feature this did not work with the widgets from django lms had to make a view changes.
+* - Due to errors, I used the admin view with the inspect tool, to see how the admin handels delet and update images.
+* - The used this information to implement in my view of this project. 
+
 
 ### About Page
 
