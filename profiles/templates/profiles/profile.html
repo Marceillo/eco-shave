@@ -77,6 +77,7 @@
                                 <h5>{{ form.default_full_name.value }} {{ form.last_name.value }}</h5>
                                 <i class="far fa-edit mb-3"></i> 
                                 <a href="#" class="btn btn-outline-black rounded-0 edit-button">Edit Profile</a>
+                                <a href="{% url 'wishlist' %}" class="btn btn-outline-black rounded-0 edit-button">Your Wish List</a>
                             </div>
                             <div class="card-body p-4">
                                 <h6>Profile Details</h6>
@@ -85,8 +86,9 @@
                                 <p><strong>Full Name:</strong> {{ form.default_full_name.value |default:"" }}</p>
                                 <p><strong>Email:</strong> {{ form.default_email.value |default:" No email provided " }}</p>
                                 <p><strong>Phone Number:</strong> {{ form.default_phone_number.value |default:"" }}</p>
-                                
+                                                                
                             </div>
+                            
                         </div>
 
                         <!--Profile Form -->
@@ -97,6 +99,7 @@
                                 
                                 <button type="submit" class="btn btn-black rounded-0 text-uppercase float-right">Update Information</button>
                                 <button type="button" class="btn btn-secondary rounded-0 cancel-button">Cancel</button>
+
                             </form>
                         </div>
 
