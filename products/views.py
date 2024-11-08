@@ -7,7 +7,7 @@ from star_ratings.models import Rating
 
 from .forms import ProductForm
 from .models import Product, Category, PreviewImage
-
+from profiles.models import UserProfile
 
 def all_products(request):
     """
@@ -74,6 +74,10 @@ def product_detail(request, product_id):
     """
     product = get_object_or_404(Product, pk=product_id)
     preview_images = PreviewImage.objects.filter(product=product)
+    
+    profile = get_object_or_404(UserProfile, user=request.user)
+
+    in_wishlist = profile.wish_list.filter(id=product.id).exists()
 
     if request.method == 'POST':
         score = request.POST.get('rating')
@@ -87,6 +91,7 @@ def product_detail(request, product_id):
     context = {
         'product': product,
         'preview_images': preview_images,
+        'in_wishlist': in_wishlist,
     }
 
     return render(request, 'products/product_detail.html', context)

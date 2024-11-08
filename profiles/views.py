@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, HttpResponse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
@@ -11,7 +11,7 @@ from products.models import Product
 def profile(request):
     """ Display the user's profile. """
     profile = get_object_or_404(UserProfile, user=request.user)
-    # wish_list = current_user.wish_list.all()
+  
 
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
@@ -30,7 +30,7 @@ def profile(request):
         'orders': orders,
         'on_profile_page': True,
         'email': request.user.email,
-        # 'wish_list': wish_list,
+        
     }
 
     return render(request, template, context)
@@ -65,62 +65,60 @@ def order_history(request, order_number):
         'order': order,
         'from_profile': True,
     }
-
+    
     return render(request, template, context)
 
 @login_required
 def wishlist(request):
     """
-    For display of user wish list 
+    This is the view for the wishlist.
     """
     profile = get_object_or_404(UserProfile, user=request.user)
-    wish_list = profile.wish_list.all()
+    products = profile.wish_list.all()
 
+    template = 'profiles/wish_list.html'
     context = {
-        'wish_list': wish_list,
-        'wish_list_page': True,
+        'wishlist': products,
     }
-    
-    return render(request, 'profiles/wish_list.html', context)
+    return render(request, template, context)
+
 
 
 @login_required
 def add_to_wishlist(request, product_id):
     """
-    To add to the wish list 
+    To add a product to the wish list.
     """
-    product = get_object_or_404(Product, id=product_id)
     profile = get_object_or_404(UserProfile, user=request.user)
-    try:
-        if product not in profile.wish_list.all():
-            profile.wish_list.add(product)
-            messages.success(request, f'{product.name} has been added to your wish list.')
-        else:
-            messages.info(request, f'{product.name} is already in your wish list.')
+    product = get_object_or_404(Product, id=product_id)
 
-    except Exception as e:
-        messages.error(request, f'There was a problem adding {product.name} to your wish list: {str(e)}')
-        
+    if profile.wish_list.filter(id=product.id).exists():
+        profile.wish_list.remove(product)
+        messages.success(request, f'Removed {product.name} from your wishlist.')
         return redirect('wishlist')
+    else:
+        profile.wish_list.add(product)
+        messages.success(request, f'Added {product.name} to your wishlist.')
+
+    return redirect('wishlist')
+
 
 @login_required
 def remove_from_wishlist(request, product_id):
     """
-    To add to the wish list 
+    To remove a wish list item.
     """
-    product = get_object_or_404(Product, id=product_id)
     profile = get_object_or_404(UserProfile, user=request.user)
-    try:
-        if product not in profile.wish_list.all():
+    product = get_object_or_404(Product, id=product_id) 
+   
+    if request.method == 'POST':
+        if profile.wish_list.filter(id=product.id).exists():
             profile.wish_list.remove(product)
-            messages.success(request, f'{product.name} has been removed from your wish list.')
+            messages.success(request, f'Removed {product.name} from your wishlist.')
         else:
-            messages.info(request, f'{product.name} is  not in your wish list.')
+            messages.info(request, f'{product.name} is not in your wishlist.')
 
-    except Exception as e:
-        messages.error(request, f'There was a error removing {product.name} from your wish list: {str(e)}')
-        
-        return redirect('wishlist')
+    return redirect('wishlist')
 
 
 
