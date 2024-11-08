@@ -4,8 +4,8 @@ from django.contrib.auth.decorators import login_required
 
 from .models import UserProfile
 from .forms import UserProfileForm
-
 from checkout.models import  Order
+from products.models import Product
 
 @login_required
 def profile(request):
@@ -85,7 +85,7 @@ def wishlist(request):
 
 
 @login_required
-def add_to_wishlist(request):
+def add_to_wishlist(request, product_id):
     """
     To add to the wish list 
     """
@@ -104,7 +104,7 @@ def add_to_wishlist(request):
         return redirect('wishlist')
 
 @login_required
-def remove_from_wishlist(request):
+def remove_from_wishlist(request, product_id):
     """
     To add to the wish list 
     """
