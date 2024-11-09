@@ -133,6 +133,8 @@
                                         <a class="btn btn-outline-secondary btn-sm rounded mt-5 text-uppercase"
                                            href="#">Already in wishlist</a>
                                     {% endif %}
+                                    <a class="btn btn-outline-secondary btn-sm rounded mt-5 text-uppercase"
+                                    href="{% url 'wishlist' %}">Your Wishlist</a>
                                 </div>
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">

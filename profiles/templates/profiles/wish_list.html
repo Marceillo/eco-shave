@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load ratings %}
+{% load static %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -72,15 +73,51 @@
                     </ul>
                     {% else %}
                     <p class="lead mb-5">Your wish list is empty.</p>
+                    <a href="{% url 'products' %}" class="btn btn-outline-black">Keep Shopping</a>
                 {% endif %}
                 </div>
+                
             </div>
         </div>
     </div>
-    
 </div>
+
 {% endblock %}
 
-{% block postloadjs %}
+{% block postloadjs %} 
+{% include 'products/includes/quantity_input_script.html' %} 
+{{ block.super }}
+<script type="text/javascript">
+    $('.update-link').click(function(e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    });
+
+    $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/bag/remove/${itemId}/`;
+        $.post(url, {'csrfmiddlewaretoken': csrfToken})
+         .done(function() {
+             location.reload();
+         });
+    });
     
-    {% endblock %}
+    $('.add-item').click(function(e) {
+        e.preventDefault(); 
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('add_')[1];
+        var url = `/bag/add/${itemId}/`; 
+
+        $.post(url, {'csrfmiddlewaretoken': csrfToken})
+         .done(function() {
+             location.reload(); 
+         });
+         function showToast(message) {
+            var toastElement = $('#toast');
+            toastElement.text(message);
+            toastElement.fadeIn().delay(3000).fadeOut(); 
+        }
+    });
+</script>
+{% endblock %}
