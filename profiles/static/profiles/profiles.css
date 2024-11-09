@@ -33,9 +33,12 @@
     border: transparent;
 }
 
-/* .card-body {
+.card-body {
+    width: auto;
 
-} */
+}
+
+
 
 @media(max-width:767px){
     .card{

@@ -72,7 +72,7 @@
                                 {% if form.instance.profile_image %}
                                     <img src="{{ form.instance.profile_image.url }}" alt="Avatar" class="img-fluid my-3" style="width: 80px;" />
                                 {% else %}
-                                    <img src="{% static 'default-avatar.png' %}" alt="Default Avatar" class="img-fluid my-3" style="width: 80px;" />
+                                    <img src="{{ MEDIA_URL }}profile_images/default-avatar.png" alt="Default Avatar" class="img-fluid my-3" style="width: 80px;" />
                                 {% endif %}
                                 <h5>{{ form.default_full_name.value }} {{ form.last_name.value }}</h5>
                                 <i class="far fa-edit mb-3"></i> 
@@ -93,10 +93,11 @@
 
                         <!--Profile Form -->
                         <div class="card-back">
-                            <form action="{% url 'profile' %}" method="post" id="profile-update-form">
+                            <form action="{% url 'profile' %}" method="post" id="profile-update-form" enctype="multipart/form-data">
                                 {% csrf_token %}
                                 {{ form|crispy }}
-                                
+
+                             
                                 <button type="submit" class="btn btn-black rounded-0 text-uppercase float-right">Update Information</button>
                                 <button type="button" class="btn btn-secondary rounded-0 cancel-button">Cancel</button>
 

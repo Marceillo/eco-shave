@@ -1,5 +1,5 @@
 from django import forms
-from .models import UserProfile # change after copy from checkout
+from .models import UserProfile 
 
 
 class UserProfileForm(forms.ModelForm): 
@@ -34,5 +34,6 @@ class UserProfileForm(forms.ModelForm):
                 else:
                     placeholder = placeholders[field]
                 self.fields[field].widget.attrs['placeholder'] = placeholder
-                self.fields[field].widget.attrs['class'] = 'border-black rounded-0 profile-form-input' # change
+                self.fields[field].widget.attrs['class'] = 'border-black rounded-0 profile-form-input' 
+                self.fields['profile_image'].label = "Upload Profile Image"
                 self.fields[field].label = False
