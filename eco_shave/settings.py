@@ -206,3 +206,7 @@ DEFAULT_FROM_EMAIL = 'eco-shave@example.com'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Django Star Rating
+STAR_RATINGS_RERATE_SAME_DELETE = True 
+STAR_RATINGS_CLEARABLE = True

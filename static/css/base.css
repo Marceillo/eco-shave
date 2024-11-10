@@ -147,13 +147,16 @@ btn.btn-lg.btn-primary {
 }
 
 .primaryAction,
+.star-ratings-rating-clear,
 .btn-outline-black {
     background: #555;
     color: white !important; 
     border: 1px solid #555;
 }
 
+
 .primaryAction:hover,
+.star-ratings-rating-clear:hover,
 .btn-outline-black:hover,
 .btn-outline-black:active,
 .btn-outline-black:focus {
@@ -161,6 +164,7 @@ btn.btn-lg.btn-primary {
     color: gold !important;
 }
 
+.star-ratings-rating-clear:hover,
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
@@ -298,3 +302,8 @@ btn.btn-lg.btn-primary {
 	color: goldenrod; /* text-info */
 }
 
+/* Star Rating  */
+
+.star-ratings-rating-clear {
+
+}
