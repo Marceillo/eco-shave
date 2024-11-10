@@ -23,16 +23,22 @@ def all_products(request):
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
             sort = sortkey
-            if sortkey == 'name':
-                sortkey = 'lower_name'
-                products = products.annotate(lower_name=Lower('name'))
-            if sortkey == 'category':
-                sortkey = 'category__name'
-            if 'direction' in request.GET:
-                direction = request.GET['direction']
-                if direction == 'desc':
-                    sortkey = f'-{sortkey}'
-            products = products.order_by(sortkey)
+            if sortkey == 'name_asc':
+                products = products.annotate(lower_name=Lower('name')).order_by('lower_name')
+            elif sortkey == 'name_desc':
+                products = products.annotate(lower_name=Lower('name')).order_by('-lower_name')
+            elif sortkey == 'category_asc':
+                products = products.order_by('category__name')
+            elif sortkey == 'category_desc':
+                products = products.order_by('-category__name')
+            elif sortkey == 'price_asc':
+                products = products.order_by('price')
+            elif sortkey == 'price_desc':
+                products = products.order_by('-price')
+            # elif sortkey == 'rating_asc':
+            #     products = products.annotate(average_rating=Avg('ratings__score')).order_by('average_rating')
+            # elif sortkey == 'rating_desc':
+            #     products = products.annotate(average_rating=Avg('ratings__score')).order_by('-average_rating')           
 
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')

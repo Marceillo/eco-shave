@@ -1,7 +1,7 @@
 from django.db import models
 from star_ratings.models import Rating
+from django.contrib.contenttypes.fields import GenericRelation
 
-# Create your models here.
 
 class Category(models.Model):
     """
@@ -36,7 +36,8 @@ class Product(models.Model):
     image_url = models.URLField(max_length=1024,
     null=True, blank=True)
     is_active = models.BooleanField(default=True)
-
+    
+    rating = GenericRelation(Rating)
 
     def __str__(self):
         
