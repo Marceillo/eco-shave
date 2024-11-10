@@ -340,7 +340,8 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 ### Product Page 
 
 * Feature :[django-star-ratings](https://django-star-ratings.readthedocs.io/en/latest/) this is a software install that handles the ratings this is differant to the LMS.
-* Sort with categories
+* Sort feature has been setup without dango star rating
+* - Had a problem where django could not see certain fields in the star ratings generic setup will add this as future setup.
 * Images used from these links: 
 * - 
 * - 
@@ -555,15 +556,9 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 
 ### Future Features
 
-* Originally I planned the like feature to include in the project but due to time constraints and having met the MPV criteria, I would like to come back to this project and include it at a later stage.I have since moved it to a won't have status on the Kanban Board.  
-* For the contact form it would be great at a later stage to set up an API with Javascript and implement a feature when a user sends their details that it goes to an email address of the admin.
-* The Favorite feature is working as planned but if the site should grow I will need to change it into a separate link on the page as this method makes it easier for users to keep track of their project favorites.
-* At The moment the colors are my favorite but there is always room for improvement also for the design and flow of the blog posts. Due to time, this was the biggest issue for me in this regard.
-* As a kayaker we often have meetups and would like to include a feature that will assist with the logistics and dates of their meetups.
-* A feature to join in on classes or book an instructor for some time.
-* An online training program with video guides and information.
-* In the far future people to be able to sell their equipment and buy from others on the platform.
-* I did not inlcude Pagination for the amount of blog posts this would be great to come back to and update at later date.  
+* To sort using the django star rating 
+* - This will be added a as future feature as the way it is currently setup using the generic build I will need to change the way the data base interacts with the software.
+* I did not inlcude Pagination  the amount of products per page so will be the next future feature.  
 
 [Back to Table of Contents](#table-of-contents)
 
