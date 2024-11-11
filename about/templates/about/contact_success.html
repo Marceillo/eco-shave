@@ -4,7 +4,7 @@
 
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'checkout/checkout.css' %}">
+<link rel="stylesheet" href="{% static 'about/about.css' %}">
 {% endblock %}
 
 {% block page_header %}
@@ -13,7 +13,8 @@
         <div class="text-center">
             <br>
             <h1 class="hm-head">
-                Thank you for the support we will attend to your query
+                Thank you for your the support .
+                
             </h1>
             <br>
         </div>
@@ -28,7 +29,11 @@
 <div class="overlay"></div>
 <div class="container mb-2">
     <div class="card">
-
+        <p class="text-center">A confirmation email will be sent to your <strong>{{ user.email }}.</strong>
+            <br>
+            We will respond shortly to your email.</p>
+            <a class="btn btn-outline-black rounded-0 text-center" href="{% url 'home' %}">Home</a> 
     </div>
 </div>
 {% endblock %}
+

@@ -2,36 +2,43 @@
 {% load static %}
 {%load crispy_forms_tags%}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'about/about.css' %}">
+{% endblock %}
+
 {%block content %}
 
 <div class="container mt-5">
   <h1 class="text-center">Contact Us</h1>
+  
   {% if messages %}
   <div class="alert alert-custom">
-
-    {% for message in messages %}
-    {{ message }}
-    {% endfor %}
-
+      {% for message in messages %}
+          <div>{{ message }}</div>
+      {% endfor %}
   </div>
   {% endif %}
 
-  <form method="post" class="kayak_contact_form">
-    {% csrf_token %}
-    <div class="mb-3">
-      <label for="id_name" class="form-label"><i class="fa-solid fa-circle-user"></i></label>
-      {{ form.name|as_crispy_field}}
-    </div>
-    <div class="mb-3">
-      <label for="id_email" class="form-label"><i class="fa-solid fa-envelope-open"></i></label>
-      {{ form.email|as_crispy_field }}
-    </div>
-    <div class="mb-3">
-      <label for="id_message" class="form-label"><i class="fa-regular fa-comment-dots"></i></label>
-      {{ form.message|as_crispy_field }}
-    </div>
-    <button type="submit" class="btn btn-outline-success">Send Message</button>
+  <form method="POST">
+      {% csrf_token %}
+      
+      {% for field in form %}
+          <div class="form-group">
+              {{ field.label_tag }}
+              {{ field }}
+              {% if field.help_text %}
+                  <small class="form-text text-muted">{{ field.help_text }}</small>
+              {% endif %}
+              {% for error in field.errors %}
+                  <div class="text-danger">{{ error }}</div>
+              {% endfor %}
+          </div>
+      {% endfor %}
+
+      <button type="submit" class="btn btn-black ">Send Message</button>
   </form>
+
+  <a href="{% url 'about' %}" >Back to About</a>
 </div>
 
 {%endblock content%}
