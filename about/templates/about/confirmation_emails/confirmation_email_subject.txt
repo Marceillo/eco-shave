@@ -1,1 +1,0 @@
-Eco-Shave Confirmation for contact request {{ user.subject  }}
