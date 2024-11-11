@@ -228,3 +228,18 @@ a:hover{
         font-size: 0.9rem;
     }
 }
+
+/* .button-container form, 
+.button-container a {
+    margin-right: 10px; 
+}
+
+.button-container .btn {
+    width: auto;
+    text-align: center;
+} */
+
+.in-bag {
+    margin-bottom: 0;
+    
+}

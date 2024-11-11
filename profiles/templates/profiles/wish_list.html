@@ -56,93 +56,22 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- add to bag -->
-                            <!-- <form action="{% url 'add_to_bag' product.id %}" method="POST" class="add-to-bag-form">
-                                {% csrf_token %}
-                                <button type="submit" class="btn btn-black rounded-0 text-uppercase">Add to Bag</button>
-                            </form> -->
-                            <!-- Remove  Button -->
-                            <!-- <form action="{% url 'remove_from_wishlist' product.id %}" method="POST" style="display:inline;">
-                                {% csrf_token %}
-                                <button type="submit" class="btn btn-danger btn-sm">Remove</button>
-                                <div class="col{% if s %}-12 mt-2{% endif %}">
-                                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
-                                        <span class="icon">
-                                            <i class="fas fa-chevron-left"></i>
-                                        </span>
-                                        <span class="text-uppercase">Keep Shopping</span>
-                                    </a>
-                                    <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
-    
-                                </div>
-                            </form> -->
-                            <!-- <form action="{% url 'add_to_bag' product.id %}" method="POST">
-                                {% csrf_token %}
-                                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
-                            </form> -->
-                           <!-- # test -->
-                           <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
-                            {% csrf_token %}
-                            <div class="form-row">
-                                <div class="col-12">
-                                    <p class="mt-3"><strong>Quantity:</strong></p>
-                                    <div class="form-group w-50">
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <button class="decrement-qty btn btn-black rounded-0 decrement-qty_{{ product.id }}" 
-                                                    data-item_id="{{ product.id }}" >
-                                                    <span class="icon">
-                                                        <i class="fas fa-minus"></i>
-                                                    </span>
-                                                </button>
-                                            </div>
-                                            
-                                            <input class="form-control qty_input id_qty_{{ product.id }}" type="number"
-                                                name="quantity" value="1" min="1" max="99"
-                                                data-item_id="{{ product.id }}"
-                                                >
-                                            <div class="input-group-append">
-                                                <button class="increment-qty btn btn-black rounded-0 increment-qty_{{ product.id }}"
-                                                    data-item_id="{{ product.id }}" >
-                                                    <span class="icon">
-                                                        <i class="fas fa-plus"></i>
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <div class="col{% if s %}-12 mt-2{% endif %}">
-                                    <a href="{% url 'products' %}" class="btn btn-black rounded-0 text-uppercase mt-5">
-                                        <span class="icon">
-                                            <i class="fas fa-chevron-left"></i>
-                                        </span>
-                                        <span class="text-uppercase">Keep Shopping</span>
-                                    </a>
-                                    <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
-                                    <!-- <div>
-                                        {% if not in_wishlist %}
-                                            <a class="btn btn-outline-secondary btn-sm rounded mt-5 text-uppercase"
-                                               href="{% url 'add_to_wishlist' product.id %}">Add To Wishlist</a>
-                                        {% else %}
-                                            <a class="btn btn-outline-secondary btn-sm rounded mt-5 text-uppercase"
-                                               href="#">Already in wishlist</a>
-                                        {% endif %}
-                                        <a class="btn btn-outline-secondary btn-sm rounded mt-5 text-uppercase"
-                                        href="{% url 'wishlist' %}">Your Wishlist</a>
-                                    </div> -->
-                                </div>
-                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                               
+                          <!-- add and remove div-->
+                          <div class="button-container d-flex justify-content-end align-items-center mt-2">
+                            <div class="d-flex align-items-center mr-2">
+                                <form action="{% url 'add_to_bag' product.id %}" method="POST" class="mr-2 btn-sm ">
+                                    {% csrf_token %}
+                                    <input type="submit" class="btn btn-black rounded-0 btn-sm mr-2 in-bag" value="Add to Bag">
+                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                </form>
                             </div>
-                        </form>
-                        <!-- remove test 2 -->
-                        <form action="{% url 'remove_from_wishlist' product.id %}" method="POST" style="display:inline;">
-                            {% csrf_token %}
-                            <button type="submit" class="btn btn-danger btn-sm">Remove</button>
-                        </form>
-
+                            <form action="{% url 'remove_from_wishlist' product.id %}" method="POST" class="mr-2">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-danger btn-sm mr-2">Remove</button>
+                            </form>
+                            
+                            <a href="{% url 'products' %}" class="btn btn-outline-black btn-sm">Keep Shopping</a>
+                        </div>
                         </li>
                         {% endfor %}
                     </ul>
@@ -163,28 +92,32 @@
 {% include 'products/includes/quantity_input_script.html' %} 
 {{ block.super }}
 <script type="text/javascript">
-    $(document).ready(function() {
-        // Handle Add to Bag button click
-        $('.add-to-bag-form').on('submit', function(e) {
-            e.preventDefault(); // Prevent default form submission
-            var form = $(this);
-            var csrfToken = form.find('input[name=csrfmiddlewaretoken]').val();
-            var url = form.attr('action');
-            var quantity = form.find('input[name=quantity]').val(); // Get quantity if needed
+    $('.update-link').click(function(e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    });
 
-            $.post(url, {'csrfmiddlewaretoken': csrfToken, 'quantity': quantity})
-                .done(function(response) {
-                    // Show success message
-                    showToast('Item added to bag!');
-                    // Remove item from wishlist UI
-                    form.closest('li').remove(); // Adjust this selector based on your HTML structure
-                })
-                .fail(function() {
-                    alert('Failed to add item to bag.'); // Handle errors
-                });
-        });
+    $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/bag/remove/${itemId}/`;
+        $.post(url, {'csrfmiddlewaretoken': csrfToken})
+         .done(function() {
+             location.reload();
+         });
+    });
+    
+    $('.add-item').click(function(e) {
+        e.preventDefault(); 
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('add_')[1];
+        var url = `/bag/add/${itemId}/`; 
 
-        function showToast(message) {
+        $.post(url, {'csrfmiddlewaretoken': csrfToken})
+         .done(function() {
+             location.reload(); 
+         });
+         function showToast(message) {
             var toastElement = $('#toast');
             toastElement.text(message);
             toastElement.fadeIn().delay(3000).fadeOut(); 
