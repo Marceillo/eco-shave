@@ -1,0 +1,39 @@
+{%extends 'base.html'%}
+{% load static %}
+{%load crispy_forms_tags%}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'about/about.css' %}">
+{% endblock %}
+
+{% block page_header %}
+<div class="container head-container">
+    <div class="col">
+        <div class="text-center">
+            <br>
+            <h1 class="hm-head">
+              EDIT FAQ
+            </h1>
+            <br>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{%block content %}
+
+<body>
+    <div class="container mt-5">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Update FAQ</button>
+            <a href="{% url 'faq' %}">Cancel</a>
+        </form>
+    </div>   
+</body>
+</html>
+
+{%endblock content%}
+

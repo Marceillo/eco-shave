@@ -1,0 +1,51 @@
+{%extends 'base.html'%}
+{% load static %}
+{%load crispy_forms_tags%}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'about/about.css' %}">
+{% endblock %}
+
+{% block page_header %}
+<div class="container head-container">
+    <div class="col">
+        <div class="text-center">
+            <br>
+            <h1 class="hm-head">
+              Add to FAQ
+            </h1>
+            <br>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+{%block content %}
+
+{% if messages %}
+  <div class="alert alert-custom">
+      {% for message in messages %}
+          <div>{{ message }}</div>
+      {% endfor %}
+  </div>
+{% endif %}
+
+
+<body>
+ 
+     <div class="add_faq_container container mt-5">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Save</button>
+        </form>
+        <a href="{% url 'faq' %}">Cancel</a>
+     </div>
+    
+</body>
+</html>
+
+{%endblock content%}
+

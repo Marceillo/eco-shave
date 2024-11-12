@@ -1,0 +1,73 @@
+{%extends 'base.html'%}
+{% load static %}
+{%load crispy_forms_tags%}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'about/about.css' %}">
+{% endblock %}
+
+
+{% block page_header %}
+<div class="container head-container">
+    <div class="col">
+        <div class="text-center">
+            <br>
+            <h1 class="hm-head">
+                FAQs
+            </h1>
+            <h1>Frequently Asked Questions</h1>
+            <br>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+{%block content %}
+<body>
+    <a href="{% url 'add_faq' %} " class="text-center">Add New FAQ</a>
+    <div class="faq-container" >
+        <ul class="text-center">
+            {% for faq in faqs %}
+                <li>
+                    <button class="accordion text-center">{{ faq.question }}</button>
+                    <div class="panel">
+                        <p>{{ faq.answer|linebreaks }}</p>
+                        <br>
+                        <a href="{% url 'edit_faq' faq.pk %}" class="btn btn-black btn-sm ">Edit</a> |
+                        <a href="{% url 'delete_faq' faq.pk %} " class="btn btn-danger btn-sm">Delete</a>
+                    </div>
+                </li>
+            {% empty %}
+                <li>No FAQs available.</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</body>
+ 
+
+{% endblock content %}
+
+{% block postloadjs %}
+<script>
+    
+    var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    } 
+                });
+            }
+
+    </script>
+{% endblock %}
+
