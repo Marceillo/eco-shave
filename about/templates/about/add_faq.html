@@ -24,28 +24,26 @@
 
 {%block content %}
 
-{% if messages %}
-  <div class="alert alert-custom">
-      {% for message in messages %}
-          <div>{{ message }}</div>
-      {% endfor %}
-  </div>
-{% endif %}
+<div class="add_faq_container container mt-5 ">
+    {% if messages %}
+    <div class="alert alert-custom">
+        {% for message in messages %}
+            <div>{{ message }}</div>
+        {% endfor %}
+    </div>
+    {% endif %}
 
-
-<body>
- 
-     <div class="add_faq_container container mt-5">
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">Save</button>
-        </form>
-        <a href="{% url 'faq' %}">Cancel</a>
-     </div>
-    
-</body>
-</html>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        
+        <button type="submit" class="btn btn-black">Save</button>
+    </form>
+    <a href="{% url 'faq' %}" class="btn btn-black">Cancel</a>
+</div>
 
 {%endblock content%}
 
+{% block postloadjs %}
+
+{% endblock %}

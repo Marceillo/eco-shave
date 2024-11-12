@@ -13,9 +13,8 @@
         <div class="text-center">
             <br>
             <h1 class="hm-head">
-                FAQs
+               Frequently Asked Questions
             </h1>
-            <h1>Frequently Asked Questions</h1>
             <br>
         </div>
     </div>
@@ -27,7 +26,14 @@
 {%block content %}
 <body>
     <a href="{% url 'add_faq' %} " class="text-center">Add New FAQ</a>
-    <div class="faq-container" >
+    <div class="faq-container " >
+        {% if messages %}
+    <div class="alert alert-custom">
+        {% for message in messages %}
+            <div>{{ message }}</div>
+        {% endfor %}
+    </div>
+    {% endif %}
         <ul class="text-center">
             {% for faq in faqs %}
                 <li>
@@ -35,8 +41,8 @@
                     <div class="panel">
                         <p>{{ faq.answer|linebreaks }}</p>
                         <br>
-                        <a href="{% url 'edit_faq' faq.pk %}" class="btn btn-black btn-sm ">Edit</a> |
-                        <a href="{% url 'delete_faq' faq.pk %} " class="btn btn-danger btn-sm">Delete</a>
+                        <a href="{% url 'edit_faq' faq.pk %}" class="btn btn-black btn-sm faq_btn">Edit</a> |
+                        <a href="{% url 'delete_faq' faq.pk %} " class="btn btn-danger btn-sm faq_btn">Delete</a>
                     </div>
                 </li>
             {% empty %}
