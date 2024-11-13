@@ -126,6 +126,7 @@
                                 </a>
                                 <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
                                 <div>
+                                    {% if show_wishlist %} 
                                     {% if not in_wishlist %}
                                         <a class="btn btn-outline-secondary btn-sm rounded mt-5 text-uppercase"
                                            href="{% url 'add_to_wishlist' product.id %}">Add To Wishlist</a>
@@ -135,7 +136,9 @@
                                     {% endif %}
                                     <a class="btn btn-outline-secondary btn-sm rounded mt-5 text-uppercase"
                                     href="{% url 'wishlist' %}">Your Wishlist</a>
+                                    {% endif %}
                                 </div>
+                                
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                            

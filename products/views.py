@@ -80,10 +80,13 @@ def product_detail(request, product_id):
     """
     product = get_object_or_404(Product, pk=product_id)
     preview_images = PreviewImage.objects.filter(product=product)
+    in_wishlist = False
+    show_wishlist = False
     
-    profile = get_object_or_404(UserProfile, user=request.user)
-
-    in_wishlist = profile.wish_list.filter(id=product.id).exists()
+    if request.user.is_authenticated:
+        profile = get_object_or_404(UserProfile, user=request.user)
+        in_wishlist = profile.wish_list.filter(id=product.id).exists()
+        show_wishlist = True
 
     if request.method == 'POST':
         score = request.POST.get('rating')
@@ -94,10 +97,12 @@ def product_detail(request, product_id):
         else:
             messages.error(request, 'Please select a rating.')
 
+
     context = {
         'product': product,
         'preview_images': preview_images,
         'in_wishlist': in_wishlist,
+        'show_wishlist': show_wishlist,
     }
 
     return render(request, 'products/product_detail.html', context)
