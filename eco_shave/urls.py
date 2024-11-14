@@ -29,3 +29,9 @@ urlpatterns = [
     path('profile/', include('profiles.urls')),
     path('about/', include('about.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+"""
+This is for the 404 and 500 page handler.
+"""
+handler404 = 'eco_shave.views.handler404'
+handler500 = 'eco_shave.views.handler500'
