@@ -30,7 +30,11 @@
 <div class="container mb-2">
     <div class="card">
         <p class="text-center">
-            We have recieved your message and will contact you using this e-mail address : {{ user.email }}.
+            {% if user.email %}
+            We have received your message and will contact you using this e-mail address: {{ user.email }}.
+            {% else %}
+            We have received your message and are happy to assist with your query as soon as possible.
+            {% endif %}
         </p>
             <a class="btn btn-outline-black rounded-0 text-center" href="{% url 'home' %}">Home</a> 
     </div>
