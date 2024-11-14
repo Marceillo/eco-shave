@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /bag/
+Disallow: /shopping_bag/
+Sitemap: https://eco-shave-7beca10c37e1.herokuapp.com/sitemap.xml
