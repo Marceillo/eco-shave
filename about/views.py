@@ -54,16 +54,16 @@ def faq(request):
 
 @login_required
 def add_faq(request):
+
     if request.method == 'POST':
         form = FAQForm(request.POST)
+        
         if form.is_valid():
             form.save()
             messages.success(request, 'FAQ has been added successfully!')
-            # print("Success message set.")
             return redirect('faq')
         else:
             messages.error(request, 'Failed to add to the FAQ.')
-            # print("Error message set.")
     else:
         form = FAQForm()
     
