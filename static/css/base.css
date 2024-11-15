@@ -33,18 +33,13 @@ main {
 }
 
 /*------------------------------Footer*/
-/* .foot {
-    margin-top: auto; 
-} */
-
 
 footer {
  
     width: 100%; 
-    background-color: #ddd !important; 
     padding: 40px;
     color: #555;
-    background-color: #ddd;
+    /* background-color: rgba(128, 128, 0, 0.5); */
      
 }
 
@@ -54,6 +49,10 @@ footer {
 
 .footer p {
     margin-bottom: 15px;
+}
+
+.foot {
+    margin-top: auto; 
 }
 
 
