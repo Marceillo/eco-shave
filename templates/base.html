@@ -61,7 +61,6 @@
 <!-- fixed-top for header -->
 
 <body>
-<div class="container-wrapper">
   <header class="container-fluid ">
     <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
       <div class="col col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
@@ -160,7 +159,7 @@
   </div>
   {% endif %}
 
-<main>
+
   {% block page_header %}
 
   {% endblock %}
@@ -168,7 +167,7 @@
   {% block content %}
 
   {% endblock %}
-</main>
+
 
   <footer class='container-wrapper'>
     <div class='container quotes-container content-container'>
@@ -223,14 +222,7 @@
     </div>
   </footer>
 
-
-
-
   {% block postloadjs %}
-  <script type="text/javascript">
-    $('.toast').toast('show');
-  </script>
- 
   <script type="text/javascript">
     (function ($) {
       window.fnames = new Array();
@@ -252,8 +244,12 @@
     }(jQuery));
     var $mcj = jQuery.noConflict(true);
   </script>
+
+<script type="text/javascript">
+  $('.toast').toast('show');
+</script>
   {% endblock %}
-</div>
+
 </body>
 
 </html>
