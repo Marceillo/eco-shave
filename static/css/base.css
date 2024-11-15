@@ -8,6 +8,8 @@ body {
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
+   
+    
 }
 .shavebody {
     background: url('/media/wpaper3.jpg') no-repeat center center fixed;
@@ -31,13 +33,29 @@ main {
 }
 
 /*------------------------------Footer*/
-.foot {
+/* .foot {
     margin-top: auto; 
+} */
+
+
+footer {
+ 
+    width: 100%; 
+    background-color: #ddd !important; 
+    padding: 40px;
+    color: #555;
+    background-color: #ddd;
+     
 }
 
-.footer {
-    width: 100%; 
+.footer h2, h3 {
+    margin-bottom: 10px;
 }
+
+.footer p {
+    margin-bottom: 15px;
+}
+
 
 /*------------------------------home page */
 
@@ -302,3 +320,11 @@ btn.btn-lg.btn-primary {
 	color: goldenrod; /* text-info */
 }
 
+/* newsletter  */
+
+#mc_embed_signup {
+    background: #fff;
+    clear:left;
+    font: 10px Helvetica, Arial, sans-serif;
+    width: 600px;
+  }
