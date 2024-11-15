@@ -1,9 +1,11 @@
-html {
+html, body {
     height: 100%;
     margin: 0;
 }
 /* ------------------------------Body*/
 body {
+    display: flex;
+    flex-direction: column;
     color: #555;
     font-family: 'Roboto', sans-serif;
     display: flex;
@@ -11,6 +13,9 @@ body {
    
     
 }
+
+
+
 .shavebody {
     background: url('/media/wpaper3.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -28,6 +33,11 @@ body {
 
 
 /*------------------------------Main*/
+
+.container-wrapper {
+    flex: 1;
+}
+
 main {
     flex: 1; 
 }
@@ -35,11 +45,10 @@ main {
 /*------------------------------Footer*/
 
 footer {
- 
     width: 100%; 
-    padding: 40px;
+    padding: 10px;
     color: #555;
-    /* background-color: rgba(128, 128, 0, 0.5); */
+    background-color: #ddd;
      
 }
 
@@ -48,7 +57,7 @@ footer {
 }
 
 .footer p {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .foot {

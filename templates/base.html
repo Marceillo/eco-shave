@@ -11,7 +11,7 @@
     content="Discover sustainable DE razors and straight razors will all the shaving soaps and shave brushes.">
   <meta name="keywords"
     content="razor blades, double edge safety razor, straight razors, single edge razors,shaving soaps and shaving brushes">
-  <meta http-equiv="x-UA-Compatible" content="ie=edge">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   {% endblock %}
@@ -61,6 +61,7 @@
 <!-- fixed-top for header -->
 
 <body>
+<div class="container-wrapper">
   <header class="container-fluid ">
     <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
       <div class="col col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
@@ -159,7 +160,7 @@
   </div>
   {% endif %}
 
-
+<main>
   {% block page_header %}
 
   {% endblock %}
@@ -167,68 +168,63 @@
   {% block content %}
 
   {% endblock %}
+</main>
+
   <footer class='container-wrapper'>
     <div class='container quotes-container content-container'>
       <section class='footer'>
         <div class='row'>
           <!-- Social Links Section -->
           <div class='col-12 col-md-6'>
-            <h3>Our social link</h3>
-            <a href='https://facebook.com' target='_blank' rel='noopener noreferrer'
-              aria-label='Follow us on Facebook'><i class='fab fa-facebook-square text-black'></i>Facebook</a>
+            <!-- <h3>Our social link</h3> -->
+            <a href='https://facebook.com' target='_blank' rel='noopener noreferrer' aria-label='Follow us on Facebook'>
+              <i class='fab fa-facebook-square text-black'></i> Facebook
+            </a>
           </div>
           <!-- Subscription Section -->
           <div class='col-12 col-md-6'>
-            <!-- Mailchimp signup form here -->
-            <div id="mc_embed_shell">
-              <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
-
-              <div id="mc_embed_signup">
-                <form
-                  action="https://hotmail.us8.list-manage.com/subscribe/post?u=2dd5b8db882ec8c9a961d6b38&amp;id=b545a78d0d&amp;f_id=00cf01e1f0"
-                  method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
-                  target="_blank">
-                  <div id="mc_embed_signup_scroll">
-                    <!-- <h2>Subscribe to our newsletter</h2> -->
-                    <!-- <div class="indicates-required"><span class="asterisk">*</span> indicates required</div> -->
-                    <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span
-                          class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email"
-                        id="mce-EMAIL" required="" value=""></div>
-                    <div id="mce-responses" class="clear foot">
-                      <div class="response" id="mce-error-response" style="display: none;"></div>
-                      <div class="response" id="mce-success-response" style="display: none;"></div>
-                    </div>
-                    <div aria-hidden="true" style="position: absolute; left: -5000px;">
-                      /* real people should not fill this in and expect good things - do not remove this or risk form
-                      bot signups */
-                      <input type="text" name="b_2dd5b8db882ec8c9a961d6b38_b545a78d0d" tabindex="-1" value="">
-                    </div>
-                    <div class="optionalParent">
-                      <div class="clear foot">
-                        <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button"
-                          value="Subscribe to our newsletter">
-                        <p style="margin: 0px auto;"><a href="http://eepurl.com/i4d76A"
-                            title="Mailchimp - email marketing made easy and fun"><span
-                              style="display: inline-block; background-color: transparent; border-radius: 4px;"><img
-                                class="refferal_badge"
-                                src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg"
-                                alt="Intuit Mailchimp"
-                                style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a>
-                        </p>
+            <h3>
+              <button class="btn btn-link p-0 " type="button" data-toggle="collapse" data-target="#newsletterCollapse" aria-expanded="false" aria-controls="newsletterCollapse">
+                Subscribe to our newsletter
+              </button>
+            </h3>
+            <div id="newsletterCollapse" class="collapse">
+              <!-- Mailchimp signup form -->
+              <div id="mc_embed_shell">
+                <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+                <div id="mc_embed_signup">
+                  <form action="https://hotmail.us8.list-manage.com/subscribe/post?u=2dd5b8db882ec8c9a961d6b38&amp;id=b545a78d0d&amp;f_id=00cf01e1f0"
+                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                    <div id="mc_embed_signup_scroll">
+                      <div class="mc-field-group">
+                        <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+                        <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="">
+                      </div>
+                      <div id="mce-responses" class="clear foot">
+                        <div class="response" id="mce-error-response" style="display: none;"></div>
+                        <div class="response" id="mce-success-response" style="display: none;"></div>
+                      </div>
+                      <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                        <input type="text" name="b_2dd5b8db882ec8c9a961d6b38_b545a78d0d" tabindex="-1" value="">
+                      </div>
+                      <div class="optionalParent">
+                        <div class="clear foot">
+                          <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </form>
+                  </form>
+                </div>
               </div>
             </div>
-
           </div>
-
         </div>
       </section>
     </div>
-
   </footer>
+
+
+
 
   {% block postloadjs %}
   <script type="text/javascript">
@@ -257,7 +253,7 @@
     var $mcj = jQuery.noConflict(true);
   </script>
   {% endblock %}
-
+</div>
 </body>
 
 </html>
