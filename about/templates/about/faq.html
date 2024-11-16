@@ -25,7 +25,10 @@
 
 {%block content %}
 <body>
-    <a href="{% url 'add_faq' %} " class="text-center">Add New FAQ</a>
+    <div class="add_faq_btn_container">
+        <a href="{% url 'add_faq' %} " class="text-center btn-black add-faq-btn">Add FAQ</a>
+    </div>
+    
     <div class="faq-container " >
         {% if messages %}
     <div class="alert alert-custom">
@@ -37,7 +40,7 @@
         <ul class="text-center">
             {% for faq in faqs %}
                 <li>
-                    <button class="accordion text-center">{{ faq.question }}</button>
+                    <button class="accordion text-center btn btn-black">{{ faq.question }}</button>
                     <div class="panel">
                         <p>{{ faq.answer|linebreaks }}</p>
                         <br>

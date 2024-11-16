@@ -32,7 +32,7 @@ button {
     cursor: pointer;
 }
 button:hover {
-    background-color: #0056b3;
+    background-color: gold;
 }
 
 /* FAQ */
@@ -62,7 +62,7 @@ button:hover {
   
   .accordion:after {
     content: '\002B';
-    color: #777;
+    color: gold;
     font-weight: bold;
     float: right;
     margin-left: 5px;
@@ -89,6 +89,26 @@ button:hover {
     content: '' !important;
   }
 
+
 .faq_btn {
   margin: 7px;
+  padding: 10px 20px; 
+  margin: 1 auto;
 }
+
+.add_faq_btn_container {
+  display: flex;            
+  justify-content: center;     
+  align-items: center;        
+  width: 50%;                 
+  margin: 0 auto;           
+  padding: 20px;            
+}
+
+.add-faq-btn {
+  padding: 10px 20px;         
+  border: none;              
+  border-radius: 4px;         
+  cursor: pointer;             
+}
+
