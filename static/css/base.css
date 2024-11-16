@@ -212,6 +212,7 @@ btn.btn-lg.btn-primary {
 .btn-black {
     background: #555 !important;
     color: white !important;
+     border-radius: 4px;  
 }
 
 .primaryAction,
@@ -230,6 +231,7 @@ btn.btn-lg.btn-primary {
 .btn-outline-black:focus {
     background: #555;
     color: gold !important;
+    border-radius: 4px;  
 }
 
 .star-ratings-rating-clear:hover,
@@ -242,8 +244,12 @@ btn.btn-lg.btn-primary {
     background: #555 !important;
     color: gold !important;
     border: 4px solid #555;
+    border-radius: 4px;  
 }
 
+.btn-link {
+    color: gold;
+}
 
 .text-black {
     color: #000 !important;

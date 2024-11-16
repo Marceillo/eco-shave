@@ -31,7 +31,7 @@
   {% endblock %}
 
   {% block extra_css %}
- 
+
   {% endblock %}
 
   {% block corejs  %}
@@ -59,6 +59,7 @@
   <title>ECO-SHAVE {% block extra_title %}{% endblock %}</title>
 </head>
 <!-- fixed-top for header -->
+
 <body>
   <header class="container-fluid ">
     <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
@@ -153,13 +154,13 @@
   </div>
   {% endif %}
 
-<main  class="container-wrapper">
-  {% block page_header %}
+  <main class="container-wrapper">
+    {% block page_header %}
 
-  {% endblock %}
+    {% endblock %}
 
-  {% block content %}
-</main>
+    {% block content %}
+  </main>
   {% endblock %}
 
 
@@ -170,14 +171,16 @@
           <!-- Social Links Section -->
           <div class='col-12 col-md-5'>
             <!-- <h3>Our social link</h3> -->
-            <a href='https://facebook.com' target='_blank' rel='noopener noreferrer' aria-label='Follow us on Facebook'>
-              <i class='fab fa-facebook-square text-black'></i> Facebook
+            <a href='https://facebook.com' target='_blank' rel='noopener noreferrer' aria-label='Follow us on Facebook'
+              class="btn btn-black ">
+              <i class='fab fa-facebook-square text-white'></i> Facebook
             </a>
           </div>
           <!-- Subscription Section -->
           <div class='col-12 col-md-6'>
             <h3>
-              <button class="btn btn-link p-0 " type="button" data-toggle="collapse" data-target="#newsletterCollapse" aria-expanded="false" aria-controls="newsletterCollapse">
+              <button class="btn  btn-black btn-link p-0 " type="button" data-toggle="collapse" data-target="#newsletterCollapse"
+                aria-expanded="false" aria-controls="newsletterCollapse">
                 Subscribe to our newsletter
               </button>
             </h3>
@@ -186,8 +189,10 @@
               <div id="mc_embed_shell">
                 <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
                 <div id="mc_embed_signup">
-                  <form action="https://hotmail.us8.list-manage.com/subscribe/post?u=2dd5b8db882ec8c9a961d6b38&amp;id=b545a78d0d&amp;f_id=00cf01e1f0"
-                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                  <form
+                    action="https://hotmail.us8.list-manage.com/subscribe/post?u=2dd5b8db882ec8c9a961d6b38&amp;id=b545a78d0d&amp;f_id=00cf01e1f0"
+                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+                    target="_blank">
                     <div id="mc_embed_signup_scroll">
                       <div class="mc-field-group">
                         <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
@@ -202,7 +207,8 @@
                       </div>
                       <div class="optionalParent">
                         <div class="clear foot">
-                          <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+                          <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-black"
+                            value="Subscribe">
                         </div>
                       </div>
                     </div>
@@ -239,9 +245,9 @@
     var $mcj = jQuery.noConflict(true);
   </script>
 
-<script type="text/javascript">
-  $('.toast').toast('show');
-</script>
+  <script type="text/javascript">
+    $('.toast').toast('show');
+  </script>
   {% endblock %}
 
 </body>
