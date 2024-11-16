@@ -59,7 +59,6 @@
   <title>ECO-SHAVE {% block extra_title %}{% endblock %}</title>
 </head>
 <!-- fixed-top for header -->
-
 <body>
   <header class="container-fluid ">
     <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
@@ -133,12 +132,7 @@
 
       </nav>
     </div>
-    <!-- need to take out  -->
-    <!-- <div id="delivery-banner" class="row text-center">
-    <div class="col bg-black text-white">
-        <h4 class="logo-font my-1">Free delivery on orders in Europe </h4>                
-    </div>            
-    </div> -->
+
   </header>
 
   {% if messages %}
@@ -159,13 +153,13 @@
   </div>
   {% endif %}
 
-
+<main  class="container-wrapper">
   {% block page_header %}
 
   {% endblock %}
 
   {% block content %}
-
+</main>
   {% endblock %}
 
 
