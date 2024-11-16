@@ -1,23 +1,12 @@
+/*------------------------------main base structure*/
 html {
     height: 100%;
     margin: 0;
     box-sizing: border-box;
-   
 }
-/* ------------------------------Body*/
-/* body {
-    display: flex;
-    flex-direction: column;
-    color: #555;
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    flex-direction: column;
-   
-    
-} */
+
 
 body {
-    /* background-color: #ddd; */
     display: flex;
     flex-direction: column;
     position: relative;
@@ -26,19 +15,6 @@ body {
     min-height: 100%;
     padding-bottom: 6.74rem;
     box-sizing: inherit;
-    flex-direction: column;
-     
-}
-
-
-.shavebody {
-    background: url('/media/wpaper3.jpg') no-repeat center center fixed;
-    background-size: cover;
-    object-fit: contain;
-    height: calc(100vh - 210px); 
-    /* height: 100vh; */
-    color: #555;
-    display: flex;
     flex-direction: column;
 }
 
@@ -70,14 +46,6 @@ main {
 
 /*------------------------------Footer*/
 
-/* footer {
-    width: 100%; 
-    padding: 10px;
-    color: #555;
-    background-color: #ddd;
-     
-} */
-
 .container-fluid {
     flex: 1; 
 }
@@ -108,6 +76,17 @@ footer {
 
 
 /*------------------------------home page */
+
+.shavebody {
+    background: url('/media/wpaper3.jpg') no-repeat center center fixed;
+    background-size: cover;
+    object-fit: contain;
+    height: calc(100vh - 210px); 
+    /* height: 100vh; */
+    color: #555;
+    display: flex;
+    flex-direction: column;
+}
 
 #homeCarousel {
     height: 300px; 
@@ -172,7 +151,7 @@ btn.btn-lg.btn-primary {
     color: goldenrod;
 } */
 
-/* Products */
+/*-------------------------------Products */
 
 .btt-button {
     height: 42px;
@@ -188,7 +167,13 @@ btn.btn-lg.btn-primary {
     cursor: pointer;
 }
 
-/* carousel in products detail */
+.card-img-top {
+    width: 100%;              
+    height: auto;            
+    max-height: 400px;        
+    object-fit: contain;           
+}
+/*-------------------------------products detail */
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -200,6 +185,12 @@ btn.btn-lg.btn-primary {
 
 }
 
+.carousel-inner img {
+    width: 100%;               
+    height: auto;          
+    max-height: 400px;        
+    object-fit: contain;     
+}
 /* shopping buttons */
 
 .shop-now-button {
@@ -251,6 +242,10 @@ btn.btn-lg.btn-primary {
     color: gold;
 }
 
+.rounded-0 {
+    border-radius: 4px; 
+}
+
 .text-black {
     color: #000 !important;
 }
@@ -262,6 +257,8 @@ btn.btn-lg.btn-primary {
 .bg-black {
     background: #555!important;
 }
+
+
 
 /* ------------------------------- bootstrap toasts */
 
