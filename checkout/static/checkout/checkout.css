@@ -1,4 +1,4 @@
-body{
+.checkout-app {
     
     background: linear-gradient(rgba(221, 221, 221, 0.7), rgba(221, 221, 221, 0.7)), url('/media/wpaper4.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -21,12 +21,16 @@ body{
     margin-bottom: 5vh;
 }
 .card{
-    margin: auto;
+    /* margin: auto; */
     max-width: 950px;
+    height: 705px;
+    overflow-y: auto;
     width: 90%;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 1rem;
     border: transparent;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 @media(max-width:767px){

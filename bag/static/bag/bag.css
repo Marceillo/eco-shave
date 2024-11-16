@@ -1,4 +1,4 @@
-body{
+.bag-app-body{
     
     background: linear-gradient(rgba(221, 221, 221, 0.7), rgba(221, 221, 221, 0.7)), url('/media/wpaper5.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -28,6 +28,7 @@ body{
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 1rem;
     border: transparent;
+    margin-top: 50px;
 }
 
 @media(max-width:767px){

@@ -17,74 +17,77 @@
 {% endblock %}
 
 {% block content %}
-<div class="overlay"></div>
-<div class="container mb-2">
-    <div class="card">
-        <div class="row">
-            <div class="col-md-12 wishlist">
-                <div class="title">
-                    <div class="row">
-                        <div class="col">
-                            <div class="col aligh-self-center text-right text-muted">
-                                {{ wishlist|length }} items in your wish list
-                            </div>
-                        </div>
-                    </div>
-                    {% if wishlist %}
-                    <ul class="list-group">
-                        {% for product in wishlist %}
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center">
-                                {% if product.image %}
-                                <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid" style="width: 80px; height: auto; margin-right: 15px;">
-                                {% else %}
-                                <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="img-fluid" style="width: 80px; height: auto; margin-right: 15px;">
-                                {% endif %}
-                                <div>
-                                    <h5 class="mb-1">{{ product.name }}</h5>
-                                    <p class="mb-1">{{ product.price }}€</p>
-                                    {% if product.category %}
-                                    <p class="small mt-1 mb-0">
-                                        <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                                            <i class="fa-solid fa-basket-shopping"></i>{{ product.category.friendly_name }}
-                                        </a>
-                                    </p>
-                                    {% endif %}
-                                    <!-- Django Star rating  -->
-                                    <div class="product-rating mt-2">
-                                        {% ratings product %}
-                                    </div>
+<div class="profile-app">
+    <div class="overlay"></div>
+    <div class="container mb-2">
+        <div class="card">
+            <div class="row">
+                <div class="col-md-12 wishlist">
+                    <div class="title">
+                        <div class="row">
+                            <div class="col">
+                                <div class="col aligh-self-center text-right text-muted">
+                                    {{ wishlist|length }} items in your wish list
                                 </div>
                             </div>
-                          <!-- add and remove div-->
-                          <div class="button-container d-flex justify-content-end align-items-center mt-2">
-                            <div class="d-flex align-items-center mr-2">
-                                <form action="{% url 'add_to_bag' product.id %}" method="POST" class="mr-2 btn-sm ">
-                                    {% csrf_token %}
-                                    <input type="submit" class="btn btn-black rounded-0 btn-sm mr-2 in-bag" value="Add to Bag">
-                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                </form>
-                            </div>
-                            <form action="{% url 'remove_from_wishlist' product.id %}" method="POST" class="mr-2">
-                                {% csrf_token %}
-                                <button type="submit" class="btn btn-danger btn-sm mr-2">Remove</button>
-                            </form>
-                            
-                            <a href="{% url 'products' %}" class="btn btn-outline-black btn-sm">Keep Shopping</a>
                         </div>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                    {% else %}
-                    <p class="lead mb-5">Your wish list is empty.</p>
-                    <a href="{% url 'products' %}" class="btn btn-outline-black">Keep Shopping</a>
-                {% endif %}
+                        {% if wishlist %}
+                        <ul class="list-group">
+                            {% for product in wishlist %}
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center">
+                                    {% if product.image %}
+                                    <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid" style="width: 80px; height: auto; margin-right: 15px;">
+                                    {% else %}
+                                    <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="img-fluid" style="width: 80px; height: auto; margin-right: 15px;">
+                                    {% endif %}
+                                    <div>
+                                        <h5 class="mb-1">{{ product.name }}</h5>
+                                        <p class="mb-1">{{ product.price }}€</p>
+                                        {% if product.category %}
+                                        <p class="small mt-1 mb-0">
+                                            <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                                                <i class="fa-solid fa-basket-shopping"></i>{{ product.category.friendly_name }}
+                                            </a>
+                                        </p>
+                                        {% endif %}
+                                        <!-- Django Star rating  -->
+                                        <div class="product-rating mt-2">
+                                            {% ratings product %}
+                                        </div>
+                                    </div>
+                                </div>
+                            <!-- add and remove div-->
+                            <div class="button-container d-flex justify-content-end align-items-center mt-2">
+                                <div class="d-flex align-items-center mr-2">
+                                    <form action="{% url 'add_to_bag' product.id %}" method="POST" class="mr-2 btn-sm ">
+                                        {% csrf_token %}
+                                        <input type="submit" class="btn btn-black rounded-0 btn-sm mr-2 in-bag" value="Add to Bag">
+                                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                    </form>
+                                </div>
+                                <form action="{% url 'remove_from_wishlist' product.id %}" method="POST" class="mr-2">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-danger btn-sm mr-2">Remove</button>
+                                </form>
+                                
+                                <a href="{% url 'products' %}" class="btn btn-outline-black btn-sm">Keep Shopping</a>
+                            </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        {% else %}
+                        <p class="lead mb-5">Your wish list is empty.</p>
+                        <a href="{% url 'products' %}" class="btn btn-outline-black">Keep Shopping</a>
+                    {% endif %}
+                    </div>
+                    
                 </div>
-                
             </div>
         </div>
     </div>
 </div>
+
 
 {% endblock %}
 

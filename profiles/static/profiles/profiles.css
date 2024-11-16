@@ -1,12 +1,12 @@
  
- body{
+.profile-app {
      
     /* background: linear-gradient(rgba(221, 221, 221, 0.7), rgba(221, 221, 221, 0.7)), url('/media/wpaper4.jpg') no-repeat center center fixed; */
     background-color: #ddd;
     background-size: cover;
     object-fit: contain;
     /* height: calc(100vh - 208px);  */
-    /* min-height: 100vh; */
+    height: 100vh;
     color: #555;
     display: flex;
     flex-direction: column;
@@ -29,9 +29,8 @@ main {
     margin-bottom: 5vh;
 }
 .card{
-    margin: auto;
+    margin-top: 50px;
     max-width: 950px;
-    /* height: ; */
     width: 90%;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 1rem;
@@ -248,5 +247,7 @@ a:hover{
     margin-bottom: 0;
     
 }
+
+
 
 
