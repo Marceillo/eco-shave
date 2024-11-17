@@ -36,8 +36,8 @@
         <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit">Update FAQ</button>
-            <a href="{% url 'faq' %}">Cancel</a>
+            <button type="submit" class="btn btn-black my-2 me-2">Update FAQ</button>
+            <a href="{% url 'faq' %} " class="btn btn-black">Cancel</a>
         </form>
     </div>   
 </body>
