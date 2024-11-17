@@ -59,21 +59,20 @@
 
 # Objective
 
-* This website sells shaving products that will transform your shave, helping you and helping our planet at the same time.
-* At the moment, this could be a small business that transforms what is normally a chore into a hobby.
-* These products are highly customizable just by changing your blades you have altered the shave.
-* It's like meditation you have to focus slow down and enjoy.
-* It is a product that just has benefits for the environment and your pocket. 
-* I know some of these products are quite expensive, but they can last a lifetime or even generations, which is a huge benefit and savings.
- 
+I decided to try building a shaving website because I am interested this way of shaving.
+The objective for me was to create an e-commerce site that sells shaving products.
+Try my hand at a e-commerce layout using the Django Framework, Python, JavaScript, CSS, and HTML.
+
 
 ## Site User Goal
 
-* 
+This website sells shaving products that will transform your shave and last for a long time.
+While in a small way educate on the benefits of shaving with de razors and single edge razors. 
+
 
 ## Site Owners Goal
 
-* 
+The goal is to  sell these products online through a dajngo app that uses secure payment methods like stripe.
 
 **Project Objectives:**
 
@@ -85,10 +84,9 @@ So in actual fact each time a customer uses these products they are helping the 
 
 ## DE and SE Shaving – The Philosophy
 
-* The shaving razors are the best in my opinion after you go through a small learning curve you get the best shaves.
-* Its a customizible shave where you can change differant assesories such as blades and soaps even your shaving  routine plays a role, the list goes on and on each can 
-  give you a diffrant shave.
-* Why not turn a everyday shave into a hobby and somthing to look forward to doing.
+* The shaving razors are the best in my opinion. After you go through a small learning curve you get the best shaves.
+* Its a customizible shave where you can change differant assesories such as blades and soaps even your shaving routine plays a role, endless way of customizing your shave.
+* Why not turn a everyday shave into a hobby and somthing to look forward to doing everday.
 * DE double edge is newer than the SE single edge razors that dat as far back as the Egyptians even further probibly. 
 * It is a product that can last and the longer it lasts the more you are saving, I will say its a tool that keeps giving.
 * It helps the enviroment my using a product longer and leaving no wast when discarded.Mostly they are given to another generation.
@@ -96,16 +94,36 @@ So in actual fact each time a customer uses these products they are helping the 
 
 ## Marketing Strategy
 
+### Target Audience
+- * The focus would be on people who want products that are sustainable, cost-saving and bring everyday value.
+- * The bussines would look for online marketing options such a facebook that has a large market following.
+
+### Marketing Types
+
+* In this site we used email marketing from a application called mailchimp. 
+* A mockup of a facebook page for the social media marketing that could be implemented in the future should the site go live 
+* And tried to use certain SEO search engine optimization strategies.
+* Content marketing was used in this just to educate the users of the site of the benefits of using these products in FAQ and landing page.
+
+### Budget Considerations
+- If you have a limited budget, focus on organic strategies like SEO, content marketing, and social media engagement. These methods require more time but can yield significant long-term benefits without substantial financial investment.
+
+### Goals Alignment
+- Your marketing strategies should align with goals such as increasing brand awareness, driving traffic to your website, and boosting sales of sustainable shaving products. 
+
 * Optimize For Mobile Devices
 * The Website Layout
 * Create content (content marketing)
 * Facebook and Instagram (social media marketing)
 
+## SEO
+
+* Using Search Engine Optimization (seo) is a science and when done correctly you should see traffic diverted to the site.
+
 ## Future Marketing Ideas
 * 
 
-## SEO
-* 
+
 
 [Back to Table of Contents](#table-of-contents)
 
