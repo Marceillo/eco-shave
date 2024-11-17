@@ -57,22 +57,21 @@
   - [Acknowledgements](#acknowledgements)
 
 
-# Objective
 
-I decided to try building a shaving website because I am interested this way of shaving.
+I decided to try building a shaving website because I am interested in this way of shaving.
 The objective for me was to create an e-commerce site that sells shaving products.
-Try my hand at a e-commerce layout using the Django Framework, Python, JavaScript, CSS, and HTML.
+Try my hand at an e-commerce layout using the Django Framework, Python, JavaScript, CSS, and HTML.
 
 
 ## Site User Goal
 
 This website sells shaving products that will transform your shave and last for a long time.
-While in a small way educate on the benefits of shaving with de razors and single edge razors. 
+While in a small way educating on the benefits of shaving with de razors and single-edge razors. 
 
 
 ## Site Owners Goal
 
-The goal is to  sell these products online through a dajngo app that uses secure payment methods like stripe.
+The goal is to sell these products online through a Django app that uses secure payment methods like Stripe.
 
 **Project Objectives:**
 
@@ -85,45 +84,64 @@ So in actual fact each time a customer uses these products they are helping the 
 ## DE and SE Shaving – The Philosophy
 
 * The shaving razors are the best in my opinion. After you go through a small learning curve you get the best shaves.
-* Its a customizible shave where you can change differant assesories such as blades and soaps even your shaving routine plays a role, endless way of customizing your shave.
-* Why not turn a everyday shave into a hobby and somthing to look forward to doing everday.
-* DE double edge is newer than the SE single edge razors that dat as far back as the Egyptians even further probibly. 
-* It is a product that can last and the longer it lasts the more you are saving, I will say its a tool that keeps giving.
-* It helps the enviroment my using a product longer and leaving no wast when discarded.Mostly they are given to another generation.
+* It's a customizable shave where you can change different accessories such as blades and soaps even your shaving routine plays a role, endless way of customizing your shave.
+* Why not turn an everyday shave into a hobby and something to look forward to doing every day?
+* DE double edge is newer than the SE single edge razors that date as far back as the Egyptians even further probably. 
+* It is a product that can last and the longer it lasts the more you are saving, I will say it's a tool that keeps giving.
+* It helps the environment by using a product longer and leaving no waste when discarded. Mostly they are given to another generation.
 
 
 ## Marketing Strategy
 
 ### Target Audience
-- * The focus would be on people who want products that are sustainable, cost-saving and bring everyday value.
-- * The bussines would look for online marketing options such a facebook that has a large market following.
+- * The focus would be on people who want products that are sustainable, cost-saving, and bring everyday value.
+- * The business would look for online marketing options such as Facebook which has a large market following.
 
-### Marketing Types
+### Marketing used 
 
-* In this site we used email marketing from a application called mailchimp. 
-* A mockup of a facebook page for the social media marketing that could be implemented in the future should the site go live 
+* On this site we used email marketing from an application called Mailchimp. 
+* A mockup of a Facebook page for social media marketing that could be implemented in the future should the site go live 
 * And tried to use certain SEO search engine optimization strategies.
-* Content marketing was used in this just to educate the users of the site of the benefits of using these products in FAQ and landing page.
+* Content marketing was used in this just to educate the users of the site of the benefits of using these products in the FAQ and landing page.
 
-### Budget Considerations
-- If you have a limited budget, focus on organic strategies like SEO, content marketing, and social media engagement. These methods require more time but can yield significant long-term benefits without substantial financial investment.
 
-### Goals Alignment
-- Your marketing strategies should align with goals such as increasing brand awareness, driving traffic to your website, and boosting sales of sustainable shaving products. 
 
-* Optimize For Mobile Devices
-* The Website Layout
-* Create content (content marketing)
-* Facebook and Instagram (social media marketing)
+### Facebook 
 
-## SEO
+Social Media marketing is a great way to get your product across to online as it has a large following.
+It has a huge potential for small businesses.
+This tool helps the eco-shave team as they can interact directly with the customers or potential customers.
+This can boost the brand and awareness of our business.
+
+
+<details>
+<summary>Facebook</summary>
+
+* I created a mockup of the Facebook page here using the Balsamiq mockups provided by LMS.
+ 
+ <img src="readme-images/facebook.png"><br>
+
+* I had some problems setting up an account I have provided the error image below.
+ I tried registering another account but it kept giving me this error.
+
+* I had some problems setting up an account I have provided the error image below.
+  I tried registering another account but it kept giving me this error.
+
+  <img src="readme-images/facebook_error.png"><br>
+
+</details>
+
+### Budget 
+
+* Since this is a small online shop that is not live yet, free marketing strategies are be used.
+
+
+### SEO
 
 * Using Search Engine Optimization (seo) is a science and when done correctly you should see traffic diverted to the site.
 
 ## Future Marketing Ideas
 * 
-
-
 
 [Back to Table of Contents](#table-of-contents)
 
