@@ -52,6 +52,23 @@ def order_history(request, order_number):
     
     return render(request, template, context)
 
+def edit_profile(request):
+    """
+    For a user to edit their profile.
+    """
+    profile = get_object_or_404(UserProfile, user=request.user)
+
+    if request.method == 'POST':
+        form = UserProfileForm(request.POST, request.FILES, instance=profile)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Profile has been updated successfully')
+            return redirect('profile')  
+    else:
+        form = UserProfileForm(instance=profile)
+
+    return render(request, 'profiles/edit_profile.html', {'form': form})
+
 @login_required
 def wishlist(request):
     """
