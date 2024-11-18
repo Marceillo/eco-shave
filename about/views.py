@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .forms import ContactForm, FAQForm
 from .models import FAQ
+from django.urls import reverse
 
 
 def about(request):
@@ -55,6 +56,10 @@ def faq(request):
 @login_required
 def add_faq(request):
 
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only admin users can add another FAQ.')
+        return redirect(reverse('faq'))
+
     if request.method == 'POST':
         form = FAQForm(request.POST)
         
@@ -71,6 +76,10 @@ def add_faq(request):
 
 @login_required
 def edit_faq(request, pk):
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only admin users can edit this FAQ.')
+        return redirect(reverse('faq'))
+
     faq = get_object_or_404(FAQ, pk=pk)
     
     if request.method == 'POST':
@@ -88,6 +97,10 @@ def edit_faq(request, pk):
 
 @login_required
 def delete_faq(request, pk):
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only admin users can delete this FAQ.')
+        return redirect(reverse('faq'))
     faq = get_object_or_404(FAQ, pk=pk)
     
     if request.method == 'POST':
