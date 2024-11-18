@@ -22,14 +22,15 @@ body {
     color: #555 !important;
 }
 
-/* h1 {
-    margin-top: 0;
-} */
+a {
+    color: olive;
+}
 
-/* p {
-    font-size: 18px;
-    text-align: justify;
-} */
+a:hover, 
+a:active {
+    color: olive;
+} 
+
 
 /*------------------------------Main*/
 
