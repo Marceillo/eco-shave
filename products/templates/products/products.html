@@ -50,7 +50,7 @@
                     </div>
                 </div>                    
                 </div>
-                <div class="row">
+                <div class="row {% if products|length == 1 %}single-product-layout{% endif %}">
                     {% for product in products %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
 
