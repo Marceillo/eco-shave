@@ -1,21 +1,15 @@
  
 .profile-app {
-     
-    /* background: linear-gradient(rgba(221, 221, 221, 0.7), rgba(221, 221, 221, 0.7)), url('/media/wpaper4.jpg') no-repeat center center fixed; */
     background-color: #ddd;
     background-size: cover;
     object-fit: contain;
     /* height: calc(100vh - 208px);  */
-    height: 100vh;
+    /* height: 100vh; */
     color: #555;
     display: flex;
     flex-direction: column;
+   margin-bottom: 32px;
 } 
-/* 
-main {
-    flex: 1;
-} */
-
 
 .container-fluid {
     padding-left: 0px;
@@ -219,7 +213,7 @@ a:hover{
     overflow-y: auto hidden;
     background-color: #fff;
     border-radius: 0.5rem;
-    padding-bottom: 150px;
+    /* padding-bottom: 150px; */
 }
 
 .order-history th, .order-history td {
@@ -252,6 +246,18 @@ a:hover{
     
 }
 
-/* --------edit profile */
+/* -----wish list at a smaller screen */
+@media (max-width: 576px) {
+    .wishlist .title {
+        padding: 10px;
+    }
+    .list-group-item {
+        padding: 10px;
+    }
+    .wishlist h5 {
+        font-size: 1.25rem; 
+    }
+}
+
 
 

@@ -22,10 +22,10 @@
     <div class="container mb-2">
         <div class="card">
             <div class="row">
-                <div class="col-md-12 wishlist">
+                <div class="col-12 wishlist">
                     <div class="title">
                         <div class="row">
-                            <div class="col">
+                            <div class="col text-right text-muted">
                                 <div class="col aligh-self-center text-right text-muted">
                                     {{ wishlist|length }} items in your wish list
                                 </div>
@@ -34,8 +34,8 @@
                         {% if wishlist %}
                         <ul class="list-group">
                             {% for product in wishlist %}
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                <div class="d-flex align-items-center">
+                            <li class="list-group-item d-flex justify-content-between align-items-center flex-column flex-sm-row">
+                                <div class="d-flex align-items-center mb-2 mb-sm-0">
                                     {% if product.image %}
                                     <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid" style="width: 80px; height: auto; margin-right: 15px;">
                                     {% else %}
@@ -58,14 +58,14 @@
                                     </div>
                                 </div>
                             <!-- add and remove div-->
-                            <div class="button-container d-flex justify-content-end align-items-center mt-2">
-                                <div class="d-flex align-items-center mr-2">
+                            <div class="button-container d-flex flex-column flex-sm-row justify-content-end align-items-center mt-2">
+                                <!-- <div class="d-flex align-items-center mr-2"> -->
                                     <form action="{% url 'add_to_bag' product.id %}" method="POST" class="mr-2 btn-sm ">
                                         {% csrf_token %}
-                                        <input type="submit" class="btn btn-black rounded-0 btn-sm mr-2 in-bag" value="Add to Bag">
+                                        <input type="submit" class="btn btn-black rounded-0 btn-sm mb-2 mb-sm-0" value="Add to Bag">
                                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                     </form>
-                                </div>
+                                <!-- </div> -->
                                 <form action="{% url 'remove_from_wishlist' product.id %}" method="POST" class="mr-2">
                                     {% csrf_token %}
                                     <button type="submit" class="btn btn-danger btn-sm mr-2">Remove</button>

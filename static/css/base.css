@@ -15,7 +15,6 @@ body {
     min-height: 100%;
     padding-bottom: 6.74rem;
     box-sizing: inherit;
-    flex-direction: column;
     margin-bottom: 32px; 
 }
 
@@ -176,7 +175,7 @@ btn.btn-lg.btn-primary {
 .card-img-top {
     width: 100%;              
     height: auto;            
-    max-height: 400px;        
+    max-height: 300px;        
     object-fit: contain;           
 }
 /*-------------------------------products detail */
