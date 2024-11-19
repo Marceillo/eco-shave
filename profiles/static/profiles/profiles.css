@@ -219,6 +219,7 @@ a:hover{
     overflow-y: auto hidden;
     background-color: #fff;
     border-radius: 0.5rem;
+    padding-bottom: 150px;
 }
 
 .order-history th, .order-history td {

@@ -11,7 +11,7 @@
     <div class="col">
         <div class="text-center">
             <br>
-            <h1 class="hm-head">{{ form.default_full_name.value }}Profile</h1>
+            <h1 class="hm-head">Your Profile</h1>
             <br>
         </div>
     </div>
@@ -25,7 +25,7 @@
         <div class="card">
             <div class="row">
                 
-                <div class="col-md-6 order-history">
+                <div class="col-md-6 order-history order-md-0 order-1">
                     <h5><b>Order History ({{ product_count }})</b></h5>
                  
                     <div class="order-history table-responsive">
@@ -63,7 +63,7 @@
                 </div>
     
     
-                <div class="col-md-6 summary">
+                <div class="col-md-6 summary order-md-1 order-0">
     
                     <div class="card-container">
                         <div class="card">
@@ -75,7 +75,7 @@
                                     {% else %}
                                         <img src="{{ MEDIA_URL }}profile_images/default-avatar.png" alt="Default Avatar" class="img-fluid my-3" style="width: 80px;" />
                                     {% endif %}
-                                    <h5>{{ form.default_full_name.value }} {{ form.last_name.value }}</h5>
+                                    <h5><strong>{{ form.default_full_name.value }} {{ form.last_name.value }}</strong></h5>
                                     <i class="far fa-edit mb-3"></i> 
                                     <a href="{% url 'edit_profile' %}" class="btn btn-outline-black rounded-0 edit-button">Edit Profile</a>
                                     <a href="{% url 'wishlist' %}" class="btn btn-outline-black rounded-0 edit-button">Your Wish List</a>
