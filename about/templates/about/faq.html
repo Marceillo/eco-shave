@@ -36,12 +36,13 @@
     {% endif %}
 
     {% if request.user.is_authenticated %}
-    {% if request.user.is_superuser %}
-    <div class="add_faq_btn_container">
-        <a href="{% url 'add_faq' %} " class="text-center btn-black add-faq-btn">Add FAQ</a>
-    </div>
+        {% if request.user.is_superuser %}
+        <div class="add_faq_btn_container">
+            <a href="{% url 'add_faq' %} " class="text-center btn-black add-faq-btn">Add FAQ</a>
+        </div>
     {% endif %}
-    
+        {% endif %}
+  
         <ul class="text-center">
             {% for faq in faqs %}
                 <li>
@@ -59,7 +60,7 @@
                 <li>No FAQs available.</li>
             {% endfor %}
         </ul>
-        {% endif %}
+     
     </div>
 
 </body>
