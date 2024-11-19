@@ -1,5 +1,5 @@
 {% load static %}
-
+{%load crispy_forms_tags%}
 <!doctype html>
 <html lang="en">
 
@@ -169,7 +169,7 @@
       <section class='footer'>
         <div class='row'>
           <!-- Social Links Section -->
-          <div class='col-12 col-md-5'>
+          <div class='col-12 col-md-5 '>
             <!-- <h3>Our social link</h3> -->
             <a href='https://facebook.com' target='_blank' rel='noopener noreferrer' aria-label='Follow us on Facebook'
               class="btn btn-black ">
@@ -193,6 +193,8 @@
                     action="https://hotmail.us8.list-manage.com/subscribe/post?u=2dd5b8db882ec8c9a961d6b38&amp;id=b545a78d0d&amp;f_id=00cf01e1f0"
                     method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
                     target="_blank">
+                    {% csrf_token %}
+                    {{ form|crispy }}
                     <div id="mc_embed_signup_scroll">
                       <div class="mc-field-group">
                         <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
