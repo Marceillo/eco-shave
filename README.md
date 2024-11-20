@@ -77,7 +77,8 @@ The goal is to sell these products online through a Django app that uses secure 
 
 # Business Model 
 
-This is a company that sells shaving products for DE double-edge blades or single-edge blades and accessories.
+This is a B2C (Business To Consumer)-model.
+Company that sells shaving products for DE double-edge blades or single-edge blades and accessories.
 The razors can be used for a lifetime even passed on to other generations and still customers can get the best shaves.
 So in actual fact each time a customer uses these products they are helping the environment and saving at the same time.
 
