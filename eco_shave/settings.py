@@ -48,6 +48,7 @@ CSRF_TRUSTED_ORIGINS = [
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
+    'django_extensions',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -65,6 +66,7 @@ INSTALLED_APPS = [
     'profiles',
     'about',
     'storages',
+    
     
      
     # other

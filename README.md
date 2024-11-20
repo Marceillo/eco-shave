@@ -77,7 +77,8 @@ The goal is to sell these products online through a Django app that uses secure 
 
 # Business Model 
 
-This is a B2C (Business To Consumer)-model.
+This is a B2C (Business To Consumer)-model so when a client buys a product the transaction is completed.
+The dajango platform is able to upscale when needed and customize when needed to it is able adjust to market needs. 
 Company that sells shaving products for DE double-edge blades or single-edge blades and accessories.
 The razors can be used for a lifetime even passed on to other generations and still customers can get the best shaves.
 So in actual fact each time a customer uses these products they are helping the environment and saving at the same time.
@@ -146,7 +147,7 @@ It has a huge potential for small businesses. This tool helps the eco-shave team
 
 ## Future Marketing Ideas
 
-* Implement more free social medai sites such as tik-tok. instagram ect.
+* Implement more free social media sites such as tik-tok. instagram ect.
 * I would like to do some online instruction videos for the brand on how to use the products.
 
 # User Experience UX
@@ -189,7 +190,7 @@ User stories can be viewed here on the project [kanban board ](https://github.co
 ## Colours
 
 * Each page is similar but a bit differant the colors are similar with white and a #ddd background color.
-* I created the style of colors to be  similar but have small differances in each app.  
+* I created the style while developing the site with each app.  
 
 ### Colour Scheme
 
@@ -314,16 +315,16 @@ Django has a built-in tool that can show you your ERD diagram.
 
 ### Steps used
 * Step 1 to using this is to install python3 -m pip install django-extensions.
-* Step 2 would be to add the installed apps in settings.
+* Step 2 would be to add the installed apps in settings (django_extensions) .
 * Step 3 would be to add it to the requirements file.
-* Step 4 is to run the python manage.py graph_models -a --output erd.dot 
+* Step 4 is to run the python3 manage.py graph_models -a --output erd.dot 
 * Step 5 After this it will create an erd. dot file with all the application model data.
 * Step 6 Put the data in this software to change to an image file much like the one I used below.
 
 The red dot file converted to image [Graphviz online](https://dreampuf.github.io/GraphvizOnline/#digraph%20G%20%7B%0A%0A%20%20subgraph%20cluster_0%20%7B%0A%20%20%20%20style%3Dfilled%3B%0A%20%20%20%20color%3Dlightgrey%3B%0A%20%20%20%20node%20%5Bstyle%3Dfilled%2Ccolor%3Dwhite%5D%3B%0A%20%20%20%20a0%20-%3E%20a1%20-%3E%20a2%20-%3E%20a3%3B%0A%20%20%20%20label%20%3D%20%22process%20%231%22%3B%0A%20%20%7D%0A%0A%20%20subgraph%20cluster_1%20%7B%0A%20%20%20%20node%20%5Bstyle%3Dfilled%5D%3B%0A%20%20%20%20b0%20-%3E%20b1%20-%3E%20b2%20-%3E%20b3%3B%0A%20%20%20%20label%20%3D%20%22process%20%232%22%3B%0A%20%20%20%20color%3Dblue%0A%20%20%7D%0A%20%20start%20-%3E%20a0%3B%0A%20%20start%20-%3E%20b0%3B%0A%20%20a1%20-%3E%20b3%3B%0A%20%20b2%20-%3E%20a3%3B%0A%20%20a3%20-%3E%20a0%3B%0A%20%20a3%20-%3E%20end%3B%0A%20%20b3%20-%3E%20end%3B%0A%0A%20%20start%20%5Bshape%3DMdiamond%5D%3B%0A%20%20end%20%5Bshape%3DMsquare%5D%3B%0A%7D)
 <br>
 <br>
-<img src="static/readme/images/erd_diagram.png"><br>
+<img src="readme-images/graphviz.png"><br>
 
 ## Credit below for the above-detailed ERD diagram.
 
