@@ -1,5 +1,5 @@
 
-<img src="static/readme/images/mockup.png">
+<img src="readme-images/mocup_ecoshave.png">
 
 # Table of Contents
 
