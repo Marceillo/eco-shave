@@ -18,7 +18,7 @@
 {% block content %}
 <div class="profile-app">
     <div class="container mb-2">
-            <form method='post'>
+            <form method='post' enctype="multipart/form-data">
                 {{ form|crispy }}
                 <button type="submit" class="btn btn-black my-2 me-2">Update Your Profile</button>
                 <a href="{% url 'profile' %}" class="btn btn-black">Cancel</a>
