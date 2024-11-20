@@ -4,10 +4,11 @@
     background-size: cover;
     object-fit: contain;
     /* height: calc(100vh - 208px);  */
-    height: 100vh;
+    /* height: 100vh; */
     color: #555;
     display: flex;
     flex-direction: column;
+    /* padding-bottom: 35px; */
 }
 
 .container-fluid {
