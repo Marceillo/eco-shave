@@ -99,19 +99,27 @@ So in actual fact each time a customer uses these products they are helping the 
 
 ### Marketing used 
 
-* On this site we used email marketing from an application called Mailchimp. 
-* A mockup of a Facebook page for social media marketing that could be implemented in the future should the site go live 
-* And tried to use certain SEO search engine optimization strategies.
+* On this site we used an email marketing application called Mailchimp that collects the subscription emails. 
+* A mockup of a Facebook page for social media marketing that could be implemented in the future should the site go live. 
+* The us certain SEO search engine optimization strategies such as [wordtracker]( https://www.wordtracker.com/) and [Ubersuggest](https://app.neilpatel.com/) .
 * Content marketing was used in this just to educate the users of the site of the benefits of using these products in the FAQ and landing page.
 
+### Search Engine Optimization (SEO)
 
+* Using Search Engine Optimization (SEO) is a science and when done correctly you should see traffic diverted to the site.
+ It is a very important method to improve the ranking on search-engines which in turn create revenew. The goal is to attract people to the site.
+ This is not easy when you are competing with so many online shops. To use keywords in the content that match the user's search criteria when using search engines. Descriptive Meta Tags have been implemented on the site after a brainstorming session and the use of [wordtracker]( https://www.wordtracker.com/) and [Ubersuggest](https://app.neilpatel.com/). The final description/words that have been used can be seen below:
+ 
+* - Meta Description - Discover sustainable DE razors and straight razors with all the shaving soaps and shave brushes.
+
+* - Meta Keywords - razor blades, double edge safety razor, straight razors, single edge razors,shaving soaps and shaving brushes.
+
+* The site also includes a sitemap.xml and robots.txt to make sure that the search engines can find and crawl the pages on the site.
 
 ### Facebook 
 
 Social Media marketing is a great way to get your product across to online as it has a large following.
-It has a huge potential for small businesses.
-This tool helps the eco-shave team as they can interact directly with the customers or potential customers.
-This can boost the brand and awareness of our business.
+It has a huge potential for small businesses. This tool helps the eco-shave team as they can interact directly with the customers or potential customers. This can boost the brand and awareness of our business.
 
 
 <details>
@@ -133,17 +141,12 @@ This can boost the brand and awareness of our business.
 
 ### Budget 
 
-* Since this is a small online shop that is not live yet, free marketing strategies are be used.
-
-
-### SEO
-
-* Using Search Engine Optimization (seo) is a science and when done correctly you should see traffic diverted to the site.
+* Since this is a small online shop that is not live yet, free marketing strategies are be used such as facebook, SEO ,Mail subscription.
 
 ## Future Marketing Ideas
-* 
 
-[Back to Table of Contents](#table-of-contents)
+* Implement more free social medai sites such as tik-tok. instagram ect.
+* I would like to do some online instruction videos for the brand on how to use the products.
 
 # User Experience UX
 
@@ -151,7 +154,10 @@ This can boost the brand and awareness of our business.
 
 User stories can be viewed here on the project [kanban board ](https://github.com/users/Marceillo/projects/10)
 
-| EPIC                                   | ID  | Priority     | User Story                                                                                     |
+<details>
+  <summary>User Stories</summary>
+
+| **EPIC**                                   | ID   | Priority     | User Story                                                                                     |
 | :------------------------------------- | --  | :----------- | :--------------------------------------------------------------------------------------------- |
 | **E-commerce Integration**             | 1.1 | Must-Have    | As a user, I want to add products to a shopping cart and proceed to check out, so I can easily make purchases on the site. |
 |                                       | 1.2 | Must-Have    | As a user, I want to receive confirmation of my purchase via email and on-screen notifications, so I can verify my order. |
@@ -171,6 +177,9 @@ User stories can be viewed here on the project [kanban board ](https://github.co
 | **Customer Support and Information Access** | 7.1 | Must-Have    | As a user, I want to submit a contact form so that I can easily reach out for support or inquiries.   |
 |                                       | 7.2 | Must-Have    | As a user, I want to view frequently asked questions in a modal so that I can find quick answers without leaving the About Page.   |
 |                                       | 7.3 | Should-Have  | As a user, I want the contact form and FAQ modal to be mobile-responsive so that I can access them on any device.   |
+
+</details>
+
 [Back to Table of Contents](#table-of-contents)
 
 
@@ -178,15 +187,12 @@ User stories can be viewed here on the project [kanban board ](https://github.co
 
 ## Colours
 
-* I used colors to match the background which is a moving mp4, more about that below in visual experience.
-
- <img src="static/readme/images/backgroundmp4.png"><br>
+* Each page is similar but a bit differant the colors are similar with white and a #ddd background color.
+* I created the style of colors to be  similar but have small differances in each app.  
 
 ### Colour Scheme
 
 * Used a [Coolors web site](https://coolors.co/palettes/trendin) to search for colors that match.
-
-[Back to Table of Contents](#table-of-contents)
 
 ## Typography
 
@@ -198,12 +204,14 @@ User stories can be viewed here on the project [kanban board ](https://github.co
 
 #### Product SKU Format
 
-* This is a format for each product will have differant sku so that can be used now and in future features.
-* In the future of this bussiness when stock becomes larger it can be used to help with stock management.
-* - Invintory tracking 
+* This is a format for each product that will have a different SKU so that it can be used now and in future features.
+* In the future of this business when stock becomes larger it can be used to help with stock management.
+* - Inventory tracking 
 * - Streamlining Point of sale (POS) Operations 
 * It can be used for sales data analysis and other applications.
 
+<details>
+<summary>SKU below an the example of the format</summary>
 
 | SKU              | Product Type                   |
 |------------------|--------------------------------|
@@ -237,6 +245,9 @@ User stories can be viewed here on the project [kanban board ](https://github.co
 | SR-028-CAP-2024  | Cap                            |
 | SR-029-DIS-2024  | Dispenser                      |
 | SR-030-BLK-2024  | Black Razor                    |
+
+</details>
+<br>
 
 # Skeleton
 
@@ -592,9 +603,12 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 
 ### Future Features
 
-* To sort using the django star rating 
-* - This will be added a as future feature as the way it is currently setup using the generic build I will need to change the way the data base interacts with the software.
-* I did not inlcude Pagination  the amount of products per page so will be the next future feature.  
+* I had some problems to implement the sorting feature with django star rating but due to time contraints left this one out but will be implementing it on a later date.
+* In the users profile there is a are features of crud but I would like it add a delete profile feature in the future this was also not implemented due to time.  
+* I did not inlcude Pagination  the amount of products per page so will be the next future feature when the site grows.
+* I would have liked a better way to handel returns should a prduct have a defect write now they can just send a message with problems in the contact form.
+* I would add some testomonials for each product in the future.
+*  
 
 [Back to Table of Contents](#table-of-contents)
 
