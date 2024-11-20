@@ -253,33 +253,37 @@ User stories can be viewed here on the project [kanban board ](https://github.co
 
 ## Wireframes
 
+There might be some small visual differances as this was due to design choices made while building the site.
+
 * The wireframes for mobile and desktop and used [Balsamiq](https://balsamiq.com/)
 
 <br>
 <details>
   <summary>Wire Frames</summary>
   <h4>Home page</h4>
-  <img src="static/readme/images/wireframes/home.png"><br>
-  <h4>Home after signed in page</h4>
-  <img src="static/readme/images/wireframes/home_signin.png"><br>
-  <h4>Create Blog page link only when logged in</h4>
-  <img src="static/readme/images/wireframes/create_blog.png"><br>
-  <h4>My Blog page link only when logged in</h4>
-  <img src="static/readme/images/wireframes/myblog.png"><br>
-  <h4>Profile page link only when logged in</h4>
-  <img src="static/readme/images/wireframes/profile.png"><br>
-  <h4>MY Profile edit page link only when logged in</h4>
-  <img src="static/readme/images/wireframes/profile_edit.png"><br>
-  <h4>About page</h4>
-  <img src="static/readme/images/wireframes/about.png"><br>
-  <h4>About contact page</h4>
-  <img src="static/readme/images/wireframes/about_contact.png"><br>
-  <h4>Register page </h4>
-  <img src="static/readme/images/wireframes/register.png"><br>
-  <h4>Login</h4>
-  <img src="static/readme/images/wireframes/login.png"><br>
-  <h4>Signout</h4>
-  <img src="static/readme/images/wireframes/signout.png"><br>
+  <img src="readme-images/wire-home.png"><br>
+  <h4>Products</h4>
+  <img src="readme-images/wire-products.png"><br>
+  <h4>Product Detail</h4>
+  <img src="readme-images/wire-product_detail.png"><br>
+  <h4>About</h4>
+  <img src="readme-images/wire-about.png"><br>
+  <h4>FAQ</h4>
+  <img src="readme-images/wire-faq.png"><br>
+  <h4>Conact Us</h4>
+  <img src="readme-images/wire-contact_us.png"><br>
+  <h4>Product Management & Edit</h4>
+  <img src="readme-images/wire-product-management.png"><br>
+  <h4>Profile</h4>
+  <img src="readme-images/wire-profile.png"><br>
+  <h4>Profile Edit</h4>
+  <img src="readme-images/wire-profile-edit.png"><br>
+  <h4>Wish List </h4>
+  <img src="readme-images/wire-wish_list.png"><br>
+  <h4>Shopping Bag </h4>
+  <img src="readme-images/wire-shopping_bag.png"><br>
+  <h4>Checkout</h4>
+  <img src="readme-images/wire-checkout.png"><br>
 </details>
 
 <br>
