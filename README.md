@@ -376,45 +376,103 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 
 <br>
 <details>
-<summary>Home Page Summary</summary>
+<summary>Home Page and footer Summary</summary>
+<br>
 
-![Home Page](/static/readme/images/after-login-page.png)
+![Home Page](readme-images/home.png)
 
+<br>
 ### Footer
 
 * Has social website links to Facebook, and a newsletter subscription.
 * The newsletter is a mail chimp subscription and when you click on it it has a success message.
-* - The problem with the success message which is correct and creates a I get the subscriber list.
-    I do not like the click back to the site link that only want more user details.
-    This is a mailchimp backend problem that I did not find a solution for will add it as a future feature. 
+* - I do not like the default success view of mail chimp and due to time contraints this is why I used this .
 
 <br>
 
-![Footer](/static/readme/images/footer.png)
+##### Footer
+
+![Footer](readme-images/footer.png)
 
 <br>
 
-![MailChimp](/static/readme/images/footer.png)
+##### MailChimp Footer view
+
+![MailChimp Footer view](readme-images/mailchimp_footer_extended%20.png)
+
+##### MailChimp Success
+
+![MailChimp Success](readme-images/mailchimp_success.png)
+
+##### MailChimp subscriber list
+
+![MailChimp subscriber list ](readme-images/mailchimp.png)
 
 </details>
 
-### Product Page 
+### Product & Product Detail
 
-* Feature :[django-star-ratings](https://django-star-ratings.readthedocs.io/en/latest/) this is a software install that handles the ratings this is differant to the LMS.
-* Sort feature has been setup without dango star rating
-* - Had a problem where django could not see certain fields in the star ratings generic setup will add this as future setup.
-* Images used from these links: 
-* - 
-* - 
+<details>
+<summary>Product & Product Detail summary</summary>
+
+### Products Page 
+
+* Feature :[django-star-ratings](https://django-star-ratings.readthedocs.io/en/latest/) this is a software install that handles the ratings this is differant to the LMS. This also has full CRUD functionality and only logged in users can rate. 
+* Have sorting features have been implemented simlar to the LMS sort price, catergory of products.
+* I did not implement the star rating as a sorting due to the way django star rating works will do this as a future feature.
+* The Images used for the products where  used from the manufactures and will be credited in the credit section.
+* I provided the the image view of admin as it has the edit and delete buttons when logged in as admin.
+* In the admin view you can edit and delete and you have a link to product management where you can add a product will add more detail below.
+
+##### Products Page 
+
+![Products Page ](readme-images/products_admin.png)
+
+##### Star Rating
+
+* The software gives a average count and rating count and you change your rating or clear it.
+
+![Star Rating](readme-images/star_rating%20.png)
 
 ### Product Detail Page
 
-* Feature : [Multiview feature](https://djangoguide.com/django-image-upload-specialization/django-multiple-image-upload/) from django that allows for one object to have multiple images .
-* - The Multiview is a extra model as with admin CRUD function.  
+* Feature : [Multiview feature](https://djangoguide.com/django-image-upload-specialization/django-multiple-image-upload/) from django that allows for one object to have multiple images. When the admin view you can add as many images as you like and delete them.
+* These images have a carousel and slide left to right with information the right for the product.
+* This was a bit difficult to add in the view on the front end, but you can when you go to edit and add images but on the add image view you are limited to two image fields.
+* - The Multiview is a extra model and has CRUD functionality.  
 * Feature :[django-star-ratings](https://django-star-ratings.readthedocs.io/en/latest/) this is a software install that handles the ratings this is differant to the LMS.
-* - The Lms had rating system but this one has been setup differantly.
+* - The Lms had a rating system but was setup differantly to has been done in this site with full CRUD as mentioned in the products.
+* In this view you can add to the bag if the wish to purchase or continue shopping.
+* I have also added a wish list button that changes the words of the button based on if a product is in the wish list or not.  
+* - The wish list is only available when you are logged in.
+
+##### Products Details image 
+
+![Products Detail ](readme-images/products_detail.png)
+
+### Product Management 
+
+* When in admin view you can edit and delete the product.
+* There is a delete confirmation when wanting to delete a product.
+* There is a dropdown link that says product managment there you can add the product and info.
+* Edit  Here you can also add information and add more images in the multiple images prievew image and CRUD functionality.   
+
+##### Edit Product
+
+![Edit Product  ](readme-images/edit_product.png)
+
+##### Add Product
+
+![Add Product  ](readme-images/add_product.png)
+
+##### Delete Product
+
+![Delete confirmation message ](readme-images/delete_product.png)
+
+</details>
 
 ### Shoppping Bag Page
+
 
 * Note: The bag app was really difficult to setup when not doing it exactly like the LMS.
 * - Side note I had little support from tutoring team as they kept instructing me to make it similar to the LMS. 
