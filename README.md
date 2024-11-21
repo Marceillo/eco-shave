@@ -81,8 +81,8 @@ Try my hand at an e-commerce layout using the Django Framework, Python, JavaScri
 
 ## Site User Goal
 
-This website sells wants to sell shaving products that will transform your shave and last for a long time.
-Also would like to educate clients of the benefits of shaving with de razors and single-edge razors in a minimilistic way. 
+This website wants to sell shaving products that will transform your shave and last for a long time.
+Also, I would like to educate clients on the benefits of shaving with de razors and single-edge razors in a minimalistic way. 
 
 
 ## Site Owners Goal
@@ -94,9 +94,9 @@ The goal is to sell these products online through a Django app that uses secure 
 # Business Model 
 
 This is a B2C (Business To Consumer)-model so when a client buys a product the transaction is completed.
-The dajango platform is able to upscale when needed and customize when needed, so  it is able adjust to market needs.
-The bussiness would like to attract people who want more out of a shave maybe a unique experience from it.  
-Company sells shaving products for DE double-edge blades or single-edge blades and accessories.
+The Django platform is able to upscale when needed and customize when needed, so it is able to adjust to market needs.
+The business would like to attract people who want more out of a shave maybe a unique experience from it.  
+The company sells shaving products for DE double-edge blades or single-edge blades and accessories.
 The razors can be used for a lifetime even passed on to other generations and still customers can get the best shaves.
 So in actual fact each time a customer uses these products they are helping the environment.
 
@@ -126,18 +126,18 @@ So in actual fact each time a customer uses these products they are helping the 
 ### SEO
 
 * Using Search Engine Optimization (SEO) is a science and when done correctly you should see traffic diverted to the site.
- It is a very important method to improve the ranking on search-engines which in turn create revenew. The goal is to attract people to the site.
+ It is a very important method to improve the ranking on search engines which in turn creates revenue. The goal is to attract people to the site.
  This is not easy when you are competing with so many online shops. To use keywords in the content that match the user's search criteria when using search engines. Descriptive Meta Tags have been implemented on the site after a brainstorming session and the use of [wordtracker]( https://www.wordtracker.com/) and [Ubersuggest](https://app.neilpatel.com/). The final description/words that have been used can be seen below:
  
 * - Meta Description - Discover sustainable DE razors and straight razors with all the shaving soaps and shave brushes.
 
-* - Meta Keywords - razor blades, double edge safety razor, straight razors, single edge razors,shaving soaps and shaving brushes.
+* - Meta Keywords - razor blades, double-edge safety razors, straight razors, single-edge razors, shaving soaps, and shaving brushes.
 
 * The site also includes a sitemap.xml and robots.txt to make sure that the search engines can find and crawl the pages on the site.
 
 ### Facebook 
 
-Social Media marketing is a great way to get your product across to online as it has a large following.
+Social Media marketing is a great way to get your product across online as it has a large following.
 It has a huge potential for small businesses. This tool helps the eco-shave team as they can interact directly with the customers or potential customers. This can boost the brand and awareness of our business.
 
 
@@ -152,7 +152,7 @@ It has a huge potential for small businesses. This tool helps the eco-shave team
  I tried registering another account but it kept giving me this error.
 
 * I had some problems setting up an account I have provided the error image below.
-  I tried registering another account but it kept giving me this error.
+ I tried registering another account but it kept giving me this error.
 
   <img src="readme-images/facebook_error.png"><br>
 
@@ -160,11 +160,11 @@ It has a huge potential for small businesses. This tool helps the eco-shave team
 
 ### Budget 
 
-* Since this is a small online shop that is not live yet, free marketing strategies are be used such as facebook, SEO ,Mail subscription.
+* Since this is a small online shop that is not live yet, free marketing strategies are being used such as Facebook, SEO, and Mail subscription.
 
 ## Future Marketing Ideas
 
-* Implement more free social media sites such as tik-tok. instagram ect.
+* Implement more free social media sites such as TikTok. Instagram ect.
 * I would like to do some online instruction videos for the brand on how to use the products.
 
 # User Experience UX
@@ -176,26 +176,26 @@ User stories can be viewed here on the project [kanban board ](https://github.co
 <details>
   <summary>User Stories</summary>
 
-| **EPIC**                                   | ID   | Priority     | User Story                                                                                     |
-| :------------------------------------- | --  | :----------- | :--------------------------------------------------------------------------------------------- |
-| **E-commerce Integration**             | 1.1 | Must-Have    | As a user, I want to add products to a shopping cart and proceed to check out, so I can easily make purchases on the site. |
-|                                       | 1.2 | Must-Have    | As a user, I want to receive confirmation of my purchase via email and on-screen notifications, so I can verify my order. |
-|                                       | 1.3 | Should-Have  | As a user, I want a streamlined checkout process, so I can complete my purchases efficiently.  |
-| **User Experience Design**            | 2.1 | Must-Have    | As a user, I want an accessible and intuitive website, so I can navigate and interact with the content seamlessly. |
-|                                       | 2.2 | Must-Have    | As a user, I want a mobile-responsive design, so I can access the website on different devices. |
-|                                       | 2.3 | Should-Have  | As a user, I want to edit and view my profile information, so I can keep my account details up-to-date. |
-|                                       | 2.4 | Should-Have  | As a user, I want to create and manage a wishlist within my profile modal, so I can save products for future consideration. |
-| **Search Engine Optimization**         | 3.1 | Must-Have    | As a user, I want to find products quickly using search functionality, so I can locate items efficiently. |
-|                                       | 3.2 | Should-Have  | As a user, I want a helpful 404 error page with navigation options, so I can find my way back to the main site if needed. |
-| **Authentication and Authorization**   | 4.1 | Must-Have    | As a user, I want to register and log in securely to access my account information.           |
-|                                       | 4.2 | Must-Have    | As an admin, I want to manage user roles effectively, so I can control access levels based on user roles. |
-|                                       | 4.3 | Should-Have  | As a user, I want to see my login status clearly on every page.                               |
-| **Marketing and Brand Reach**         | 5.1 | Must-Have    | As a user, I want to subscribe to newsletters for updates and promotions.                     |
-|                                       | 5.2 | Should-Have  | As a user, I want to share products on social media easily to recommend them to friends.     |
-| **E-commerce Fundamentals**            | 6.1 | Must-Have    | As a business owner, I want to document the e-commerce model clearly for outlining the application’s purpose and user value. |
-| **Customer Support and Information Access** | 7.1 | Must-Have    | As a user, I want to submit a contact form so that I can easily reach out for support or inquiries.   |
-|                                       | 7.2 | Must-Have    | As a user, I want to view frequently asked questions in a modal so that I can find quick answers without leaving the About Page.   |
-|                                       | 7.3 | Should-Have  | As a user, I want the contact form and FAQ modal to be mobile-responsive so that I can access them on any device.   |
+| **EPIC** | ID   | Priority     | User Story                                                                                     |
+| :------------------------------------- | --  | :----------- | :--------------------------------------------------------------------------------------------- |
+| **E-commerce Integration** | 1.1 | Must-Have    | As a user, I want to add products to a shopping cart and proceed to check out, so I can easily make purchases on the site. |
+|                                       | 1.2 | Must-Have    | As a user, I want to receive confirmation of my purchase via email and on-screen notifications, so I can verify my order. |
+|                                       | 1.3 | Should-Have  | As a user, I want a streamlined checkout process, so I can complete my purchases efficiently.  |
+| **User Experience Design** | 2.1 | Must-Have    | As a user, I want an accessible and intuitive website, so I can navigate and interact with the content seamlessly. |
+|                                       | 2.2 | Must-Have    | As a user, I want a mobile-responsive design, so I can access the website on different devices. |
+|                                       | 2.3 | Should-Have  | As a user, I want to edit and view my profile information, so I can keep my account details up-to-date. |
+|                                       | 2.4 | Should-Have  | As a user, I want to create and manage a wishlist within my profile modal, so I can save products for future consideration. |
+| **Search Engine Optimization** | 3.1 | Must-Have    | As a user, I want to find products quickly using search functionality, so I can locate items efficiently. |
+|                                       | 3.2 | Should-Have  | As a user, I want a helpful 404 error page with navigation options, so I can find my way back to the main site if needed. |
+| **Authentication and Authorization** | 4.1 | Must-Have    | As a user, I want to register and log in securely to access my account information.           |
+|                                       | 4.2 | Must-Have    | As an admin, I want to manage user roles effectively, so I can control access levels based on user roles. |
+|                                       | 4.3 | Should-Have  | As a user, I want to see my login status clearly on every page.                               |
+| **Marketing and Brand Reach** | 5.1 | Must-Have    | As a user, I want to subscribe to newsletters for updates and promotions.                     |
+|                                       | 5.2 | Should-Have  | As a user, I want to share products on social media easily to recommend them to friends.     |
+| **E-commerce Fundamentals** | 6.1 | Must-Have    | As a business owner, I want to document the e-commerce model clearly for outlining the application’s purpose and user value. |
+| **Customer Support and Information Access** | 7.1 | Must-Have    | As a user, I want to submit a contact form so that I can easily reach out for support or inquiries.   |
+|                                       | 7.2 | Must-Have    | As a user, I want to view frequently asked questions in a modal so that I can find quick answers without leaving the About Page.   |
+|                                       | 7.3 | Should-Have  | As a user, I want the contact form and FAQ modal to be mobile-responsive so that I can access them on any device.   |
 
 </details>
 
@@ -206,14 +206,14 @@ User stories can be viewed here on the project [kanban board ](https://github.co
 
 ### Colours-Backgrounds
 
-* Each page is similar but a bit differant the colors are similar with white and a #ddd background color.
+* Each page is similar but a bit different the colors are similar with white and a #ddd background color.
 * I created the style while developing the site with each app some have different backgrounds.
-* For the home page background and all the other background images I used a free Ai tool [bing](https://www.bing.com/images/create?FORM=IRPGEN) to generate them as finding and image that I like was difficult.   
-* I found a free template from [bbbootstrap](https://bbbootstrap.com/snippets/bootstrap-ecommerce-shopping-cart-item-summary-44021562) and used this as a base to style some of the apps  .
+* For the home page background and all the other background images I used a free AI tool [Bing](https://www.bing.com/images/create?FORM=IRPGEN) to generate them as finding an image that I like was difficult.   
+* I found a free template from [bbbootstrap](https://bbbootstrap.com/snippets/bootstrap-ecommerce-shopping-cart-item-summary-44021562) and used this as a base to style some of the apps.
 
 ### Colour Scheme
 
-* Used a [Coolors web site](https://coolors.co/palettes/trendin) to search for colors that match but in the end stayed with the simlistic design.
+* Used a [Coolors website](https://coolors.co/palettes/trendin) to search for colors that match but in the end, stayed with the simplistic design.
 
 ### Typography
 
@@ -223,8 +223,8 @@ User stories can be viewed here on the project [kanban board ](https://github.co
 
 ### Imagery
 
-* I used the images for the products from the manufacturere website of the products.
-* For some background images I used a Ai generated tool from Bing more on this in features.
+* I used the images for the products from the manufacturer's website of the products.
+* For some background images I used a Ai AI-generated tool from Bing more on this in features.
 
 #### Product SKU Format
 
@@ -235,40 +235,40 @@ User stories can be viewed here on the project [kanban board ](https://github.co
 * It can be used for sales data analysis and other applications.
 
 <details>
-<summary>SKU below an the example of the format</summary>
+<summary>SKU below an example of the format</summary>
 
-| SKU              | Product Type                   |
+| SKU              | Product Type                   |
 |------------------|--------------------------------|
-| SR-001-STR-2024  | Straight Razor 2               |
-| SR-002-RAZ-2024  | Razor                          |
-| SR-003-BRS-2024  | Brush                          |
-| SR-004-SAP-2024  | Soap                           |
-| SR-005-CRE-2024  | Cream                          |
-| SR-006-BLA-2024  | Blade                          |
-| SR-007-SAF-2024  | Safety Razor 3                 |
-| SR-008-PRE-2024  | Pre-shave                      |
-| SR-009-BAG-2024  | Bag                            |
-| SR-010-BRT-2024  | Brush Restorer Tool            |
-| SR-011-SHM-2024  | Shaving Mug                    |
-| SR-012-MUG-2024  | Mug                            |
-| SR-013-RUB-2024  | Rub                            |
-| SR-014-LTH-2024  | Leather                        |
-| SR-015-TOW-2024  | Towel                          |
-| SR-016-FLA-2024  | Flannel                        |
-| SR-017-PAD-2024  | Pad                            |
-| SR-018-KIT-2024  | Kit                            |
-| SR-019-GEL-2024  | Gel                            |
-| SR-020-WAX-2024  | Wax                            |
-| SR-021-FIN-2024  | Finish                         |
-| SR-022-COM-2024  | Comb                           |
-| SR-023-SCR-2024  | Scraper                        |
-| SR-024-RAS-2024  | Razor Stand                    |
-| SR-025-HOL-2024  | Holder                         |
-| SR-026-SLI-2024  | Slitter                        |
-| SR-027-PEN-2024  | Pen                            |
-| SR-028-CAP-2024  | Cap                            |
-| SR-029-DIS-2024  | Dispenser                      |
-| SR-030-BLK-2024  | Black Razor                    |
+| SR-001-STR-2024  | Straight Razor 2               |
+| SR-002-RAZ-2024  | Razor                          |
+| SR-003-BRS-2024  | Brush                          |
+| SR-004-SAP-2024  | Soap                           |
+| SR-005-CRE-2024  | Cream                          |
+| SR-006-BLA-2024  | Blade                          |
+| SR-007-SAF-2024  | Safety Razor 3                 |
+| SR-008-PRE-2024  | Pre-shave                      |
+| SR-009-BAG-2024  | Bag                            |
+| SR-010-BRT-2024  | Brush Restorer Tool            |
+| SR-011-SHM-2024  | Shaving Mug                    |
+| SR-012-MUG-2024  | Mug                            |
+| SR-013-RUB-2024  | Rub                            |
+| SR-014-LTH-2024  | Leather                        |
+| SR-015-TOW-2024  | Towel                          |
+| SR-016-FLA-2024  | Flannel                        |
+| SR-017-PAD-2024  | Pad                            |
+| SR-018-KIT-2024  | Kit                            |
+| SR-019-GEL-2024  | Gel                            |
+| SR-020-WAX-2024  | Wax                            |
+| SR-021-FIN-2024  | Finish                         |
+| SR-022-COM-2024  | Comb                           |
+| SR-023-SCR-2024  | Scraper                        |
+| SR-024-RAS-2024  | Razor Stand                    |
+| SR-025-HOL-2024  | Holder                         |
+| SR-026-SLI-2024  | Slitter                        |
+| SR-027-PEN-2024  | Pen                            |
+| SR-028-CAP-2024  | Cap                            |
+| SR-029-DIS-2024  | Dispenser                      |
+| SR-030-BLK-2024  | Black Razor                    |
 
 </details>
 <br>
@@ -277,7 +277,7 @@ User stories can be viewed here on the project [kanban board ](https://github.co
 
 ## Wireframes
 
-There might be some small visual differances as this was due to design choices made while building the site.
+There might be some small visual differences as this was due to design choices made while building the site.
 
 * The wireframes for mobile and desktop and used [Balsamiq](https://balsamiq.com/)
 
@@ -300,7 +300,7 @@ There might be some small visual differances as this was due to design choices m
   <img src="readme-images/wire-product-management.png"><br>
   <h4>Profile</h4>
   <img src="readme-images/wire-profile.png"><br>
-  <h4>Profile Edit</h4>
+  <h4>Profile Edit</h4>
   <img src="readme-images/wire-profile-edit.png"><br>
   <h4>Wish List </h4>
   <img src="readme-images/wire-wish_list.png"><br>
@@ -318,7 +318,7 @@ There might be some small visual differances as this was due to design choices m
 <summary>My Intial ERD Diagram</summary>
 
 * For the initial ERD diagram plan, I used [lucid chart](https://www.lucidchart.com/)
-* There are some some design differances made during the project build just as side note.
+* There are some design differences made during the project build just as a side note.
 <br>
 <br>
 <img src="readme-images/erd-diagram.png">
@@ -336,14 +336,14 @@ Django has a built-in tool that can show you your ERD diagram.
 
 * It is not always possible to start a project from scratch sometimes it may be the case that you need to work on someone else project.
 * So this will give me as a developer an overview of the project from an ERD standpoint.
-* Also was good to see how everthing is connected in the end of the project.
+* Also was good to see how everything is connected at the end of the project.
 
 ### Steps used
 * Step 1 to using this is to install python3 -m pip install django-extensions.
 * Step 2 would be to add the installed apps in settings (django_extensions) .
 * Step 3 would be to add it to the requirements file.
 * Step 4 is to run the python3 manage.py graph_models -a --output erd.dot 
-* Step 5 After this it will create an erd. dot file with all the application model data.
+* Step 5 After this it will create an erd. Dot file with all the application model data.
 * Step 6 Put the data in this software to change to an image file much like the one I used below.
 
 The red dot file converted to image [Graphviz online](https://dreampuf.github.io/GraphvizOnline/#digraph%20G%20%7B%0A%0A%20%20subgraph%20cluster_0%20%7B%0A%20%20%20%20style%3Dfilled%3B%0A%20%20%20%20color%3Dlightgrey%3B%0A%20%20%20%20node%20%5Bstyle%3Dfilled%2Ccolor%3Dwhite%5D%3B%0A%20%20%20%20a0%20-%3E%20a1%20-%3E%20a2%20-%3E%20a3%3B%0A%20%20%20%20label%20%3D%20%22process%20%231%22%3B%0A%20%20%7D%0A%0A%20%20subgraph%20cluster_1%20%7B%0A%20%20%20%20node%20%5Bstyle%3Dfilled%5D%3B%0A%20%20%20%20b0%20-%3E%20b1%20-%3E%20b2%20-%3E%20b3%3B%0A%20%20%20%20label%20%3D%20%22process%20%232%22%3B%0A%20%20%20%20color%3Dblue%0A%20%20%7D%0A%20%20start%20-%3E%20a0%3B%0A%20%20start%20-%3E%20b0%3B%0A%20%20a1%20-%3E%20b3%3B%0A%20%20b2%20-%3E%20a3%3B%0A%20%20a3%20-%3E%20a0%3B%0A%20%20a3%20-%3E%20end%3B%0A%20%20b3%20-%3E%20end%3B%0A%0A%20%20start%20%5Bshape%3DMdiamond%5D%3B%0A%20%20end%20%5Bshape%3DMsquare%5D%3B%0A%7D)
@@ -360,9 +360,9 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 
 ## Visual Experience
 
-* This is based on e-commerce so the design was focused on this that customers can see what they are buying. 
-* The product detail has a carousel that shows more images of the product as to have more detail of the product.
-* I could do more when it comes to improving the visual experience the goal is that it is functionale.
+* This is based on e-commerce so the design was focused on this so that customers can see what they are buying. 
+* The product detail has a carousel that shows more images of the product so as to have more detail of the product.
+* I could do more when it comes to improving the visual experience the goal is that it is functional.
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -370,9 +370,9 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 
 ### Home Page
 
-* Styling : Used one of bootstrape [4.6 template example](https://getbootstrap.com/docs/4.6/examples/carousel/) example for the carousel and styled from there.  
+* Styling : Used one of bootstrape [4.6 template example](https://getbootstrap.com/docs/4.6/examples/carousel/) example for the carousel and styled from there.  
 * Image: I used a [Ai generatied image](https://www.bing.com/images/create?FORM=GENILP) as I could not find a image that matches.
-* When a user is looged in it will show there name but when not is will show Your Profile.
+* When a user is logged in it will show their name but when not it will show Your Profile.
 
 <br>
 <details>
@@ -387,7 +387,7 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 
 * Has social website links to Facebook, and a newsletter subscription.
 * The newsletter is a mail chimp subscription and when you click on it it has a success message.
-* - I do not like the default success view of mail chimp and due to time contraints this is why I used this .
+* - I do not like the default success view of MailChimp and due to time constraints, this is why I used this.
 
 <br>
 
@@ -418,11 +418,11 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 
 ### Products Page 
 
-* Feature :[django-star-ratings](https://django-star-ratings.readthedocs.io/en/latest/) this is a software install that handles the ratings this is differant to the LMS. This also has full CRUD functionality and only logged in users can rate. 
-* Have sorting features have been implemented simlar to the LMS sort price, catergory of products.
-* I did not implement the star rating as a sorting due to the way django star rating works will do this as a future feature.
-* The Images used for the products where  used from the manufactures and will be credited in the credit section.
-* I provided the the image view of admin as it has the edit and delete buttons when logged in as admin.
+* Feature :[django-star-ratings](https://django-star-ratings.readthedocs.io/en/latest/) This is a software install that handles the ratings which are different from the LMS. This also has full CRUD functionality and only logged-in users can rate. 
+* Have sorting features been implemented similar to the LMS sort price, and category of products?
+* I did not implement the star rating as a sorting due to the way Django star rating works will do this as a future feature.
+* The Images used for the products were used by the manufacturers and will be credited in the credit section.
+* I provided the image view of admin as it has the edit and delete buttons when logged in as admin.
 * In the admin view you can edit and delete and you have a link to product management where you can add a product will add more detail below.
 
 ##### Products Page 
@@ -431,20 +431,20 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 
 ##### Star Rating
 
-* The software gives a average count and rating count and you change your rating or clear it.
+* The software gives an average count and rating count and you change your rating or clear it.
 
 ![Star Rating](readme-images/star_rating%20.png)
 
 ### Product Detail Page
 
-* Feature : [Multiview feature](https://djangoguide.com/django-image-upload-specialization/django-multiple-image-upload/) from django that allows for one object to have multiple images. When the admin view you can add as many images as you like and delete them.
-* These images have a carousel and slide left to right with information the right for the product.
-* This was a bit difficult to add in the view on the front end, but you can when you go to edit and add images but on the add image view you are limited to two image fields.
-* - The Multiview is a extra model and has CRUD functionality.  
-* Feature :[django-star-ratings](https://django-star-ratings.readthedocs.io/en/latest/) this is a software install that handles the ratings this is differant to the LMS.
-* - The Lms had a rating system but was setup differantly to has been done in this site with full CRUD as mentioned in the products.
-* In this view you can add to the bag if the wish to purchase or continue shopping.
-* I have also added a wish list button that changes the words of the button based on if a product is in the wish list or not.  
+* Feature : [Multiview feature](https://djangoguide.com/django-image-upload-specialization/django-multiple-image-upload/) from Django that allows for one object to have multiple images. When the admin view you can add as many images as you like and delete them.
+* These images have a carousel and slide left to right with information on the right for the product.
+* This was a bit difficult to add in the view on the front end, but you can when you go to edit and add images on the add image view you are limited to two image fields.
+* - The Multiview is an extra model and has CRUD functionality.  
+* Feature :[django-star-ratings](https://django-star-ratings.readthedocs.io/en/latest/) This is a software install that handles the ratings which are different from the LMS.
+* - The LMS had a rating system but was set up differently than has been done on this site with full CRUD as mentioned in the products.
+* In this view you can add to the bag if you wish to purchase or continue shopping.
+* I have also added a wish list button that changes the words of the button based on whether a product is in the wish list or not.  
 * - The wish list is only available when you are logged in.
 
 ##### Products Details image 
@@ -455,17 +455,17 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 
 * When in admin view you can edit and delete the product.
 * There is a delete confirmation when wanting to delete a product.
-* There is a dropdown link that says product managment there you can add the product and info.
-* Edit  Here you can also add information and add more images in the multiple images prievew image and CRUD functionality. 
-* The is active I will add this in as future upgrade to signal that a product is available or not.   
+* There is a dropdown link that says product management there you can add the product and info.
+* Edit  Here you can also add information and add more images in the multiple images preview image and CRUD functionality. 
+* The is active I will add this in as a future upgrade to signal that a product is available or not.   
 
 ##### Edit Product
 
-![Edit Product  ](readme-images/edit_product.png)
+![Edit Product  ](readme-images/edit_product.png)
 
 ##### Add Product
 
-![Add Product  ](readme-images/add_product.png)
+![Add Product  ](readme-images/add_product.png)
 
 ##### Delete confirmation message 
 
@@ -473,30 +473,30 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 
 </details>
 
-### Shoppping Bag Page
+### Shopping Bag Page
 
 <details>
 <summary> Shopping Bag summary</summary>
 
-* Note: The bag app was really difficult to setup when not doing it exactly like the LMS.
-* - Side note I had little support from tutoring as in the beginning things where very differant. So they guided me to make it similar to the LMS. 
-* - Learning is about trying new things and making mistakes, I believe from this I learnt that variables should be consistant the hard way.
-* - Problem 1: The adding of image and date to the bag app. Solution was had to redo the bag/views,context.py several times.
-* - Problem 2: The remove button was not working as I was not consistently using strings for keys, after all the refactoring and print logs problem resolved.
+* Note: The bag app was really difficult to set up when not doing it exactly like the LMS.
+* - Side note I had little support from tutoring as in the beginning things were very different. So they guided me to make it similar to the LMS. 
+* - Learning is about trying new things and making mistakes, I believe from this I learned that variables should be consistent the hard way.
+* - Problem 1: The adding of image and date to the bag app. The solution was had to redo the bag/views,context.py several times.
+* - Problem 2: The remove button was not working as I was not consistently using strings for keys, after all the refactoring and print logs problem was resolved.
 * Styling : I used a [free template](https://bbbootstrap.com/snippets/bootstrap-ecommerce-shopping-cart-item-summary-44021562) and customised it to the bag app 
-* In the bag you can update the quantity or decrease it and you can go to check out from here there are toast message as well whe items get added to the from the product details page.
+* In the bag you can update the quantity or decrease it and you can go to check out from here there are toast messages as well when items get added to from the product details page.
 
 ##### Shopping Bag
 
-![Shopping bag view  ](readme-images/bag_view.png)
+![Shopping bag view  ](readme-images/bag_view.png)
 
 ### Checkout Page & Success Checkout Page
 
-* Note: This is a page to allow the user to fill out there personal details and delivery information.
-* Bug fix: The Checkout success page was not showing up after confirming the form repaired views the problem was the element for java script was not in the  
-  layout.   
-* - Setup stripe as per the LMS the views have changed in the last years but still managed to create a account and setup with strip functionality.
-* There is a form that links up to Strip and confirms order then gives a success message when completed 
+* Note: This is a page to allow the user to fill out their personal details and delivery information.
+* Bug fix: The Checkout success page was not showing up after confirming the form repaired views the problem was the element for the javascript was not in the  
+ layout.   
+* - Setup stripe as per the LMS the views have changed in the last years but still managed to create an account and set up with strip functionality.
+* There is a form that links up to Strip and confirms the order then gives a success message when completed 
 
 ##### Checkout
 
@@ -508,43 +508,100 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 
 </details>
 
+
 ### User Profile 
 
+<details>
+<summary> Profile & Wish List summary</summary>
+
 * The page for the profile shows the order history and the profile information.
-* Here I tried to oimplement a flip animation feature but had to problems with styling so I changed it to save time.
-* Delete profile still to be implemented 
+* Here I tried to implement a flip animation feature but had problems with styling so I changed it to save time.
+* A user can edit their profile when they enter incorrect information they might not get their product.
+* Delete profile feature I would like to add this in the future.
+* I added an image field feature should the user want to update their image.
+* I styled it similar to the bag template so that the order history is on the left and the right profile summary.
+* The edit profile goes to a separate html document.
+* There is an option to go to the wishlist from the profile view.
+* When a user clicks on the order history it will show the checkout success page.
 
-### Product Admin 
+##### 
 
-* I have django multiview feature this did not work with the widgets from django lms had to make a view changes.
-* - Due to errors, I used the admin view with the inspect tool, to see how the admin handels delet and update images.
-* - The used this information to implement in my view of this project. 
+![Checkout Success ](readme-images/profile.png)
 
+##### Profile Edit 
+
+![Profile Edit](readme-images/profile_edit.png)
+
+
+### Wish List 
+
+* The wish list has CRUD functionality as you add and remove an item to the wish list and update the star rating.
+* You can also add items to the bag that you would like to purchase.
+* The wish list is only availble when logged in.
+
+##### Wish LIst
+
+![Wish lIst  ](readme-images/wish_list.png)
+
+</details>
 
 ### About Page
 
 <details>
-<summary>About Page summary</summary>
+<summary>About, FAq, Contact us summary</summary>
 <br>
 
-* Note: This is a basic page with a contact form for users to get in contact.
-
-
-<br>
-
-![About](/static/readme/images/about-page.png)
+* The about is a basic page with a contact form users to get in contact with eco-shaves.
 
 <br>
 
-#### Contact form 
-
-* Note: This is a basic page with a contact form for users to get in contact.
+![About](readme-images/about.png)
 
 <br>
 
-![About](/static/readme/images/contactform.png)
+##### Contact Us
 
-<br>
+* Note: This is a basic pagee with a contact form for users to send a email and a message.
+
+![Contact Us](readme-images/contact_us.png)
+
+##### Contact us message 
+
+![Contact Us message](readme-images/contact_message_noemail.png)
+
+### FAQ
+
+* This is model with questions and answers field.
+* The admin user has CRUD functionality I included the image with the CRUD View for super users.
+* display message for each update when updating the FAQ also added below 
+
+##### FAQ
+
+![FAQ](readme-images/superuser_view_faq.png)
+
+##### Add FAQ
+
+![Add FAQ](readme-images/add_faq.png)
+
+##### Edit FAQ
+
+![Edit FAQ](readme-images/edit-faq.png)
+
+##### Confirm delete message FAQ
+
+![Confirm delete message FAQ](readme-images/delete_confirm_faq.png)
+
+##### Update message delete
+
+![Update message delete ](readme-images/delete_faq_message.png)
+
+##### Update message edit
+
+![Update message edit ](readme-images/edit_message_faq.png)
+
+##### Update message add
+
+![Update message add ](readme-images/faq_add_message.png)
 
 </details> 
 
