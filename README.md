@@ -382,6 +382,7 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 ![Home Page](readme-images/home.png)
 
 <br>
+
 ### Footer
 
 * Has social website links to Facebook, and a newsletter subscription.
@@ -455,7 +456,8 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 * When in admin view you can edit and delete the product.
 * There is a delete confirmation when wanting to delete a product.
 * There is a dropdown link that says product managment there you can add the product and info.
-* Edit  Here you can also add information and add more images in the multiple images prievew image and CRUD functionality.   
+* Edit  Here you can also add information and add more images in the multiple images prievew image and CRUD functionality. 
+* The is active I will add this in as future upgrade to signal that a product is available or not.   
 
 ##### Edit Product
 
@@ -465,7 +467,7 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 
 ![Add Product  ](readme-images/add_product.png)
 
-##### Delete Product
+##### Delete confirmation message 
 
 ![Delete confirmation message ](readme-images/delete_product.png)
 
@@ -473,25 +475,43 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 
 ### Shoppping Bag Page
 
+<details>
+<summary> Shopping Bag summary</summary>
 
 * Note: The bag app was really difficult to setup when not doing it exactly like the LMS.
-* - Side note I had little support from tutoring team as they kept instructing me to make it similar to the LMS. 
-* - Learning is about trying new things and making mistakes, I believe from this I learnt that variables should be consistant.
+* - Side note I had little support from tutoring as in the beginning things where very differant. So they guided me to make it similar to the LMS. 
+* - Learning is about trying new things and making mistakes, I believe from this I learnt that variables should be consistant the hard way.
 * - Problem 1: The adding of image and date to the bag app. Solution was had to redo the bag/views,context.py several times.
 * - Problem 2: The remove button was not working as I was not consistently using strings for keys, after all the refactoring and print logs problem resolved.
 * Styling : I used a [free template](https://bbbootstrap.com/snippets/bootstrap-ecommerce-shopping-cart-item-summary-44021562) and customised it to the bag app 
+* In the bag you can update the quantity or decrease it and you can go to check out from here there are toast message as well whe items get added to the from the product details page.
+
+##### Shopping Bag
+
+![Shopping bag view  ](readme-images/bag_view.png)
 
 ### Checkout Page & Success Checkout Page
 
 * Note: This is a page to allow the user to fill out there personal details and delivery information.
 * Bug fix: The Checkout success page was not showing up after confirming the form repaired views the problem was the element for java script was not in the  
   layout.   
-* - Setup stripe as per the LMS the views have changed in the last years but still managed to create a account and setup.
+* - Setup stripe as per the LMS the views have changed in the last years but still managed to create a account and setup with strip functionality.
+* There is a form that links up to Strip and confirms order then gives a success message when completed 
+
+##### Checkout
+
+![Checkout](readme-images/checkout.png)
+
+##### Checkout Success
+
+![Checkout Success ](readme-images/checkout_success2.png)
+
+</details>
 
 ### User Profile 
 
 * The page for the profile shows the order history and the profile information.
-* When you click on the profile information there is flip animation that for the user to update.
+* Here I tried to oimplement a flip animation feature but had to problems with styling so I changed it to save time.
 * Delete profile still to be implemented 
 
 ### Product Admin 
