@@ -1,6 +1,14 @@
-
 <img src="readme-images/mocup_ecoshave.png">
 
+# **ECO-SHAVE**
+
+# Overview 
+
+This is a site that is built for selling shaving products that use DE double edge razors I love this way of shaving.
+The product does not use the plastic cartridge systems that is so popular today, I feel these systems are wastfull and expensive over time.
+Below is my first e-commerce B2C website.
+
+Here is the live deployed site [Eco-Shave](https://eco-shave-7beca10c37e1.herokuapp.com/)
 # Table of Contents
 
 - [Objective](#objective)
@@ -60,6 +68,10 @@
 - [Credits](#credits)
   - [Acknowledgements](#acknowledgements)
 
+# Project
+
+Everything on this webpage is for educational purposes only, documentation on where pictures and information are coming from is in the credit section.
+
 # Objective
 
 I decided to try building a shaving website because I am interested in this way of shaving.
@@ -69,8 +81,8 @@ Try my hand at an e-commerce layout using the Django Framework, Python, JavaScri
 
 ## Site User Goal
 
-This website sells shaving products that will transform your shave and last for a long time.
-While in a small way educating on the benefits of shaving with de razors and single-edge razors. 
+This website sells wants to sell shaving products that will transform your shave and last for a long time.
+Also would like to educate clients of the benefits of shaving with de razors and single-edge razors in a minimilistic way. 
 
 
 ## Site Owners Goal
@@ -82,10 +94,11 @@ The goal is to sell these products online through a Django app that uses secure 
 # Business Model 
 
 This is a B2C (Business To Consumer)-model so when a client buys a product the transaction is completed.
-The dajango platform is able to upscale when needed and customize when needed, so  it is able adjust to market needs. 
-Company that sells shaving products for DE double-edge blades or single-edge blades and accessories.
+The dajango platform is able to upscale when needed and customize when needed, so  it is able adjust to market needs.
+The bussiness would like to attract people who want more out of a shave maybe a unique experience from it.  
+Company sells shaving products for DE double-edge blades or single-edge blades and accessories.
 The razors can be used for a lifetime even passed on to other generations and still customers can get the best shaves.
-So in actual fact each time a customer uses these products they are helping the environment and saving at the same time.
+So in actual fact each time a customer uses these products they are helping the environment.
 
 ## Shaving Philosophy
 
@@ -107,7 +120,7 @@ So in actual fact each time a customer uses these products they are helping the 
 
 * On this site we used an email marketing application called Mailchimp that collects the subscription emails. 
 * A mockup of a Facebook page for social media marketing that could be implemented in the future should the site go live. 
-* The us certain SEO search engine optimization strategies such as [wordtracker]( https://www.wordtracker.com/) and [Ubersuggest](https://app.neilpatel.com/) .
+* The use of certain SEO search engine optimization strategies such as [wordtracker]( https://www.wordtracker.com/) and [Ubersuggest](https://app.neilpatel.com/) .
 * Content marketing was used in this just to educate the users of the site of the benefits of using these products in the FAQ and landing page.
 
 ### SEO
@@ -196,7 +209,7 @@ User stories can be viewed here on the project [kanban board ](https://github.co
 * Each page is similar but a bit differant the colors are similar with white and a #ddd background color.
 * I created the style while developing the site with each app some have different backgrounds.
 * For the home page background and all the other background images I used a free Ai tool [bing](https://www.bing.com/images/create?FORM=IRPGEN) to generate them as finding and image that I like was difficult.   
-* I found a free template from [bbbootstrap](https://bbbootstrap.com/snippets/bootstrap-ecommerce-shopping-cart-item-summary-44021562) and used this as a base to style some apps .
+* I found a free template from [bbbootstrap](https://bbbootstrap.com/snippets/bootstrap-ecommerce-shopping-cart-item-summary-44021562) and used this as a base to style some of the apps  .
 
 ### Colour Scheme
 
@@ -210,7 +223,7 @@ User stories can be viewed here on the project [kanban board ](https://github.co
 
 ### Imagery
 
-* I used the images for the producst from the manufacturere website for the products.
+* I used the images for the products from the manufacturere website of the products.
 * For some background images I used a Ai generated tool from Bing more on this in features.
 
 #### Product SKU Format
@@ -348,9 +361,8 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 ## Visual Experience
 
 * This is based on e-commerce so the design was focused on this that customers can see what they are buying. 
-* So the product  detail has a carousel that shows more images of the product when there are more images.
-* I could do more when it comes to improving the visual experience the goal is that it meets the needs of user.
-
+* The product detail has a carousel that shows more images of the product as to have more detail of the product.
+* I could do more when it comes to improving the visual experience the goal is that it is functionale.
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -360,40 +372,29 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 
 * Styling : Used one of bootstrape [4.6 template example](https://getbootstrap.com/docs/4.6/examples/carousel/) example for the carousel and styled from there.  
 * Image: I used a [Ai generatied image](https://www.bing.com/images/create?FORM=GENILP) as I could not find a image that matches.
+* When a user is looged in it will show there name but when not is will show Your Profile.
 
+<br>
 <details>
-
 <summary>Home Page Summary</summary>
-
-<br>
-
-#### Before login 
-
-* 
-
- <br>
-
-![Home Page](/static/readme/images/home-screen.png)
-
-<br>
-
-#### After login  
-
-*
-
-<br>
 
 ![Home Page](/static/readme/images/after-login-page.png)
 
 ### Footer
 
-* Has social website links to Facebook, X, and YouTube.
+* Has social website links to Facebook, and a newsletter subscription.
+* The newsletter is a mail chimp subscription and when you click on it it has a success message.
+* - The problem with the success message which is correct and creates a I get the subscriber list.
+    I do not like the click back to the site link that only want more user details.
+    This is a mailchimp backend problem that I did not find a solution for will add it as a future feature. 
 
 <br>
 
-![Home Page](/static/readme/images/footer.png)
+![Footer](/static/readme/images/footer.png)
 
 <br>
+
+![MailChimp](/static/readme/images/footer.png)
 
 </details>
 
