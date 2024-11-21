@@ -7,22 +7,26 @@
 - [Site User Goal](#site-user-goal)
 - [Site Owners Goal](#site-owners-goal)
 - [Business Model](#business-model)
-  - [ DE and SE Shaving – The Philosophy](#de-se-shaving--the-philosophy)
+  - [Shaving Philosophy](#shaving-philosophy)
   - [Marketing Strategy](#marketing-strategy)
-  - [Future Marketing Ideas](#future-marketing-ideas)
+  - [Target Audience](#target-audience)
+  - [Marketing used](#marketing-used) 
   - [SEO](#seo)
-  - [Google Search Console](#google-search-console)  
+  - [Future Marketing Ideas](#future-marketing-ideas)
 - [User Experience (UX)](#user-experience-ux)
   - [User Stories](#user-stories)
 - [Design](#design)
+  - [Colours-Backgrounds](#colours-backgrounds)
   - [Colour Scheme](#colour-scheme)
+  - [Typography](#typography)
+  - [Imagery](#imagery)
+  - [Product SKU Format](#product-sku-format)
   - [Skeleton](#skeleton)
-  - [#### Product SKU Format](#product-sku-format)
   - [Wireframes](#wireframes)
-  - [Flowchart](#flowchart)
+  - [Initial ERD Diagram](#initial-erd-diagram)
   - [Visual Effects](#visual-effects)
 - [Features](#features)
-  - [Visual Effects](#visual-effects)
+  - [Visual Experience](#visual-experience)
   - [Home Page](#home-page)
   - [Product Page](#product-page)
   - [Product Detail Page](#product-detail-page)
@@ -56,7 +60,7 @@
 - [Credits](#credits)
   - [Acknowledgements](#acknowledgements)
 
-
+# Objective
 
 I decided to try building a shaving website because I am interested in this way of shaving.
 The objective for me was to create an e-commerce site that sells shaving products.
@@ -78,12 +82,12 @@ The goal is to sell these products online through a Django app that uses secure 
 # Business Model 
 
 This is a B2C (Business To Consumer)-model so when a client buys a product the transaction is completed.
-The dajango platform is able to upscale when needed and customize when needed to it is able adjust to market needs. 
+The dajango platform is able to upscale when needed and customize when needed, so  it is able adjust to market needs. 
 Company that sells shaving products for DE double-edge blades or single-edge blades and accessories.
 The razors can be used for a lifetime even passed on to other generations and still customers can get the best shaves.
 So in actual fact each time a customer uses these products they are helping the environment and saving at the same time.
 
-## DE and SE Shaving – The Philosophy
+## Shaving Philosophy
 
 * The shaving razors are the best in my opinion. After you go through a small learning curve you get the best shaves.
 * It's a customizable shave where you can change different accessories such as blades and soaps even your shaving routine plays a role, endless way of customizing your shave.
@@ -106,7 +110,7 @@ So in actual fact each time a customer uses these products they are helping the 
 * The us certain SEO search engine optimization strategies such as [wordtracker]( https://www.wordtracker.com/) and [Ubersuggest](https://app.neilpatel.com/) .
 * Content marketing was used in this just to educate the users of the site of the benefits of using these products in the FAQ and landing page.
 
-### Search Engine Optimization (SEO)
+### SEO
 
 * Using Search Engine Optimization (SEO) is a science and when done correctly you should see traffic diverted to the site.
  It is a very important method to improve the ranking on search-engines which in turn create revenew. The goal is to attract people to the site.
@@ -187,22 +191,27 @@ User stories can be viewed here on the project [kanban board ](https://github.co
 
 # Design
 
-## Colours
+### Colours-Backgrounds
 
 * Each page is similar but a bit differant the colors are similar with white and a #ddd background color.
-* I created the style while developing the site with each app.  
+* I created the style while developing the site with each app some have different backgrounds.
+* For the home page background and all the other background images I used a free Ai tool [bing](https://www.bing.com/images/create?FORM=IRPGEN) to generate them as finding and image that I like was difficult.   
+* I found a free template from [bbbootstrap](https://bbbootstrap.com/snippets/bootstrap-ecommerce-shopping-cart-item-summary-44021562) and used this as a base to style some apps .
 
 ### Colour Scheme
 
-* Used a [Coolors web site](https://coolors.co/palettes/trendin) to search for colors that match.
+* Used a [Coolors web site](https://coolors.co/palettes/trendin) to search for colors that match but in the end stayed with the simlistic design.
 
-## Typography
+### Typography
 
 * The Roboto font is the main font, and Lato is the secondary font used for the whole project.
 
 [Back to Table of Contents](#table-of-contents)
 
 ### Imagery
+
+* I used the images for the producst from the manufacturere website for the products.
+* For some background images I used a Ai generated tool from Bing more on this in features.
 
 #### Product SKU Format
 
@@ -290,20 +299,22 @@ There might be some small visual differances as this was due to design choices m
 
 <br>
 
-## Initial ERD Diagram
+### Initial ERD Diagram
 
 <details>
 <summary>My Intial ERD Diagram</summary>
 
 * For the initial ERD diagram plan, I used [lucid chart](https://www.lucidchart.com/)
+* There are some some design differances made during the project build just as side note.
 <br>
 <br>
-<img src="static/readme/images/lucid_erd_diagram.png">
+<img src="readme-images/erd-diagram.png">
 <br>
 <br>
 </details>
 
 ## Django ERD Diagram
+
 <details>
 <summary>Used code Django to get an ERD.dot file and convert it to ERD Diagram</summary>
 Django has a built-in tool that can show you your ERD diagram.
@@ -312,6 +323,7 @@ Django has a built-in tool that can show you your ERD diagram.
 
 * It is not always possible to start a project from scratch sometimes it may be the case that you need to work on someone else project.
 * So this will give me as a developer an overview of the project from an ERD standpoint.
+* Also was good to see how everthing is connected in the end of the project.
 
 ### Steps used
 * Step 1 to using this is to install python3 -m pip install django-extensions.
@@ -335,15 +347,10 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 
 ## Visual Experience
 
-* 
+* This is based on e-commerce so the design was focused on this that customers can see what they are buying. 
+* So the product  detail has a carousel that shows more images of the product when there are more images.
+* I could do more when it comes to improving the visual experience the goal is that it meets the needs of user.
 
-#### Positives
-
-*
-
-#### Negatives 
-
-* 
 
 [Back to Table of Contents](#table-of-contents)
 
