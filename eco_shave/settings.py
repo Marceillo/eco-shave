@@ -12,10 +12,10 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
-import dj_database_url 
+import dj_database_url
 
 if os.path.exists("env.py"):
-    import env 
+    import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -34,13 +34,12 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'eco-shave-7beca10c37e1.herokuapp.com',
     '8000-marceillo-ecoshave-isg1mt279wv.ws.codeinstitute-ide.net',
-    ]
+]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-marceillo-ecoshave-isg1mt279wv.ws.codeinstitute-ide.net',
     'https://eco-shave-7beca10c37e1.herokuapp.com',
-    
-    ] 
+]
 
 
 # Application definition
@@ -53,10 +52,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites', # allauth
-    'allauth', # allauth
-    'allauth.account', # allauth
-    'allauth.socialaccount', # allauth
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'home',
     'products',
     'star_ratings',
@@ -66,12 +65,8 @@ INSTALLED_APPS = [
     'profiles',
     'about',
     'storages',
-    
-    
-     
     # other
     'crispy_forms',
-    
 ]
 
 MIDDLEWARE = [
@@ -107,12 +102,10 @@ TEMPLATES = [
                 'django.template.context_processors.media',
                 'bag.contexts.bag_contents',
             ],
-
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',
                 'crispy_forms.templatetags.crispy_forms_field',
-                
-            ]
+            ],
         },
     },
 ]
@@ -121,18 +114,14 @@ MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 # allauth changed brackets
 AUTHENTICATION_BACKENDS = (
-   
     # Needed to login by username in Django admin, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',
-
     # `allauth` specific authentication methods, such as login by email
     'allauth.account.auth_backends.AuthenticationBackend',
-    
 )
 
-# allauth
 
-SITE_ID = 1  
+SITE_ID = 1
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
@@ -145,7 +134,6 @@ LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'eco_shave.wsgi.application'
-
 
 
 # Database
@@ -171,25 +159,28 @@ else:
     }
 
 
-
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME':
+        'django.contrib.auth.password_validation.'
+        'UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME':
+        'django.contrib.auth.password_validation.MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME':
+        'django.contrib.auth.password_validation.CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME':
+        'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
@@ -221,7 +212,7 @@ if 'USE_AWS' in os.environ:
 
     # Bucket Config
     AWS_STORAGE_BUCKET_NAME = 'eco-shave1'
-    AWS_S3_REGION_NAME = 'eu-central-1' 
+    AWS_S3_REGION_NAME = 'eu-central-1'
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
@@ -236,7 +227,7 @@ if 'USE_AWS' in os.environ:
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
-# Stripe 
+# Stripe
 STRIPE_CURRENCY = 'eur'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
@@ -249,7 +240,7 @@ DEFAULT_FROM_EMAIL = 'eco-shave@example.com'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Django Star Rating
-STAR_RATINGS_RERATE_SAME_DELETE = True 
+STAR_RATINGS_RERATE_SAME_DELETE = True
 STAR_RATINGS_CLEARABLE = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

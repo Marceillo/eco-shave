@@ -4,21 +4,21 @@ from django.contrib.auth.decorators import login_required
 
 from .models import UserProfile
 from .forms import UserProfileForm
-from checkout.models import  Order
+from checkout.models import Order
 from products.models import Product
+
 
 @login_required
 def profile(request):
-    """ Display the user's profile. """
+    """Display the user's profile."""
     profile = get_object_or_404(UserProfile, user=request.user)
-  
 
     if request.method == 'POST':
         form = UserProfileForm(request.POST, request.FILES, instance=profile)
         if form.is_valid():
             form.save()
             messages.success(request, 'Profile updated successfully')
-            return redirect('profile')  
+            return redirect('profile')
 
     else:
         form = UserProfileForm(instance=profile)
@@ -30,7 +30,6 @@ def profile(request):
         'orders': orders,
         'on_profile_page': True,
         'email': request.user.email,
-        
     }
 
     return render(request, template, context)
@@ -39,18 +38,22 @@ def profile(request):
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 
-    messages.info(request, (
-        f'This is a past confirmation for order number {order_number}. '
-        'A confirmation email was sent on the order date.'
-    ))
+    messages.info(
+        request,
+        (
+            f'This is a past confirmation for order number {order_number}. '
+            'A confirmation email was sent on the order date.'
+        ),
+    )
 
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
         'from_profile': True,
     }
-    
+
     return render(request, template, context)
+
 
 def edit_profile(request):
     """
@@ -63,11 +66,12 @@ def edit_profile(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Profile has been updated successfully')
-            return redirect('profile')  
+            return redirect('profile')
     else:
         form = UserProfileForm(instance=profile)
 
     return render(request, 'profiles/edit_profile.html', {'form': form})
+
 
 @login_required
 def wishlist(request):
@@ -84,7 +88,6 @@ def wishlist(request):
     return render(request, template, context)
 
 
-
 @login_required
 def add_to_wishlist(request, product_id):
     """
@@ -95,7 +98,9 @@ def add_to_wishlist(request, product_id):
 
     if profile.wish_list.filter(id=product.id).exists():
         profile.wish_list.remove(product)
-        messages.success(request, f'Removed {product.name} from your wishlist.')
+        messages.success(
+            request, f'Removed {product.name} from your wishlist.'
+        )
         return redirect('wishlist')
     else:
         profile.wish_list.add(product)
@@ -110,16 +115,15 @@ def remove_from_wishlist(request, product_id):
     To remove a wish list item.
     """
     profile = get_object_or_404(UserProfile, user=request.user)
-    product = get_object_or_404(Product, id=product_id) 
-   
+    product = get_object_or_404(Product, id=product_id)
+
     if request.method == 'POST':
         if profile.wish_list.filter(id=product.id).exists():
             profile.wish_list.remove(product)
-            messages.success(request, f'Removed {product.name} from your wishlist.')
+            messages.success(
+                request, f'Removed {product.name} from your wishlist.'
+            )
         else:
             messages.info(request, f'{product.name} is not in your wishlist.')
 
     return redirect('wishlist')
-
-
-

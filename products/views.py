@@ -9,6 +9,7 @@ from .forms import ProductForm
 from .models import Product, Category, PreviewImage
 from profiles.models import UserProfile
 
+
 def all_products(request):
     """
     For all products with some filtering ans sorting.
@@ -24,9 +25,13 @@ def all_products(request):
             sortkey = request.GET['sort']
             sort = sortkey
             if sortkey == 'name_asc':
-                products = products.annotate(lower_name=Lower('name')).order_by('lower_name')
+                products = products.annotate(
+                    lower_name=Lower('name')
+                ).order_by('lower_name')
             elif sortkey == 'name_desc':
-                products = products.annotate(lower_name=Lower('name')).order_by('-lower_name')
+                products = products.annotate(
+                    lower_name=Lower('name')
+                ).order_by('-lower_name')
             elif sortkey == 'category_asc':
                 products = products.order_by('category__name')
             elif sortkey == 'category_desc':
@@ -35,10 +40,6 @@ def all_products(request):
                 products = products.order_by('price')
             elif sortkey == 'price_desc':
                 products = products.order_by('-price')
-            # elif sortkey == 'rating_asc':
-            #     products = products.annotate(average_rating=Avg('ratings__score')).order_by('average_rating')
-            # elif sortkey == 'rating_desc':
-            #     products = products.annotate(average_rating=Avg('ratings__score')).order_by('-average_rating')           
 
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
@@ -59,7 +60,7 @@ def all_products(request):
                 | Q(category__name__icontains=query)
                 | Q(category__friendly_name__icontains=query)
             )
-            # distinct removes duplicate results
+
             products = products.filter(queries).distinct()
 
     current_sorting = f'{sort}'
@@ -82,7 +83,7 @@ def product_detail(request, product_id):
     preview_images = PreviewImage.objects.filter(product=product)
     in_wishlist = False
     show_wishlist = False
-    
+
     if request.user.is_authenticated:
         profile = get_object_or_404(UserProfile, user=request.user)
         in_wishlist = profile.wish_list.filter(id=product.id).exists()
@@ -96,7 +97,6 @@ def product_detail(request, product_id):
             messages.success(request, 'Thank you for your rating!')
         else:
             messages.error(request, 'Please select a rating.')
-
 
     context = {
         'product': product,
@@ -169,7 +169,7 @@ def upload_product_view(request):
 
 @login_required
 def edit_product(request, product_id):
-    """Edit a product in the store products """
+    """Edit a product in the store products"""
 
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
@@ -186,7 +186,7 @@ def edit_product(request, product_id):
             for i in range(len(preview_images)):
                 image_id = request.POST.get(f'previewimage_set-{i}-id')
                 new_image = request.FILES.get(f'previewimage_set-{i}-image')
-                
+
                 if new_image:
                     preview_image = PreviewImage.objects.get(id=image_id)
                     preview_image.image = new_image
@@ -195,15 +195,19 @@ def edit_product(request, product_id):
                 if request.POST.get(f'previewimage_set-{i}-DELETE'):
                     PreviewImage.objects.filter(id=image_id).delete()
 
-
             images = request.FILES.getlist('images')
             for image in images:
-                PreviewImage.objects.create(product=product_instance, image=image)
+                PreviewImage.objects.create(
+                    product=product_instance, image=image
+                )
 
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to update product. Please ensure the form is valid.',
+            )
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
@@ -216,6 +220,7 @@ def edit_product(request, product_id):
 
     return render(request, 'products/edit_product.html', context)
 
+
 @login_required
 def delete_product(request, product_id):
     """Delete a product from the store"""
@@ -225,10 +230,12 @@ def delete_product(request, product_id):
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
-    
+
     if request.method == 'POST':
         product.delete()
         messages.success(request, 'Product deleted!')
         return redirect(reverse('products'))
 
-    return render(request, 'products/product_confirm_delete.html', {'product': product})
+    return render(
+        request, 'products/product_confirm_delete.html', {'product': product}
+    )
