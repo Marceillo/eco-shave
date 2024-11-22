@@ -4,8 +4,8 @@
 
 # Overview 
 
-This is a site that is built for selling shaving products that use DE double edge razors I love this way of shaving.
-The product does not use the plastic cartridge systems that is so popular today, I feel these systems are wastfull and expensive over time.
+This is a site built for selling shaving products that use DE double-edge razors. I love this way of shaving.
+The product does not use the plastic cartridge systems that are so popular today. I feel these systems are wasteful and expensive over time.
 Below is my first e-commerce B2C website.
 
 Here is the live deployed site [Eco-Shave](https://eco-shave-7beca10c37e1.herokuapp.com/)
@@ -15,62 +15,62 @@ Here is the live deployed site [Eco-Shave](https://eco-shave-7beca10c37e1.heroku
 - [Site User Goal](#site-user-goal)
 - [Site Owners Goal](#site-owners-goal)
 - [Business Model](#business-model)
-  - [Shaving Philosophy](#shaving-philosophy)
-  - [Marketing Strategy](#marketing-strategy)
-  - [Target Audience](#target-audience)
-  - [Marketing used](#marketing-used) 
-  - [SEO](#seo)
-  - [Future Marketing Ideas](#future-marketing-ideas)
+  - [Shaving Philosophy](#shaving-philosophy)
+  - [Marketing Strategy](#marketing-strategy)
+  - [Target Audience](#target-audience)
+  - [Marketing used](#marketing-used) 
+  - [SEO](#seo)
+  - [Future Marketing Ideas](#future-marketing-ideas)
 - [User Experience (UX)](#user-experience-ux)
-  - [User Stories](#user-stories)
+  - [User Stories](#user-stories)
 - [Design](#design)
-  - [Colours-Backgrounds](#colours-backgrounds)
-  - [Colour Scheme](#colour-scheme)
-  - [Typography](#typography)
-  - [Imagery](#imagery)
-  - [Product SKU Format](#product-sku-format)
-  - [Skeleton](#skeleton)
-  - [Wireframes](#wireframes)
-  - [Initial ERD Diagram](#initial-erd-diagram)
-  - [Visual Effects](#visual-effects)
+  - [Colours-Backgrounds](#colours-backgrounds)
+  - [Colour Scheme](#colour-scheme)
+  - [Typography](#typography)
+  - [Imagery](#imagery)
+  - [Product SKU Format](#product-sku-format)
+  - [Skeleton](#skeleton)
+  - [Wireframes](#wireframes)
+  - [Initial ERD Diagram](#initial-erd-diagram)
+  - [Visual Effects](#visual-effects)
 - [Features](#features)
-  - [Visual Experience](#visual-experience)
-  - [Home Page](#home-page)
-  - [Product Page](#product-page)
-  - [Product Detail Page](#product-detail-page)
-  - [Checkout Page & Success Checkout Page ](#checkout-page-&-success-checkout-page)
-  - [About Page](#about-us-page)
-  - [Contact Page](#contact-page)
-  - [Account Login](#account-login)
-  - [Register](#register)
-  - [Profile](#profile)
-  - [Logout](#logout)
-  - [Future Features](#future-features)
-  - [Technolgies used](#technolgies-used)
+  - [Visual Experience](#visual-experience)
+  - [Home Page](#home-page)
+  - [Product Page](#product-page)
+  - [Product Detail Page](#product-detail-page)
+  - [Checkout Page & Success Checkout Page ](#checkout-page-&-success-checkout-page)
+  - [About Page](#about-us-page)
+  - [Contact Page](#contact-page)
+  - [Account Login](#account-login)
+  - [Register](#register)
+  - [Profile](#profile)
+  - [Logout](#logout)
+  - [Future Features](#future-features)
+  - [Technolgies used](#technolgies-used)
 - [Agile Methodology](#agile-methodology)
-  - [Database](#database)
+  - [Database](#database)
 - [Testing](#testing)
-  - [Responsive Layout and Design](#responsive-layout-and-design)
-  - [Testing User Stories](#testing-user-stories)
-  - [Lighthouse](#lighthouse)
-  - [HTML Validation](#html-validation)
-  - [CSS Validation](#css-validation)
-  - [Manual Testing](#manual-testing)
-  - [Frontend](#frontend)
-  - [Backend Admin Panel](#backend-admin-panel)
-  - [Fixed Bugs](#fixed-bugs)
-  - [Unfixed Bugs](#unfixed-bugs)
+  - [Responsive Layout and Design](#responsive-layout-and-design)
+  - [Testing User Stories](#testing-user-stories)
+  - [Lighthouse](#lighthouse)
+  - [HTML Validation](#html-validation)
+  - [CSS Validation](#css-validation)
+  - [Manual Testing](#manual-testing)
+  - [Frontend](#frontend)
+  - [Backend Admin Panel](#backend-admin-panel)
+  - [Fixed Bugs](#fixed-bugs)
+  - [Unfixed Bugs](#unfixed-bugs)
 - [Creating the Django app](#creating-the-django-app)
-  - [Deployment of This Project](#deployment-of-this-project)
-  - [Final Deployment](#final-deployment)
-  - [Forking This Project](#forking-this-project)
-  - [Cloning This Project](#cloning-this-project)
+  - [Deployment of This Project](#deployment-of-this-project)
+  - [Final Deployment](#final-deployment)
+  - [Forking This Project](#forking-this-project)
+  - [Cloning This Project](#cloning-this-project)
 - [Credits](#credits)
-  - [Acknowledgements](#acknowledgements)
+  - [Acknowledgements](#acknowledgements)
 
 # Project
 
-Everything on this webpage is for educational purposes only, documentation on where pictures and information are coming from is in the credit section.
+Everything on this webpage is for educational purposes only. The credit section provides documentation on where pictures and information are coming from.
 
 # Objective
 
@@ -98,7 +98,7 @@ The Django platform is able to upscale when needed and customize when needed, so
 The business would like to attract people who want more out of a shave maybe a unique experience from it.  
 The company sells shaving products for DE double-edge blades or single-edge blades and accessories.
 The razors can be used for a lifetime even passed on to other generations and still customers can get the best shaves.
-So in actual fact each time a customer uses these products they are helping the environment.
+So in fact each time a customer uses these products they are helping the environment.
 
 ## Shaving Philosophy
 
@@ -176,26 +176,26 @@ User stories can be viewed here on the project [kanban board ](https://github.co
 <details>
   <summary>User Stories</summary>
 
-| **EPIC**                          | **ID** | **Priority**  | **User Story**                                                                                                                                       |
+| **EPIC** | **ID** | **Priority** | **User Story** |
 |-----------------------------------|--------|---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| **E-commerce Integration**        | 1.1    | Must-Have     | As a user, I want to add products to a shopping cart and proceed to check out, so I can easily make purchases on the site.                        |
-|                                   | 1.2    | Must-Have     | As a user, I want to receive confirmation of my purchase via email and on-screen notifications, so I can verify my order.                         |
-|                                   | 1.3    | Should-Have   | As a user, I want a streamlined checkout process, so I can complete my purchases efficiently.                                                      |
-| **User Experience Design**        | 2.1    | Must-Have     | As a user, I want an accessible and intuitive website, so I can navigate and interact with the content seamlessly.                                  |
-|                                   | 2.2    | Must-Have     | As a user, I want a mobile-responsive design, so I can access the website on different devices.                                                    |
-|                                   | 2.3    | Should-Have   | As a user, I want to edit and view my profile information, so I can keep my account details up-to-date.                                           |
-|                                   | 2.4    | Should-Have   | As a user, I want to create and manage a wishlist within my profile modal, so I can save products for future consideration.                        |
-| **Search Engine Optimization**    | 3.1    | Must-Have     | As a user, I want to find products quickly using search functionality, so I can locate items efficiently.                                          |
-|                                   | 3.2    | Should-Have   | As a user, I want a helpful 404 error page with navigation options, so I can find my way back to the main site if needed.                         |
-| **Authentication and Authorization** | 4.1  | Must-Have     | As a user, I want to register and log in securely to access my account information.                                                                 |
-|                                   | 4.2    | Must-Have     | As an admin, I want to manage user roles effectively, so I can control access levels based on user roles.                                          |
-|                                   | 4.3    | Should-Have   | As a user, I want to see my login status clearly on every page.                                                                                   |
-| **Marketing and Brand Reach**     | 5.1    | Must-Have     | As a user, I want to subscribe to newsletters for updates and promotions.                                                                          |
-|                                   | 5.2    | Should-Have   | As a user, I want to share products on social media easily to recommend them to friends.                                                           |
-| **E-commerce Fundamentals**        | 6.1    | Must-Have     | As a business owner, I want to document the e-commerce model clearly for outlining the application’s purpose and user value.                       |
-| **Customer Support and Information Access** | 7.1  | Must-Have     | As a user, I want to submit a contact form so that I can easily reach out for support or inquiries.                                                |
-|                                   | 7.2    | Must-Have     | As a user, I want to view frequently asked questions in a modal so that I can find quick answers without leaving the About Page.                   |
-|                                   | 7.3    | Should-Have   | As a user, I want the contact form and FAQ modal to be mobile-responsive so that I can access them on any device.                                  |
+| **E-commerce Integration** | 1.1    | Must-Have     | As a user, I want to add products to a shopping cart and proceed to check out, so I can easily make purchases on the site.                        |
+|                                   | 1.2    | Must-Have     | As a user, I want to receive confirmation of my purchase via email and on-screen notifications, so I can verify my order.                         |
+|                                   | 1.3    | Should-Have   | As a user, I want a streamlined checkout process, so I can complete my purchases efficiently.                                                      |
+| **User Experience Design** | 2.1    | Must-Have     | As a user, I want an accessible and intuitive website, so I can navigate and interact with the content seamlessly.                                  |
+|                                   | 2.2    | Must-Have     | As a user, I want a mobile-responsive design, so I can access the website on different devices.                                                    |
+|                                   | 2.3    | Should-Have   | As a user, I want to edit and view my profile information, so I can keep my account details up-to-date.                                           |
+|                                   | 2.4    | Should-Have   | As a user, I want to create and manage a wishlist within my profile modal, so I can save products for future consideration.                        |
+| **Search Engine Optimization** | 3.1    | Must-Have     | As a user, I want to find products quickly using search functionality, so I can locate items efficiently.                                          |
+|                                   | 3.2    | Should-Have   | As a user, I want a helpful 404 error page with navigation options, so I can find my way back to the main site if needed.                         |
+| **Authentication and Authorization** | 4.1  | Must-Have     | As a user, I want to register and log in securely to access my account information.                                                                 |
+|                                   | 4.2    | Must-Have     | As an admin, I want to manage user roles effectively, so I can control access levels based on user roles.                                          |
+|                                   | 4.3    | Should-Have   | As a user, I want to see my login status clearly on every page.                                                                                   |
+| **Marketing and Brand Reach** | 5.1    | Must-Have     | As a user, I want to subscribe to newsletters for updates and promotions.                                                                          |
+|                                   | 5.2    | Should-Have   | As a user, I want to share products on social media easily to recommend them to friends.                                                           |
+| **E-commerce Fundamentals** | 6.1    | Must-Have     | As a business owner, I want to document the e-commerce model clearly to outline the application’s purpose and user value.                       |
+| **Customer Support and Information Access** | 7.1  | Must-Have     | As a user, I want to submit a contact form so that I can easily reach out for support or inquiries.                                                |
+|                                   | 7.2    | Must-Have     | As a user, I want to view frequently asked questions in a modal so that I can find quick answers without leaving the About Page.                   |
+|                                   | 7.3    | Should-Have   | As a user, I want the contact form and FAQ modal to be mobile-responsive so that I can access them on any device.                                  |
 
 
 </details>
@@ -537,14 +537,14 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 ### Wish List 
 
 * The wish list has CRUD functionality as you add and remove an item to the wish list and update the star rating.
-* Ypu can add to the wish list through buttonsin the product detail page as shown in product details.
+* You can add to the wish list through buttons on the product detail page as shown in product details.
 * You can also add items to the bag that you would like to purchase.
-* You can delete from the wish list.
-* The wish list is only availble when logged in.
+* You can delete it from the wish list.
+* The wish list is only available when logged in.
 
-##### Wish LIst
+##### Wish List
 
-![Wish lIst  ](readme-images/wish_list.png)
+![Wish lIst  ](readme-images/wish_list.png)
 
 </details>
 
@@ -554,7 +554,7 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 <summary>About, FAq, Contact us summary</summary>
 <br>
 
-* The about is a basic page with a contact form users to get in contact with eco-shaves.
+* The About is a basic page with a contact form for users to get in contact with eco-shaves.
 
 <br>
 
@@ -564,7 +564,7 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 
 ##### Contact Us
 
-* Note: This is a basic pagee with a contact form for users to send a email and a message.
+* Note: This is a basic page with a contact form for users to send an email and a message.
 
 ![Contact Us](readme-images/contact_us.png)
 
@@ -574,7 +574,7 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 
 ### FAQ
 
-* This is model with questions and answers field.
+* This is a model with a questions and answers field.
 * The admin user has CRUD functionality I included the image with the CRUD View for super users.
 * display message for each update when updating the FAQ also added below 
 
@@ -617,7 +617,7 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 
 <br>
 
-### Register a account 
+### Register an account 
 
 * Note: Here the user can register an account for more features in order to have some CRUD functionality.
 * 
@@ -705,40 +705,40 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 <details>
 <summary>Confirmation messages</summary>
 
-* There are success confirmation message and error messages toasts where used. 
-* There is Java Script and mondal code inspired by the LMS.
-* Not going show all of them as you will see them in the project.
+* There are success confirmation messages and error messages toasts where used. 
+* There is Java Script and Mondal code inspired by the LMS.
+* Not going to show all of them as you will see them in the project.
 * Logging in and out
 * Registering a new account
 * Buying a product ect
 * When registering a new account
-* In the most of the apps in the project.
- 
+* In most of the apps in the project.
+ 
 ![Login](readme-images/toast.png)
 
 </details>
 
 ### Future Features
 
-* I had some problems to implement the sorting feature with django star rating but due to time contraints left this one out but will be implementing it on a later date.
-* In the users profile there iare features of crud but I would like it add a delete profile feature in the future this was also not implemented due to time.
-* - Also in the profile I would have like when a user is logged in with there name not to be able to change the data.   
-* I did not inlcude Pagination  the amount of products per page so will be the next future feature when the site grows.
-* I would have liked a better way to handel returns should a product have a defect, write now they can just send a message with problems in the contact form.
-* I would add some testomonials for each product in the future.
-*  More social media platforms 
-* Also a brand app that shows the details of the product manufacturere and there carbon footprint.
+* I had some problems implementing the sorting feature with the Django star rating but due to time constraints left this one out but will be implementing it at a later date.
+* In the user's profile there are features of crud but I would like it add a delete profile feature in the future this was also not implemented due to time.
+* - Also in the profile I would have liked it when a user is logged in with their name not to be able to change the data.   
+* I did not include Pagination the number of products per page so will be the next future feature when the site grows.
+* I would have liked a better way to handle returns should a product have a defect, write now they can just send a message with problems in the contact form.
+* I would add some testimonials for each product in the future.
+* More social media platforms 
+* Also a brand app that shows the details of the product manufacturer and their carbon footprint.
 * More styling as I focused on this project on functionality. 
 
 [Back to Table of Contents](#table-of-contents)
 
-## Technolgies Used
+## Technologies Used
 
 ### Dependencies
 <details>
 <summary>Dependencies used summary</summary>
 
-This is simple description of the key dependencies used in the app.
+This is a simple description of the key dependencies used in the app.
 
 - **asgiref==3.8.1**: A library that provides utilities for ASGI (Asynchronous Server Gateway Interface) applications.
 - **boto3==1.35.59**: The official AWS SDK for Python, enabling easy integration with AWS services like S3 and EC2.
@@ -749,12 +749,12 @@ This is simple description of the key dependencies used in the app.
 - **django-allauth==0.54.0**: An integrated set of Django applications addressing authentication, registration, account management, and third-party (social) account authentication.
 - **django-braces==1.16.0**: A collection of reusable class-based view mixins for Django that simplify common patterns in view logic.
 - **django-countries==7.6.1**: A Django application that provides a country field for models and a list of countries with their ISO codes.
-- **django-crispy-forms==2.3**: A Django application that helps manage the rendering of forms with a focus on DRY (Don't Repeat Yourself) principles and flexibility in form layout.
+- **django-crispy-forms==2.3**: A Django application that helps manage the rendering of forms with a focus on DRY (Don't Repeat Yourself) principles and flexibility in the form layout.
 - **django-extensions==3.2.3**: A collection of custom extensions for Django that enhance the development experience with additional management commands and features.
 - **django-model-utils==5.0.0**: A set of utilities for Django models that provide additional functionality such as inherited model fields and model managers.
 - **django-star-ratings==0.9.2**: A Django application that allows users to rate items using star ratings, providing an intuitive feedback mechanism.
 - **django-storages==1.14.4**: A Django library that provides storage backends for various cloud storage services like Amazon S3 and Google Cloud Storage.
-- **gunicorn==23.0.0**: A Python WSGI HTTP server for UNIX that serves web applications in a concurrent manner, ideal for production environments.
+- **gunicorn==23.0.0**: A Python WSGI HTTP server for UNIX that concurrently serves web applications, ideal for production environments.
 - **jmespath==1.0.1**: A query language for JSON, allowing you to extract and transform JSON data easily from Python applications.
 - **oauthlib==3.2.2**: A generic, spec-compliant implementation of OAuth for Python, enabling secure authorization flows in applications.
 - **pillow==10.4.0**: The Python Imaging Library fork (PIL) that adds image processing capabilities to your Python interpreter.
@@ -795,12 +795,12 @@ LightHouse in the browser- for testing performance<br>
 
 ## Database
 
-During this project I used the PostgreSQL  and the AWS S3 Bucket for storing of data.
-I have also used a Graph MOdels to show the relationship with the database and used to lucid charts in the begining to plan for the intial MVP build.
+During this project, I used the PostgreSQL  and the AWS S3 Bucket for storing data.
+I have also used Graph MOdels to show the relationship with the database and used lucid charts in the beginning to plan for the intial MVP build.
 
 ## Agile Methodology
 This project was developed using the Agile methodology.<br>
-All epics and user stories implementation progress was registered using [Github](https://github.com/users/Marceillo/projects/10). As the user stories were accomplished, they were moved in the Kanban Board from **Epic**,**User stories**, **No Status**, **To Do**, to **In-progress**, and **Done** . As last test before moving to done I tested them again during my testing process.
+All epics and user stories implementation progress was registered using [Github](https://github.com/users/Marceillo/projects/10). As the user stories were accomplished, they were moved in the Kanban Board from **Epic**,**User stories**, **No Status**, **To Do**, to **In-progress**, and **Done** . As the last test before moving to done, I tested them again during my testing process.
 
 I used epics to help with organizing the project and MoSCoW prioritization Labels were also included in each issue. 
 
@@ -811,7 +811,7 @@ I used epics to help with organizing the project and MoSCoW prioritization Label
 
 # Testing 
 
-* I have created a separate readme file for testing .
+* I have created a separate readme file for testing.
 * Please click on this link [(Testing)](TESTING.md) to take you to the page .
 
 
@@ -822,17 +822,17 @@ I used epics to help with organizing the project and MoSCoW prioritization Label
 <details>
 <summary>Deployment summary</summary>
 
-### Helpfull guide links 
+### Helpful guide links 
 
 [Django](https://docs.djangoproject.com/en/5.1/topics/install/)
 [Django Central](https://djangocentral.com/building-a-blog-application-with-django/#pre-requirements)
 
-* A small note: This is a simple guide of how to get the app up and running.
-* Should certain section not seem clear there is a large number of recources that can clarify the below steps if not clear.
+* A small note: This is a simple guide to how to get the app up and running.
+* Should certain sections not seem clear there is a large number of resources that can clarify the below steps if not clear.
 
 The project was deployed to [Heroku](https://www.heroku.com). To deploy a project, these are the steps:
 
-1. Begin by creating a GitHub repository I used this template [Code Institute template](https://github.com/Code-Institute-Org/gitpod-full-template). Navigate to template and select use. THis was the step I used you can create this in a differant way.
+1. Begin by creating a GitHub repository I used this template [Code Institute template](https://github.com/Code-Institute-Org/gitpod-full-template). Navigate to the template and select use. This was the step I used you can create this differently.
 
 2. 'Create Repository From the Template.
 
@@ -841,11 +841,11 @@ The project was deployed to [Heroku](https://www.heroku.com). To deploy a projec
 4. Install Django by entering this command in the terminal:
 
 * ```pip3 install Django~=4.2.1``` 
-* Best is to see what is the latest verstion and if compatible with the software you plan to install.
+* The best is to see what is the latest version and if compatible with the software you plan to install.
 
 5. Generate a requirements file using the following command:
 
-* ```pip3 freeze --local > requirements.txt``` - This will create the requirements.txt file and adds required libraries to it. This command needs to exectuted every time a new libary gets added to the project.
+* ```pip3 freeze --local > requirements.txt``` - This will create the requirements.txt file and add the required libraries to it. This command needs to be executed every time a new library gets added to the project.
 
 6. Create your project:
 
@@ -853,11 +853,11 @@ The project was deployed to [Heroku](https://www.heroku.com). To deploy a projec
 
 7. Create your application using:
 
-* ```python3 manage.py startapp APP_NAME``` - This will create your application with the name "APP-NAME"
+* ```python3 manage.py start app APP_NAME``` - This will create your application with the name "APP-NAME"
 
-8. Add your local server to "ALLOWED_HOSTS" in the settings.py file. For this you need to run the command
+8. Add your local server to "ALLOWED_HOSTS" in the settings.py file. For this, you need to run the command
 
-* ```python3 manage.py runserver``` - This runs the server. This will give you an error message "DisallowedHost at /", following the link of your local server. Copy this link and add it in your settings.py file.
+* ```python3 manage.py runserver``` - This runs the server. This will give you an error message "DisallowedHost at /", following the link of your local server. Copy this link and add it to your settings.py file.
 * While in the settings.py file, also add your newly created app in the "INSTALLED_APPS" section at the bottom of the list. In the picture, the first app is called "APP".
 
 9. To get the code ready for deployment, gunicorn needs to be installed and added to the requirements with the following commands:
@@ -865,13 +865,13 @@ The project was deployed to [Heroku](https://www.heroku.com). To deploy a projec
 * ```pip3 install gunicorn~=20.1``` - This installs gunicorn
 * ```pip3 freeze --local > requirements.txt``` - This will add gunicorn to the requirements.txt file
 
-10. Create a file in the root directory named "Procfile" and add the nessesary lines to the settings.py file:
+10. Create a file in the root directory named "Procfile" and add the necessary lines to the settings.py file:
 
 - Procfile:
 * ```web: gunicorn "proejec_name".wsgi``` - "project_name" stands for the name of your project
 - settings.py:
 * ```DEBUG = False``` - This is the debug line in the settings.py file. It is very important that debug is never set to "True" on a deployed webpage for security reasons. While in development, DEBUG should be set to "True"
-* ```,'.herokuapp.com'``` needs to be added to the "ALLOWED_HOSTS" section in the settings.py file, so that heroku has the permission to access the project.
+* ```,'.herokuapp.com'``` needs to be added to the "ALLOWED_HOSTS" section in the settings.py file, so that Heroku has permission to access the project.
 
 11. Now it is time to create the application on Heroku:
 
@@ -881,10 +881,10 @@ The project was deployed to [Heroku](https://www.heroku.com). To deploy a projec
 
 12. On Heroku, enter a unique application name, choose your region, and click 'Create app':
 
-13. I used thePostgres database provided by Code Institute, [PostgresSQL](https://dbs.ci-dbs.net/) in the LMS course material.
+13. I used the Postgres database provided by Code Institute, [PostgresSQL](https://dbs.ci-dbs.net/) in the LMS course material.
 
-* Press "Reveal Config Vars" and add "DATABASE_URL" as key and enter the postgres URL, which has been sent by email, as the value.
-* Addistionally, add the "DISABLE_COLLECTSTATIC" key with a value of "1" as a second config var. This is nessesary for the later implementation of the Cloudinary API.
+* Press "Reveal Config Vars" and add "DATABASE_URL" as the key and enter the Postgres URL, which has been sent by email, as the value.
+* Additionally, add the "DISABLE_COLLECTSTATIC" key with a value of "1" as a second config var. This is necessary for the later implementation of the Cloudinary API.
 
 14. In GitPod, create an env.py file in the top-level directory with the following content:
 
@@ -908,7 +908,7 @@ The project was deployed to [Heroku](https://www.heroku.com). To deploy a projec
 17. Replace the insecure secret key in settings.py with:
 ```SECRET_KEY = os.environ.get('SECRET_KEY')```
 
-18. Comment out the old database settings and add the link to DATABASE_URL since the project does not use the standart sqlite3 database. 
+18. Comment out the old database settings and add the link to DATABASE_URL since the project does not use the standard SQLite3 database. 
 
 ```DATABASES = {'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))}```
 
@@ -916,16 +916,16 @@ The project was deployed to [Heroku](https://www.heroku.com). To deploy a projec
 
 ```python3 manage.py migrate```
 
-19. To set up Stripe, you will have to create a free account [Stripe](https://dashboard.stripe.com/register). After you have created your account, retrieve your Publishable key and Secret key and add them to your env.py file, as well as to your heroku config vars. Additionally, you will have to set up all the stripe code for your project, but this was done with the [Stripe Documentation](https://docs.stripe.com/). It is important to include the following code in the checkout views.py file: 
+19. To set up Stripe, you will have to create a free account [Stripe](https://dashboard.stripe.com/register). After you have created your account, retrieve your Publishable key and Secret key and add them to your env.py file, as well as to your Heroku config vars. Additionally, you will have to set up all the stripe codes for your project, but this was done with the [Stripe Documentation](https://docs.stripe.com/). It is important to include the following code in the checkout views.py file: 
 
-20. Create a stripe webhook for your plattform by creating a new webhook in the stripe section under *Developers* - *Event Destination* - *Add Destination* and adding your *deployed url*/checkout/wh/ in the form. After creating the webhook, you will recieve a stripe_wh_secret key.
+20. Create a stripe webhook for your platform by creating a new webhook in the stripe section under *Developers* - *Event Destination* - *Add Destination* and adding your *deployed url*/checkout/wh/ in the form. After creating the webhook, you will receive a stripe_wh_secret key.
 
 21. The next step to complete the deployment is to create an AWS account and an S3 bucket. To create an account, you have to visit the [AWS website](https://signin.aws.amazon.com/signup?request_type=register) and follow the instructions to create the free tier account.
 
-* - Code Institute tutor Oisin instructions helped me setup the AWS with the below instructions:
+* - Code Institute tutor Oisin's instructions helped me setup the AWS with the below instructions:
 * - [Create an AWS S3 Bucket](https://docs.google.com/document/d/1bqvCFiCW_JV9sllNZrN5uUJpIiusHICTk4TIk3oUWHY/edit?tab=t.0#heading=h.jypp4mbtvx4q)
 * - [Create an AWS Group and User](https://docs.google.com/document/d/1z6L8KKiTi3QU5rMbHXhA3QR9jQIG7wLqnScUDpe238E/edit?tab=t.0#heading=h.1ixuny26uvc)
-* - After finishing the steps from the documentation above, you will recieve an AWS access key and an AWS secret key.
+* - After finishing the steps from the documentation above, you will receive an AWS access key and an AWS secret key.
 
 22. Add all keys into your env.py file and the Heroku config vars.
 
@@ -933,14 +933,14 @@ The project was deployed to [Heroku](https://www.heroku.com). To deploy a projec
 
 23. * Install **boto3** and **django-storages**
 
-24. Update your settings.py to setup the storages file.
+24. Update your settings.py to set up the storage file.
 
 ![settings ](readme-images/bucketandstripe.png)
 
 #### Extra variables added to the env file.
 
-* The below variables where added after the intial deploment 
-* ```os.environ.setdefault("EMAIL_HOST_PASS", "your_email_password")``` sets the default values for the email host user and password environment variables. Which are used to configure the email sending functionality for the forgot password feature when deploying your application to Heroku.
+* The below variables were added after the initial deployment 
+* ```os.environ.setdefault("EMAIL_HOST_PASS", "your_email_password")``` sets the default values for the email host user and password environment variables. Which are used to configure the email-sending functionality for the forgot password feature when deploying your application to Heroku.
 
 ## Final Deployment 
 
@@ -966,7 +966,7 @@ The project was deployed to [Heroku](https://www.heroku.com). To deploy a projec
 
 1. Open [GitHub](https://github.com/Marceillo/kayak-blog-pp4).
 2. You will be provided with three options to choose from: HTTPS, SSH, or GitHub CLI. Click the clipboard icon to copy the URL of your preferred option.
-3. Once you click the button, the fork will be in your repository (if you chose to fork it).
+3. Once you click the button, the fork will be in your repository (if you choose to fork it).
 4. Open a new terminal.
 5. Change the current working directory to the location where you want the cloned directory.
 6. Type `git clone` followed by pasting the URL copied in step 2.
@@ -983,20 +983,65 @@ To clone and set up this project, follow these steps:
 
 5. To get the project to work, install the required dependencies using the command below:
 
-   ```bash
-   pip3 install -r requirements.txt
-6. This step is to set up the environment file so that the project knows what variables that needs to be used for it to work. Environment variables are usually hidden due to sensitive information. It's very important that you don't push the env.py file to Github (this can be secured by adding env.py to the .gitignore-file). The variables that are declared in the env.py file needs to be added to the Heroku config vars. Don't forget to do necessary migrations before trying to run the server.
+ ```bash pip3 install -r requirements.txt```
+
+6. This step is to set up the environment file so that the project knows what variables need to be used for it to work. Environment variables are usually hidden due to sensitive information. You mustn't push the env.py file to Github (this can be secured by adding env.py to the .gitignore-file). The variables that are declared in the env.py file need to be added to the Heroku config vars. Don't forget to do the necessary migrations before trying to run the server.
 
 * ```python3 manage.py migrate``` - This will do the necessary migrations.
-* ```python3 manage.py runserver``` - If everything i setup correctly the project is now live locally.
+* ```python3 manage.py runserver``` - If everything I set up correctly the project is now live locally.
 * ```python3 manage.py createsuperuser ``` - Create super user as you will need this to access the admin panel.
 7. In GitPod, create an env.py file in the top-level directory with the following content:
 * ```import os``` - This imports the os library
 * ```os.environ("DATABASE_URL", "postgres://*********************")``` - This sets database variable to your PostgresSQL database.
 * ```os.environ("SECRET_KEY", "actual_secret_key")``` - You can create your own key with a webpage like [RandomKeyGen](https://randomkeygen.com/).
 * ```os.environ.setdefault("EMAIL_HOST_PASS", "your_email_password","DEVELOPMENT", "1")```sets the default values for the email host user and password environment variables
+ 
+## Credits
+
+* The [Bootstrap](https://getbootstrap.com/) documentation was so really helpful.
+* The *Boutique Ado* code along project from Code Institute has been a valuable source for both starting the project as well as for setting up new apps, models, URLs views, and templates.
+* - Could not have done it without the assistance of this material. 
+* I have used different websites and content during this process I found that dajango documentation was the best and the more common sites like stack overflow.
+* I also took some inspiration from the readme files below and adjusted them to meet my project.
+* AI [perplexity](https://www.perplexity.ai/) helped with writing the FAQ question and answer. Also as a learning tool to explain and help with bug errors found.     
+* [Ian-Garrigan](https://github.com/Ian-Garrigan/shavers-haven?tab=readme-ov-file)
+* [django-extensions](https://django-extensions.readthedocs.io/en/latest/graph_models.html)
+* [Coolors web site](https://coolors.co/palettes/trendin)
+* [Book on django](https://www.amazon.de/-/en/Antonio-Mel%C3%A9-ebook/dp/B0CPN3H5YW#:~:text=Django%205%20By%20Example%20is,step%2Dby%2Dstep%20approach)
+* [guide to the Github Agile Tool](https://www.youtube.com/watch?v=U_dMihBgUNY&list=PL_7334VduOHsrWzhu5Ta2lrkp016kcBWY&index=34)
+* [ERD youtube](https://www.youtube.com/watch?v=xsg9BDiwiJE)
+* [User account create Django](https://youtu.be/Ev5xgwndmf)
+* [Website for django blog](https://djangocentral.com/building-a-blog-application-with-django/#database-models)
+* [Website stackoverflow](https://stackoverflow.com)
+* [Forms stackoverflow](https://stackoverflow.com/questions/1727564/how-to-create-a-userprofile-form-in-django-with-first-name-last-name-modificati)
+* [Forgot Password](https://stackoverflow.com/questions/67545932/how-can-i-send-a-reset-password-email-on-django)
+* [Images and mp4 video used pexels](https://www.pexels.com)
+* [Images used unsplash](https://unsplash.com/)
+* [widgets in Django used in forms blog ](https://docs.djangoproject.com/en/5.0/topics/forms/modelforms/)
+* [search function](https://blog.csdn.net/bbwangj/article/details/98026817)
+* [Django documentation](https://docs.djangoproject.com/)
+* [Django Queryset API](https://docs.djangoproject.com/en/stable/ref/models/querysets/)
+* [Django Pagination](https://docs.djangoproject.com/en/stable/topics/pagination/)
+* [Django Q objects](https://docs.djangoproject.com/en/stable/topics/db/queries/#complex-lookups-with-q-objects)
+* [allauth ](https://docs.allauth.org/en/latest/installation/quickstart.html )
+* [Icons for wirframes](https://icons8.com/icons/set/razor--static--black)
+* [Freepik foor images](https://www.freepik.com/search?format=search&query=men%20shaving%20%20)
+* [AI image generator](https://www.bing.com/images/create?FORM=IRPGEN)
+* [Dango MUltiview](https://djangoguide.com/django-image-upload-specialization/django-multiple-image-upload/)
+* [Star Rating](https://django-star-ratings.readthedocs.io/en/latest/?badge=latest/)
+* [Mocups](https://techsini.com/multi-mockup/)
+* [Image for Tatara razors](https://tatararazors.com/product-category/razors)
+* [Leaf Shave Images](https://leafshave.com/)
+* [Proof razors images](https://proofrazor.com/)
+* [Oneblade razors images](https://www.onebladeshave.com/)
+* [Dovo images](https://dovo.com/de/)
+* [Amazon images]( https://www.amazon.de/)
+* [Free templates used](https://bbbootstrap.com/snippets/bootstrap-ecommerce-shopping-cart-item-summary-44021562)
+* [Bootstrape template used](https://getbootstrap.com/docs/4.6/examples/carousel/)
+
  
 ## Credits
+
 * The [Bootstrap](https://getbootstrap.com/) documentation was so really helpful.
 * The *Boutique Ado* code along project from Code Institute has been a valuable source for both starting the project as well as for setting up new apps, models, urls and views, templates.
 * - Could not have done it without this assistance of this material.. 
