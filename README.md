@@ -789,7 +789,7 @@ LightHouse in the browser- for testing performance<br>
 [CI database](https://dbs.ci-dbs.net/)
 [temp-mail](https://temp-mail.org/en/)
 [grammarly](https://app.grammarly.com/) spell checker for this readme.
-
+[Stripe](https://stripe.com/en-de) Used for a secure card payment system 
 [Back to Table of Contents](#table-of-contents)
 
 
@@ -806,7 +806,7 @@ I used epics to help with organizing the project and MoSCoW prioritization Label
 
 ### env file setup in both Heruko and IDE 
 
-![Update message add ](readme-images/faq_add_message.png)
+![Heruko and env file ](readme-images/heruko_vars.png)
 
 
 # Testing 
@@ -916,41 +916,26 @@ The project was deployed to [Heroku](https://www.heroku.com). To deploy a projec
 
 ```python3 manage.py migrate```
 
-19. Set up Cloudinary for static file storage: After creating a Cloudinary account, you can copy the API Environment Variable from the Cloudinary dashboard.
+19. To set up Stripe, you will have to create a free account [Stripe](https://dashboard.stripe.com/register). After you have created your account, retrieve your Publishable key and Secret key and add them to your env.py file, as well as to your heroku config vars. Additionally, you will have to set up all the stripe code for your project, but this was done with the [Stripe Documentation](https://docs.stripe.com/). It is important to include the following code in the checkout views.py file: 
 
-20. In the env.py file, add the Cloudinary url (it's very important that the url is unaltered):
+20. Create a stripe webhook for your plattform by creating a new webhook in the stripe section under *Developers* - *Event Destination* - *Add Destination* and adding your *deployed url*/checkout/wh/ in the form. After creating the webhook, you will recieve a stripe_wh_secret key.
 
-```os.environ.setdefault("CLOUDINARY_URL", "cloudinary://*********************************")```
+21. The next step to complete the deployment is to create an AWS account and an S3 bucket. To create an account, you have to visit the [AWS website](https://signin.aws.amazon.com/signup?request_type=register) and follow the instructions to create the free tier account.
 
-21. In the Config Vars of heroku, add the Cloudinary url (CLOUDINARY_URL as the key, the actual url as the value). 
+* - Code Institute tutor Oisin instructions helped me setup the AWS with the below instructions:
+* - [Create an AWS S3 Bucket](https://docs.google.com/document/d/1bqvCFiCW_JV9sllNZrN5uUJpIiusHICTk4TIk3oUWHY/edit?tab=t.0#heading=h.jypp4mbtvx4q)
+* - [Create an AWS Group and User](https://docs.google.com/document/d/1z6L8KKiTi3QU5rMbHXhA3QR9jQIG7wLqnScUDpe238E/edit?tab=t.0#heading=h.1ixuny26uvc)
+* - After finishing the steps from the documentation above, you will recieve an AWS access key and an AWS secret key.
 
-22. In the settings.py file, the Cloudinary Libraries have to be added to the installed apps. The correct order is very important.
+22. Add all keys into your env.py file and the Heroku config vars.
 
-23. In the bottom of settings.py, add additional settings for static file management:
+![Heruko and env file ](readme-images/heruko_vars.png)
 
-24. The next step is to link the file to the Heroku templates directory:
+23. * Install **boto3** and **django-storages**
 
-25. Now edit the templates directory to "TEMPLATES_DIR" in the teamplates array.
+24. Update your settings.py to setup the storages file.
 
-26. Some more files are needed before deploying:
-
-* Create 2 folders in the top level directory: **static** and **templates**
-* The **static** folder will include all CSS and JS files as well as images.
-* The **templates** folder will include the "base.html" file, as well as all django related templates.
-
-27. Make sure that all the files are saved, then enter the following lines in the console for the first commit and push to Github:
-
-* ```python3 manage.py collectstatic ``` 
-* ```git add .```
-* ```git commit -m "Deployment commit"```
-* ```git push```
-
-
-30. Now it's time for deployment. Scroll to the top of the settings page in Heroku and click the 'Deploy' tab. For deployment method, select 'Github'. Search for the repository name you want to deploy and then click connect.
-
-31. Scroll down to the manual deployment section and click 'Deploy Branch'.
-
-The live link to the site on Heroku an be found [Kayak Blog](https://kayak-blog-pp4-1054055911f7.herokuapp.com/). And the Github repository can be found [github](https://github.com/Marceillo/kayak-blog-pp4).
+![settings ](readme-images/bucketandstripe.png)
 
 #### Extra variables added to the env file.
 
@@ -959,10 +944,9 @@ The live link to the site on Heroku an be found [Kayak Blog](https://kayak-blog-
 
 ## Final Deployment 
 
-1. Create a runtime.txt `python-3.8.13`
-2. Create a Profile `web: gunicorn your_project_name.wsgi`
-3. When development is complete change the debug setting to: `DEBUG = False` in settings.py
-4. In Heroku settings, delete the config vars for `DISABLE_COLLECTSTATIC = 1`
+1. Create a Profile `web: gunicorn your_project_name.wsgi`
+2. When development is complete change the debug setting to: `DEBUG = False` in settings.py
+3. In Heroku settings, delete the config vars for `DISABLE_COLLECTSTATIC = 1`
 
 </details>
 
@@ -1014,16 +998,15 @@ To clone and set up this project, follow these steps:
  
 ## Credits
 * The [Bootstrap](https://getbootstrap.com/) documentation was so really helpful.
-* The *I think therefore I blog* code along project from Code Institute has been a valuable source for both starting the project as well as for setting up new apps, models, urls and views
+* The *Boutique Ado* code along project from Code Institute has been a valuable source for both starting the project as well as for setting up new apps, models, urls and views, templates.
+* - Could not have done it without this assistance of this material.. 
 * I have used differant  website and content during this process I found that dajango documentation was the best and the more common sites like stack overflow.
-* I took insperation from the from the LMS *I think therefore I blog* project and used a start code then custimized and changed to match my project.
 * I also took some inspiration from the readme files below and adjusted it to meet my project.
-* AI [perplexity](https://www.perplexity.ai/) helped with writing the blog kayak stories on the home page. Also as learning tool to explain and help with bug errors found.     
-* Took is inspiration from this readme[Marcus Erikssons PP4](https://github.com/worldofmarcus/project-portfolio-4/blob/main/README.md#existing-features) and made changes.  
+* AI [perplexity](https://www.perplexity.ai/) helped with writing the FAQ question and answer. Also as learning tool to explain and help with bug errors found.     
+* [Ian-Garrigan](https://github.com/Ian-Garrigan/shavers-haven?tab=readme-ov-file)
 * [django-extensions](https://django-extensions.readthedocs.io/en/latest/graph_models.html)
 * [Coolors web site](https://coolors.co/palettes/trendin)
 * [Book on django](https://www.amazon.de/-/en/Antonio-Mel%C3%A9-ebook/dp/B0CPN3H5YW#:~:text=Django%205%20By%20Example%20is,step%2Dby%2Dstep%20approach)
-* [examples of projects](https://codeinstitute.net/de/student-projects/https://github.com/hogbergmarkus/golfers-dream)  
 * [guide to the Github Agile Tool](https://www.youtube.com/watch?v=U_dMihBgUNY&list=PL_7334VduOHsrWzhu5Ta2lrkp016kcBWY&index=34)
 * [ERD youtube](https://www.youtube.com/watch?v=xsg9BDiwiJE)
 * [User account create Django](https://youtu.be/Ev5xgwndmf)
@@ -1031,7 +1014,6 @@ To clone and set up this project, follow these steps:
 * [Website stackoverflow](https://stackoverflow.com)
 * [Forms stackoverflow](https://stackoverflow.com/questions/1727564/how-to-create-a-userprofile-form-in-django-with-first-name-last-name-modificati)
 * [Forgot Password](https://stackoverflow.com/questions/67545932/how-can-i-send-a-reset-password-email-on-django)
-* [Logo design](https://logo.com/dashboard/your-logo-files)
 * [Images and mp4 video used pexels](https://www.pexels.com)
 * [Images used unsplash](https://unsplash.com/)
 * [widgets in djano used in forms blog ](https://docs.djangoproject.com/en/5.0/topics/forms/modelforms/)
@@ -1040,21 +1022,36 @@ To clone and set up this project, follow these steps:
 * [Django Queryset API](https://docs.djangoproject.com/en/stable/ref/models/querysets/)
 * [Django Pagination](https://docs.djangoproject.com/en/stable/topics/pagination/)
 * [Django Q objects](https://docs.djangoproject.com/en/stable/topics/db/queries/#complex-lookups-with-q-objects)
+* [allauth ](https://docs.allauth.org/en/latest/installation/quickstart.html )
+* [Icons for wirframes](https://icons8.com/icons/set/razor--static--black)
+* [Freepik foor images](https://www.freepik.com/search?format=search&query=men%20shaving%20%20)
+* [AI image generator](https://www.bing.com/images/create?FORM=IRPGEN)
+* [Dango MUltiview](https://djangoguide.com/django-image-upload-specialization/django-multiple-image-upload/)
+* [Star Rating](https://django-star-ratings.readthedocs.io/en/latest/?badge=latest/)
+* [Mocups](https://techsini.com/multi-mockup/)
+* [Image for Tatara razors](https://tatararazors.com/product-category/razors)
+* [Leaf Shave Images](https://leafshave.com/)
+* [Proof razors images](https://proofrazor.com/)
+* [Oneblade razors images](https://www.onebladeshave.com/)
+* [Dovo images](https://dovo.com/de/)
+* [Amazon images]( https://www.amazon.de/)
+* [Free templates used](https://bbbootstrap.com/snippets/bootstrap-ecommerce-shopping-cart-item-summary-44021562)
+* [Bootstrape template used](https://getbootstrap.com/docs/4.6/examples/carousel/)
+
 
 ### Content
 
 * [YouTube Graph Models](https://www.youtube.com/watch?v=qzrE7cfc_3Q&t=357s)
-* [You Tube link](https://www.youtube.com/watch?v=sBjbty691eI&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy)
 * [Youtube Bootstrap](https://www.youtube.com/watch?v=-qfEOE4vtxE)
-
+* [Stripe for payment](https://youtu.be/hZYWtK2k1P8?si=I9KdHXR7xvDcpv8R) 
 ## Acknowledgements
 
-* I would like to thank code institute for the good LMS they have written that really helped pave the way forward.
+* I would like to thank code institute for the good LMS they have written that really helped pave the way forward with out it would not have been possible with the time allocated.
 
 * I would like to thank my mentor [Precious Ijege](https://code-institute-room.slack.com/team/USMD0GEAD) for relevant feedback and bug hunting during our meetings.
 
-* I would like to thank student [Sebastian](https://github.com/Mienjung97) and [Linus](https://github.com/j0hanz) for all their help in times of need.
+* I would like to thank student [Sebastian](https://github.com/Mienjung97) and [Jan R](https://github.com/yanidruffy) for all their help in times of need.
 
-* Also would like to say thank you to tutor support.
+* Also would like to say thank you to tutor support and LMS walkthrough.
 
 [Back to Table of Contents](#table-of-contents)
