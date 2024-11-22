@@ -82,7 +82,7 @@ Try my hand at an e-commerce layout using the Django Framework, Python, JavaScri
 ## Site User Goal
 
 This website wants to sell shaving products that will transform your shave and last for a long time.
-Also, I would like to educate clients on the benefits of shaving with de razors and single-edge razors in a minimalistic way. 
+Also, I tried to educate clients on the benefits of shaving with de razors and single-edge razors in a minimalistic way. 
 
 
 ## Site Owners Goal
@@ -145,14 +145,15 @@ It has a huge potential for small businesses. This tool helps the eco-shave team
 <summary>Facebook</summary>
 
 * I created a mockup of the Facebook page here using the Balsamiq mockups provided by LMS.
- 
- <img src="readme-images/facebook.png"><br>
+ <br>
 
+ <img src="readme-images/facebook.png">
+
+<br>
 * I had some problems setting up an account I have provided the error image below.
  I tried registering another account but it kept giving me this error.
+<br>
 
-* I had some problems setting up an account I have provided the error image below.
- I tried registering another account but it kept giving me this error.
 
   <img src="readme-images/facebook_error.png"><br>
 
@@ -785,12 +786,12 @@ This is a simple description of the key dependencies used in the app.
 [CSS - Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_uri) - used for validating the CSS<br>
 [GraphvizOnline](https://dreampuf.github.io/GraphvizOnline/#digraaph%20G%20%7B%0A%0A%20%20subgraph%20cluster_0%20%7B%0A%20%20%20%20style%3Dfilled%3B%0A%20%20%20%20color%3Dlightgrey%3B%0A%20%20%20%20node%20%5Bstyle%3Dfilled%2Ccolor%3Dwhite%5D%3B%0A%20%20%20%20a0%20-%3E%20a1%20-%3E%20a2%20-%3E%20a3%3B%0A%20%20%20%20label%20%3D%20%22process%20%231%22%3B%0A%20%20%7D%0A%0A%20%20subgraph%20cluster_1%20%7B%0A%20%20%20%20node%20%5Bstyle%3Dfilled%5D%3B%0A%20%20%20%20b0%20-%3E%20b1%20-%3E%20b2%20-%3E%20b3%3B%0A%20%20%20%20label%20%3D%20%22process%20%232%22%3B%0A%20%20%20%20color%3Dblue%0A%20%20%7D%0A%20%20start%20-%3E%20a0%3B%0A%20%20start%20-%3E%20b0%3B%0A%20%20a1%20-%3E%20b3%3B%0A%20%20b2%20-%3E%20a3%3B%0A%20%20a3%20-%3E%20a0%3B%0A%20%20a3%20-%3E%20end%3B%0A%20%20b3%20-%3E%20end%3B%0A%0A%20%20start%20%5Bshape%3DMdiamond%5D%3B%0A%20%20end%20%5Bshape%3DMsquare%5D%3B%0A%7D) - To take erd. dot file and convert to a graph<br>
 LightHouse in the browser- for testing performance<br>
-[AWS](https://aws.amazon.com/) Used for storage of the files folders.
-[CI database](https://dbs.ci-dbs.net/)
-[temp-mail](https://temp-mail.org/en/)
-[grammarly](https://app.grammarly.com/) spell checker for this readme.
-[Stripe](https://stripe.com/en-de) Used for a secure card payment system 
-[Back to Table of Contents](#table-of-contents)
+[AWS](https://aws.amazon.com/) Used for storage of the files folders.<br>
+[CI database](https://dbs.ci-dbs.net/)<br>
+[temp-mail](https://temp-mail.org/en/)<br>
+[grammarly](https://app.grammarly.com/) spell checker for this readme.<br>
+[Stripe](https://stripe.com/en-de) Used for a secure card payment system <br>
+[Back to Table of Contents](#table-of-contents)<br>
 
 
 ## Database
