@@ -176,26 +176,27 @@ User stories can be viewed here on the project [kanban board ](https://github.co
 <details>
   <summary>User Stories</summary>
 
-| **EPIC** | ID   | Priority     | User Story                                                                                     |
-| :------------------------------------- | --  | :----------- | :--------------------------------------------------------------------------------------------- |
-| **E-commerce Integration** | 1.1 | Must-Have    | As a user, I want to add products to a shopping cart and proceed to check out, so I can easily make purchases on the site. |
-|                                       | 1.2 | Must-Have    | As a user, I want to receive confirmation of my purchase via email and on-screen notifications, so I can verify my order. |
-|                                       | 1.3 | Should-Have  | As a user, I want a streamlined checkout process, so I can complete my purchases efficiently.  |
-| **User Experience Design** | 2.1 | Must-Have    | As a user, I want an accessible and intuitive website, so I can navigate and interact with the content seamlessly. |
-|                                       | 2.2 | Must-Have    | As a user, I want a mobile-responsive design, so I can access the website on different devices. |
-|                                       | 2.3 | Should-Have  | As a user, I want to edit and view my profile information, so I can keep my account details up-to-date. |
-|                                       | 2.4 | Should-Have  | As a user, I want to create and manage a wishlist within my profile modal, so I can save products for future consideration. |
-| **Search Engine Optimization** | 3.1 | Must-Have    | As a user, I want to find products quickly using search functionality, so I can locate items efficiently. |
-|                                       | 3.2 | Should-Have  | As a user, I want a helpful 404 error page with navigation options, so I can find my way back to the main site if needed. |
-| **Authentication and Authorization** | 4.1 | Must-Have    | As a user, I want to register and log in securely to access my account information.           |
-|                                       | 4.2 | Must-Have    | As an admin, I want to manage user roles effectively, so I can control access levels based on user roles. |
-|                                       | 4.3 | Should-Have  | As a user, I want to see my login status clearly on every page.                               |
-| **Marketing and Brand Reach** | 5.1 | Must-Have    | As a user, I want to subscribe to newsletters for updates and promotions.                     |
-|                                       | 5.2 | Should-Have  | As a user, I want to share products on social media easily to recommend them to friends.     |
-| **E-commerce Fundamentals** | 6.1 | Must-Have    | As a business owner, I want to document the e-commerce model clearly for outlining the application’s purpose and user value. |
-| **Customer Support and Information Access** | 7.1 | Must-Have    | As a user, I want to submit a contact form so that I can easily reach out for support or inquiries.   |
-|                                       | 7.2 | Must-Have    | As a user, I want to view frequently asked questions in a modal so that I can find quick answers without leaving the About Page.   |
-|                                       | 7.3 | Should-Have  | As a user, I want the contact form and FAQ modal to be mobile-responsive so that I can access them on any device.   |
+| **EPIC**                          | **ID** | **Priority**  | **User Story**                                                                                                                                       |
+|-----------------------------------|--------|---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+| **E-commerce Integration**        | 1.1    | Must-Have     | As a user, I want to add products to a shopping cart and proceed to check out, so I can easily make purchases on the site.                        |
+|                                   | 1.2    | Must-Have     | As a user, I want to receive confirmation of my purchase via email and on-screen notifications, so I can verify my order.                         |
+|                                   | 1.3    | Should-Have   | As a user, I want a streamlined checkout process, so I can complete my purchases efficiently.                                                      |
+| **User Experience Design**        | 2.1    | Must-Have     | As a user, I want an accessible and intuitive website, so I can navigate and interact with the content seamlessly.                                  |
+|                                   | 2.2    | Must-Have     | As a user, I want a mobile-responsive design, so I can access the website on different devices.                                                    |
+|                                   | 2.3    | Should-Have   | As a user, I want to edit and view my profile information, so I can keep my account details up-to-date.                                           |
+|                                   | 2.4    | Should-Have   | As a user, I want to create and manage a wishlist within my profile modal, so I can save products for future consideration.                        |
+| **Search Engine Optimization**    | 3.1    | Must-Have     | As a user, I want to find products quickly using search functionality, so I can locate items efficiently.                                          |
+|                                   | 3.2    | Should-Have   | As a user, I want a helpful 404 error page with navigation options, so I can find my way back to the main site if needed.                         |
+| **Authentication and Authorization** | 4.1  | Must-Have     | As a user, I want to register and log in securely to access my account information.                                                                 |
+|                                   | 4.2    | Must-Have     | As an admin, I want to manage user roles effectively, so I can control access levels based on user roles.                                          |
+|                                   | 4.3    | Should-Have   | As a user, I want to see my login status clearly on every page.                                                                                   |
+| **Marketing and Brand Reach**     | 5.1    | Must-Have     | As a user, I want to subscribe to newsletters for updates and promotions.                                                                          |
+|                                   | 5.2    | Should-Have   | As a user, I want to share products on social media easily to recommend them to friends.                                                           |
+| **E-commerce Fundamentals**        | 6.1    | Must-Have     | As a business owner, I want to document the e-commerce model clearly for outlining the application’s purpose and user value.                       |
+| **Customer Support and Information Access** | 7.1  | Must-Have     | As a user, I want to submit a contact form so that I can easily reach out for support or inquiries.                                                |
+|                                   | 7.2    | Must-Have     | As a user, I want to view frequently asked questions in a modal so that I can find quick answers without leaving the About Page.                   |
+|                                   | 7.3    | Should-Have   | As a user, I want the contact form and FAQ modal to be mobile-responsive so that I can access them on any device.                                  |
+
 
 </details>
 
@@ -536,7 +537,9 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 ### Wish List 
 
 * The wish list has CRUD functionality as you add and remove an item to the wish list and update the star rating.
+* Ypu can add to the wish list through buttonsin the product detail page as shown in product details.
 * You can also add items to the bag that you would like to purchase.
+* You can delete from the wish list.
 * The wish list is only availble when logged in.
 
 ##### Wish LIst
@@ -605,39 +608,54 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 
 </details> 
 
-### Register Page
+### AllAuth 
 
 <details>
 
-<summary>Register Page summary</summary>
+<summary> Allauth Page summary</summary>
+
 
 <br>
+
+### Register a account 
 
 * Note: Here the user can register an account for more features in order to have some CRUD functionality.
-* The email address is optional for now as this is not yet live to the general public and some might not like that.
-* If a user decides not to enter an email address and forget their password they will need to use the contact form so that the admin can reset this.
+* 
 
 <br>
 
-![Register](/static/readme/images/register-page.png)
+##### Register view 
 
-</details>
+![Register](readme-images/register-email.png)
+
+##### Confirm email message
+
+![Confirm email message ](readme-images/confirm_email_message.png)
+
+##### Verify email message 
+
+![Verify email message ](readme-images/verify_email.png)
+
+##### Confirm email in inbox
+
+![Confirm email in inbox](readme-images/confirmation%20e-mail.png)
+
+#### 
 
 ### Login page
 
-<details>
-
-<summary>Login and Logout Page summary</summary>
-
-<br>
-
 * Note: Here you can log in using the allauth tool in Django.
-* Note: I added the forgot password feature here to give the users the ability to be independent. 
 * However it is not 100 percent as certain mail servers block Django messages. 
 
 <br>
 
-![Login](/static/readme/images/login-page.png)
+##### Login
+
+![Login](readme-images/login_view-email.png)
+
+##### Login success
+
+![Login](readme-images/success_signin_email.png)
 
 #### Forgot Password
 
@@ -647,17 +665,27 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 
 <br>
 
-![Login](/static/readme/images/forgot-password.png)
+##### forgot 
+
+![forgot](readme-images/forgot-pass-email.png)
 
 <br>
 
-* If you did not add an email address as it is optional you can use the About contact form to get in contact.
 * Once you enter your e-mail address you will see this screen as a user.
 
 <br>
 
-![Login](/static/readme/images/passwordresetmessage.png)
+##### Forgot email in email inbox
 
+![Login](readme-images/forgot-email.png)
+
+##### change password 
+
+![Login](readme-images/forgot-change-email.png)
+
+#### Success message
+
+![Login](readme-images/success-email-pass-change.png)
 
 ##### NOTE:
 
@@ -665,70 +693,11 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 * The reason for this is that certain service providers block Django messages on the server side such as Gmail.
 * This is not a live site and not in control of the SMTP server I have to accept this result.
 
-###### Terminal link view 
-<br>
 
-![Login](/static/readme/images/passchangeterminal.png)
-
-<br>
-
-###### Temporary email address view test from Heruko
+###### Temporary email address view tests
 
 * The way I tested this was to use a temporary [ temporary e-mail service provider](https://temp-mail.org/).
 * Created a user account with the temp email service provider and tested this.
-
-<br>
-
-![Login](/static/readme/images/passtempforgotpasswordlink.png)
-
-<br>
-
-</details>
-
-### After login: Profile Page CRUD 
-
-<details>
-
-<summary>Profile Page summary</summary>
-
-#### Profile page view 
-
-* When you click on the Profile icon with your registered name it will show you your profile data.
-* Here you will have CRUD functionality.
-* You will be able to change your password.
-* Delete Your profile.
-* Edit your Profile Image as there is a default image, as well as personal details including kayaking skills.     
-
-<br>
-
-![Profile](/static/readme/images/profile-edit-page.png)
-
-<br>
-
-#### Profile Edit 
-
-<br>
-
-![Profile edit](/static/readme/images/profile-edit-form.png)
-
-<br>
-
-#### Profile password Change 
-
-![Password Change](/static/readme/images/profile_passwordchange.png)
-
-<br>
-
-#### Profile Delete
-
-<br>
-
-![Profile Delete](/static/readme/images/delet_profile.png)
-
-<br>
-
-</details>
-
 
 </details>
 
@@ -736,28 +705,30 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 <details>
 <summary>Confirmation messages</summary>
 
-* There are success confirmation message and error messages 
+* There are success confirmation message and error messages toasts where used. 
 * There is Java Script and mondal code inspired by the LMS.
-
+* Not going show all of them as you will see them in the project.
 * Logging in and out
-* In the Comments features
-* In the post features
+* Registering a new account
+* Buying a product ect
 * When registering a new account
-* In the Profile features  
-* Favorite or unfavorite
-
-![Style of the Message](/static/readme/images/message-style.png)
+* In the most of the apps in the project.
+ 
+![Login](readme-images/toast.png)
 
 </details>
 
 ### Future Features
 
 * I had some problems to implement the sorting feature with django star rating but due to time contraints left this one out but will be implementing it on a later date.
-* In the users profile there is a are features of crud but I would like it add a delete profile feature in the future this was also not implemented due to time.  
+* In the users profile there iare features of crud but I would like it add a delete profile feature in the future this was also not implemented due to time.
+* - Also in the profile I would have like when a user is logged in with there name not to be able to change the data.   
 * I did not inlcude Pagination  the amount of products per page so will be the next future feature when the site grows.
-* I would have liked a better way to handel returns should a prduct have a defect write now they can just send a message with problems in the contact form.
+* I would have liked a better way to handel returns should a product have a defect, write now they can just send a message with problems in the contact form.
 * I would add some testomonials for each product in the future.
-*  
+*  More social media platforms 
+* Also a brand app that shows the details of the product manufacturere and there carbon footprint.
+* More styling as I focused on this project on functionality. 
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -770,60 +741,34 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 This is simple description of the key dependencies used in the app.
 
 - **asgiref==3.8.1**: A library that provides utilities for ASGI (Asynchronous Server Gateway Interface) applications.
-
-- **click==8.1.7**: A package for creating command-line interfaces (CLI) in Python.
-
-- **cloudinary==1.40.0**: A library for integrating Cloudinary's image and video management services in the application.
-
-- **colorama==0.4.6**: A library that allows for cross-platform colored terminal text in Python.
-
-- **crispy-bootstrap5==2024.2**: A Django application that provides Bootstrap 5 support for crispy forms.
-
-- **cssbeautifier==1.15.1**: A tool for formatting and beautifying CSS code.
-
-- **dj-database-url==0.5.0**: A utility for parsing database URLs and configuring Django's database settings from environment variables.
-
-- **dj3-cloudinary-storage==0.0.6**: A Django storage backend for Cloudinary.
-
-- **Django==4.2.13**: The primary web framework for building web applications in Python.
-
-- **django-allauth==0.57.2**: A comprehensive authentication package for Django that supports authentication and account management.
-
-- **django-crispy-forms==2.2**: A Django application that helps to manage and render forms with a clean and customizable layout.
-
-- **django-extensions==3.2.3**: A collection of custom extensions for Django.
-
-- **EditorConfig==0.12.4**: A plugin that helps maintain consistent coding styles across different editors and IDEs by using a `.editorconfig` file.
-
-- **gunicorn==20.1.0**: A Python WSGI HTTP server for UNIX, used to serve your Django application in a production environment.
-
-- **html-tag-names==0.1.2**: A library that provides a list of HTML tag names.
-
-- **html-void-elements==0.1.0**: A utility that defines void elements in HTML.
-
-- **jsbeautifier==1.15.1**: A JavaScript beautifier that formats and beautifies JavaScript code for improved readability.
-
-- **oauthlib==3.2.2**: A generic, spec-compliant implementation of the OAuth request-signing logic for Python, facilitating OAuth 1 and OAuth 2 support.
-
-- **pathspec==0.12.1**: A library that provides a way to specify file patterns for matching files in a directory.
-
-- **psycopg2==2.9.9**: A PostgreSQL adapter for Python, allowing Django to interact with PostgreSQL databases.
-
-- **PyJWT==2.8.0**: A Python library for encoding and decoding JSON Web Tokens (JWT), used for secure authentication and information exchange.
-
-- **python-dotenv==1.0.1**: A library that reads key-value pairs from a `.env` file and adds them to the environment variables.
-
-- **python3-openid==3.2.0**: A library for OpenID authentication in Python, enabling users to log in using their OpenID credentials.
-
-- **regex==2024.7.24**: An alternative to Python's built-in `re` module, providing additional functionality for regular expressions.
-
-- **requests-oauthlib==2.0.0**: A library that provides OAuth support for the popular `requests` library, making it easier to work with OAuth-protected APIs.
-
-- **sqlparse==0.5.0**: A non-validating SQL parser for Python, useful for formatting and analyzing SQL queries.
-
-- **tqdm==4.66.5**: A library for creating progress bars in Python.
-
-- **whitenoise==6.5.0**: A middleware for serving static files in Django applications, simplifying static file management in production environments.
+- **boto3==1.35.59**: The official AWS SDK for Python, enabling easy integration with AWS services like S3 and EC2.
+- **botocore==1.35.59**: A low-level interface to AWS services that serves as the foundation for Boto3, providing service definitions and API operations.
+- **crispy-bootstrap4==2024.1**: A Django application that provides Bootstrap 4 support for crispy forms, enhancing form styling.
+- **dj-database-url==2.2.0**: A utility for parsing database URLs to configure Django's database settings easily.
+- **Django==4.2.8**: A high-level Python web framework that encourages rapid development and clean, pragmatic design.
+- **django-allauth==0.54.0**: An integrated set of Django applications addressing authentication, registration, account management, and third-party (social) account authentication.
+- **django-braces==1.16.0**: A collection of reusable class-based view mixins for Django that simplify common patterns in view logic.
+- **django-countries==7.6.1**: A Django application that provides a country field for models and a list of countries with their ISO codes.
+- **django-crispy-forms==2.3**: A Django application that helps manage the rendering of forms with a focus on DRY (Don't Repeat Yourself) principles and flexibility in form layout.
+- **django-extensions==3.2.3**: A collection of custom extensions for Django that enhance the development experience with additional management commands and features.
+- **django-model-utils==5.0.0**: A set of utilities for Django models that provide additional functionality such as inherited model fields and model managers.
+- **django-star-ratings==0.9.2**: A Django application that allows users to rate items using star ratings, providing an intuitive feedback mechanism.
+- **django-storages==1.14.4**: A Django library that provides storage backends for various cloud storage services like Amazon S3 and Google Cloud Storage.
+- **gunicorn==23.0.0**: A Python WSGI HTTP server for UNIX that serves web applications in a concurrent manner, ideal for production environments.
+- **jmespath==1.0.1**: A query language for JSON, allowing you to extract and transform JSON data easily from Python applications.
+- **oauthlib==3.2.2**: A generic, spec-compliant implementation of OAuth for Python, enabling secure authorization flows in applications.
+- **pillow==10.4.0**: The Python Imaging Library fork (PIL) that adds image processing capabilities to your Python interpreter.
+- **psycopg2==2.9.10**: A PostgreSQL adapter for the Python programming language, allowing interaction with PostgreSQL databases.
+- **psycopg2-binary==2.9.9**: A stand-alone package of psycopg2 that includes the binary dependencies needed to connect to PostgreSQL without requiring compilation.
+- **PyJWT==2.9.0**: A Python library for encoding and decoding JSON Web Tokens (JWT), facilitating secure token-based authentication.
+- **python3-openid==3.2.0**: An OpenID consumer library for Python 3, enabling authentication using OpenID providers.
+- **pytz==2024.2**: A library that brings the Olson timezone database into Python, allowing accurate timezone calculations and conversions.
+- **requests-oauthlib==2.0.0**: An extension of the Requests library that adds OAuth support, simplifying the process of making authenticated API requests.
+- **s3transfer==0.10.3**: A library that provides a high-level interface for transferring files to and from Amazon S3 with support for multipart uploads and downloads.
+- **sqlparse==0.5.1**: A non-validating SQL parser for Python that provides syntax highlighting and formatting capabilities for SQL queries.
+- **stripe==11.2.0**: The official Stripe API client library for Python, facilitating integration with Stripe's payment processing services.
+- **swapper==1.4.0**: A utility for swapping out models in Django applications dynamically, allowing flexible model management during development or testing.
+- **typeguard==2.13.3**: A runtime type checker for Python functions that validates argument types against type hints during execution.
 
 </details>
 
@@ -831,9 +776,8 @@ This is simple description of the key dependencies used in the app.
 
 [GitHub](https://github.com/) - used for hosting the source code of the program<br>
 [Heroku](https://dashboard.heroku.com/) - used for deploying the project<br>
-[Favicon.io](https://favicon.io/) - used for generating the website favicon<br>
 [Font Awesome](https://fontawesome.com/) - for creating atractive UX with icons<br>
-[Bootstrap5](https://getbootstrap.com/) - for adding predefined styled elements and creating responsiveness<br>
+[Bootstrap4.6](https://getbootstrap.com/) - for adding predefined styled elements and creating responsiveness<br>
 [Google Fonts](https://fonts.google.com/) - for typography<br>
 [JsHint](https://jshint.com/) - used for validating the javascript code<br>
 [PEP8 Validator](http://pep8online.com/) - used for validating the python code<br>
@@ -841,7 +785,7 @@ This is simple description of the key dependencies used in the app.
 [CSS - Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_uri) - used for validating the CSS<br>
 [GraphvizOnline](https://dreampuf.github.io/GraphvizOnline/#digraaph%20G%20%7B%0A%0A%20%20subgraph%20cluster_0%20%7B%0A%20%20%20%20style%3Dfilled%3B%0A%20%20%20%20color%3Dlightgrey%3B%0A%20%20%20%20node%20%5Bstyle%3Dfilled%2Ccolor%3Dwhite%5D%3B%0A%20%20%20%20a0%20-%3E%20a1%20-%3E%20a2%20-%3E%20a3%3B%0A%20%20%20%20label%20%3D%20%22process%20%231%22%3B%0A%20%20%7D%0A%0A%20%20subgraph%20cluster_1%20%7B%0A%20%20%20%20node%20%5Bstyle%3Dfilled%5D%3B%0A%20%20%20%20b0%20-%3E%20b1%20-%3E%20b2%20-%3E%20b3%3B%0A%20%20%20%20label%20%3D%20%22process%20%232%22%3B%0A%20%20%20%20color%3Dblue%0A%20%20%7D%0A%20%20start%20-%3E%20a0%3B%0A%20%20start%20-%3E%20b0%3B%0A%20%20a1%20-%3E%20b3%3B%0A%20%20b2%20-%3E%20a3%3B%0A%20%20a3%20-%3E%20a0%3B%0A%20%20a3%20-%3E%20end%3B%0A%20%20b3%20-%3E%20end%3B%0A%0A%20%20start%20%5Bshape%3DMdiamond%5D%3B%0A%20%20end%20%5Bshape%3DMsquare%5D%3B%0A%7D) - To take erd. dot file and convert to a graph<br>
 LightHouse in the browser- for testing performance<br>
-[Cloudinary](https://cloudinary.com/users/login) - to handel the image storage.<br>
+[AWS](https://aws.amazon.com/) Used for storage of the files folders.
 [CI database](https://dbs.ci-dbs.net/)
 [temp-mail](https://temp-mail.org/en/)
 [grammarly](https://app.grammarly.com/) spell checker for this readme.
@@ -851,24 +795,32 @@ LightHouse in the browser- for testing performance<br>
 
 ## Database
 
-The project uses the PostgreSQL database for storing the data.
+During this project I used the PostgreSQL  and the AWS S3 Bucket for storing of data.
+I have also used a Graph MOdels to show the relationship with the database and used to lucid charts in the begining to plan for the intial MVP build.
 
 ## Agile Methodology
 This project was developed using the Agile methodology.<br>
-All epics and user stories implementation progress was registered using [Github](https://github.com/users/Marceillo/projects/8). As the user stories were accomplished, they were moved in the Kanban Board from **Epic**,**User stories**, **No Status**, **To Do**, to **In-progress**, and **Done** lists.
+All epics and user stories implementation progress was registered using [Github](https://github.com/users/Marceillo/projects/10). As the user stories were accomplished, they were moved in the Kanban Board from **Epic**,**User stories**, **No Status**, **To Do**, to **In-progress**, and **Done** . As last test before moving to done I tested them again during my testing process.
 
-I added sprints to help with organizing the project and MoSCoW prioritization Labels were also included in each issue. Additionally, I included tasks for some guidance as to what needs to be done. 
+I used epics to help with organizing the project and MoSCoW prioritization Labels were also included in each issue. 
 
-[Back to Table of Contents](#table-of-contents)
+### env file setup in both Heruko and IDE 
+
+![Update message add ](readme-images/faq_add_message.png)
+
 
 # Testing 
 
 * I have created a separate readme file for testing .
 * Please click on this link [(Testing)](TESTING.md) to take you to the page .
 
+
+[Back to Table of Contents](#table-of-contents)
+
 # Deployment of this project
+
 <details>
-<summary>Deployment from terminal to Heroku</summary>
+<summary>Deployment summary</summary>
 
 ### Helpfull guide links 
 
