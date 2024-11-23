@@ -27,10 +27,10 @@ def contact(request):
         form = ContactForm(request.POST)
 
         if form.is_valid():
-            # print(form.cleaned_data)
+
             messages.success(
-                request,
-                'Your message has been received successfully!')
+                request, 'Your message has been received successfully!'
+            )
 
             return redirect('contact_success')
         else:
@@ -46,12 +46,14 @@ def contact_success(request):
     """
     return render(request, 'about/contact_success.html')
 
+
 def faq(request):
     """
     View for the FAQ page
     """
     faqs = FAQ.objects.all()
     return render(request, 'about/faq.html', {'faqs': faqs})
+
 
 @login_required
 def add_faq(request):
@@ -62,7 +64,7 @@ def add_faq(request):
 
     if request.method == 'POST':
         form = FAQForm(request.POST)
-        
+
         if form.is_valid():
             form.save()
             messages.success(request, 'FAQ has been added successfully!')
@@ -71,8 +73,9 @@ def add_faq(request):
             messages.error(request, 'Failed to add to the FAQ.')
     else:
         form = FAQForm()
-    
+
     return render(request, 'about/add_faq.html', {'form': form})
+
 
 @login_required
 def edit_faq(request, pk):
@@ -81,7 +84,7 @@ def edit_faq(request, pk):
         return redirect(reverse('faq'))
 
     faq = get_object_or_404(FAQ, pk=pk)
-    
+
     if request.method == 'POST':
         form = FAQForm(request.POST, instance=faq)
         if form.is_valid():
@@ -90,7 +93,7 @@ def edit_faq(request, pk):
             return redirect('faq')
         else:
             messages.error(request, 'Failed to update the FAQ.')
-    
+
     form = FAQForm(instance=faq)
     return render(request, 'about/edit_faq.html', {'form': form})
 
@@ -102,13 +105,14 @@ def delete_faq(request, pk):
         messages.error(request, 'Sorry, only admin users can delete this FAQ.')
         return redirect(reverse('faq'))
     faq = get_object_or_404(FAQ, pk=pk)
-    
+
     if request.method == 'POST':
         faq.delete()
         messages.success(request, 'FAQ has been deleted successfully!')
         return redirect('faq')
 
     return render(request, 'about/faq_confirm_delete.html', {'faq': faq})
+
 
 def faq_list(request):
     faqs = FAQ.objects.all()
