@@ -1,263 +1,249 @@
- 
-.profile-app {
-    background-color: #ddd;
-    background-size: cover;
-    object-fit: contain;
-    /* height: calc(100vh - 208px);  */
-    /* height: 100vh; */
-    color: #555;
-    display: flex;
-    flex-direction: column;
-   margin-bottom: 32px;
-} 
+ .profile-app {
+     background-color: #ddd;
+     background-size: cover;
+     object-fit: contain;
+     color: #555;
+     display: flex;
+     flex-direction: column;
+     margin-bottom: 32px;
+ }
 
-.container-fluid {
-    padding-left: 0px;
-    padding-right: 0px;
-}
+ .container-fluid {
+     padding-left: 0px;
+     padding-right: 0px;
+ }
 
-.hm-head {
-    color: #555;
-}
+ .hm-head {
+     color: #555;
+ }
 
-.title{
-    margin-bottom: 5vh;
-}
-.card{
-    margin-top: 50px;
-    max-width: 950px;
-    width: 90%;
-    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 1rem;
-    border: transparent;
-}
+ .title {
+     margin-bottom: 5vh;
+ }
 
-.card-body {
-    width: auto;
+ .card {
+     margin-top: 50px;
+     max-width: 950px;
+     width: 90%;
+     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+     border-radius: 1rem;
+     border: transparent;
+ }
 
-}
+ .card-body {
+     width: auto;
+
+ }
 
 
 
-@media(max-width:767px){
-    .card{
-        margin: 3vh auto;
-    }
-}
-.cart{
-    background-color: #fff;
-    padding: 4vh 5vh;
-    border-bottom-left-radius: 1rem;
-    border-top-left-radius: 1rem;
-}
-@media(max-width:767px){
-    .cart{
-        padding: 4vh;
-        border-bottom-left-radius: unset;
-        border-top-right-radius: 1rem;
-    }
-}
-.summary{
-    background-color: #ddd;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    padding: 4vh;
-    color: rgb(65, 65, 65);
-}
-@media(max-width:767px){
-    .summary{
-    border-top-right-radius: unset;
-    border-bottom-left-radius: 1rem;
-    }
-}
-.summary .col-2{
-    padding: 0;
-}
-.summary .col-10
-{
-    padding: 0;
-}.row{
-    margin: 0;
-}
-.title b{
-    font-size: 1.5rem;
-}
-.main{
-    margin: 0;
-    padding: 2vh 0;
-    width: 100%;
-}
-.col-2, .col{
-    padding: 0 1vh;
-}
-a{
-    padding: 0 1vh;
-}
-.close{
-    margin-left: auto;
-    font-size: 0.7rem;
-}
-img{
-    width: 3.5rem;
-}
-.back-to-shop{
-    margin-top: 4.5rem;
-}
-h5{
-    margin-top: 4vh;
-}
-hr{
-    margin-top: 1.25rem;
-}
-form{
-    padding: 2vh 0;
-}
-select{
-    border: 1px solid rgba(0, 0, 0, 0.137);
-    padding: 1.5vh 1vh;
-    margin-bottom: 4vh;
-    outline: none;
-    width: 100%;
-    background-color: rgb(247, 247, 247);
-}
-input{
-    border: 1px solid rgba(0, 0, 0, 0.137);
-    padding: 1vh;
-    margin-bottom: 4vh;
-    outline: none;
-    width: 100%;
-    background-color: rgb(247, 247, 247);
-}
-input:focus::-webkit-input-placeholder
-{
-      color:transparent;
-}
-.btn{
-    background-color: #555;
-    border-color: #555;
-    color: white;
-    width: 100%;
-    padding: 1vh;
-    border-radius: 0;
-}
-.btn:focus{
-    box-shadow: none;
-    outline: none;
-    box-shadow: none;
-    color: white;
-    -webkit-box-shadow: none;
-    -webkit-user-select: none;
-    transition: none; 
-    box-shadow: none;            
-    -webkit-user-select: none;   
-    -moz-user-select: none;      
-    user-select: none;           
-    transition: none;
-}
+ @media(max-width:767px) {
+     .card {
+         margin: 3vh auto;
+     }
+ }
 
-.btn:hover{
-    
-    color: gold;
-}
-a{
-    color: black; 
-}
-a:hover{
-    color: black;
-    text-decoration: none;
-}
- #code{
-    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.253) , rgba(255, 255, 255, 0.185)), url("https://img.icons8.com/small/16/000000/long-arrow-right.png");
-    background-repeat: no-repeat;
-    background-position-x: 95%;
-    background-position-y: center;
-} */
+ .cart {
+     background-color: #fff;
+     padding: 4vh 5vh;
+     border-bottom-left-radius: 1rem;
+     border-top-left-radius: 1rem;
+ }
 
+ @media(max-width:767px) {
+     .cart {
+         padding: 4vh;
+         border-bottom-left-radius: unset;
+         border-top-right-radius: 1rem;
+     }
+ }
 
-/* card flip  */
+ .summary {
+     background-color: #ddd;
+     border-top-right-radius: 1rem;
+     border-bottom-right-radius: 1rem;
+     padding: 4vh;
+     color: rgb(65, 65, 65);
+ }
 
-.card-container {
-    perspective: 1000px;
-}
+ @media(max-width:767px) {
+     .summary {
+         border-top-right-radius: unset;
+         border-bottom-left-radius: 1rem;
+     }
+ }
 
-.card {
-    border: none;
-    width: 100%;
-    min-height: 650px;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.6s;
-}
+ .summary .col-2 {
+     padding: 0;
+ }
 
-.card-front, .card-back {
-    position: absolute;
-    width: 100%;
-    backface-visibility: hidden;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 0.5rem;
-}
+ .summary .col-10 {
+     padding: 0;
+ }
 
-/* .card-back {
-    transform: rotateY(180deg);
-} */
+ .row {
+     margin: 0;
+ }
 
-/* .card-container.flipped .card {
-    transform: rotateY(180deg);
-} */
+ .title b {
+     font-size: 1.5rem;
+ }
 
-/* ----------------------order history */
+ .main {
+     margin: 0;
+     padding: 2vh 0;
+     width: 100%;
+ }
 
-.order-history {
-    max-height: 625px;
-    overflow-y: auto hidden;
-    background-color: #fff;
-    border-radius: 0.5rem;
-    /* padding-bottom: 150px; */
-}
+ .col-2,
+ .col {
+     padding: 0 1vh;
+ }
 
-.order-history th, .order-history td {
-    text-align: left;
-}
+ a {
+     padding: 0 1vh;
+ }
 
-.order-history a {
-    color: olive;
-    text-decoration: underline;
-}
+ .close {
+     margin-left: auto;
+     font-size: 0.7rem;
+ }
 
-@media (max-width: 768px) {
-    .order-history {
-        font-size: 0.9rem;
-    }
-}
+ img {
+     width: 3.5rem;
+ }
 
-/* .button-container form, 
-.button-container a {
-    margin-right: 10px; 
-}
+ .back-to-shop {
+     margin-top: 4.5rem;
+ }
 
-.button-container .btn {
-    width: auto;
-    text-align: center;
-} */
+ h5 {
+     margin-top: 4vh;
+ }
 
-.in-bag {
-    margin-bottom: 0;
-    
-}
+ hr {
+     margin-top: 1.25rem;
+ }
 
-/* -----wish list at a smaller screen */
-@media (max-width: 576px) {
-    .wishlist .title {
-        padding: 10px;
-    }
-    .list-group-item {
-        padding: 10px;
-    }
-    .wishlist h5 {
-        font-size: 1.25rem; 
-    }
-}
+ form {
+     padding: 2vh 0;
+ }
 
+ select {
+     border: 1px solid rgba(0, 0, 0, 0.137);
+     padding: 1.5vh 1vh;
+     margin-bottom: 4vh;
+     outline: none;
+     width: 100%;
+     background-color: rgb(247, 247, 247);
+ }
 
+ input {
+     border: 1px solid rgba(0, 0, 0, 0.137);
+     padding: 1vh;
+     margin-bottom: 4vh;
+     outline: none;
+     width: 100%;
+     background-color: rgb(247, 247, 247);
+ }
 
+ input:focus::-webkit-input-placeholder {
+     color: transparent;
+ }
+
+ .btn {
+     background-color: #555;
+     border-color: #555;
+     color: white;
+     width: 100%;
+     padding: 1vh;
+     border-radius: 0;
+ }
+
+ .btn:focus {
+     box-shadow: none;
+     outline: none;
+     box-shadow: none;
+     color: white;
+     -webkit-box-shadow: none;
+     -webkit-user-select: none;
+     transition: none;
+     box-shadow: none;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     user-select: none;
+     transition: none;
+ }
+
+ .btn:hover {
+
+     color: gold;
+ }
+
+ a {
+     color: black;
+ }
+
+ a:hover {
+     color: black;
+     text-decoration: none;
+ }
+
+ #code {
+     background-image: linear-gradient(to left, rgba(255, 255, 255, 0.253), rgba(255, 255, 255, 0.185)), url("https://img.icons8.com/small/16/000000/long-arrow-right.png");
+     background-repeat: no-repeat;
+     background-position-x: 95%;
+     background-position-y: center;
+ }
+
+ .card {
+     border: none;
+     width: 100%;
+     min-height: 650px;
+     position: relative;
+ }
+
+ /* ----------------------order history */
+
+ .order-history {
+     max-height: 625px;
+     overflow: auto;
+     background-color: #fff;
+     border-radius: 0.5rem;
+ }
+
+ .order-history th,
+ .order-history td {
+     text-align: left;
+ }
+
+ .order-history a {
+     color: olive;
+     text-decoration: underline;
+ }
+
+ @media (max-width: 768px) {
+     .order-history {
+         font-size: 0.9rem;
+     }
+ }
+
+ .in-bag {
+     margin-bottom: 0;
+
+ }
+
+ /* -----wish list at a smaller screen */
+ @media (max-width: 576px) {
+     .wishlist .title {
+         padding: 10px;
+     }
+
+     .list-group-item {
+         padding: 10px;
+     }
+
+     .wishlist h5 {
+         font-size: 1.25rem;
+     }
+ }

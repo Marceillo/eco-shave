@@ -224,40 +224,78 @@ The project design was adapted to different devices and Bootstrap helped with mo
 
 </details>                                      
 
+<br>
 
 ## Lighthouse
+<br>
 
 * I had some performace scores that I received where above the 60% mark one reason was the image files for pages with images.
 * Mostly good scores they could always be better when I come back to this project will imprve this scores in the future. 
-
+<br>
 <details>
-<summary>Lighthouse image of pages</summary>
+<summary>Lighthouse test images</summary>
 
 * I added some of them but not all as the results where all similar.
 
 #### Home
 
-* [Lighthouse Home](/static/readme/images/homelight.png)
-* [Lighthouse Home mobile](/static/readme/images/homelightmobile.png)
+* ![Lighthouse Home](readme-images/home-desktop.png)
+* ![Lighthouse Home mobile](readme-images/home-mobile.png)
 
 #### About 
 
-* [Lighthouse About](/static/readme/images/aboutlight.png)
-* [Lighthouse About](/static/readme/images/aboutlightmobile.png)
+* ![Lighthouse About](readme-images/about_desktop.png)
+* ![Lighthouse About](readme-images/about_mobile.png)
 
 #### Profile
 
-* [Lighthouse Profile](/static/readme/images/profilelight.png)
-* [Lighthouse Profile Mobile](/static/readme/images/profilelightmobile.png)
+* ![Lighthouse Profile](readme-images/profile_desktop.png)
+* ![Lighthouse Profile Mobile](readme-images/profile_mobile.png)
 
 #### Profile Edit 
 
-* [Profile Edit ](/static/readme/images/profileeditlight.png)
-* [Profile Edit mobile ](/static/readme/images/profilelighteditmobile.png)
+* ![Profile Edit ](readme-images/profile_edit_desktop.png)
+* ![Profile Edit mobile ](readme-images/profile_edit_mobile.png)
 
-#### Add Profile 
+#### Products
 
+* ![Products ](readme-images/desktop-products.png)
+* ![Products Mobile ](readme-images/mobile-products.png)
 
+#### Add product 
+
+* ![Product Add ](readme-images/add_product_desktop.png)
+* ![Product Add mobile ](readme-images/add_product_mobile.png)
+
+#### Edit product 
+
+* ![Product Edit ](readme-images/edit_product_desktop.png)
+* ![Product Edit mobile ](readme-images/edit_product_mobile%20.png)
+
+#### Product Detail
+
+* ![Product Detail ](readme-images/product_detail_desktop.png)
+* ![Product Detail Mobile ](readme-images/product_detail_mobile.png)
+
+#### Wish List
+
+* ![Wish LIst ](readme-images/wish_list_desktop.png)
+* ![Wish List mobile ](readme-images/wish_list_mobile.png)
+
+#### FAQ
+
+* ![Profile Add ](readme-images/faq_desktop.png)
+* ![Profile Add ](readme-images/faq_mobile.png)
+
+#### Contact Us
+
+* ![Contact Us ](readme-images/contact_us_desktop.png)
+* ![Contact Us Mobile ](readme-images/contact_us_mobile.png)
+
+#### All Auth
+
+* ![All Auth ](readme-images/allauth_desktop.png)
+* ![All Auth Mobile ](readme-images/allauth_mobile.png)
 
 
 </details>

@@ -15,7 +15,7 @@ body {
     min-height: 100%;
     padding-bottom: 6.74rem;
     box-sizing: inherit;
-    margin-bottom: 32px; 
+    margin-bottom: 32px;
 }
 
 .text-black {
@@ -26,10 +26,10 @@ a {
     color: olive;
 }
 
-a:hover, 
+a:hover,
 a:active {
     color: olive;
-} 
+}
 
 
 /*------------------------------Main*/
@@ -39,16 +39,13 @@ a:active {
 }
 
 main {
-    /* width: 80%;
-    margin: 0 auto;
-    padding: 32px; */
-    flex: 1 !important; 
+    flex: 1 !important;
 }
 
 /*------------------------------Footer*/
 
 .container-fluid {
-    flex: 1; 
+    flex: 1;
 }
 
 footer {
@@ -60,14 +57,14 @@ footer {
     right: 0;
     left: 0;
     bottom: 0;
-    /* margin-top: auto;  */
     border-top: 2px solid #ddd;
     box-shadow: 0 6px 20px 0 rgba(85, 85, 85);
-    
-   
+
+
 }
 
-.footer h2, h3 {
+.footer h2,
+h3 {
     margin-bottom: 10px;
 }
 
@@ -76,7 +73,7 @@ footer {
 }
 
 .foot {
-    margin-top: auto; 
+    margin-top: auto;
 }
 
 
@@ -86,32 +83,31 @@ footer {
     background: url('/media/wpaper3.jpg') no-repeat center center fixed;
     background-size: cover;
     object-fit: contain;
-    height: calc(100vh - 210px); 
-    /* height: 100vh; */
+    height: calc(100vh - 210px);
     color: #555;
     display: flex;
     flex-direction: column;
 }
 
 #homeCarousel {
-    height: 300px; 
+    height: 300px;
     margin-top: 0;
-    position: relative; 
+    position: relative;
 }
 
 .second-phase {
     margin-top: -170px;
     height: 700px;
-    background-color: transparent ; 
+    background-color: transparent;
 }
 
 .carousel-item {
-    background-color: transparent ;
-    height: 100%; 
+    background-color: transparent;
+    height: 100%;
 }
 
 .carousel-inner {
-    height: 100%; 
+    height: 100%;
 }
 
 btn.btn-lg.btn-primary {
@@ -141,21 +137,6 @@ btn.btn-lg.btn-primary {
 
 
 
-
-/* .carousel-caption {
-    position: absolute; 
-    bottom: 20px; 
-}
-
-.carousel-caption {
-    color: goldenrod; 
-}
-
-
-.carousel-caption p {
-    color: goldenrod;
-} */
-
 /*-------------------------------Products */
 
 .btt-button {
@@ -173,30 +154,32 @@ btn.btn-lg.btn-primary {
 }
 
 .card-img-top {
-    width: 100%;              
-    height: auto;            
-    max-height: 300px;        
-    object-fit: contain;           
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
 }
+
 /*-------------------------------products detail */
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-size: 100%, 100%; 
-    background-color: rgba(0, 0, 0, 0.5); 
-    width: 50px; 
-    height: 50px; 
-    border-radius: 50%; 
+    background-size: 100%, 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 
 }
 
 .carousel-inner img {
-    width: 100%;               
-    height: auto;          
-    max-height: 400px;        
-    object-fit: contain;     
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
 }
-/* shopping buttons */
+
+/* ---------shopping buttons */
 
 .shop-now-button {
     background: gold;
@@ -208,14 +191,14 @@ btn.btn-lg.btn-primary {
 .btn-black {
     background: #555 !important;
     color: white !important;
-     border-radius: 4px;  
+    border-radius: 4px;
 }
 
 .primaryAction,
 .star-ratings-rating-clear,
 .btn-outline-black {
     background: #555;
-    color: white !important; 
+    color: white !important;
     border: 1px solid #555;
 }
 
@@ -227,7 +210,7 @@ btn.btn-lg.btn-primary {
 .btn-outline-black:focus {
     background: #555;
     color: gold !important;
-    border-radius: 4px;  
+    border-radius: 4px;
 }
 
 .star-ratings-rating-clear:hover,
@@ -240,7 +223,7 @@ btn.btn-lg.btn-primary {
     background: #555 !important;
     color: gold !important;
     border: 4px solid #555;
-    border-radius: 4px;  
+    border-radius: 4px;
 }
 
 .btn-link {
@@ -248,7 +231,7 @@ btn.btn-lg.btn-primary {
 }
 
 .rounded-0 {
-    border-radius: 4px; 
+    border-radius: 4px;
 }
 
 .text-black {
@@ -260,7 +243,7 @@ btn.btn-lg.btn-primary {
 }
 
 .bg-black {
-    background: #555!important;
+    background: #555 !important;
 }
 
 
@@ -326,8 +309,8 @@ btn.btn-lg.btn-primary {
 /* Allauth form formatting */
 
 .allauth-form-inner-content p {
-    margin-top: 1.5rem; /* mt-4 */
-    color: #6c757d; /* text-secondary */
+    margin-top: 1.5rem;
+    color: #6c757d;
 }
 
 .allauth-form-inner-content input {
@@ -337,7 +320,7 @@ btn.btn-lg.btn-primary {
 
 .allauth-form-inner-content label:not([for='id_remember']) {
     display: none;
-    
+
 }
 
 .allauth-form-inner-content input::placeholder {
@@ -346,8 +329,8 @@ btn.btn-lg.btn-primary {
 
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {
-	/* btn */
-	display: inline-block;
+
+    display: inline-block;
     font-weight: 400;
     color: #ddd;
     text-align: center;
@@ -362,33 +345,28 @@ btn.btn-lg.btn-primary {
     font-size: 1rem;
     line-height: 1.5;
     border-radius: 0;
-
-    /* standard bootstrap btn transitions */
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .allauth-form-inner-content button:hover,
-.allauth-form-inner-content input[type='submit']:hover {	
-	color: #ddd;
+.allauth-form-inner-content input[type='submit']:hover {
+    color: #ddd;
     background-color: #222;
     border-color: #222;
 }
 
 .allauth-form-inner-content a {
-	color: goldenrod; /* text-info */
+    color: goldenrod;
 }
 
-/* newsletter  */
-
+/* -----------newsletter  */
 #mc_embed_signup {
     background: #fff;
-    clear:left;
+    clear: left;
     font: 10px Helvetica, Arial, sans-serif;
     width: auto;
-  }
+}
 
 #upbtn {
     z-index: 1500 !important;
 }
-
- 
