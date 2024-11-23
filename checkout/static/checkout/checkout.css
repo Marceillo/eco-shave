@@ -1,5 +1,6 @@
+/*--- main checkout body container */
 .checkout-app {
-    
+
     background: linear-gradient(rgba(221, 221, 221, 0.7), rgba(221, 221, 221, 0.7)), url('/media/wpaper4.jpg') no-repeat center center fixed;
     background-size: cover;
     object-fit: contain;
@@ -17,11 +18,11 @@
     color: #555;
 }
 
-.title{
+.title {
     margin-bottom: 5vh;
 }
-.card{
-    /* margin: auto; */
+
+.card {
     max-width: 950px;
     height: 705px;
     overflow-y: auto;
@@ -33,80 +34,99 @@
     margin-bottom: 20px;
 }
 
-@media(max-width:767px){
-    .card{
+@media(max-width:767px) {
+    .card {
         margin: 3vh auto;
     }
 }
-.cart{
+
+.cart {
     background-color: #fff;
     padding: 4vh 5vh;
     border-bottom-left-radius: 1rem;
     border-top-left-radius: 1rem;
 }
-@media(max-width:767px){
-    .cart{
+
+@media(max-width:767px) {
+    .cart {
         padding: 4vh;
         border-bottom-left-radius: unset;
         border-top-right-radius: 1rem;
     }
 }
-.summary{
+
+.summary {
     background-color: #ddd;
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
     padding: 4vh;
     color: rgb(65, 65, 65);
 }
-@media(max-width:767px){
-    .summary{
-    border-top-right-radius: unset;
-    border-bottom-left-radius: 1rem;
+
+@media(max-width:767px) {
+    .summary {
+        border-top-right-radius: unset;
+        border-bottom-left-radius: 1rem;
     }
 }
-.summary .col-2{
+
+.summary .col-2 {
     padding: 0;
 }
-.summary .col-10
-{
+
+.summary .col-10 {
     padding: 0;
-}.row{
+}
+
+.row {
     margin: 0;
 }
-.title b{
+
+.title b {
     font-size: 1.5rem;
 }
-.main{
+
+.main {
     margin: 0;
     padding: 2vh 0;
     width: 100%;
 }
-.col-2, .col{
+
+.col-2,
+.col {
     padding: 0 1vh;
 }
-a{
+
+a {
     padding: 0 1vh;
 }
-.close{
+
+.close {
     margin-left: auto;
     font-size: 0.7rem;
 }
-img{
+
+img {
     width: 3.5rem;
 }
-.back-to-shop{
+
+.back-to-shop {
     margin-top: 4.5rem;
 }
-h5{
+
+h5 {
     margin-top: 4vh;
 }
-hr{
+
+hr {
     margin-top: 1.25rem;
 }
-form{
+
+form {
     padding: 2vh 0;
 }
-select{
+
+select {
     border: 1px solid rgba(0, 0, 0, 0.137);
     padding: 1.5vh 1vh;
     margin-bottom: 4vh;
@@ -114,7 +134,8 @@ select{
     width: 100%;
     background-color: rgb(247, 247, 247);
 }
-input{
+
+input {
     border: 1px solid rgba(0, 0, 0, 0.137);
     padding: 1vh;
     margin-bottom: 4vh;
@@ -122,11 +143,12 @@ input{
     width: 100%;
     background-color: rgb(247, 247, 247);
 }
-input:focus::-webkit-input-placeholder
-{
-      color:transparent;
+
+input:focus::-webkit-input-placeholder {
+    color: transparent;
 }
-.btn{
+
+.btn {
     background-color: #555;
     border-color: #555;
     color: white;
@@ -134,34 +156,38 @@ input:focus::-webkit-input-placeholder
     padding: 1vh;
     border-radius: 0;
 }
-.btn:focus{
+
+.btn:focus {
     box-shadow: none;
     outline: none;
     box-shadow: none;
     color: white;
     -webkit-box-shadow: none;
     -webkit-user-select: none;
-    transition: none; 
-    box-shadow: none;            
-    -webkit-user-select: none;   
-    -moz-user-select: none;      
-    user-select: none;           
+    transition: none;
+    box-shadow: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
     transition: none;
 }
 
-.btn:hover{
-    
+.btn:hover {
+
     color: gold;
 }
-a{
-    color: black; 
+
+a {
+    color: black;
 }
-a:hover{
+
+a:hover {
     color: black;
     text-decoration: none;
 }
- #code{
-    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.253) , rgba(255, 255, 255, 0.185)), url("https://img.icons8.com/small/16/000000/long-arrow-right.png");
+
+#code {
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.253), rgba(255, 255, 255, 0.185)), url("https://img.icons8.com/small/16/000000/long-arrow-right.png");
     background-repeat: no-repeat;
     background-position-x: 95%;
     background-position-y: center;
@@ -171,13 +197,12 @@ a:hover{
 
 /* add and minus buttons on the bag page */
 .quantity-container {
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
 }
 
 .update-custom {
-    padding: 0.25rem 0.5rem; 
-    /* font-size: 0.75rem;  */
+    padding: 0.25rem 0.5rem;
     line-height: 0.5;
 }
 
@@ -187,58 +212,57 @@ a:hover{
 
 .decrement-qty,
 .increment-qty {
-    background-color: #555 !important; 
-    color: white; 
-    border: none; 
-    width: 30px; 
-    height: 30px; 
-    cursor: pointer; 
-    font-weight: bold; 
+    background-color: #555 !important;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 .qty_input {
-    width: 50px; 
-    text-align: center; 
-    border: none; 
-    padding: 5px; 
-    margin: 0 5px; 
-    background-color: rgb(247, 247, 247); 
+    width: 50px;
+    text-align: center;
+    border: none;
+    padding: 5px;
+    margin: 0 5px;
+    background-color: rgb(247, 247, 247);
 }
 
 
 .qty_input:focus {
-    outline: none; 
+    outline: none;
 }
 
 .decrement-qty:hover,
 .increment-qty:hover {
     background-color: #555;
-    color: gold; 
+    color: gold;
 }
 
-
-
+/* ------------Stripe */
 .StripeElement,
 .stripe-style-input {
-  box-sizing: border-box;
-  height: 40px;
-  padding: 10px 12px;
-  border: 1px solid transparent;
-  border-radius: 0px;
-  background-color: white;
-  box-shadow: 0 1px 3px 0 #e6ebf1;
-  -webkit-transition: box-shadow 150ms ease;
-  transition: box-shadow 150ms ease;
+    box-sizing: border-box;
+    height: 40px;
+    padding: 10px 12px;
+    border: 1px solid transparent;
+    border-radius: 0px;
+    background-color: white;
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
 }
 
 .StripeElement--focus,
 .stripe-style-input:focus,
 .stripe-style-input:active {
-  box-shadow: 0 1px 3px 0 #cfd7df;
+    box-shadow: 0 1px 3px 0 #cfd7df;
 }
 
 .StripeElement--webkit-autofill {
-  background-color: #fefde5 !important;
+    background-color: #fefde5 !important;
 }
 
 .stripe-style-input::placeholder {
@@ -258,8 +282,8 @@ a:hover{
 
 /* spinner loading button  */
 #loading-overlay {
-	display: none;
-	position: fixed;
+    display: none;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -269,7 +293,7 @@ a:hover{
 }
 
 .loading-spinner {
-	display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
