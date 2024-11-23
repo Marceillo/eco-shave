@@ -76,50 +76,147 @@ The project design was adapted to different devices and Bootstrap helped with mo
 ## Python Validation - PEP8
 
 * I had a lot of errors found but none that could not be fixed, use this tool [pep8ci](https://pep8ci.herokuapp.com/)
-* Cleared all until I received the below result. 
+* Cleared all until I received this Results: All clear, no errors found
 
-<br>
-
-![Pyhton](/static/readme/test-image/blogviewpepnoerror.png)
-
-<br>
-
+## PeP8 Errors 
 <details>
-<summary>Blog PeP8 errors/warnings fixed</summary>
+<summary> PeP8 errors/warnings fixed</summary>
+
+| **File**                | **Warning/Error**                                                                 |
+|-------------------------|----------------------------------------------------------------------------------|
+| `env.py`                | E501 line too long (153 > 79 characters)                                          |
+|                         | E501 line too long (80 > 79 characters)                                           |
+|                         | E501 line too long (143 > 79 characters)                                          |
+|                         | E501 line too long (143 > 79 characters)                                          |
+|                         | W291 trailing whitespace                                                          |
+| `profiles-views.py`     | E271 multiple spaces after keyword                                               |
+|                         | E302 expected 2 blank lines, found 1                                              |
+|                         | W293 blank line contains whitespace                                              |
+|                         | E303 too many blank lines (2)                                                     |
+|                         | W291 trailing whitespace                                                          |
+|                         | W293 blank line contains whitespace                                              |
+|                         | W293 blank line contains whitespace                                              |
+|                         | E302 expected 2 blank lines, found 1                                              |
+|                         | W291 trailing whitespace                                                          |
+|                         | W293 blank line contains whitespace                                              |
+|                         | E501 line too long (80 > 79 characters)                                           |
+|                         | W391 blank line at end of file                                                   |
+| `profile-urls.py`       | E231 missing whitespace after ','                                                 |
+|                         | E501 line too long (84 > 79 characters)                                           |
+|                         | E501 line too long (90 > 79 characters)                                           |
+|                         | E501 line too long (103 > 79 characters)                                          |
+|                         | W292 no newline at end of file                                                   |
+| `profile-models.py`     | E501 line too long (89 > 79 characters)                                           |
+|                         | E501 line too long (81 > 79 characters)                                           |
+|                         | E501 line too long (84 > 79 characters)                                           |
+|                         | E501 line too long (84 > 79 characters)                                           |
+|                         | E501 line too long (81 > 79 characters)                                           |
+|                         | E501 line too long (80 > 79 characters)                                           |
+|                         | W293 blank line contains whitespace                                              |
+|                         | W293 blank line contains whitespace                                              |
+|                         | W391 blank line at end of file                                                   |
+| `profile-forms.py`      | W291 trailing whitespace                                                          |
+|                         | W291 trailing whitespace                                                          |
+|                         | E231 missing whitespace after ','                                                 |
+|                         | W291 trailing whitespace                                                          |
+|                         | W293 blank line contains whitespace                                              |
+|                         | W291 trailing whitespace                                                          |
+|                         | E501 line too long (102 > 79 characters)                                          |
+|                         | W291 trailing whitespace                                                          |
+|                         | W292 no newline at end of file                                                   |
+| `products-widgets.py`   | E501 line too long (87 > 79 characters)                                           |
+|                         | W293 blank line contains whitespace                                              |
+| `products-views.py`     | E302 expected 2 blank lines, found 1                                              |
+|                         | E501 line too long (93 > 79 characters)                                           |
+|                         | E501 line too long (94 > 79 characters)                                           |
+|                         | W293 blank line contains whitespace                                              |
+|                         | E303 too many blank lines (2)                                                     |
+|                         | W293 blank line contains whitespace                                              |
+|                         | W293 blank line contains whitespace                                              |
+|                         | E303 too many blank lines (2)                                                     |
+|                         | W293 blank line contains whitespace                                              |
+|                         | W293 blank line contains whitespace                                              |
+|                         | E501 line too long (82 > 79 characters)                                           |
+|                         | E501 line too long (97 > 79 characters)                                           |
+|                         | W293 blank line contains whitespace                                              |
+|                         | E501 line too long (88 > 79 characters)                                           |
+|                         | W292 no newline at end of file                                                   |
+| `products-urls.py`      | W291 trailing whitespace                                                          |
+|                         | E501 line too long (82 > 79 characters)                                           |
+|                         | E501 line too long (82 > 79 characters)                                           |
+|                         | W293 blank line contains whitespace                                              |
+|                         | W292 no newline at end of file                                                   |
+| `products-models.py`    | E128 continuation line under-indented for visual indent                           |
+|                         | W293 blank line contains whitespace                                              |
+|                         | E302 expected 2 blank lines, found 1                                              |
+|                         | W293 blank line contains whitespace                                              |
+|                         | W291 trailing whitespace                                                          |
+|                         | W291 trailing whitespace                                                          |
+|                         | E302 expected 2 blank lines, found 1                                              |
+|                         | W292 no newline at end of file                                                   |
+| `products-forms.py`     | E302 expected 2 blank lines, found 1                                              |
+|                         | W293 blank line contains whitespace                                              |
+|                         | E301 expected 1 blank line, found 0                                               |
+|                         | W293 blank line contains whitespace                                              |
+|                         | W391 blank line at end of file                                                   |
+| `products-admin.py`     | E302 expected 2 blank lines, found 1                                              |
+|                         | E124 closing bracket does not match visual indentation                           |
+|                         | W293 blank line contains whitespace                                              |
+|                         | W291 trailing whitespace                                                          |
+|                         | W292 no newline at end of file                                                   |
+| `products-migrations.py`| E501 line too long (117 > 79 characters)                                          |
+|                         | W293 blank line contains whitespace                                              |
+|                         | E501 line too long (115 > 79 characters)                                          |
+|                         | E501 line too long (117 > 79 characters)                                          |
+|                         | E501 line too long (85 > 79 characters)                                           |
+|                         | W391 blank line at end of file                                                   |
+| `home-views.py`         | E302 expected 2 blank lines, found 1                                              |
+| `home-urls.py`          | W291 trailing whitespace                                                          |
+|                         | W292 no newline at end of file                                                   |
+| `eco-shave-urls.py`     | E225 missing whitespace around operator                                          |
+|                         | W292 no newline at end of file                                                   |
+| `eco-shave-settings.py` | E303 too many blank lines (3)                                                     |
+|                         | E291 trailing whitespace                                                          |
+|                         | E501 line too long (91 > 79 characters)                                          |
+|                         | W291 trailing whitespace                                                          |
+|                         | W293 blank line contains whitespace                                              |
+|                         | W291 trailing whitespace                                                          |
+|                         | W292 no newline at end of file                                                   |
+| `checkout-webhooks.py`  | E302 expected 2 blank lines, found 1                                              |
+|                         | E122 continuation line missing indentation or outdented                           |
+|                         | W293 blank line contains whitespace                                              |
+|                         | E501 line too long (86 > 79 characters)                                          |
+| `checkout-views.py`     | E501 line too long (87 > 79 characters)                                          |
+|                         | W291 trailing whitespace                                                          |
+|                         | E302 expected 2 blank lines, found 1                                              |
+|                         | W293 blank line contains whitespace                                              |
+|                         | W293 blank line contains whitespace                                              |
+| `checkout-signals.py`   | E302 expected 2 blank lines, found 1                                              |
+|                         | W293 blank line contains whitespace                                              |
+|                         | W292 no newline at end of file                                                   |
+| `checkout-models.py`    | E502 line too long (99 > 79 characters)                                          |
+|                         | W293 blank line contains whitespace                                              |
+| `checkout-forms.py`     | W292 no newline at end of file                                                   |
+|                         | W291 trailing whitespace                                                          |
+| `bag-views.py`          | E501 line too long (87 > 79 characters)                                          |
+|                         | W291 trailing whitespace                                                          |
+|                         | E302 expected 2 blank lines, found 1                                              |
+| `bag-urls.py`           | E501 line too long (81 > 79 characters)                                          |
+|                         | W293 blank line contains whitespace                                              |
+| `bag-contents.py`       | E302 expected 2 blank lines, found 1                                              |
+|                         | E391 blank line at end of file                                                   |
+| `about-views.py`        | E302 expected 2 blank lines, found 1                                              |
+|                         | W293 blank line contains whitespace                                              |
+|                         | W292 no newline at end of file                                                   |
+|                         | W293 blank line contains whitespace                                              |
+| `about-urls.py`         | E501 line too long (84 > 79 characters)                                          |
+|                         | W292 no newline at end of file                                                   |
+| `about-models.py`       | W291 trailing whitespace                                                          |
+|                         | W293 blank line contains whitespace                                              |
+|                         | E292 no newline at end of file                                                   |
+
 
 </details>                                      
-
-<details>
-
-<summary>About PeP8 errors</summary>
-
-                   |
-|            |                                |            |                                    |
-
-</details>
-
-<details>
-<summary>Main App PeP8 errors</summary>
-
-## Main View
-
-
-
-## Main Urls
-
-
-## Main Settings
-
-
-</details>
-
-<details>
-<summary>ENV file PEP8 errors</summary>
-
-#### ENV File
-
-
-</details> 
 
 
 ## Lighthouse
