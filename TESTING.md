@@ -8,14 +8,8 @@
 - [Python Validation](#python-validation)
 - - [PeP8 Errors Fixed](#pep8-errors-fixed)
 - [Lighthouse](#lighthouse)
-  - 
-  - 
-  - 
-- [HTML Validation](#html-validation)
-  - 
-  -  
-- [CSS Validation](#css-validation)
-  - 
+- [HTML Validation](#html-validation)  
+- [CSS Validation](#css-validation) 
 - [Manual Testing](#manual-testing)
 - [Frontend](#frontend)
 - [Backend Admin Panel](#backend-admin-panel)
@@ -327,12 +321,46 @@ The project design was adapted to different devices and Bootstrap helped with mo
 
 * MY custom CSS was validated using [W3C Jigsaw validation](https://jigsaw.w3.org/css-validator/)service. 
 
+#### Leason learnt:
+
+ I was eager to have differant css files as to me it is a nice feature to have, but this makes things more complex in the project when it comes to styling. I would be more carefull in the future when using differant css files in one project and a adopt a simpler approuch.
+ In this project I had a free template that I tried to adjust, to the needs of the project.This became difficult with the added css files to troubleshooting and was more time consuming in the end to find solutions to the problems found.
+
+ 
 <details>
 <summary>CSS success image</summary>
 
-![CSS](/static/readme/test-image/success-css.png)
+##### Base CSS
+
+![Base Success](readme-images/base-css-success.png)
+
+##### About CSS
+
+![About Success ](readme-images/about-success-css.png)
+
+##### About Error Fixed
+
+* I forgot to add the unit behond the digit eg: 1px 
+
+![About fixed error ](readme-images/about-success-css.png)
+
+##### Checkout CSS
+
+![ Checkout Success](readme-images/checkout_success_css.png)
+
+##### Profiles
+
+![Profile Success ](readme-images/profiles_success_css.png)
+
+##### Error Fixed
+
+* Here was some left over some code from the flip card Idea I had to simple remove this.
+* I had a typo issue with one of the fields I added both auto and hidden
+
+![ Profile fixed error](readme-images/profile_css_error.png)
 
 </details>
+
 [Back to Table of Contents](#table-of-contents)
 
 ## Java Script 
