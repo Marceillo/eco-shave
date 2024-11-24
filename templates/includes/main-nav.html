@@ -12,16 +12,15 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                 <a href="{% url 'products' %}?sort=price_desc" class="dropdown-item">Price</a>
-                <!-- <a href="{% url 'products' %}" class="dropdown-item ">Rating</a> -->
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link"
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link-mobile"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Razors
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+            <div class="dropdown-menu border-0" aria-labelledby="all-products-link-mobile">
                 <a href="{% url 'products' %}?category=safety_razors" class="dropdown-item">Safety Razors</a>
                 <a href="{% url 'products' %}?category=straight_razors" class="dropdown-item ">Straight Razors</a>
                 <a href="{% url 'products' %}?category=straight_razors,safety_razors" class="dropdown-item">All Razors</a>
