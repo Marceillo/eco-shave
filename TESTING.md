@@ -366,24 +366,28 @@ The project design was adapted to different devices and Bootstrap helped with mo
 ## Java Script 
 
 * I used [jsHint](https://jshint.com/) for testing the JS in my static file 
-* Removed all the warnings and errors.
+*Did not have errors just some warnings that are not harmfull.
 * Undefinded variables and unused variables remained.
 * I tried to remove these as well but ended up crashing my app features and decided to leave them as they are no risk. 
-
-![JS](/static/readme/test-image/jshint.png)
 
 <details>
 <summary>jsHInt error summary </summary>
 
 #### JS Errors
 
-| Line | Error Message                                                           | Line | Error Message                                                           |
-|------|-------------------------------------------------------------------------|------|-------------------------------------------------------------------------|
-| 1    | 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz). | 2    | 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz). |
-|
-| Type | Variable |
-|------|----------|
-| Undefined | 7 bootstrap |
+| File Name                        | Metrics Summary                                                                 | Errors | Warning Summary                                             | Undefined Variables       |
+|----------------------------------|--------------------------------------------------------------------------------|--------|-------------------------------------------------------------|---------------------------|
+| profiles-js-Countryfields.js     | There is only one function in this file. It takes no arguments. This function contains 4 statements. Cyclomatic complexity number for this function is 2. | 0      | 'let' is available in ES6 (use 'esversion: 6')             | $                         |
+| Base template                     | There is only one function in this file. It takes one argument. This function contains 16 statements. Cyclomatic complexity number for this function is 1. | 0      | Array literal notation [] is preferable                     | fnames, ftypes, jQuery    |
+| Stripe checkout                   | There are 5 functions in this file. Function with the largest signature takes 1 argument, while the median is 1. Largest function has 10 statements in it, while the median is 5. The most complex function has a cyclomatic complexity value of 3 while the median is 1. | 0      | 'template literal syntax' is only available in ES6 (use 'esversion: 6')   | $, Stripe                 |
+| Wishlist                          | There are 6 functions in this file. Function with the largest signature takes 1 argument, while the median is 1. Largest function has 6 statements in it, while the median is 2.5. The most complex function has a cyclomatic complexity value of 1 while the median is 1. | 0      | 'template literal syntax' is only available in ES6 (use 'esversion: 6')   | $                         |
+| products                          | There are 2 functions in this file. Function with the largest signature takes 1 argument, while the median is 0.5. Largest function has 6 statements in it, while the median is 3.5. The most complex function has a cyclomatic complexity value of 2 while the median is 1.5. | 0      |                                                             | $                         |
+| products Detail                   | There are 6 functions in this file. Function with the largest signature takes 1 argument, while the median is 1. Largest function has 6 statements in it, while the median is 2.5. The most complex function has a cyclomatic complexity value of 1 while the median is 1. | 0      | 'template literal syntax' is only available in ES6 (use 'esversion: 6')   | $                         |
+| edit product                      | There is only one function in this file. It takes no arguments. This function contains 2 statements. Cyclomatic complexity number for this function is 1. | 0      | 'template literal syntax' is only available in ES6 (use 'esversion: 6')   | $                         |
+| add product                       | There is only one function in this file. It takes no arguments. This function contains 2 statements. Cyclomatic complexity number for this function is 1. | 0      | 'template literal syntax' is only available in ES6 (use 'esversion: 6')   | $                         |
+| Quantity input script products    | There are 4 functions in this file. Function with the largest signature takes 1 argument, while the median is 1. Largest function has 6 statements in it, while the median is 5.5. The most complex function has a cyclomatic complexity value of 1 while the median is 1. | 0      | 'template literal syntax' is only available in ES6 (use 'esversion: 6')   | $                         |
+| bag                               | There are 3 functions in this file. Function with the largest signature takes 1 argument, while the median is 1. Largest function has 6 statements in it, while the median is 2. The most complex function has a cyclomatic complexity value of 1 while the median is 1.|0       | 'template literal syntax' is only available in ES6 (use 'esversion: 6')   | $                         |
+| FAQ                               | There is only one function in this file. It takes no arguments. This function contains 5 statements. Cyclomatic complexity number for this function is 2.|0       |                                                             |                           |
 
 </details>
 

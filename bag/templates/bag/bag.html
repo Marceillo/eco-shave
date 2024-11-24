@@ -114,29 +114,6 @@
              location.reload();
          });
     });
-    
-    // $('.add-item').click(function(e) {
-    //     e.preventDefault();
-    //     var csrfToken = "{{ csrf_token }}";
-    //     var itemId = $(this).attr('id').split('add_')[1];
-    //     var url = `/bag/add/${itemId}/`; 
-
-    //     $.post(url, {'csrfmiddlewaretoken': csrfToken})
-    //      .done(function() {
-    //          location.reload(); 
-    //      });
-
-    //      $.post(url, {'csrfmiddlewaretoken': csrfToken})
-    //      .done(function(response) {
-             
-    //          alert(response.message); 
-             
-    //      })
-    //      .fail(function() {
-    //          alert('Error adding item to bag.');
-    //      });
-    // });
-    
 
 </script>
 {% endblock %}
