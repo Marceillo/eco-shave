@@ -89,14 +89,11 @@
                                     </a>
                                 </p>
                                 {% endif %}
-                                <!-----------------------------------------------------------------django Star Rating -->
+                                <!--django Star Rating -->
                                 <div class="product-rating mt-2">
                                     <div class="product-rating mt-2">
-                                        {% ratings product %}
-
-
+                                         {% ratings product %}
                                     </div>
-                                    <!-- note message and change icon fontawsom  -->
                                     <div class="update_product">
                                         {% if request.user.is_superuser %}
 
