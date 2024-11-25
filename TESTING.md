@@ -473,83 +473,59 @@ In addition to tests stated above I have performed a series of manual tests. Bel
 | &check; | Clicking the nav logo loads the home page
 | &check; | Clicking the Home button on the nav bar loads the home page and lists all posts
 | &check; | Clicking the About button on the nav bar loads the About page.
-| &check; | Clicking While in the About page clicking on the contac us link loads the contact page.
+| &check; | Clicking While in the About page clicking on the contact us link loads the contact page.
 | &check; | Clicking the Register link loads the Register page
 | &check; | Clicking the Log In link loads the Log In page 
 | &check; | Clicking In the Log In link clicking on the forget password link loads password reset.  
-| &check; | Clicking on the Post title loads the review detail page
-| &check; | In Post details view the user has no access to update post.
-| &check; | In the details view the user cannot create a comment or delet.
+| &check; | Clicking on the Product loads the product detail page
+| &check; | In Product detail view the no-admin user has no access to update product.
+| &check; | In the details view the user cannot update or delet the product.
 | &check; | Clicking the Facebook link in the footer area opens Facebook link. 
-| &check; | Clicking the X link in the footer area opens X link . 
-| &check; | Clicking the You Tube in the footer area opens You Tube link.
-| &check; | Clicking the search field and serching for Author,Body,Excerpt,Title works. 
+| &check; | Clicking the news letter opens the subscription form. 
+| &check; | Adding the new e-mail in the newsletter generates a confirmation success.
+| &check; | Clicking the search field and searching for a product works. 
 
 | Status | **Main Website - User Logged In**
 |:-------:|:--------|
 | &check; | Typing in a incorrect URL on the page loads the 404 error page
 | &check; | User cannot access Admin Panel without being staff member
 | &check; | Clicking the nav logo loads the home page
-| &check; | Clicking the Home button on the nav bar loads the home page and lists all posts
+| &check; | Clicking the Home button on the nav bar loads the home page and shows all the links.
+| &check; | While in the the home page click on all the dropdown lists works.
+| &check; | While in the the home page the Faq,about,conact us is visible.
+| &check; | Clicking the price opens the products page from high-low price.
+| &check; | Clicking the all products loads all the products in one page.
+| &check; | While in the Products testing all the sorting fuctions works.
+| &check; | Clicking on the catergories loads each category products and works.
 | &check; | Clicking the About button on the nav bar loads the About page.
-| &check; | Clicking While in the About page clicking on the contac us link loads the contact page.
+| &check; | Clicking While in the About page clicking on the contact us link loads the contact page.
 | &check; | Clicking in the Profile page loads the Profile page.
-| &check; | While in the Profile page clicking on the button Password change loads the page to change password.
-| &check; | While in the Profile page clicking on the button Profile Edit loads the page to edit profile.
-| &check; | While in the Profile Edit page clicking on the button delete Profile Picture deletes profile picture.
-| &check; | While in the Profile page clicking on the button Profile Delete loads confirm page and then when confirmed deletes profile.
+| &check; | While in the Profile page clicking on edit Profile loades the edit profile page.
+| &check; | While in the Profile edit page updating a testing the fields works.
+| &check; | While in the Profile edit page clicking on update works and diverts to profile page.
+| &check; | While in the Profile edit page click on the cancel button works and diverts to profile page.
+| &check; | While in the Profile page clicking on the wish list button loads the wish list page.
+| &check; | While in the Wish list page clicking and testing all three buttons work.
 | &check; | After it  deletes profile a success message is displayed or error message if not.
-| &check; | In the detail post view or the home page will show buttons if user is the author of post.
-| &check; | In the detail post view the logged in user can comment underneath a post.
-| &check; | When user submits a comment a confirmation message is being shown on the page
-| &check; | In the detail view the logged in user can update/delete the comments written by themselves.
-| &check; | Clicking the update button the comment text will show in the comment box.
-| &check; | Clicking the delete button loads the delete comment confirm message page.
-| &check; | In the detail view the logged in user can Favorite/unfavorite posts.
-| &check; | In the detail view the logged in user has full CRUD for the post written by themselves.
-| &check; | Clicking the edit button in My Blog nav link view loads the edit btn and page.
-| &check; | Clicking the delete button in the detail view loads the delete post confirmation page
-| &check; | Clicking the My Blog nav link in the logged in user nav bar shows the logged in users posts
-| &check; | While in the My Blog link the logged in user can see there drafts and published posts.
-| &check; | In the logged in user menu the Admin Area is not visible
-| &check; | Clicking the X link in the footer area opens X link . 
-| &check; | Clicking the You Tube in the footer area opens You Tube link.
-| &check; | Clicking the search field and serching for Author,Body,Excerpt,Title works. 
+
 
 | Status | **Main Website - Admin Logged In**
 |:-------:|:--------|
 | &check; | The Admin Panel is access b typing /admin
 | &check; | Deleting a Profile works on the Admin Panel
-| &check; | Deleting a Post works on the Admin Panel
-| &check; | Deleting a Comment works on the Admin Panel
+| &check; | Test to see if the admin is able to update and delete data.  
 | &check; | Changing an email of any user works in the admin bar
 | &check; | Changing a password of any user works in the admin bar
-| &check; | Deleting a Profile will delete their posts, comments and email and logout the user before delet.
 
- Status | **Create A Post - User Logged In**
-|:-------:|:--------|
-| &check; | Title field is required
-| &check; | Title field does not accept empty field
-| &check; | Title field does not accept just spaces
-| &check; | Featured Image is not required
-| &check; | Body field is required
-| &check; | Body field does not accept empty field
-| &check; | Body field has to have 100 characters.
-| &check; | Excerpt is not required
-| &check; | Excerpt auto summorises the text.
-| &check; | Status field defaults to Draft
-| &check; | Posting as shows name of author
-| &check; | If no image is selected a default is provided.
-| &check; | **Home** page with a success message is displayed when the user submits the post
 
 Status | **Create A New User - User Logged Out**
 |:-------:|:--------|
 | &check; | Username field is required
 | &check; | Username field does not accept empty field
 | &check; | Email field does not accept just spaces
-| &check; | Email field is optional
 | &check; | Password field is required does not accept empty field
 | &check; | Success message is displayed when the user creates a new user
+| &check; | Verification email message is sent when the user creates a new user
 | &check; | Error message with corresponding info when wrong input is submitted
 
 
