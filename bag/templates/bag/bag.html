@@ -23,7 +23,7 @@
                 <div class="col-md-8 cart">
                     <div class="title">
                         <div class="row">
-                            <div class="col"><h4><b><i class="fa-solid fa-bag-shopping"></i></b></h4></div>
+                            <div class="col"><b><i class="fa-solid fa-bag-shopping"></i></b></div>
                             <div class="col align-self-center text-right text-muted">
                                 {{ items_in_bag_contents }} item price 
                             </div>
@@ -94,7 +94,7 @@
 {% block postloadjs %}
 {% include 'products/includes/quantity_input_script.html' %}
 {{ block.super }}
-<script type="text/javascript">
+<script>
 
     // Update quantity on click
     $('.update-link').click(function(e) {

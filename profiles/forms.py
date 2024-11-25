@@ -13,11 +13,10 @@ class UserProfileForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         """
         Add placeholders and classes, remove auto-generated
-        labels and set autofocus on first field
+        labels and set autofocus on the first field.
         """
         super().__init__(*args, **kwargs)
         placeholders = {
-            'profile_image': 'Profile Image',
             'default_full_name': 'Full Name',
             'default_email': 'Email',
             'default_phone_number': 'Phone Number',
@@ -30,7 +29,7 @@ class UserProfileForm(forms.ModelForm):
 
         self.fields['default_phone_number'].widget.attrs['autofocus'] = True
         for field in self.fields:
-            if field != 'default_country':
+            if field not in ['default_country', 'profile_image']:
                 if self.fields[field].required:
                     placeholder = f'{placeholders[field]} *'
                 else:
@@ -39,5 +38,11 @@ class UserProfileForm(forms.ModelForm):
                 self.fields[field].widget.attrs[
                     'class'
                 ] = 'border-black rounded-0 profile-form-input'
-                self.fields['profile_image'].label = "Upload Profile Image"
                 self.fields[field].label = False
+
+        if 'profile_image' in self.fields:
+            self.fields['profile_image'].label = "Upload Your Profile Image"
+            self.fields['profile_image'].widget.attrs['class'] = (
+                self.fields['profile_image'].widget.attrs.get('class', '')
+                + ' form-control-file'
+            )

@@ -27,7 +27,6 @@
                 
                 <div class="col-md-6 order-history order-md-0 order-1">
                     <h5><b>Order History ({{ product_count }})</b></h5>
-                    <!-- <div class="order-history table-responsive"> -->
                         <table class="table table-sm table-borderless">
                             <thead>
                                 <tr>
@@ -58,7 +57,6 @@
                                 {% endfor %}
                             </tbody>
                         </table>
-                    <!-- </div> this made the double scrolls-->
                 </div>
     
     
@@ -67,12 +65,11 @@
                     <div class="card-container">
                         <div class="card">
                             <div class="card-front">
-                                <!-- Display User Information -->
                                 <div class="col text-center" style="background-color: #ddd;">
                                     {% if form.instance.profile_image %}
-                                        <img src="{{ form.instance.profile_image.url }}" alt="Avatar" class="img-fluid my-3" style="width: 80px;" />
+                                        <img src="{{ form.instance.profile_image.url }}" alt="Avatar" class="img-fluid my-3" style="width: 80px;">
                                     {% else %}
-                                        <img src="{{ MEDIA_URL }}profile_images/default-avatar.png" alt="Default Avatar" class="img-fluid my-3" style="width: 80px;" />
+                                        <img src="{{ MEDIA_URL }}profile_images/default-avatar.png" alt="Default Avatar" class="img-fluid my-3" style="width: 80px;">
                                     {% endif %}
                                     <h5><strong>{{ form.default_full_name.value }} {{ form.last_name.value }}</strong></h5>
                                     <i class="far fa-edit mb-3"></i> 
@@ -90,20 +87,7 @@
                                 </div>
                                 
                             </div>
-    
-                            <!--Profile Form -->
-                            <!-- <div class="card-back">
-                                <form action="{% url 'profile' %}" method="post" id="profile-update-form" enctype="multipart/form-data">
-                                    {% csrf_token %}
-                                    {{ form|crispy }}
-    
-                                 
-                                    <button type="submit" class="btn btn-black rounded-0 text-uppercase float-right">Update Information</button>
-                                    <button type="button" class="btn btn-secondary rounded-0 cancel-button">Cancel</button>
-    
-                                </form>
-                            </div> -->
-    
+   
                         </div> 
                     </div> 
                 </div>
@@ -116,7 +100,7 @@
 {% endblock %}
 
 {% block postloadjs %}
-<script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
+<script src="{% static 'profiles/js/countryfield.js' %}"></script>
 {{ block.super }}
 
     

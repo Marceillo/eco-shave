@@ -24,7 +24,7 @@
 
 
 {%block content %}
-<body>
+
    
     <div class="faq-container " >
         {% if messages %}
@@ -48,7 +48,7 @@
                 <li>
                     <button class="accordion text-center btn btn-black">{{ faq.question }}</button>
                     <div class="panel">
-                        <p>{{ faq.answer|linebreaks }}</p>
+                        {{ faq.answer|linebreaks }}
                         <br>
                         {% if request.user.is_superuser %}
                         <a href="{% url 'edit_faq' faq.pk %}" class="btn btn-black btn-sm faq_btn">Edit</a> |
@@ -63,7 +63,7 @@
      
     </div>
 
-</body>
+
  
 
 {% endblock content %}
