@@ -299,20 +299,89 @@ The project design was adapted to different devices and Bootstrap helped with mo
 ## HTML Validation
 
 * I used the [W3C Validator](https://validator.w3.org/)
-* They managed to clear the errors I found from the validator on all the links.
+* They managed to clear most of the templates errors  and recieved the below success message .
+<br>
 
-![HTML](/static/readme/test-image/html-test/validator-w3-success.png)
+![HTML](readme-images/html-validation-success.png)
 
 <details>
-<summary>links validated success </summary>
+<summary>HTML Validated Summary </summary>
 
-* [Profile](/static/readme/test-image/html-test/userprofilesuccess.png)
-* [Profile Edit](/static/readme/test-image/html-test/profile_edit.png)
-* [Delete Profile](/static/readme/test-image/html-test/deleteprofile.png)
-* [Password Change](/static/readme/test-image/html-test/profilepasswordchange.png)
-* [Password Reset](/static/readme/test-image/html-test/password-reset.png)
-* [Home Page](/static/readme/test-image/html-test/homepage.png)
-* [HTML About Page](/static/readme/test-image/html-test/aboutpagesuccess.png)
+## Validation Errors Could not fix
+
+##### Star Rating validation error 
+* I could not clear this below error message. As this was software that I installed from django star-rating.
+  At the time I thought is was great I had problems installing and setting up but got it to work.
+  This problem with the validation I did not expect as the library automatically injects this style element into it. I tried many things to see if I could fix it I tried creating a custom widget and force it that way but to no avail. I tried using the dango tags to see if that forces it into the head element that also did not work. In all I spent alot of time troubleshooting this. I searched online and found a [ticket](https://github.com/wildfish/django-star-ratings/issues/198) that was open since 2020. This is unfortunate but sometimes the code or software we use cause problems like the summernote application also causes validation errors. 
+  * This affected the apps with the star rating I cleared out the errors of my code.
+  * - The style error was hidden here to show the success message  
+
+![HTML](readme-images/style-validation-error-html.png)
+<br>
+
+##### Star rating element from inspect tools.
+
+![HTML](readme-images/style-inspect-html.png)
+
+##### The Stripe validation warning
+
+* I hade a warning message that I could find in my code only to discover that the stripe code is doing this.
+Since I can not change this and it is a warning that has not effect on anything.
+
+![HTML](readme-images/profile-edit-html-error.png)
+
+
+  ##### Products 
+
+  ![HTML](readme-images/products_%20success-html.png)
+  
+  ##### Product Detail
+
+  ![HTML](readme-images/products-detail-success-html.png)
+
+  ##### Checkout Detail
+
+  ![HTML](readme-images/checkout-html-success.png)
+
+<br>
+
+### Errors found and cleared in the below apps 
+
+##### Faq errors 
+
+![HTML](readme-images/faq-error-html.png)
+<br>
+
+##### Faq cleared error 
+
+![HTML](readme-images/faq-success-html.png)
+
+##### Home success
+
+![HTML](readme-images/home-html-success.png)
+<br>
+
+##### Home Error
+
+![HTML](readme-images/home-html-error.png)
+
+| **App Validation**             | **Success** |
+|--------------------------------|--------------|
+| Contact Us                     | [x]          |
+| Contact Us Confirmation        | [x]           |
+| Wish List                      | [x]           |
+| About                          | [x]           |
+| Add Product                    | [x]           |
+| Edit Product                   | [x]           |
+| Delete Product                 | [x]           |
+| FAQ                            | [x]           |
+| Add FAQ                        | [x]           |
+| Edit FAQ                       | [x]           |
+| Delete FAQ                     | [x]           |
+| Profile                        | [x]           |
+| Bag                            | [x]           |
+| Checkout                       | [x]           |
+
 
 </details>
 
@@ -352,7 +421,7 @@ The project design was adapted to different devices and Bootstrap helped with mo
 
 ![Profile Success ](readme-images/profiles_success_css.png)
 
-##### Error Fixed
+##### Error Fixed Profiles
 
 * Here was some left over some code from the flip card Idea I had to simple remove this.
 * I had a typo issue with one of the fields I added both auto and hidden
