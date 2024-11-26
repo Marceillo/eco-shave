@@ -69,6 +69,32 @@ The project design was adapted to different devices and Bootstrap helped with mo
 
 * Testing was ongoing during this project from one feature to the next even so I left some of the final testing for last.
  
+### Responsiveness Test
+The responsive design tests were carried out manually with [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/) and [Multi Device Mockup Generator](https://techsini.com/multi-mockup/).
+
+| Desktop    | Display <1200px       | Display >1200px    |
+|------------|-----------------------|--------------------|
+| Render     | pass                  | pass               |
+| Images     | pass                  | pass               |
+| Links      | pass                  | pass               |
+
+| Tablet     | iPad Air              | Asus Zenbook Fold  | iPad Mini | iPad Pro |
+|------------|-----------------------|--------------------|-----------|----------|
+| Render     | pass                  | pass               | pass      | pass     |
+| Images     | pass                  | pass               | pass      | pass     |
+| Links      | pass                  | pass               | pass      | pass     |
+
+| Phone      | Galaxy S8+/S20 Ultra  | iPhone XR/12Pro/14 Pro Max | Pixel 7 / 7 Pro      |
+|------------|-----------------------|----------------------------|----------------------|
+| Render     | pass                  | pass                       | pass      | pass     |
+| Images     | pass                  | pass                       | pass      | pass     |
+| Links      | pass                  | pass                       | pass      | pass     |
+
+
+### Browser Compatibility
+* Google Chrome Version 
+* Mozilla Firefox 
+* Microsoft Edge 
 
 
 ## Python Validation
@@ -461,6 +487,7 @@ Since I can not change this it is a warning that does not affect anything.
 ## Manual Testing
 
 In addition to the tests stated above I have performed a series of manual tests. Below the list of tests that have been conducted can be found.
+
 <details>
 <summary>Manual Testing results </summary>
 
@@ -539,34 +566,7 @@ Status | **Profile Page - User Logged In**
 | &check; | The profile success message or error is displayed when the user submits the profile form.
 
 
-### Responsiveness Test
-The responsive design tests were carried out manually with [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/) and [Multi Device Mockup Generator](https://techsini.com/multi-mockup/).
-
-| Desktop    | Display <1200px       | Display >1200px    |
-|------------|-----------------------|--------------------|
-| Render     | pass                  | pass               |
-| Images     | pass                  | pass               |
-| Links      | pass                  | pass               |
-
-| Tablet     | iPad Air              | Asus Zenbook Fold  | iPad Mini | iPad Pro |
-|------------|-----------------------|--------------------|-----------|----------|
-| Render     | pass                  | pass               | pass      | pass     |
-| Images     | pass                  | pass               | pass      | pass     |
-| Links      | pass                  | pass               | pass      | pass     |
-
-| Phone      | Galaxy S8+/S20 Ultra  | iPhone XR/12Pro/14 Pro Max | Pixel 7 / 7 Pro      |
-|------------|-----------------------|----------------------------|----------------------|
-| Render     | pass                  | pass                       | pass      | pass     |
-| Images     | pass                  | pass                       | pass      | pass     |
-| Links      | pass                  | pass                       | pass      | pass     |
-
-### Browser Compatibility
-* Google Chrome Version 
-* Mozilla Firefox 
-* Microsoft Edge 
 </details>
- 
-[Back to Table of Contents](#table-of-contents)
 
 - All manual testing was done with DEBUG = False in the settings.py file.
 

@@ -50,16 +50,6 @@ Here is the live deployed site [Eco-Shave](https://eco-shave-7beca10c37e1.heroku
 - [Agile Methodology](#agile-methodology)
   - [Database](#database)
 - [Testing](#testing)
-  - [Responsive Layout and Design](#responsive-layout-and-design)
-  - [Testing User Stories](#testing-user-stories)
-  - [Lighthouse](#lighthouse)
-  - [HTML Validation](#html-validation)
-  - [CSS Validation](#css-validation)
-  - [Manual Testing](#manual-testing)
-  - [Frontend](#frontend)
-  - [Backend Admin Panel](#backend-admin-panel)
-  - [Fixed Bugs](#fixed-bugs)
-  - [Unfixed Bugs](#unfixed-bugs)
 - [Creating the Django App](#creating-the-django-app)
   - [Deployment of This Project](#deployment-of-this-project)
   - [Final Deployment](#final-deployment)
@@ -353,11 +343,11 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 <br>
 <img src="readme-images/graphviz.png"><br>
 
-## Credit below for the above-detailed ERD diagram.
+###### Credit below for the above-detailed ERD diagram.
 
 [YouTube link](https://www.youtube.com/watch?v=qzrE7cfc_3Q&t=357s)
 [django-extensions](https://django-extensions.readthedocs.io/en/latest/graph_models.html)
-
+c
 </details>
 
 ## Visual Experience
@@ -462,7 +452,7 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 * There is a delete confirmation when wanting to delete a product.
 * There is a dropdown link that says product management there you can add the product and info.
 * Edit  Here you can also add information and add more images in the multiple images preview image and CRUD functionality. 
-* The is active I will add this in as a future upgrade to signal that a product is available or not.
+* The is active model I will add this in as a future upgrade to signal that a product is available or not.
 
 ##### Edit Product
 
@@ -725,7 +715,7 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 ### Future Features
 
 * I had some problems implementing the sorting feature with the Django star rating but due to time constraints left this one out but will be implementing it at a later date.
-* - * On the backend I say the package I used for Django star rating had validation issues and no access from the admin panel would like use a better package .   
+* -  On the backend I say the package I used for Django star rating had validation issues and no access from the admin panel would like use a better package .   
 * In the user's profile there are features of crud but I would like it add a delete profile feature in the future this was also not implemented due to time.
 * - Also in the profile I would have liked it when a user is logged in with their name not to be able to change the data.   
 * I did not include Pagination the number of products per page so will be the next future feature when the site grows.
@@ -734,6 +724,7 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 * More social media platforms 
 * Also a brand app that shows the details of the product manufacturer and their carbon footprint.
 * More styling as I focused on this project on functionality. 
+* The is active I will add this in as a future upgrade to signal that a product is available or not.
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -961,7 +952,7 @@ The project was deployed to [Heroku](https://www.heroku.com). To deploy a projec
 
 * To fork this project by following the steps below:
 
-1. Open [GitHub](https://github.com/hughes84/my-blog-pp4.git)
+1. Open [GitHub](https://github.com/Marceillo/eco-shave)
 2. Find the 'Fork' button at the top right of the page
 3. Once you click the button the fork will be in your repository
 
@@ -969,7 +960,7 @@ The project was deployed to [Heroku](https://www.heroku.com). To deploy a projec
 
 * Clone this project by following the steps:
 
-1. Open [GitHub](https://github.com/Marceillo/kayak-blog-pp4).
+1. Open [GitHub](https://github.com/Marceillo/eco-shave).
 2. You will be provided with three options to choose from: HTTPS, SSH, or GitHub CLI. Click the clipboard icon to copy the URL of your preferred option.
 3. Once you click the button, the fork will be in your repository (if you choose to fork it).
 4. Open a new terminal.
@@ -996,6 +987,9 @@ To clone and set up this project, follow these steps:
 * ```python3 manage.py runserver``` - If everything I set up correctly the project is now live locally.
 * ```python3 manage.py createsuperuser ``` - Create super user as you will need this to access the admin panel.
 7. In GitPod, create an env.py file in the top-level directory with the following content:
+<br>
+![Heruko and env file ](readme-images/heruko_vars.png)
+<br>
 * ```import os``` - This imports the os library
 * ```os.environ("DATABASE_URL", "postgres://*********************")``` - This sets database variable to your PostgresSQL database.
 * ```os.environ("SECRET_KEY", "actual_secret_key")``` - You can create your own key with a webpage like [RandomKeyGen](https://randomkeygen.com/).
@@ -1044,56 +1038,12 @@ To clone and set up this project, follow these steps:
 * [Free templates used](https://bbbootstrap.com/snippets/bootstrap-ecommerce-shopping-cart-item-summary-44021562)
 * [Bootstrape template used](https://getbootstrap.com/docs/4.6/examples/carousel/)
 
- 
-## Credits
-
-* The [Bootstrap](https://getbootstrap.com/) documentation was so really helpful.
-* The *Boutique Ado* code along project from Code Institute has been a valuable source for both starting the project as well as for setting up new apps, models, urls and views, templates.
-* - Could not have done it without this assistance of this material.. 
-* I have used differant  website and content during this process I found that dajango documentation was the best and the more common sites like stack overflow.
-* I also took some inspiration from the readme files below and adjusted it to meet my project.
-* AI [perplexity](https://www.perplexity.ai/) helped with writing the FAQ question and answer. Also as learning tool to explain and help with bug errors found.     
-* [Ian-Garrigan](https://github.com/Ian-Garrigan/shavers-haven?tab=readme-ov-file)
-* [django-extensions](https://django-extensions.readthedocs.io/en/latest/graph_models.html)
-* [Coolors web site](https://coolors.co/palettes/trendin)
-* [Book on django](https://www.amazon.de/-/en/Antonio-Mel%C3%A9-ebook/dp/B0CPN3H5YW#:~:text=Django%205%20By%20Example%20is,step%2Dby%2Dstep%20approach)
-* [guide to the Github Agile Tool](https://www.youtube.com/watch?v=U_dMihBgUNY&list=PL_7334VduOHsrWzhu5Ta2lrkp016kcBWY&index=34)
-* [ERD youtube](https://www.youtube.com/watch?v=xsg9BDiwiJE)
-* [User account create Django](https://youtu.be/Ev5xgwndmf)
-* [Website for django blog](https://djangocentral.com/building-a-blog-application-with-django/#database-models)
-* [Website stackoverflow](https://stackoverflow.com)
-* [Forms stackoverflow](https://stackoverflow.com/questions/1727564/how-to-create-a-userprofile-form-in-django-with-first-name-last-name-modificati)
-* [Forgot Password](https://stackoverflow.com/questions/67545932/how-can-i-send-a-reset-password-email-on-django)
-* [Images and mp4 video used pexels](https://www.pexels.com)
-* [Images used unsplash](https://unsplash.com/)
-* [widgets in djano used in forms blog ](https://docs.djangoproject.com/en/5.0/topics/forms/modelforms/)
-* [search function](https://blog.csdn.net/bbwangj/article/details/98026817)
-* [Django documentation](https://docs.djangoproject.com/)
-* [Django Queryset API](https://docs.djangoproject.com/en/stable/ref/models/querysets/)
-* [Django Pagination](https://docs.djangoproject.com/en/stable/topics/pagination/)
-* [Django Q objects](https://docs.djangoproject.com/en/stable/topics/db/queries/#complex-lookups-with-q-objects)
-* [allauth ](https://docs.allauth.org/en/latest/installation/quickstart.html )
-* [Icons for wirframes](https://icons8.com/icons/set/razor--static--black)
-* [Freepik foor images](https://www.freepik.com/search?format=search&query=men%20shaving%20%20)
-* [AI image generator](https://www.bing.com/images/create?FORM=IRPGEN)
-* [Dango MUltiview](https://djangoguide.com/django-image-upload-specialization/django-multiple-image-upload/)
-* [Star Rating](https://django-star-ratings.readthedocs.io/en/latest/?badge=latest/)
-* [Mocups](https://techsini.com/multi-mockup/)
-* [Image for Tatara razors](https://tatararazors.com/product-category/razors)
-* [Leaf Shave Images](https://leafshave.com/)
-* [Proof razors images](https://proofrazor.com/)
-* [Oneblade razors images](https://www.onebladeshave.com/)
-* [Dovo images](https://dovo.com/de/)
-* [Amazon images]( https://www.amazon.de/)
-* [Free templates used](https://bbbootstrap.com/snippets/bootstrap-ecommerce-shopping-cart-item-summary-44021562)
-* [Bootstrape template used](https://getbootstrap.com/docs/4.6/examples/carousel/)
-
-
 ### Content
 
 * [YouTube Graph Models](https://www.youtube.com/watch?v=qzrE7cfc_3Q&t=357s)
 * [Youtube Bootstrap](https://www.youtube.com/watch?v=-qfEOE4vtxE)
 * [Stripe for payment](https://youtu.be/hZYWtK2k1P8?si=I9KdHXR7xvDcpv8R) 
+
 ## Acknowledgements
 
 * I would like to thank code institute for the good LMS they have written that really helped pave the way forward with out it would not have been possible with the time allocated.
