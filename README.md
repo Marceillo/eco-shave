@@ -434,8 +434,11 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 ##### Star Rating
 
 * The software gives an average count and rating count and you change your rating or clear it.
+* - There where validation problems when testing I provided more details in testing file .
+* - Also had a problem with accessing it in the admin Panel and got an internal server error 500.
+* - Unfortunatlty the documentation is not clear how to resolve this I looked and tried many differant ways to troubleshoot to no avail .
 
-![Star Rating](readme-images/star_rating%20.png)
+![Star Rating](readme-images/star_rating.png)
 
 ### Product Detail Page
 
@@ -459,7 +462,7 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 * There is a delete confirmation when wanting to delete a product.
 * There is a dropdown link that says product management there you can add the product and info.
 * Edit  Here you can also add information and add more images in the multiple images preview image and CRUD functionality. 
-* The is active I will add this in as a future upgrade to signal that a product is available or not.   
+* The is active I will add this in as a future upgrade to signal that a product is available or not.
 
 ##### Edit Product
 
@@ -526,7 +529,7 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 * There is an option to go to the wishlist from the profile view.
 * When a user clicks on the order history it will show the checkout success page.
 
-##### 
+##### Profile
 
 ![Checkout Success ](readme-images/profile.png)
 
@@ -722,6 +725,7 @@ The red dot file converted to image [Graphviz online](https://dreampuf.github.io
 ### Future Features
 
 * I had some problems implementing the sorting feature with the Django star rating but due to time constraints left this one out but will be implementing it at a later date.
+* - * On the backend I say the package I used for Django star rating had validation issues and no access from the admin panel would like use a better package .   
 * In the user's profile there are features of crud but I would like it add a delete profile feature in the future this was also not implemented due to time.
 * - Also in the profile I would have liked it when a user is logged in with their name not to be able to change the data.   
 * I did not include Pagination the number of products per page so will be the next future feature when the site grows.
