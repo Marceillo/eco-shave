@@ -471,7 +471,7 @@ In addition to tests stated above I have performed a series of manual tests. Bel
 | &check; | Typing in a incorrect URL on the page loads the 404 error page
 | &check; | Pasting page that needs authentication loads the log in page
 | &check; | Clicking the nav logo loads the home page
-| &check; | Clicking the Home button on the nav bar loads the home page and lists all posts
+| &check; | Clicking the Home button on the nav bar loads the home page.
 | &check; | Clicking the About button on the nav bar loads the About page.
 | &check; | Clicking While in the About page clicking on the contact us link loads the contact page.
 | &check; | Clicking the Register link loads the Register page
@@ -490,6 +490,8 @@ In addition to tests stated above I have performed a series of manual tests. Bel
 | &check; | Typing in a incorrect URL on the page loads the 404 error page
 | &check; | User cannot access Admin Panel without being staff member
 | &check; | Clicking the nav logo loads the home page
+| &check; | Verify that the search results display correctly for valid queries. And invalid results |
+| &check; | Ensure that clicking on a category in the navigation loads the relevant products.|
 | &check; | Clicking the Home button on the nav bar loads the home page and shows all the links.
 | &check; | While in the the home page click on all the dropdown lists works.
 | &check; | While in the the home page the Faq,about,conact us is visible.
@@ -506,8 +508,11 @@ In addition to tests stated above I have performed a series of manual tests. Bel
 | &check; | While in the Profile edit page click on the cancel button works and diverts to profile page.
 | &check; | While in the Profile page clicking on the wish list button loads the wish list page.
 | &check; | While in the Wish list page clicking and testing all three buttons work.
-| &check; | After it  deletes profile a success message is displayed or error message if not.
-
+| &check; | Ensure that users can add products to the wish list through the product detail page.
+| &check; | The FAQ has CRUD for Admin users and that there are success message while updating. 
+| &check; | The That products can be added to the to the bag and that it can be checkout out.
+| &check; | The That products quatitiy can be updated in the bag before checkout.
+| &check; | While in the checkout when the form is filled submitted that it reflects in admin panel and stripe. 
 
 | Status | **Main Website - Admin Logged In**
 |:-------:|:--------|
@@ -532,8 +537,9 @@ Status | **Create A New User - User Logged Out**
 Status | **Profile Page - User Logged In**
 |:-------:|:--------|
 | &check; | The default profile info is seen on the profile page (Field not provided).
+| &check; | The Order history is displayed and there are the edit and wishlist buttons.
 | &check; | The profile success message or error is displayed when the user submits the profile form.
-| &check; | A new user has CRUD on there profile and posts, like and crud on comment after registering.
+
 
 ### Responsiveness Test
 The responsive design tests were carried out manually with [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/) and [Multi Device Mockup Generator](https://techsini.com/multi-mockup/).
