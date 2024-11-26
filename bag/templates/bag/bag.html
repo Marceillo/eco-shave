@@ -106,7 +106,6 @@
         e.preventDefault();
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
-        // console.log(`Attempting to remove item with ID 1: ${itemId}`);
         var url = `/shopping_bag/remove/${itemId}/`;
         console.log(`Attempting to remove item with ID: ${itemId}`);
         $.post(url, {'csrfmiddlewaretoken': csrfToken})

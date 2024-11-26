@@ -49,23 +49,21 @@ class StripeWH_Handler:
         intent = event.data.object
 
         pid = intent.id
-        shopping_bag = intent.metadata.shopping_bag  # changed
+        shopping_bag = intent.metadata.shopping_bag
         save_info = intent.metadata.save_info
 
         # Get the Charge object
 
         stripe_charge = stripe.Charge.retrieve(intent.latest_charge)
 
-        billing_details = stripe_charge.billing_details  # updated
+        billing_details = stripe_charge.billing_details
         shipping_details = intent.shipping
-        total = round(stripe_charge.amount / 100, 2)  # updated
+        total = round(stripe_charge.amount / 100, 2)
 
-        # Clean data in the shipping details
         for field, value in shipping_details.address.items():
             if value == "":
                 shipping_details.address[field] = None
 
-        # Update profile information if save_info was checked
         profile = None
         username = intent.metadata.username
         if username != 'AnonymousUser':
@@ -100,8 +98,7 @@ class StripeWH_Handler:
                     street_address2__iexact=shipping_details.address.line2,
                     county__iexact=shipping_details.address.state,
                     total=total,
-                    # original_bag=bag,
-                    original_bag=shopping_bag,  # changed to shopping bag
+                    original_bag=shopping_bag,
                     stripe_pid=pid,
                 )
                 order_exists = True
@@ -110,7 +107,7 @@ class StripeWH_Handler:
                 attempt += 1
                 time.sleep(1)
         if order_exists:
-            self._send_confirmation_email(order)  # email mess
+            self._send_confirmation_email(order)
             return HttpResponse(
                 content=(
                     f'Webhook received: {event["type"]} | SUCCESS: '
@@ -132,7 +129,6 @@ class StripeWH_Handler:
                     street_address1=shipping_details.address.line1,
                     street_address2=shipping_details.address.line2,
                     county=shipping_details.address.state,
-                    # original_bag=bag,
                     original_bag=shopping_bag,
                     stripe_pid=pid,
                 )

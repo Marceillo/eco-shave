@@ -3,13 +3,13 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col text-center">
-                <h1>Wish list</h1>
-            </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col text-center">
+            <h1>Wish list</h1>
         </div>
     </div>
+</div>
 {% endblock %}
 
 {% block extra_css %}
@@ -34,54 +34,59 @@
                         {% if wishlist %}
                         <ul class="list-group">
                             {% for product in wishlist %}
-                            <li class="list-group-item d-flex justify-content-between align-items-center flex-column flex-sm-row">
+                            <li
+                                class="list-group-item d-flex justify-content-between align-items-center flex-column flex-sm-row">
                                 <div class="d-flex align-items-center mb-2 mb-sm-0">
                                     {% if product.image %}
-                                    <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid" style="width: 80px; height: auto; margin-right: 15px;">
+                                    <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid"
+                                        style="width: 80px; height: auto; margin-right: 15px;">
                                     {% else %}
-                                    <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="img-fluid" style="width: 80px; height: auto; margin-right: 15px;">
+                                    <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="img-fluid"
+                                        style="width: 80px; height: auto; margin-right: 15px;">
                                     {% endif %}
                                     <div>
                                         <h5 class="mb-1">{{ product.name }}</h5>
                                         <p class="mb-1">{{ product.price }}€</p>
                                         {% if product.category %}
                                         <p class="small mt-1 mb-0">
-                                            <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                                                <i class="fa-solid fa-basket-shopping"></i>{{ product.category.friendly_name }}
+                                            <a class="text-muted"
+                                                href="{% url 'products' %}?category={{ product.category.name }}">
+                                                <i
+                                                    class="fa-solid fa-basket-shopping"></i>{{ product.category.friendly_name }}
                                             </a>
                                         </p>
                                         {% endif %}
-                                        <!-- Django Star rating  -->
                                         <div class="product-rating mt-2">
                                             {% ratings product %}
                                         </div>
                                     </div>
                                 </div>
-                            <!-- add and remove div-->
-                            <div class="button-container d-flex flex-column flex-sm-row justify-content-end align-items-center mt-2">
-                                <!-- <div class="d-flex align-items-center mr-2"> -->
+                                <div
+                                    class="button-container d-flex flex-column flex-sm-row justify-content-end align-items-center mt-2">
                                     <form action="{% url 'add_to_bag' product.id %}" method="POST" class="mr-2 btn-sm ">
                                         {% csrf_token %}
-                                        <input type="submit" class="btn btn-black rounded-0 btn-sm mb-2 mb-sm-0" value="Add to Bag">
+                                        <input type="submit" class="btn btn-black rounded-0 btn-sm mb-2 mb-sm-0"
+                                            value="Add to Bag">
                                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                     </form>
-                                <!-- </div> -->
-                                <form action="{% url 'remove_from_wishlist' product.id %}" method="POST" class="mr-2">
-                                    {% csrf_token %}
-                                    <button type="submit" class="btn btn-danger btn-sm mr-2">Remove</button>
-                                </form>
-                                
-                                <a href="{% url 'products' %}" class="btn btn-outline-black btn-sm">Keep Shopping</a>
-                            </div>
+                                    <form action="{% url 'remove_from_wishlist' product.id %}" method="POST"
+                                        class="mr-2">
+                                        {% csrf_token %}
+                                        <button type="submit" class="btn btn-danger btn-sm mr-2">Remove</button>
+                                    </form>
+
+                                    <a href="{% url 'products' %}" class="btn btn-outline-black btn-sm">Keep
+                                        Shopping</a>
+                                </div>
                             </li>
                             {% endfor %}
                         </ul>
                         {% else %}
                         <p class="lead mb-5">Your wish list is empty.</p>
                         <a href="{% url 'products' %}" class="btn btn-outline-black">Keep Shopping</a>
-                    {% endif %}
+                        {% endif %}
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -91,39 +96,44 @@
 
 {% endblock %}
 
-{% block postloadjs %} 
-{% include 'products/includes/quantity_input_script.html' %} 
+{% block postloadjs %}
+{% include 'products/includes/quantity_input_script.html' %}
 {{ block.super }}
 <script>
-    $('.update-link').click(function(e) {
+    $('.update-link').click(function (e) {
         var form = $(this).prev('.update-form');
         form.submit();
     });
 
-    $('.remove-item').click(function(e) {
+    $('.remove-item').click(function (e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
         var url = `/bag/remove/${itemId}/`;
-        $.post(url, {'csrfmiddlewaretoken': csrfToken})
-         .done(function() {
-             location.reload();
-         });
+        $.post(url, {
+                'csrfmiddlewaretoken': csrfToken
+            })
+            .done(function () {
+                location.reload();
+            });
     });
-    
-    $('.add-item').click(function(e) {
-        e.preventDefault(); 
+
+    $('.add-item').click(function (e) {
+        e.preventDefault();
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('add_')[1];
-        var url = `/bag/add/${itemId}/`; 
+        var url = `/bag/add/${itemId}/`;
 
-        $.post(url, {'csrfmiddlewaretoken': csrfToken})
-         .done(function() {
-             location.reload(); 
-         });
-         function showToast(message) {
+        $.post(url, {
+                'csrfmiddlewaretoken': csrfToken
+            })
+            .done(function () {
+                location.reload();
+            });
+
+        function showToast(message) {
             var toastElement = $('#toast');
             toastElement.text(message);
-            toastElement.fadeIn().delay(3000).fadeOut(); 
+            toastElement.fadeIn().delay(3000).fadeOut();
         }
     });
 </script>

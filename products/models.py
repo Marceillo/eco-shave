@@ -45,7 +45,6 @@ class Product(models.Model):
         return f"{self.name} ({self.sku})"
 
 
-# from django docs
 class PreviewImage(models.Model):
     """
     To store multiple images for one product

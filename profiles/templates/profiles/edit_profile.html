@@ -7,9 +7,9 @@
 <div class="container head-container">
     <div class="col">
         <div class="text-center">
-          
+
             <h1 class="hm-head">Profile Edit</h1>
-            
+
         </div>
     </div>
 </div>
@@ -18,12 +18,12 @@
 {% block content %}
 <div class="profile-app">
     <div class="container mb-2">
-            <form method='post' enctype="multipart/form-data">
-                {{ form|crispy }}
-                <button type="submit" class="btn btn-black my-2 me-2">Update Your Profile</button>
-                <a href="{% url 'profile' %}" class="btn btn-black">Cancel</a>
-                {% csrf_token %}
-            </form>
+        <form method='post' enctype="multipart/form-data">
+            {{ form|crispy }}
+            <button type="submit" class="btn btn-black my-2 me-2">Update Your Profile</button>
+            <a href="{% url 'profile' %}" class="btn btn-black">Cancel</a>
+            {% csrf_token %}
+        </form>
     </div>
 </div>
 {% endblock %}
