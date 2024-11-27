@@ -13,6 +13,7 @@
 - [Manual Testing](#manual-testing)
 - [Fixed Bugs](#fixed-bugs)
 - [Unfixed Bugs](#unfixed-bugs)
+- [Back to Readme](README.md)
 <br>
 <br>
 
