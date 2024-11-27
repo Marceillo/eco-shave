@@ -438,7 +438,7 @@ c
 * - The Multiview is an extra model and has CRUD functionality.  
 * Feature :[django-star-ratings](https://django-star-ratings.readthedocs.io/en/latest/) This is a software install that handles the ratings which are different from the LMS.
 * - The LMS had a rating system but was set up differently than has been done on this site with full CRUD as mentioned in the products.
-* In this view you can add to the bag if you wish to purchase or continue shopping.
+* In this view you can add to the bag if you wish to purchase or continue shopping and a success message will show with the product info on the right side.
 * I have also added a wish list button that changes the words of the button based on whether a product is in the wish list or not.  
 * - The wish list is only available when you are logged in.
 
@@ -452,7 +452,12 @@ c
 * There is a delete confirmation when wanting to delete a product.
 * There is a dropdown link that says product management there you can add the product and info.
 * Edit  Here you can also add information and add more images in the multiple images preview image and CRUD functionality. 
-* The is active model I will add this in as a future upgrade to signal that a product is available or not.
+* The is active click button original was for the staff to be able to hide products if the products are not available due to logistic reasons or other reasons that may arise from the day-to-day business. I have not yet built this as I wanted due to time constraints.
+It is added as a future implementation feature to build in as it is only staff that sees this I left it visible. As when you untick from the front end it will show in the admin panel as unticked should they want to do a bulk update of differant products in the admin panel.   
+
+![Is active button](readme-images/is_active-product-man.png)
+
+![Edit Product  ](readme-images/edit_product.png)
 
 ##### Edit Product
 
@@ -614,7 +619,7 @@ c
 ### Register an account 
 
 * Note: Here the user can register an account for more features in order to have some CRUD functionality.
-* 
+
 
 <br>
 
