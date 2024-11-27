@@ -50,6 +50,7 @@ Here is the live deployed site [Eco-Shave](https://eco-shave-7beca10c37e1.heroku
 - [Agile Methodology](#agile-methodology)
   - [Database](#database)
 - [Testing](#testing)
+  - [Link to Testing.md file](TESTING.md)
 - [Creating the Django App](#creating-the-django-app)
   - [Deployment of This Project](#deployment-of-this-project)
   - [Final Deployment](#final-deployment)
