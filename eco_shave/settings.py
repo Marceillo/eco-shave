@@ -28,17 +28,20 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+#DEBUG = False
 # DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = [
     'eco-shave-7beca10c37e1.herokuapp.com',
     '8000-marceillo-ecoshave-isg1mt279wv.ws.codeinstitute-ide.net',
+    os.environ.get('ALLOWED_HOSTS', 'localhost'),
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-marceillo-ecoshave-isg1mt279wv.ws.codeinstitute-ide.net',
     'https://eco-shave-7beca10c37e1.herokuapp.com',
+    'https://*.onrender.com',
 ]
 
 
@@ -146,10 +149,18 @@ WSGI_APPLICATION = 'eco_shave.wsgi.application'
 #     }
 # }
 
+#if 'DATABASE_URL' in os.environ:
+    #DATABASES = {
+        #'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+   # }
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        'default': dj_database_url.parse(
+            os.environ.get('DATABASE_URL'),
+            conn_max_age=0
+        )
     }
+
 else:
     DATABASES = {
         'default': {
