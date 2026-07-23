@@ -8,7 +8,7 @@ This is a site built for selling shaving products that use DE double-edge razors
 The product does not use the plastic cartridge systems that are so popular today. I feel these systems are wasteful and expensive over time.
 Below is my first e-commerce B2C website.
 
-Here is the live deployed site [Eco-Shave](https://eco-shave-7beca10c37e1.herokuapp.com/)
+Here is the live deployed site [Eco-Shave](https://eco-shave.onrender.com/)
 # Table of Contents
 
 - [Objective](#objective)
